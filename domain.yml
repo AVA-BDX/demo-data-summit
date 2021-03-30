@@ -1,7 +1,14 @@
-version: "2.0" 
+version: "2.0"
 
 intents:
   - faq
+  - greet
+  - goodbye
+  - affirm
+  - deny
+  - mood_great
+  - mood_unhappy
+  - bot_challenge
 
 entities:
   - PCR
@@ -65,6 +72,28 @@ entities:
   - voyages_organise
 
 responses:
+  utter_greet:
+  - text: "salut comment vas-tu ?"
+  - text: "Bonjour ça va ?"
+
+  utter_goodbye:
+  - text: "Au revoir"
+
+  utter_iamabot:
+  - text: "Je suis un bot créé grâce à Rasa par Talan"
+
+  utter_did_that_help:
+  - text: "cela vous a-t-il aidé ?"
+
+  utter_super:
+  - text: "Top"
+  - text: "ravis de l'apprendre"
+  - text: "super alors"
+
+  utter_reformulate:
+  - text: "pouvez-vous reformuler la question ?"
+  - text: "très bien, reformulez votre question"
+
   utter_faq/1:
     - text: "Les ressortissants français arrivant dans les principaux aéroports du pays n'ont plus besoin de visa pour un séjour inférieur à 30 jours. Leur passeport doit toutefois comporter 2 pages vierges et être encore valide 6 mois après la date d'arrivée."
 
@@ -270,3 +299,7 @@ Votre bagage en soute peut mesurer jusqu'à 158 cm (a + b + c), poches, rou
   utter_faq/67:
     - text: "Il est conseillé de co-organisé votre voyage avec des personnes sur les forums de voyageurs en ligne plutôt que de les rencontrer la bas "
 
+
+session_config:
+  session_expiration_time: 60  # value in minutes
+  carry_over_slots_to_new_session: true
