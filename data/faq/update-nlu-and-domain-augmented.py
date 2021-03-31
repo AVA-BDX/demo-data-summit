@@ -5,7 +5,7 @@ import pandas as pd
 #import unicodedata
 path = r"data/data-base-source/QNA_for_bots_entites.csv"
 data_base = pd.read_csv(path,  sep=";", encoding="latin3")
-with open("data/faq/faq-nlu.yml", "wt", encoding="utf-8") as f:
+with open("data/nlu/faq-nlu.yml", "wt", encoding="utf-8") as f:
     f.write('version: "2.0" \n')
     f.write('\n')
     f.write("nlu:\n")
@@ -37,7 +37,7 @@ with open("data/faq/faq-domain.yml", "wt", encoding="utf-8") as f:
         f.write(f"  - {indiv_entity}\n")
     f.write("\n")
     f.write('responses:\n')
-    for num_pivot in range(1,len(data_base)):
+    for num_pivot in range(1,len(data_base)+1):
         data_base_pivot = data_base.loc[data_base["id_question_pivot"]==num_pivot,]
         f.write("  utter_faq/" + str(num_pivot) +":" "\n")
         for row in range(len(data_base_pivot)):

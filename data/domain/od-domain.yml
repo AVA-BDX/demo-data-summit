@@ -1,0 +1,33 @@
+version: "2.0" 
+
+intents:
+  - greet
+  - goodbye
+  - affirm
+  - deny
+  - mood_great
+  - mood_unhappy
+  - bot_challenge
+
+responses:
+  utter_greet:
+  - text: "salut comment vas-tu ?"
+  - text: "Bonjour ça va ?"
+
+  utter_goodbye:
+  - text: "Au revoir"
+
+  utter_iamabot:
+  - text: "Je suis un bot créé grâce à Rasa par Talan"
+
+  utter_did_that_help:
+  - text: "cela vous a-t-il aidé ?"
+
+  utter_super:
+  - text: "Top"
+  - text: "ravis de l'apprendre"
+  - text: "super alors"
+
+  utter_reformulate:
+  - text: "pouvez-vous reformuler la question ?"
+  - text: "très bien, reformulez votre question"
