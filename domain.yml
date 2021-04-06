@@ -12,12 +12,12 @@ entities:
   - PCR
   - activites
   - aeroport
+  - aeroport_hotel
   - allergies
   - animaux
   - anti_moustique
   - argent_liquide
   - assurance
-  - aéroport_hotel
   - bagage_sup
   - billet_aller_retour
   - billet_avion
@@ -427,6 +427,10 @@ responses:
     utter_faq/67:
       - text: 'Il est conseillé de co-organisé votre voyage avec des personnes sur
             les forums de voyageurs en ligne plutôt que de les rencontrer la bas '
+    utter_faq/68:
+      - text: Le surf et la plongée sont 2 activités nautiques abordables à Bali.
+            Vous pouvez également découvrir de nouvelles sensations avec le fly board
+            !
 session_config:
     session_expiration_time: 60
     carry_over_slots_to_new_session: false

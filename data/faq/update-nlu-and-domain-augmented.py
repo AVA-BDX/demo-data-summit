@@ -26,7 +26,7 @@ with open("data/nlu/faq-nlu.yml", "wt", encoding="utf-8") as f:
         
 
    
-with open("data/faq/faq-domain.yml", "wt", encoding="utf-8") as f:
+with open("data/domain/faq-domain.yml", "wt", encoding="utf-8") as f:
     f.write('version: "2.0" \n')
     f.write('\n')
     f.write("intents:\n")
