@@ -5,9 +5,9 @@ pipeline:
   - name: "CountVectorsFeaturizer"
   - name: "DIETClassifier"
     entity_recognition: False
-    epochs: 200
+    epochs: 300
   - name: ResponseSelector
-    epochs: 200
+    epochs: 300
     retrieval_intent: faq
 
 policies:
