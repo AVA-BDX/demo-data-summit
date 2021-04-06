@@ -3,207 +3,207 @@ version: "2.0"
 nlu:
 - intent: faq/1
   examples: |
-   - Est-ce qu'il faut un [visa]("entity":visa) ?
+   - Est-ce qu'il faut un [visa](visa) ?
 
 - intent: faq/2
   examples: |
-   - Est-ce qu'il faut un [passeport]("entity":passeport) ?
+   - Est-ce qu'il faut un [passeport](passeport) ?
 
 - intent: faq/3
   examples: |
-   - Est-ce qu''un [test PCR]("entity":PCR) est obligatoire ?
+   - Est-ce qu''un [test PCR](PCR) est obligatoire ?
 
 - intent: faq/4
   examples: |
-   - Est-ce qu'il y a des [vaccins]("entity":vaccins) obligatoires?
+   - Est-ce qu'il y a des [vaccins](vaccins) obligatoires?
 
 - intent: faq/5
   examples: |
-   - Est- ce que je pourrais utiliser ma [carte de crédit]("entity":carte_credit) là-bas?
+   - Est- ce que je pourrais utiliser ma [carte de crédit](carte_credit) là-bas?
 
 - intent: faq/6
   examples: |
-   - Le [retrait d'argent]("entity":retrait_argent) génère-t-il des frais supplémentaires ?
+   - Le [retrait d'argent](retrait_argent) génère-t-il des frais supplémentaires ?
 
 - intent: faq/7
   examples: |
-   - Est-ce qu'il faut prévoir de l'[argent liquide]("entity":argent_liquide) ?
+   - Est-ce qu'il faut prévoir de l'[argent liquide](argent_liquide) ?
 
 - intent: faq/8
   examples: |
-   - Est-ce que je peux annuler le [voyage]("entity":voyage) à tout moment? 
+   - Est-ce que je peux annuler le [voyage](voyage) à tout moment? 
 
 - intent: faq/9
   examples: |
-   - Quelle est la [monnaie]("entity":monnaie) à Bali ?
+   - Quelle est la [monnaie](monnaie) à Bali ?
 
 - intent: faq/10
   examples: |
-   - Quel est le mode de [remboursement]("entity":remboursement) en cas d'annulation du voyage ?
+   - Quel est le mode de [remboursement](remboursement) en cas d'annulation du voyage ?
 
 - intent: faq/11
   examples: |
-   - Quelles sont les préconisations [sanitaires]("entity":sanitaires) ?
+   - Quelles sont les préconisations [sanitaires](sanitaires) ?
 
 - intent: faq/12
   examples: |
-   - Comment modifier ma [réservation]("entity":reservation) ? 
+   - Comment modifier ma [réservation](reservation) ? 
 
 - intent: faq/13
   examples: |
-   - Comment annuler ma [réservation]("entity":reservation) ? 
+   - Comment annuler ma [réservation](reservation) ? 
 
 - intent: faq/14
   examples: |
-   - Est-ce que l'[assurance]("entity":assurance) voyage est obligatoire ?
+   - Est-ce que l'[assurance](assurance) voyage est obligatoire ?
 
 - intent: faq/15
   examples: |
-   - Est-ce qu'il y a un équivalent de [carte européenne]("entity":carte_européenne) d'assurance maladie à l'étranger ?
+   - Est-ce qu'il y a un équivalent de [carte européenne](carte_européenne) d'assurance maladie à l'étranger ?
 
 - intent: faq/16
   examples: |
-   - Où est-ce que je peux trouver une [assurance]("entity":assurance) voyage?
+   - Où est-ce que je peux trouver une [assurance](assurance) voyage?
 
 - intent: faq/17
   examples: |
-   - Quelle est la meilleure [assurance]("entity":assurance) voyage ?
+   - Quelle est la meilleure [assurance](assurance) voyage ?
 
 - intent: faq/18
   examples: |
-   - Quels sont les [hôtels]("entity":hotels) recommandés ?
+   - Quels sont les [hôtels](hotels) recommandés ?
 
 - intent: faq/19
   examples: |
-   - Quels sont les [moyens de paiement]("entity":moyen_paiement) pour régler mon voyage ? 
+   - Quels sont les [moyens de paiement](moyen_paiement) pour régler mon voyage ? 
 
 - intent: faq/20
   examples: |
-   - Est-ce qu'il y a des [voyages organisé]("entity":voyages_organise)s ?
+   - Est-ce qu'il y a des [voyages organisé](voyages_organise)s ?
 
 - intent: faq/21
   examples: |
-   - Est-il possible de réserver un [guide touristique]("entity":guide_touristique) sur place ?
+   - Est-il possible de réserver un [guide touristique](guide_touristique) sur place ?
 
 - intent: faq/22
   examples: |
-   - Est-il recommandé d'effectuer un [change]("entity":change) de monnaie avant le voyage ? 
+   - Est-il recommandé d'effectuer un [change](change) de monnaie avant le voyage ? 
 
 - intent: faq/23
   examples: |
-   - Comment faire pour avoir un hôtel avec une connexion [internet]("entity":internet) (wifi) ? 
+   - Comment faire pour avoir un hôtel avec une connexion [internet](internet) (wifi) ? 
 
 - intent: faq/24
   examples: |
-   - Est-ce qu'il y a la [4G]("entity":quatre_G) à Bali ? 
+   - Est-ce qu'il y a la [4G](quatre_G) à Bali ? 
 
 - intent: faq/25
   examples: |
-   - Est-ce qu'il y a des [forfaits téléphoniques]("entity":forfaits_téléphonique) à Bali ?
+   - Est-ce qu'il y a des [forfaits téléphoniques](forfaits_téléphonique) à Bali ?
 
 - intent: faq/26
   examples: |
-   - Combien coûte une semaine de [séjour]("entity":sejour) en moyenne sur place ?
+   - Combien coûte une semaine de [séjour](sejour) en moyenne sur place ?
 
 - intent: faq/27
   examples: |
-   - Quel est le [décalage]("entity":decalage) horaire ?
+   - Quel est le [décalage](decalage) horaire ?
 
 - intent: faq/28
   examples: |
-   - Je voudrais une [liste d'hôtels]("entity":liste_hotels)
+   - Je voudrais une [liste d'hôtels](liste_hotels)
 
 - intent: faq/29
   examples: |
-   - Les [animaux]("entity":animaux) sont-ils autorisés dans les hôtels ? 
+   - Les [animaux](animaux) sont-ils autorisés dans les hôtels ? 
 
 - intent: faq/30
   examples: |
-   - Que faut-il faire pour [prolonger]("entity":prolonger) mon séjour sur place? 
+   - Que faut-il faire pour [prolonger](prolonger) mon séjour sur place? 
 
 - intent: faq/31
   examples: |
-   - Quelle est la personne à contacter en cas de [problème]("entity":probleme) durant mon séjour ? 
+   - Quelle est la personne à contacter en cas de [problème](probleme) durant mon séjour ? 
 
 - intent: faq/32
   examples: |
-   - Quels médicaments puis-je prendre sans [ordonnance]("entity":ordonnance) à Bali ?
+   - Quels médicaments puis-je prendre sans [ordonnance](ordonnance) à Bali ?
 
 - intent: faq/33
   examples: |
-   - Quelle est la [saison]("entity":saison) en Juin ?
+   - Quelle est la [saison](saison) en Juin ?
 
 - intent: faq/34
   examples: |
-   - Quels objets peuvent être [utiles]("entity":utile) là-bas ?
+   - Quels objets peuvent être [utiles](utile) là-bas ?
 
 - intent: faq/35
   examples: |
-   - Quels objets sont [interdits]("entity":interdit) dans l'avion ?
+   - Quels objets sont [interdits](interdit) dans l'avion ?
 
 - intent: faq/36
   examples: |
-   - Quelles sont les [dimensions]("entity":dimensions) maximales d'un bagage dans l'avion ?
+   - Quelles sont les [dimensions](dimensions) maximales d'un bagage dans l'avion ?
 
 - intent: faq/37
   examples: |
-   - Quel est le [poids]("entity":poids) maximum de mon bagage dans l'avion ?
+   - Quel est le [poids](poids) maximum de mon bagage dans l'avion ?
 
 - intent: faq/38
   examples: |
-   - Quel est le prix d'un [bagage supplémentaire]("entity":bagage_sup) en soute ?
+   - Quel est le prix d'un [bagage supplémentaire](bagage_sup) en soute ?
 
 - intent: faq/39
   examples: |
-   - Dois-je prendre de l'[anti-moustique]("entity":anti_moustique) ?
+   - Dois-je prendre de l'[anti-moustique](anti_moustique) ?
 
 - intent: faq/40
   examples: |
-   - Comment faire pour trouver des [billets d'avion]("entity":billet_avion) ?
+   - Comment faire pour trouver des [billets d'avion](billet_avion) ?
 
 - intent: faq/41
   examples: |
-   - Quel est le prix moyen du [billet aller-retour]("entity":billet_aller_retour) France-Bali ?
+   - Quel est le prix moyen du [billet aller-retour](billet_aller_retour) France-Bali ?
 
 - intent: faq/42
   examples: |
-   - Est-ce qu'il y a des [vols directs]("entity":vol_direct) ?
+   - Est-ce qu'il y a des [vols directs](vol_direct) ?
 
 - intent: faq/43
   examples: |
-   - Quelle [compagnie aérienne]("entity":compagnie_aerienne) est recommandée ?
+   - Quelle [compagnie aérienne](compagnie_aerienne) est recommandée ?
 
 - intent: faq/44
   examples: |
-   - A quelle heure je dois me présenter à l'[aéroport]("entity":aeroport) pour avoir mon vol ?
+   - A quelle heure je dois me présenter à l'[aéroport](aeroport) pour avoir mon vol ?
 
 - intent: faq/45
   examples: |
-   - Comment être [indemnisé]("entity":indemniser) si mon bagage a été perdu ou endommagé pendant le trajet en avion ?
+   - Comment être [indemnisé](indemniser) si mon bagage a été perdu ou endommagé pendant le trajet en avion ?
 
 - intent: faq/46
   examples: |
-   - Puis-je voyager en avion avec mes [animaux]("entity":animaux) ? 
+   - Puis-je voyager en avion avec mes [animaux](animaux) ? 
 
 - intent: faq/47
   examples: |
-   - Quels sont les frais supplémentaire pour voyager avec mon [animal]("entity":animaux) ? 
+   - Quels sont les frais supplémentaire pour voyager avec mon [animal](animaux) ? 
 
 - intent: faq/48
   examples: |
-   - Comment savoir si mon vol a été [modifié]("entity":modifier) ? 
+   - Comment savoir si mon vol a été [modifié](modifier) ? 
 
 - intent: faq/49
   examples: |
-   - Sous quel [format]("entity":format) vais-je recevoir mon billet ? 
+   - Sous quel [format](format) vais-je recevoir mon billet ? 
 
 - intent: faq/50
   examples: |
-   - Aura-t-on un [médecin]("entity":medecin) dans l'avion ? 
+   - Aura-t-on un [médecin](medecin) dans l'avion ? 
 
 - intent: faq/51
   examples: |
-   - Est-il possible d'avoir des plats différents en fonction de mes [allergies]("entity":allergies) ? 
+   - Est-il possible d'avoir des plats différents en fonction de mes [allergies](allergies) ? 
 
 - intent: faq/52
   examples: |
@@ -211,61 +211,65 @@ nlu:
 
 - intent: faq/53
   examples: |
-   - Combien coûte un [taxi]("entity":taxi) pour aller à l'aéroport ?
+   - Combien coûte un [taxi](taxi) pour aller à l'aéroport ?
 
 - intent: faq/54
   examples: |
-   - Quelles sont les [langues]("entity":langues) les plus parlées là-bas ?
+   - Quelles sont les [langues](langues) les plus parlées là-bas ?
 
 - intent: faq/55
   examples: |
-   - Quelles sont les [activités]("entity":activites) recommandées à Bali ?
+   - Quelles sont les [activités](activites) recommandées à Bali ?
 
 - intent: faq/56
   examples: |
-   - Est-ce qu'il y a des comportements à [éviter]("entity":eviter) ?
+   - Est-ce qu'il y a des comportements à [éviter](eviter) ?
 
 - intent: faq/57
   examples: |
-   - Quels types d'[hébergement atypiques]("entity":hebergement_atypiques) puis-je trouver sur place et louer ?
+   - Quels types d'[hébergement atypiques](hebergement_atypiques) puis-je trouver sur place et louer ?
 
 - intent: faq/58
   examples: |
-   - Quels sont les [plats]("entity":plats) typiques de Bali ?
+   - Quels sont les [plats](plats) typiques de Bali ?
 
 - intent: faq/59
   examples: |
-   - Est-ce qu''il faut réserver les [activités]("entity":activites) à l'avance ?
+   - Est-ce qu''il faut réserver les [activités](activites) à l'avance ?
 
 - intent: faq/60
   examples: |
-   - Puis-je amener mes [animaux]("entity":animaux) de compagnie dans les lieux culturels ?
+   - Puis-je amener mes [animaux](animaux) de compagnie dans les lieux culturels ?
 
 - intent: faq/61
   examples: |
-   - Quel est le budget moyen par [activité]("entity":activites) ?
+   - Quel est le budget moyen par [activité](activites) ?
 
 - intent: faq/62
   examples: |
-   - Quelles sont  les [activités]("entity":activites) proposées dans l'hôtel ?
+   - Quelles sont  les [activités](activites) proposées dans l'hôtel ?
 
 - intent: faq/63
   examples: |
-   - Les [repas]("entity":repas) sont-ils inclus dans le forfait de l'hôtel ?
+   - Les [repas](repas) sont-ils inclus dans le forfait de l'hôtel ?
 
 - intent: faq/64
   examples: |
-   - Quels sont les [endroits]("entity":endroits) incontournables de Bali ? 
+   - Quels sont les [endroits](endroits) incontournables de Bali ? 
 
 - intent: faq/65
   examples: |
-   - Quelles sont les évènements / fêtes [culturelles]("entity":culturelles) ?
+   - Quelles sont les évènements / fêtes [culturelles](culturelles) ?
 
 - intent: faq/66
   examples: |
-   - Faut-il un [permis]("entity":permis) pour louer un deux roues à Bali ?
+   - Faut-il un [permis](permis) pour louer un deux roues à Bali ?
 
 - intent: faq/67
   examples: |
-   - Il y a-t-il des lieux de [rencontres]("entity":rencontres) pour des étrangers ?
+   - Il y a-t-il des lieux de [rencontres](rencontres) pour des étrangers ?
+
+- intent: faq/68
+  examples: |
+   - Quels sont les [sports nautiques](sports_nautiques) populaires ?
 

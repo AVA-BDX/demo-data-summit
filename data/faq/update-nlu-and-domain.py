@@ -2,7 +2,6 @@
 #-*- coding: UTF-8 -*-
 
 import pandas as pd
-#import unicodedata
 path = r"data/data-base-source/QNA_for_bots.csv"
 data_base = pd.read_csv(path,  sep=";", encoding="latin3")
 with open("data/nlu/faq-nlu.yml", "wt", encoding="utf-8") as f:
@@ -34,3 +33,24 @@ with open("data/faq/faq-domain.yml", "wt", encoding="utf-8") as f:
             text = text.encode('utf8', 'ignore').decode().replace('\x92',"'").replace('\x9c','oe').replace('\x80','€')
             f.write(f"    - text: {text}\n")
         f.write("\n")
+
+import ruamel.yaml
+import yaml
+#combiner les deux fichiers faq-domain.yml et od-domain.yml en commun de manière automatique
+#ouverture des deux fichiers yml
+#importation de faq-domain.yml
+with open("data/domain/faq-domain.yml", 'rb') as stream:
+        faq_domain = yaml.load(stream)
+#importation de od-domain.yml
+with open("data/domain/od-domain.yml", 'rb') as stream:
+        od_domain = yaml.load(stream) 
+#generating the new domain.yml file
+domain_yaml = {'version': '2.0'}
+domain_yaml['intents'] = faq_domain['intents'] + od_domain['intents']
+domain_yaml['entities'] = faq_domain['entities'] 
+domain_yaml['responses'] = {**od_domain['responses'] , **faq_domain['responses']}
+domain_yaml['session_config'] = {'session_expiration_time': 60, 'carry_over_slots_to_new_session': False}
+with open("domain.yml", 'w') as stream:
+    ruamel.yaml.round_trip_dump(domain_yaml, stream, indent=4, block_seq_indent=2)
+
+
