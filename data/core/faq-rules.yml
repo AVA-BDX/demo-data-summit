@@ -25,3 +25,8 @@ rules:
   - action: utter_faq
   - intent: faq
   - action: utter_faq
+
+- rule: The chatbot says it does not understand when it doesn't understand
+  steps:
+  - intent: nlu_fallback
+  - action: utter_dont_understand

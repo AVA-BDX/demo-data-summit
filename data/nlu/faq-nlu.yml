@@ -1,275 +1,491 @@
-version: "2.0" 
-
+version: "2.0"
 nlu:
 - intent: faq/1
   examples: |
-   - Est-ce qu'il faut un [visa](visa) ?
-
+    - Est-ce qu'il faut un [visa](visa) ?
+    - Est-ce que j'ai besoin d'un [visa](visa) ?
+    - Quel est le [visa](visa)
+    - Est-ce qu’il faut un [visa](visa) ?
+    - Ai-je besoin d'un [visa](visa)
+    - [visa](visa)
+    - Est ce qu'il faut un [visa](visa)
+    - Dois je prendre un [visa](visa)
+    - un [visa](visa) est il obligatoire ?
 - intent: faq/2
   examples: |
-   - Est-ce qu'il faut un [passeport](passeport) ?
-
+    - Est-ce qu'il faut un [passeport](passeport) ?
+    - [passeport](passeport)
+    - Est ce qu'il faut un [passeport](passeport)
+    - Dois je prendre mon [passeport](passeport)
 - intent: faq/3
   examples: |
-   - Est-ce qu''un [test PCR](PCR) est obligatoire ?
-
+    - Est-ce qu''un [test PCR](PCR) est obligatoire ?
+    - il faut faire un [PCR](PCR) ?
+    - il faut faire un test [PCR](PCR) ?
 - intent: faq/4
   examples: |
-   - Est-ce qu'il y a des [vaccins](vaccins) obligatoires?
-
+    - Est-ce qu'il y a des [vaccins](vaccins) obligatoires?
+    - Les [vaccins](vaccins) sont il obligatoires ?
+    - dois-je faire un [vaccin](vaccins) ?
+    - Est-ce que je dois faire un [vaccin](vaccins)
+    - quels sont les [vaccins](vaccins) que je dois faire ?
+    - [vaccins](vaccins)
+    - [vaccins](vaccins) obligatoire
+    - [vaccins](vaccins) obligatoires
 - intent: faq/5
   examples: |
-   - Est- ce que je pourrais utiliser ma [carte de crédit](carte_credit) là-bas?
-
+    - Est- ce que je pourrais utiliser ma [carte de crédit](carte_credit) là-bas?
+    - Je peux utiliser ma [carte de crédit](carte_credit) sur place ?
+    - [carte de crédit](carte_credit)
+    - je peux payer par [carte bancaire](carte_credit)?
+    - carte bancaire 
+    - je peux utiliser ma carte bancaire  
 - intent: faq/6
   examples: |
-   - Le [retrait d'argent](retrait_argent) génère-t-il des frais supplémentaires ?
-
+    - Le [retrait d'argent](retrait_argent) génère-t-il des frais supplémentaires ?
+    - Est-ce que j'aurais des frais supplémentaires si j'effectue un [retrait](retrait_argent) ?
+    - Est-ce qu'l y a des frais supplémentaires liés aux [retraits](retrait_argent) d'argent ?
+    - [retrait d'argent](retrait_argent)
 - intent: faq/7
   examples: |
-   - Est-ce qu'il faut prévoir de l'[argent liquide](argent_liquide) ?
-
+    - Est-ce qu'il faut prévoir de l'[argent liquide](argent_liquide) ?
+    - y a t'il besoin d'[argent liquide](argent_liquide)?
+    - Dois je prendre de l'[argent liquide](argent_liquide)
+    - Est ce qu'il me faut de l'[argent liquide](argent_liquide)
+    - Dois-je prendre du [cash](argent_liquide)
 - intent: faq/8
   examples: |
-   - Est-ce que je peux annuler le [voyage](voyage) à tout moment? 
-
+    - Est-ce que je peux [annuler](annuler) le [voyage](voyage) à tout moment?
+    - Est il possible d'[annuler](annuler) mon [voyage](voyage) quand je le souhaite
+    - Est il possible d'[annuler](annuler) mon [voyage](voyage) ?
+    - Est-ce que je peux [annuler](annuler) mon [voyage](voyage) quand je le souhaite ?
+    - [Annuler](annuler) mon [voyage](voyage)
 - intent: faq/9
   examples: |
-   - Quelle est la [monnaie](monnaie) à Bali ?
-
+    - Quelle est la [monnaie](monnaie) à Bali ?
+    - Ils utilisent quoi comme [monnaie](monnaie) ?
+    - [monnaie](monnaie) de Bali
+    - Quel est la [monnaie](monnaie) de Bali
 - intent: faq/10
   examples: |
-   - Quel est le mode de [remboursement](remboursement) en cas d'annulation du voyage ?
-
+    - Quel est le mode de [remboursement](remboursement) en cas d'[annulation](annuler) du voyage ?
+    - Comment je serais [remboursé](remboursement) ?
+    - Comment être [remboursée](remboursement) en cas d'[annulation](annuler) de mon [voyage](voyage) ?
+    - si j'annule mon voyage, quel est le mode de [remboursement](remboursement) ?
+    - remboursement voyage
 - intent: faq/11
   examples: |
-   - Quelles sont les préconisations [sanitaires](sanitaires) ?
-
+    - Quelles sont les [préconisations](preconisation) [sanitaires](sanitaires) ?
+    - Est-ce qu'il y a des précautions [sanitaires](sanitaires) ?
+    - Est-ce qu'il y a des consignes [sanitaires](sanitaires)  ?
+    - [préco](preconisation) sanitaires
+    - reglementation [sanitaire](sanitaires)
 - intent: faq/12
   examples: |
-   - Comment modifier ma [réservation](reservation) ? 
-
+    - Comment [modifier](modifier) ma [réservation](reservation) ?
+    - je veux [modifier](modifier) une réservation
+    - [Modif](modifier) ma [réservation](reservation)
+    - Modifier ma réservation
 - intent: faq/13
   examples: |
-   - Comment annuler ma [réservation](reservation) ? 
-
+    - Comment [annuler](annuler) ma [réservation](reservation) ?
+    - Je fais comment pour [annuler](annuler) une [réservation](reservation) ?
+    - Annuler ma réservation
 - intent: faq/14
   examples: |
-   - Est-ce que l'[assurance](assurance) voyage est obligatoire ?
-
+    - Est-ce que l'[assurance](assurance) voyage est obligatoire ?
+    - me faudra t'il une [assurance](assurance) voyage ?
+    - Suis-je obligé d'avoir une [assurance](assurance) [voyage](voyage)
+    - dois-je prendre une assurance [voyage](voyage) ?
+    - [assurance](assurance) voyage obligatoire
 - intent: faq/15
   examples: |
-   - Est-ce qu'il y a un équivalent de [carte européenne](carte_européenne) d'assurance maladie à l'étranger ?
-
+    - Est-ce qu'il y a un équivalent de [carte européenne](carte_européenne) d'assurance maladie à l'étranger ?
+    - ont t -il des [carte européenne](carte_européenne) là bas ?
+    - [Assurance maladie](carte_européenne)
 - intent: faq/16
   examples: |
-   - Où est-ce que je peux trouver une [assurance](assurance) voyage?
-
+    - Où est-ce que je peux trouver une [assurance](assurance) voyage?
+    - Je veux une [assurance](assurance) [voyage](voyage)
+    - Comment trouver une assurance voyage ?
+    - assurance voyage
+    - Ou trouver une sassurance [voyage](voyage)
 - intent: faq/17
   examples: |
-   - Quelle est la meilleure [assurance](assurance) voyage ?
-
+    - Quelle est la meilleure [assurance](assurance) voyage ?
+    - Et du coup quelle est la meilleure [assurance](assurance) ?
+    - Quelle est la meilleure assurance [voyage](voyage)
 - intent: faq/18
   examples: |
-   - Quels sont les [hôtels](hotels) recommandés ?
-
+    - Quels sont les [hôtels](hotels) recommandés ?
+    - Quels hôtels est-ce que vous me [recommandez](recommander) ?
+    - Tu me [recommandes](recommander) quel [hôtel](hotels) ?
+    - quel  hôtel est le plus [populaire](recommander) ?
+    - quels sont les bons [hôtels](hotels) ?
 - intent: faq/19
   examples: |
-   - Quels sont les [moyens de paiement](moyen_paiement) pour régler mon voyage ? 
-
+    - Quels sont les [moyens de paiement](moyen_paiement) pour régler mon voyage ?
+    - Comment est-ce que je peux [payer](moyen_paiement)  mon billet?
+    - pour mon voyage, quels sont les moyens de [moyens de paiement](moyen_paiement) ?
 - intent: faq/20
   examples: |
-   - Est-ce qu'il y a des [voyages organisé](voyages_organise)s ?
-
+    - Est-ce qu'il y a des [voyages organisés](voyages_organise) ?
+    - Comment trouver des [voyages organisés](voyages_organise) ?
+    - Comment trouver des [voyages organisés](voyages_organise) ?
+    - je cherche des voyages organisés
 - intent: faq/21
   examples: |
-   - Est-il possible de réserver un [guide touristique](guide_touristique) sur place ?
-
+    - Est-il possible de réserver un [guide touristique](guide_touristique) sur place ?
+    - sur place je voudrais un [guide touristique](guide_touristique)
+    - Comment avoir un [guide touristique](guide_touristique) sur place ?
 - intent: faq/22
   examples: |
-   - Est-il recommandé d'effectuer un [change](change) de monnaie avant le voyage ? 
-
+    - Est-il [recommandé](recommander) d'effectuer un [change](change) de monnaie avant le voyage ?
+    - Est-ce que je dois [changer](change) ma monnaie avant mon [voyage](voyage) ?
+    - Est-ce que je dois faire un change de [monnaie](monnaie) avant ?
+    - dois-je faire [échanger](change) la [monnaies](monnaie) avant de [voyager](voyage) ?
 - intent: faq/23
   examples: |
-   - Comment faire pour avoir un hôtel avec une connexion [internet](internet) (wifi) ? 
-
+    - Comment faire pour avoir un [hôtel](hotels) avec une connexion [internet](internet) (wifi) ?
+    - Je veux une connexion [internet](internet) dans mon [hôtel](hotels)
+    - Est-ce que je peux avoir une connexion [internet](internet) dans mon hôtel?
+    - Je veux une connexion wi-fi dans mon hôtel
+    - Est-il possible d'avoir une connexion [internet](internet) dans mon hôtel ?
+    - Y a t'il de la [wifi](internet) ?
+    - est-ce que les [hôtels](hotels) on la [wifi](internet)  ?
+    - est ce qu'il y a [internet](internet) dans les hôtels ?
 - intent: faq/24
   examples: |
-   - Est-ce qu'il y a la [4G](quatre_G) à Bali ? 
-
+    - Est-ce qu'il y a la [4G](quatre_G) à Bali ?
+    - Est-ce qu'il y a la [4g](quatre_G) sur place ?
+    - La [4G](quatre_G) est disponible à Bali ?
+    - La [4G](quatre_G) existe ?
 - intent: faq/25
   examples: |
-   - Est-ce qu'il y a des [forfaits téléphoniques](forfaits_téléphonique) à Bali ?
-
+    - Est-ce qu'il y a des [forfaits téléphoniques](forfaits_téléphonique) à Bali ?
+    - Comment avoir un [forfait de téléphone](forfaits_téléphonique) local ?
+    - Est-ce que des forfaits téléphoniques existent à Bali ?
+    - Est-ce qu'il y a des [forfait téléphoniques](forfaits_téléphonique)?
+    - comment faire pour [téléphoner](forfaits_téléphonique) a bali   ?
+    - comment je fais pour les [forfaits téléphoniques](forfaits_téléphonique)?
+    - Il y a des [forfaits téléphoniques](forfaits_téléphonique) à  bali ?
 - intent: faq/26
   examples: |
-   - Combien coûte une semaine de [séjour](sejour) en moyenne sur place ?
-
+    - Combien [coûte](prix) une semaine de [séjour](sejour) en moyenne sur place ?
+    - Quel [budget](prix) pour un séjour d'une semaine à Bali ?
+    - Quel budget pour une semaine à Bali ?
+    - Quel est le [budget](prix) pour une semaine à Bali ?
+    - un séjour d'une durée de 1 semaine me [coutera](prix) combien ?
+    - Combien [coûte](prix) une séjour d'une semaine à Bali ?
+    - cela coute combien un [séjour](sejour) en moyenne  ?
+    - Quel est le [prix](prix) moyen d'un [séjour](sejour) a bali   ?
+    - une semaine de [séjour](sejour) coûte combien ?
 - intent: faq/27
   examples: |
-   - Quel est le [décalage](decalage) horaire ?
-
+    - Quel est le [décalage](decalage) horaire ?
+    - Il y a combien d'heure de [décalage horraire](decalage) entre Paris et Bali ?
+    - Combien il y a d'heures de décalage entre Paris et Bali ?
+    - Combien de décalage horaire entre Paris et Bali ?
+    - Est-ce qu'il y a des heures de  [décalage](decalage)
+    - Est-ce qu'il y a un décalage horaire
+    - on a combien d'heures de décalage horaire ?
+    - [décalage horaire](decalage) ?
 - intent: faq/28
   examples: |
-   - Je voudrais une [liste d'hôtels](liste_hotels)
-
+    - Je voudrais une [liste d'hôtels](liste_hotels)
+    - Est-ce que je peux avoir une [listes de hôtels](liste_hotels) disponibles à Bali ?
+    - Avez-vous une [liste d'hôtels](liste_hotels)?
+    - ou [trouver  un hôtel](liste_hotels)  ?
+    - y a t'il des [liste d'hôtel](liste_hotels)  ?
 - intent: faq/29
   examples: |
-   - Les [animaux](animaux) sont-ils autorisés dans les hôtels ? 
-
+    - Les [animaux](animaux) sont-ils [autorisés](interdit) dans les hôtels ?
+    - Est-ce que les animaux sont [autorisés](interdit) dans mon hôtel ?
+    - Est-ce que je peux amener mon [animal](animaux) à l'hôtel ?
+    - Est-ce que je peux emmener mon [lapin](animaux) dans l'hôtel ?
+    - `Puis-je amener  mon [animal de compagnie](animaux) à l'[hôtel](hotels) ?
+    - je peux emmener des [animaux](animaux) dans l'hôtel ,
+    - est ce que je peux prendre des [animaux](animaux) dans l'hôtel ?
 - intent: faq/30
   examples: |
-   - Que faut-il faire pour [prolonger](prolonger) mon séjour sur place? 
-
+    - Que faut-il faire pour [prolonger](prolonger) mon [séjour](sejour) sur place?
+    - je veux [prolonger](prolonger) mon [séjour](sejour)
+    - comment puis-je [prolonger](prolonger) mon [séjour](sejour) ?
+    - Je veux prolonger mon [séjour](sejour)
 - intent: faq/31
   examples: |
-   - Quelle est la personne à contacter en cas de [problème](probleme) durant mon séjour ? 
-
+    - Quelle est la personne à [contacter](contacter) en cas de [problème](probleme) durant mon séjour ?
+    - qui dois je [contacter](contacter)  si j'ai un [probleme](probleme)
+    - Qui contacter si j'ai un [problème](probleme)
+    - Je dois contacter qui si j'ai des [problèmes](probleme) ?
 - intent: faq/32
   examples: |
-   - Quels médicaments puis-je prendre sans [ordonnance](ordonnance) à Bali ?
-
+    - Quels [médicaments](medicament) puis-je prendre sans [ordonnance](ordonnance) à Bali ?
+    - Quels médicaments prendre
+    - est-ce que je peux prendre des [médicaments](medicament) avec moi ?
+    - Il y a t il des médicaments que je peux prendre sans [ordonnance](ordonnance) ?
 - intent: faq/33
   examples: |
-   - Quelle est la [saison](saison) en Juin ?
-
+    - Quelle est la [saison](saison) en Juin ?
+    - c'est quoi la [saison](saison) ?
+    - Quelle est la [météo](saison)
+    - c'est quoi la saison là bas ?
 - intent: faq/34
   examples: |
-   - Quels objets peuvent être [utiles](utile) là-bas ?
-
+    - Quels objets peuvent être [utiles](utile) là-bas ?
+    - [objets utiles](utile) ?
+    - Y a t'il des objets utiles a prendre  ?
+    - Qu'est ce qui est [utile](utile) la bas  ?
+    - quels objets peuvent m'être utiles ?
 - intent: faq/35
   examples: |
-   - Quels objets sont [interdits](interdit) dans l'avion ?
-
+    - Quels objets sont [interdits](interdit) dans l'avion ?
+    - Objets [interdits](interdit)
+    - [interdits](interdit)
+    - Quels sont les objets [interdits](interdit)
+    - [Pas autorisé](interdit) dans l'avion
+    - Qu'est ce qui n'est [pas autorisé](interdit) dans l'avion
+    - est ce qu'il y a des objets [interdits](interdit) durant le vol ?
 - intent: faq/36
   examples: |
-   - Quelles sont les [dimensions](dimensions) maximales d'un bagage dans l'avion ?
-
+    - Quelles sont les [dimensions](dimensions) maximales d'un bagage dans l'avion ?
+    - c'est quoi les [dimensions](dimensions) maximales dans la soute ?
+    - [dimensions](dimensions) valise avion
+    - [dimension](dimensions) valises dans l'avion
+    - Quelle est la [dimensions](dimensions) maximale de ma valise
+    - c'est quoi la [taille](dimensions) maximal d'un bagage ?
 - intent: faq/37
   examples: |
-   - Quel est le [poids](poids) maximum de mon bagage dans l'avion ?
-
+    - Quel est le [poids](poids) maximum de mon bagage dans l'avion ?
+    - [Poids](poids) max avion
+    - Quel est le [poids](poids) maximum de ma valise ?
+    - c'est quoi le [poids](poids) maximal  d'un bagage  ?
+    - je veux le [poids](poids) maximum d'un bagage
 - intent: faq/38
   examples: |
-   - Quel est le prix d'un [bagage supplémentaire](bagage_sup) en soute ?
-
+    - Quel est le prix d'un [bagage supplémentaire](bagage_sup) en soute ?
+    - si j'ai un [bagage supplémentaire](bagage_sup), je paye combien ?
+    - Supplément [bagage supplémentaire](bagage_sup) ?
+    - est-ce qu'il y a un supplément pour les [bagages supplémentaires](bagage_sup)  ?
+    - y a t'il des frais pour un [bagage supplémentaire](bagage_sup) ?
 - intent: faq/39
   examples: |
-   - Dois-je prendre de l'[anti-moustique](anti_moustique) ?
-
+    - Dois-je prendre de l'[anti-moustique](anti_moustique) ?
+    - Je dois penser à de l'[anti-moustique](anti_moustique) ?
+    - est-ce qu'il y a des [moustiques](anti_moustique)  ?
 - intent: faq/40
   examples: |
-   - Comment faire pour trouver des [billets d'avion](billet_avion) ?
-
+    - Comment faire pour trouver des [billets d'avion](billet_avion) ?
+    - [billets d'avion](billet_avion), je trouve où ?
+    - Je veux trouver un [billet d'avion](billet_avion)
 - intent: faq/41
   examples: |
-   - Quel est le prix moyen du [billet aller-retour](billet_aller_retour) France-Bali ?
-
+    - Quel est le prix moyen du [billet aller-retour](billet_aller_retour) France-Bali ?
+    - [billet aller-retour](billet_aller_retour) c'est combien ?
+    - [Prix d'un aller-retour](billet_aller_retour) Paris-Bali
 - intent: faq/42
   examples: |
-   - Est-ce qu'il y a des [vols directs](vol_direct) ?
-
+    - Est-ce qu'il y a des [vols directs](vol_direct) ?
+    - Des [vols directs](vol_direct) existent entre Paris et Bali ?
+    - je veux un [vol direct](vol_direct)
+    - est-il possible d'avoir un [vol directe](vol_direct) ?
 - intent: faq/43
   examples: |
-   - Quelle [compagnie aérienne](compagnie_aerienne) est recommandée ?
-
+    - Quelle [compagnie aérienne](compagnie_aerienne) est recommandée ?
+    - Vous me recommandez une [compagnie aérienne](compagnie_aerienne) ?
+    - quelle est la meilleure [compagnie aérienne](compagnie_aerienne) ?
+    - j'aimerais une [compagnie aérienne](compagnie_aerienne)
 - intent: faq/44
   examples: |
-   - A quelle heure je dois me présenter à l'[aéroport](aeroport) pour avoir mon vol ?
-
+    - A quelle [heure](heure_arrivee) je dois me présenter à l'[aéroport](aeroport) pour avoir mon vol ?
+    - [Combien de temps](heure_arrivee) à l'avance dois'je arriver ?
+    - Combien de [temps à l'avance](heure_arrivee) dois-je arriver ?
+    - Combien de [temps](heure_arrivee) à l'avance [dois-je arriver](heure_arrivee) à l'[aéroport](aeroport) ?
 - intent: faq/45
   examples: |
-   - Comment être [indemnisé](indemniser) si mon bagage a été perdu ou endommagé pendant le trajet en avion ?
-
+    - Comment être [indemnisé](indemniser) si mon [bagage a été perdu](bagage_perdu) ou endommagé pendant le trajet en avion ?
+    - si mon [bagage est perdu](bagage_perdu) est ce que je suis [indemnisé](indemniser) ?
+    - comment je suis indemnisé si mon bagage est perdu ou aucours du trajet ?
+    - Que faire si j'ai [perdu mon bagage](bagage_perdu)
+    - Mon [bagage a été volé](bagage_perdu), comment dois-je faire pour me le faire [rembourser](indemniser) ?
+    - Mon bagage a été volé, comment dois-je faire pour me faire indemniser ?
 - intent: faq/46
   examples: |
-   - Puis-je voyager en avion avec mes [animaux](animaux) ? 
-
+    - Puis-je [voyager](voyage) en avion avec mes [animaux](animaux) ?
+    - est ce que je peux voyager avec des animaux ?
+    - Je voudrais [emmener](voyage) mon animal
+    - JE veux voyager avec mon [animal](animaux)
+    - Est-ce que je peux voyager avec mon animal ?
+    - Mon animal peut il [venir avec moi](voyage) dans l'avion ?
+    - puis je prendre mon animal en avion ?
 - intent: faq/47
   examples: |
-   - Quels sont les frais supplémentaire pour voyager avec mon [animal](animaux) ? 
-
+    - Quels sont les [frais supplémentaire](frais_supp) pour voyager avec mon [animal](animaux) ?
+    - Si je voyage avec mon animal, quels sont les [frais supplémentaires](frais_supp) ?
+    - Combien ça [coûte](frais_supp) pour voyager avec un [animal](animaux) ?
+    - est-ce qu'il y a des frais supplémentaire pour prendre mon animal  dans l'avion  ?
 - intent: faq/48
   examples: |
-   - Comment savoir si mon vol a été [modifié](modifier) ? 
-
+    - Comment savoir si mon vol a été [modifié](modifier) ?
+    - je fais comment pour savoir si mon [vol a été modifié](modifier) ?
+    - si on [modifie mon vol](modifier) je fais comment pour savoir ?
+    - Mon vol est modifié
+    - Est-ce que mon vol a été modifié ?
 - intent: faq/49
   examples: |
-   - Sous quel [format](format) vais-je recevoir mon billet ? 
-
+    - Sous quel [format](format) vais-je recevoir mon billet ?
+    - mon billet d'avion sera sous quel [format](format) ?
+    - format de mon billet
+    - Comment vais je recevoir mon billet ?
+    - Sous quel [format](format) est mon billet ?
 - intent: faq/50
   examples: |
-   - Aura-t-on un [médecin](medecin) dans l'avion ? 
-
+    - Aura-t-on un [médecin](medecin) dans l'avion ?
+    - est ce qu'il y a un médecin dans l'avion ?
+    - [medecin](medecin) avion
+    - [Medecin](medecin) avion
+    - Y a t-il un médecin dans l'avion ?
 - intent: faq/51
   examples: |
-   - Est-il possible d'avoir des plats différents en fonction de mes [allergies](allergies) ? 
-
+    - Est-il possible d'avoir des plats différents en fonction de mes [allergies](allergies) ?
+    - Si j'ai des [allergies](allergies), puis-je bénéficier de plats différents ?
+    - il y a t-il des [plats différents](allergies) en fonction de mes allergies ?
+    - Puis je avoir un plat différents si je suis [allergique](allergies) ?
+    - [allergies](allergies)
+    - [Allergie](allergies)
+    - [Plats différentes](allergies) alergies
+    - Puis je avoir un plat différentes si je suis allergique
+    - [Je fais des allergies](allergies), est-ce que je peux avoir des plats en adaptés ?
 - intent: faq/52
   examples: |
-   - Comment va-t-on de l'aéroport à l'hôtel ?
-
+    - Comment va-t-on de l'[aéroport à l'hôtel](aeroport_hotel) ?
+    - [Trajet aéroport hotel](aeroport_hotel)
+    - [Aller de l'aéroport à l'hotel](aeroport_hotel) ?
+    - Je veux aller de l'aéroport à l'hôtel
+    - Je veux aller de [l'hôtel à l'aéroport](aeroport_hotel)
 - intent: faq/53
   examples: |
-   - Combien coûte un [taxi](taxi) pour aller à l'aéroport ?
-
+    - Combien coûte un [taxi](taxi) pour aller à l'aéroport ?
+    - Le [prix d'un taxi](taxi) pour aller à l'aéroport coûte combien ?
+    - [Taxi](taxi)
+    - Prix [taxi](taxi)
+    - [prix taxi](taxi) jusqu'à l'aéroport
 - intent: faq/54
   examples: |
-   - Quelles sont les [langues](langues) les plus parlées là-bas ?
-
+    - Quelles sont les [langues](langues) les plus parlées là-bas ?
+    - quelles sont les [langues les plus parlées](langues) à Bali ?
+    - c'est quoi les langues les plus parlées à Bali ?
+    - [langues populaires](langues)
+    - Quelles sont les [langues](langues) de Bali
+    - Langue populaire à Bali
+    - [Langues courantes](langues) à Bali
 - intent: faq/55
   examples: |
-   - Quelles sont les [activités](activites) recommandées à Bali ?
-
+    - Quelles sont les [activités](activites) recommandées à Bali ?
+    - C'est quoi les activités recommandées  à Bali ?
+    - [Activités](activites) à Bali
+    - [activités](activites) recommandés
+    - [Activités](activites) recommandés
+    - [Sports](activites) à Bali
+    - Quels activités me recommandez-vous ?
 - intent: faq/56
   examples: |
-   - Est-ce qu'il y a des comportements à [éviter](eviter) ?
-
+    - Est-ce qu'il y a des [comportements](comportement) à [éviter](eviter) ?
+    - Quels [comportements](comportement) faut-il éviter ?
+    - Il y a des comportements à [éviter](eviter)  à Bali ?
+    - [comportements](comportement)
+    - [comportement](comportement)
+    - [Comportements](comportement) à éviter
+    - Que dois-je [éviter de faire](comportement)
+    - [Quels comportements](comportement) dois-je éviter de faire ?
 - intent: faq/57
   examples: |
-   - Quels types d'[hébergement atypiques](hebergement_atypiques) puis-je trouver sur place et louer ?
-
+    - Quels types d'[hébergement atypiques](hebergement_atypiques) puis-je trouver sur place et louer ?
+    - Il y a t il des [hébergement atypiques](hebergement_atypiques) à Bali ?
+    - Je voudrais un [hébergement atypique](hebergement_atypiques)
+    - hébergement atypique
+    - Quels sont les hébergements atypiques à Bali ?
 - intent: faq/58
   examples: |
-   - Quels sont les [plats](plats) typiques de Bali ?
-
+    - Quels sont les [plats](plats) typiques de Bali ?
+    - C'est quoi les [plats typiques](plats) typiques là bas ?
+    - quels sont les [plats](plats) ?
+    - Quels sont les plats ?
+    - [spécialité culinaires](plats)
+    - Y a t-il des plats typiques à Bali ?
 - intent: faq/59
   examples: |
-   - Est-ce qu''il faut réserver les [activités](activites) à l'avance ?
-
+    - Est-ce qu''il faut [réserver les activités](reserver_act) à l'avance ?
+    - Puis-je [réserver les activités](reserver_act) ?
+    - Réserver les activités
+    - [Reserver les activites](reserver_act)
+    - réserver les activité
+    - Dois-je [réserver mes activités](reserver_act) à l'avance ?
 - intent: faq/60
   examples: |
-   - Puis-je amener mes [animaux](animaux) de compagnie dans les lieux culturels ?
-
+    - Puis-je amener mes [animaux](animaux) de compagnie dans les [lieux culturels](lieux_cult) ?
+    - amener mes animaux dans les [temples](lieux_cult)
+    - Est-ce que je peux amener mon animal dans un [lieu de culture](lieux_cult) ?
 - intent: faq/61
   examples: |
-   - Quel est le budget moyen par [activité](activites) ?
-
+    - Quel est le [budget moyen par activité](prix_act) ?
+    - Quel est le [budget pour les activités](prix_act) ?
+    - [Prix activité](prix_act)
+    - [budget activité](prix_act)
+    - [Prix moyen d'une activité](prix_act)
+    - Quel est le [prix moyen des activités](prix_act) ?
 - intent: faq/62
   examples: |
-   - Quelles sont  les [activités](activites) proposées dans l'hôtel ?
-
+    - Quelles sont  les [activités](activites) proposées dans l'hôtel ?
+    - [activité à l'hotel](act_hotel)
+    - [activité hotel](act_hotel)
+    - [Service hotel](act_hotel)
+    - Quels sont les [activités de mon hôtel](act_hotel) ?
 - intent: faq/63
   examples: |
-   - Les [repas](repas) sont-ils inclus dans le forfait de l'hôtel ?
-
+    - Les [repas](repas) sont-ils inclus dans le forfait de l'hôtel ?
+    - Est-ce que les repas sont inclus ?
+    - [repas inclus](repas)
+    - [repas hotel](repas)
+    - Est-ce qu'il y a des [repas dans mon forfait](repas) ?
 - intent: faq/64
   examples: |
-   - Quels sont les [endroits](endroits) incontournables de Bali ? 
-
+    - Quels sont les [endroits](endroits) incontournables de Bali ?
+    - [Endroits](endroits) à visiter ?
+    - endroits Bali
+    - [lieux incontournables](endroits)
+    - [lieux à visiter](endroits)
+    - Endroit à ne pas rater
+    - Quels sont les [endroits à ne pas rater](endroits)
+    - Y a t-il des [endroits immanquables](endroits) à Bali ?
 - intent: faq/65
   examples: |
-   - Quelles sont les évènements / fêtes [culturelles](culturelles) ?
-
+    - Quelles sont les [évènements](eve_fete) / [fêtes](eve_fete) [culturelles](culturelles) ?
+    - fêtes [culturelles](culturelles) 
+    - [évenements](eve_fete) à Bali
+    - [evenement](eve_fete) et fetes de Bali
+    - evenement Bali
+    - Est-ce qu'il y a des [évènements](eve_fete) en ce moment ?
 - intent: faq/66
   examples: |
-   - Faut-il un [permis](permis) pour louer un deux roues à Bali ?
-
+    - Faut-il un [permis](permis) pour louer un deux roues à Bali ?
+    - Faut-il un permis pour les sccoter s?
+    - Faut-il un [permis pour les scooter](permis) ?
+    - [louer scooter](permis)
+    - louer moto
+    - conduite une [moto](permis)
+    - Est-ce que j'ai besoin d'un permis spécifique pour [louer une moto](permis) ?
 - intent: faq/67
   examples: |
-   - Il y a-t-il des lieux de [rencontres](rencontres) pour des étrangers ?
-
+    - Il y a-t-il des lieux de [rencontres](rencontres) pour des étrangers ?
+    - [Rencontrer](rencontres) des étrangers
+    - [Voir des étrangers](rencontres)
+    - Je veux faire [des rencontres](rencontres) avec d'autres étrangers
 - intent: faq/68
   examples: |
-   - Quels sont les [sports nautiques](sports_nautiques) populaires ?
-
+    - Quels sont les [sports nautiques](sports_nautiques) populaires ?
+    - Je voudrais faire des [sports nautiques](sports_nautiques)
+    - [sports nautique](sports_nautiques)
+    - [sports nautiques](sports_nautiques)
+    - Sports nautiques à Bali
+    - Dites mois quels sont les [sports nautiques](sports_nautiques) populaires

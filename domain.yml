@@ -1,73 +1,86 @@
 version: '2.0'
 intents:
-  - faq
-  - greet
-  - goodbye
-  - affirm
-  - deny
-  - mood_great
-  - mood_unhappy
-  - bot_challenge
+- faq
+- greet
+- goodbye
+- affirm
+- deny
+- bot_challenge
 entities:
-  - PCR
-  - activites
-  - aeroport
-  - aeroport_hotel
-  - allergies
-  - animaux
-  - anti_moustique
-  - argent_liquide
-  - assurance
-  - bagage_sup
-  - billet_aller_retour
-  - billet_avion
-  - carte_credit
-  - carte_européenne
-  - change
-  - compagnie_aerienne
-  - culturelles
-  - decalage
-  - dimensions
-  - endroits
-  - eviter
-  - forfaits_téléphonique
-  - format
-  - guide_touristique
-  - hebergement_atypiques
-  - hotels
-  - indemniser
-  - interdit
-  - internet
-  - langues
-  - liste_hotels
-  - medecin
-  - modifier
-  - monnaie
-  - moyen_paiement
-  - ordonnance
-  - passeport
-  - permis
-  - plats
-  - poids
-  - probleme
-  - prolonger
-  - quatre_G
-  - remboursement
-  - rencontres
-  - repas
-  - reservation
-  - retrait_argent
-  - saison
-  - sanitaires
-  - sejour
-  - sports_nautiques
-  - taxi
-  - utile
-  - vaccins
-  - visa
-  - vol_direct
-  - voyage
-  - voyages_organise
+- PCR
+- activites
+- aeroport
+- aeroport_hotel
+- allergies
+- animaux
+- anti_moustique
+- argent_liquide
+- assurance
+- bagage_sup
+- billet_aller_retour
+- billet_avion
+- carte_credit
+- carte_européenne
+- change
+- compagnie_aerienne
+- culturelles
+- decalage
+- dimensions
+- endroits
+- eviter
+- forfaits_téléphonique
+- format
+- guide_touristique
+- hebergement_atypiques
+- hotels
+- indemniser
+- interdit
+- internet
+- langues
+- liste_hotels
+- medecin
+- modifier
+- monnaie
+- moyen_paiement
+- ordonnance
+- passeport
+- permis
+- plats
+- poids
+- probleme
+- prolonger
+- quatre_G
+- remboursement
+- rencontres
+- repas
+- reservation
+- retrait_argent
+- saison
+- sanitaires
+- sejour
+- sports_nautiques
+- taxi
+- utile
+- vaccins
+- visa
+- vol_direct
+- voyage
+- voyages_organise
+- preconisation
+- recommander
+- comportement
+- prix
+- contacter
+- frais_supp
+- act_hotel
+- heure_arrivee
+- lieux_cult
+- annuler
+- reserver_act
+- prix_act
+- eve_fete
+- medicament
+- bagage_perdu
 responses:
     utter_greet:
       - text: salut comment vas-tu ?
