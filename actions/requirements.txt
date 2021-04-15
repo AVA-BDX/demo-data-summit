@@ -1,0 +1,3 @@
+pytablewriter
+pandas
+numpy==1.18.5
