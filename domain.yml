@@ -94,15 +94,15 @@ responses:
       - text: cela vous a-t-il aidé ?
         buttons:
         - title: "1"
-        payload: /1
+          payload: /1
         - title: "2"
-        payload: /2
+          payload: /2
         - title: "3"
-        payload: /3
+          payload: /3
         - title: "4"
-        payload: /4
+          payload: /4
         - title: "5"
-        payload: /5
+          payload: /5
     utter_super:
       - text: Top
       - text: ravis de l'apprendre
