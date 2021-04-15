@@ -461,8 +461,8 @@ responses:
             Vous pouvez également découvrir de nouvelles sensations avec le fly board!
 
 
-# actions:
-#   - action_session_start
+actions:
+  - action_session_start
 
   
 session_config:

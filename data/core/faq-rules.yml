@@ -34,4 +34,4 @@ rules:
   conversation_start: false
   steps:
   - action: action_session_start
-  - action: action_restart
+  - action: utter_restart
