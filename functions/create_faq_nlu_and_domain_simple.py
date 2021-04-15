@@ -2,7 +2,7 @@
 #-*- coding: UTF-8 -*-
 
 import pandas as pd
-path = r"data/data-base-source/QNA_for_bots.csv"
+path = r"data/qna_data_bases/QNA_for_bots.csv"
 data_base = pd.read_csv(path,  sep=";", encoding="latin3")
 with open("data/nlu/faq-nlu.yml", "wt", encoding="utf-8") as f:
     f.write('version: "2.0" \n')

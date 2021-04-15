@@ -3,7 +3,7 @@
 
 import pandas as pd
 #import unicodedata
-path = r"data/data-base-source/QNA_for_bots_entites.csv"
+path = r"data/qna_data_bases/QNA_for_bots_entites.csv"
 data_base = pd.read_csv(path,  sep=";", encoding="latin3")
 with open("data/nlu/faq-nlu.yml", "wt", encoding="utf-8") as f:
     f.write('version: "2.0" \n')

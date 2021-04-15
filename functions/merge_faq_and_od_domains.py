@@ -18,6 +18,6 @@ domain_yaml['entities'] = faq_domain['entities']
 domain_yaml['responses'] = {**od_domain['responses'] , **faq_domain['responses']}
 domain_yaml['session_config'] = {'session_expiration_time': 60, 'carry_over_slots_to_new_session': False}
 with open("domain.yml", 'w') as stream:
-    ruamel.yaml.round_trip_dump(domain_yaml, stream, indent=2, block_seq_indent=0)
+    ruamel.yaml.round_trip_dump(domain_yaml, stream, indent=4, block_seq_indent=2)
 
 
