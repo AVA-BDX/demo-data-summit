@@ -82,9 +82,20 @@ entities:
   - medicament
   - bagage_perdu
 
+slots:
+  user_ongoin_message:
+    type: any
+  time_user_question:
+    type: any
+  bot_ongoin_message:
+    type: any
+  time_bot_answer:
+    type: any
+  note:
+    type: any
+
+
 responses:
-    utter_restart:
-      - text: C'est quoi ton email ?
     utter_greet:
       - text: salut comment vas-tu ?
       - text: Bonjour ça va ?
@@ -92,19 +103,20 @@ responses:
       - text: Au revoir
     utter_iamabot:
       - text: Je suis un bot créé grâce à Rasa par Talan
-    utter_did_that_help:
-      - text: cela vous a-t-il aidé ?
+    utter_ask_note:
+      - text: "cela vous a-t-il aidé ? 
+          \n donnez une note entre 1 et 5 pour exprimer votre satisfaction"
         buttons:
         - title: "1"
-          payload: /one
+          payload: "1"
         - title: "2"
-          payload: /two
+          payload: "2"
         - title: "3"
-          payload: /three
+          payload: "3"
         - title: "4"
-          payload: /four
+          payload: "4"
         - title: "5"
-          payload: /five
+          payload: "5"
     utter_super:
       - text: Top
       - text: ravis de l'apprendre
@@ -462,7 +474,20 @@ responses:
 
 
 actions:
-  - action_session_start
+  - action_user_last_message
+  - action_bot_last_message
+  - action_record_the_user_note
+  - validate_note_asking_form
+  - user_note_to_none
+
+forms:
+  note_asking_form:
+    note:
+      - type: from_text
+        intent: number
+        not_intent:
+          - faq
+          - deny
 
   
 session_config:

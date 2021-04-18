@@ -1,37 +1,54 @@
 version: "2.0"
 
 rules:
-- rule: after each response to faq ask if uttered well
+- rule: start note_asking_form ans store times for both user question and bot answer
   steps:
   - intent: faq
+  - action: user_note_to_none
+  - action: action_user_last_message
   - action: utter_faq
-  - action: utter_did_that_help
+  - action: action_bot_last_message
+  - action: note_asking_form
+  - active_loop: note_asking_form
 
-- rule: response great whenever the user agree to the fact that the anwser satisties his request
+- rule: go back to another faq when the user ask so
+  condition:
+  - active_loop: note_asking_form
   steps:
-  - action: utter_did_that_help
+  - intent: faq
+  - action: user_note_to_none
+  - action: action_user_last_message
+  - action: utter_faq
+  - action: action_bot_last_message
+  - action: note_asking_form
+  - active_loop: note_asking_form
+
+- rule: Example of an unhappy path
+  condition:
+  - active_loop: note_asking_form
+  steps:
+  # This unhappy path handles the case of an intent `affirm`.
   - intent: affirm
   - action: utter_super
+  # Return to form after handling the `affirm` intent
+  - action: note_asking_form
+  - active_loop: note_asking_form
 
-- rule: ask to reformulate whenever the answer is not satisfying
+- rule: submit the note_asking_form
+  condition:
+      - active_loop: note_asking_form
   steps:
-  - action: utter_did_that_help
-  - intent: deny
-  - action: utter_reformulate
-
-- rule: the user ask another question after his previous one
-  steps:
-  - action: utter_faq
-  - intent: faq
-  - action: utter_faq
+    - action: note_asking_form
+    - active_loop: null
+    - action: action_record_the_user_note
 
 - rule: The chatbot says it does not understand when it doesn't understand
   steps:
   - intent: nlu_fallback
   - action: utter_dont_understand
 
-- rule: bot verify identity
-  conversation_start: false
-  steps:
-  - action: action_session_start
-  - action: utter_restart
+# - rule: bot verify identity
+#   conversation_start: false
+#   steps:
+#   - action: action_session_start
+#   - action: utter_restart
