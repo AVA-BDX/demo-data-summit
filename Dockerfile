@@ -4,8 +4,8 @@ COPY actions /app/actions
 COPY data /app/data
 
 USER root
-RUN pip3 install --upgrade pip
-RUN pip3 install --no-cache-dir -r /app/actions/requirements.txt
+RUN pip install --upgrade pip
+RUN pip install --no-cache-dir -r /app/actions/requirements.txt
 
 RUN useradd -ms /bin/bash admin
 RUN chown -R admin:admin /app
