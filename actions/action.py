@@ -4,7 +4,6 @@ from rasa_sdk import Action,  Tracker
 from rasa_sdk.executor import CollectingDispatcher
 from rasa_sdk.events import AllSlotsReset, SlotSet, EventType, SessionStarted, ActionExecuted
 from rasa_sdk.forms import FormAction, FormValidationAction, REQUESTED_SLOT
-import pandas as pd
 import psycopg2
 from psycopg2 import Error
 from datetime import datetime
@@ -92,7 +91,7 @@ class Record_user_note(Action):
                 print("PostgreSQL connection is closed") 
 
         dispatcher.utter_message(f"vous avez donné la note de {user_note} à la question.") 
-        
+
         return [] 
 
 class validatenoteForm(FormValidationAction):
