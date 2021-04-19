@@ -92,6 +92,7 @@ class Record_user_note(Action):
                 print("PostgreSQL connection is closed") 
 
         dispatcher.utter_message(f"vous avez donné la note de {user_note} à la question.") 
+        
         return [] 
 
 class validatenoteForm(FormValidationAction):

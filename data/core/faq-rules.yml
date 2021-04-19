@@ -23,16 +23,16 @@ rules:
   - action: note_asking_form
   - active_loop: note_asking_form
 
-- rule: Example of an unhappy path
-  condition:
-  - active_loop: note_asking_form
-  steps:
-  # This unhappy path handles the case of an intent `affirm`.
-  - intent: affirm
-  - action: utter_super
-  # Return to form after handling the `affirm` intent
-  - action: note_asking_form
-  - active_loop: note_asking_form
+# - rule: Example of an unhappy path
+#   condition:
+#   - active_loop: note_asking_form
+#   steps:
+#   # This unhappy path handles the case of an intent `affirm`.
+#   - intent: affirm
+#   - action: utter_super
+#   # Return to form after handling the `affirm` intent
+#   - action: note_asking_form
+#   - active_loop: note_asking_form
 
 - rule: submit the note_asking_form
   condition:

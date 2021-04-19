@@ -103,9 +103,11 @@ responses:
       - text: Au revoir
     utter_iamabot:
       - text: Je suis un bot créé grâce à Rasa par Talan
+    utter_did_that_help:
+      - text: cela vous a-t-il aidé ?
+      - text: êtes vous satisfaits de la réponse ?
     utter_ask_note:
-      - text: "cela vous a-t-il aidé ? 
-          \n donnez une note entre 1 et 5 pour exprimer votre satisfaction"
+      - text: donnez une note entre 1 et 5 pour exprimer votre satisfaction
         buttons:
         - title: "1"
           payload: "1"
