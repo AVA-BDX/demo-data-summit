@@ -63,7 +63,7 @@ class Record_user_note(Action):
             # Create a cursor to perform database operations
             cursor = connection.cursor()
             # Executing a SQL query to insert data into  table
-            insert_query = """ INSERT INTO user_bot_recordings 
+            insert_query = """ INSERT INTO user_bot_recordings_langlais 
             (user_question,
             bot_answer, 
             user_note,
@@ -79,7 +79,7 @@ class Record_user_note(Action):
             connection.commit()
             print("1 Record inserted successfully")
             # Fetch result
-            cursor.execute("SELECT * from user_bot_recordings")
+            cursor.execute("SELECT * from user_bot_recordings_langlais")
             record = cursor.fetchall()
             print("Result ", record)
         except (Exception, Error) as error:
