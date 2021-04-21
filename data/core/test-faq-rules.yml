@@ -1,0 +1,8 @@
+# version: "2.0"
+
+# rules:
+# - rule: utter user intention
+#   steps:
+#   - intent: faq
+#   - action: action_get_user_curent_intent
+

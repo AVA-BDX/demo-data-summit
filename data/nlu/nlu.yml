@@ -13,6 +13,14 @@ nlu:
     - 8
     - 9
     - 10
+- intent: ask_reformulate
+  examples: |
+    - pouvez vous reformuler
+    - dis le moi autrement
+    - reformule
+    - dis le d'une autre manière
+    - dites le différemment
+    
 - intent: greet
   examples: |
     - Bonjour

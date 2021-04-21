@@ -1,0 +1,614 @@
+version: "2.0" 
+
+nlu:
+- intent: faq/1
+  examples: |
+   - Quelles sont les conditions de validité du visa ?
+   - Un visa est obligatoire ?
+   - Le visa est-il obligatoire pour ce voyage ? 
+   - Faut-il un visa pour se rendre à ce Pays?
+   - Faut-il avoir un visa pour aller à Bali ?
+   - ai-je besoin d'un visa ?
+
+- intent: faq/2
+  examples: |
+   - Faut-il un passeport pour ce voyage ?
+   - Ai je besoin de mon passeport ?
+   - Est ce qu'un passeport valide est obligatoire?
+   - Le passeport est-il nécessaire pour voyage à Bali ? 
+   - Je dois avoir un passeport ?
+   - Un passeport est obligatoire ?
+
+- intent: faq/3
+  examples: |
+   - Faut-il faire un test Covid avant de partir ?
+   - Le test PCR est il obligé pour entrer à Bali ?
+   - Faut-il faire le test PCR ? 
+   - Avant combien d'heure du vol dois-je faire un test PCR?
+   - Quelles sont les confitions pour prendre l'avions en cette période de coronavirus ?
+   - est-ce obligatoire de faire un test de Corona ?
+
+- intent: faq/4
+  examples: |
+   - Dois-je me faire vacciner pour aller à Bali ? 
+   - Faut-il se faire vacciner ?
+   - Quels vaccins sont obligatoires ?
+   - Dois-je me vacciner avant de me rendre à Bali?
+   - Quels sont les vaccins à faire ? 
+   - Il y a-t-il des vaccins obligatoires ?
+
+- intent: faq/5
+  examples: |
+   - Est ce que les cartes bancaires sont acceptées partout à Bali?
+   - Est-ce que les CB françaises sont acceptées Bali ?
+   - Ma carte bleue fonctionne-t-elle là bas ?
+   - Quels sont les moyens de paiement qui fonctionne sur place ? 
+   - Est-ce que je peux payer par carte à Bali ?
+   - Je peux utiliser ma carte bancaire à Bali ?
+
+- intent: faq/6
+  examples: |
+   - Ai je des frais supplémentaires pour retirer ?
+   - Quels sont les frais pour les retrait de cash ?
+   - Comment faire pour éviter les frais de retrait supplémentaire sur place ? 
+   - Est-ce que les frais de retrait d'argent dans les distributeurs sont facturés?
+   - Quel est le % de frais supplémentaires lors d'un retrait ? 
+   - Le retrait d'argent génère-t-il des frais supplémentaires ?
+
+- intent: faq/7
+  examples: |
+   - Est-il nécessaire d'avoir du liquide sur soi ? 
+   - Ai-je besoin de cash ?
+   - Combien faut-il prévoir de cash sur place ?
+   - Est-ce qu'il faut obligatoirement avoir de l'argent liquide ou la carte bancaire suffit?
+   - Est-ce qu'il faut du liquide ?
+   - Dois-je avoir de l'argent liquide sur moi ?
+
+- intent: faq/8
+  examples: |
+   - Quelles sont les conditions d'annulation du voyage?
+   - Est-il possible d'annuler a n'importe quel moment ?
+   - Puis-je annuler mon voyage ?
+   - Quelles sont les conditions d'annulation ?
+   - Comment annuler mon voyage ? 
+   - Est-ce possible d'annuler le voyage à tout moment ?
+
+- intent: faq/9
+  examples: |
+   - Quelle est la monnaie du pays ?
+   - Est-ce qu'ils acceptent les euros à Bali  ? 
+   - Quelle est la monnaie sur place ?
+   - Quel est le moyen d'échange à Bali?
+   - Quelle est la devise locale ?
+   - Quelle est le nom de la monnaie à Bali ?
+
+- intent: faq/10
+  examples: |
+   - Est-ce que je pourrais être remboursé en cas d'annulation du voyage?
+   - Comment me faire rembourser si mon voyage est annulé ?
+   - Comment est-ce que je serais rembourser en cas d'annulation ? 
+   - Si j'annule, comment suis-je remboursé ?
+   - Comment se faire rembourser un voyage annulé
+   - Si mon voyage est annulé, comment suis-je remboursé ?
+
+- intent: faq/11
+  examples: |
+   - Y a t'il des normes sanitaires particulière a respecter ? 
+   - Quelles sont les réglementations sanitaires ?
+   - Y'a-t-il des maladies à Bali ?
+   - Est-ce que l'eau de robinet est potable?
+   - Est-ce que l'eau est potable à Bali ?
+   - Quelles recommandations sanitaires dois-je suivre à Bali ?
+
+- intent: faq/12
+  examples: |
+   - Comment changer mon voyage ?
+   - Je voudrais modifier ma réservation
+   - Que faire pour modifier ma réservation ? 
+   - Est-ce qu'il y a moyen de modifier la réservation?
+   - Je veux modifier mon vol. 
+   - Comment modifier mon billet
+
+- intent: faq/13
+  examples: |
+   - Que faire pour annuler ma réservation ?
+   - Est-ce que je peux annuler ma réservation?
+   - Je voudrais annuler ma reservation
+   - Comment faire une annulation pour mon vol   ? 
+   - Je veux annuler mon vol
+   - Comment annuler mon billet ?
+
+- intent: faq/14
+  examples: |
+   - Une assurance voyage est elle obligée
+   - Faut-il obligatoirement prendre une assurance.
+   - Faut-il forcement prendre une assurance voyage ? 
+   - Est-ce que c'est obligatoire d'avoir une assurance voyage?
+   - Est-ce que je dois avoir une assurance voyage ?
+   - L'assurance de voyage est-elle obligatoire ?
+
+- intent: faq/15
+  examples: |
+   - Comment être pris en charge en cas de maladie à Bali?
+   - Existe-t-il une Carte d'Assurance Maladie pour Bali ?
+   - Quel est l'équivalent de la carte européenne à l'étranger ? 
+   - Est ce qu'il y a une assurance maladie à Bali ?
+   - Est-ce qu'il y a une carte d'assurance maladie internationale ?
+   - Est-ce-que je bénéficie d'un équivalent de carte d'assurance maladie à Bali ?
+
+- intent: faq/16
+  examples: |
+   - Quelles sont les meilleures assurance pour ce voyage ?
+   - Ou puis souscrire une assurance voyage ?
+   - Ou puis-je souscrire à une assurance pour mon voyage ? 
+   - Comment trouver une assurance voyage?
+   - Je veux une assurance voyage. 
+   - Je cherche une assurance de voyage
+
+- intent: faq/17
+  examples: |
+   - Que faut-il prévoir comme assurance pour le voyage ?
+   - Comment trouver la meilleur assurance voyage ?
+   - Ou est-ce que je peux trouver la meilleure assurance voyage ? 
+   - Comment trouver la meilleure assurance voyage?
+   - Je souhaite prendre une assurance voyage.
+   - Je cherche une bonne assurance de voyage.
+
+- intent: faq/18
+  examples: |
+   - Où est-ce que je pourrais trouver de bons hôtels?
+   - Quels sont les meilleurs hotels ?
+   - Comment puis-je trouver les hôtels les plus populaires à Bali ? 
+   - Quel hotel choisir ?
+   - Quels hôtels me recommandez-vous ? 
+   - Quels sont les bons hôtels à Bali ?
+
+- intent: faq/19
+  examples: |
+   - Est-ce que je peux régler avec des chèques voyages entreprise ?
+   - Comment puis-je régler mon voyage ?
+   - Comment payer mon voyage ?
+   - Avec quel type de CB puis-je payer mon voyage?
+   - Comment régler mon billet ? 
+   - Par quel moyen puis-je régler mon voyage ?
+
+- intent: faq/20
+  examples: |
+   - Est- ce que je peux agences de voyage qui proposent des voyages organisés?
+   - Je voudrais participer à des voyages organisés
+   - Puis-je avoir un séjour programmé ?
+   - Existe t'il des voyages organisés à faire sur place ? 
+   - Est-ce que des agences organisent des voyagent pour Bali ? 
+   - Il y a des voyages organisés ?
+
+- intent: faq/21
+  examples: |
+   - Je voudrais réserver un guide sur place
+   - Comment faire pour trouver un guide touristique à Bali ? 
+   - Puis-je avoir un guide sur place ?
+   - Est-ce que je pourrais être aiguillé par un guide touristique?
+   - Je veux un guide touristique 
+   - Comment réserver un guide à Bali ?
+
+- intent: faq/22
+  examples: |
+   - Est-ce compliqué d'utiliser sa carte bancaire à Bali ? 
+   - Vaut-il mieux échanger son argent avant de partir ?
+   - Faut-il prendre du cash avant de partir ?
+   - Est-ce que c'est simple de faire un change de monnaie sur place?
+   - Comment échanger ma monnaie ?
+   - C'est mieux de faire un échange de monnaie avant ou après le voyage ?
+
+- intent: faq/23
+  examples: |
+   - Est-ce que tous les hôtels ont de la wifi?
+   - Est ce qu'il y a le wifi dans l'hotel ?
+   - Est-ce qu'il y a des hôtel qui proposent une connexion internet sur place ? 
+   - Je voudrais su Wifi dans mon hotel
+   - Je veux une connexion internet dans mon hôtel
+   - Je cherche un hôtel avec une connexion internet
+
+- intent: faq/24
+  examples: |
+   - Puis je avoir la 4g à Bali ?
+   - Est-ce qu'il y a facilement la 4G ?
+   - Est-ce que mon téléphone peut capter la 4G sur place ? 
+   - Est-ce que je peux avoir un forfait téléphoniques avec la 4G à Bali?
+   - Comment avoir la 4G à Bali ?
+   - A-t-on la 4G à Bali ?
+
+- intent: faq/25
+  examples: |
+   - Comment avoir un téléphone à Bali ?
+   - Où puis-je acheter un forfait téléphonique?
+   - Comment faire pour pouvoir téléphoner su place ? 
+   - Je voudrais un forfait téléphonique sur place
+   - Comment avoir un forfait téléphonique à Bali ?
+   - Quels sont les forfaits téléphoniques à Bali ?
+
+- intent: faq/26
+  examples: |
+   - Quel est le budget hebdomadaire sur place pour une semaine à Bali  ? 
+   - Combien me faut-il pour une semaine ?
+   - Quel est le cout à la semaine ?
+   - Quel budget faut-il prévoir pour une semaine de séjour?
+   - Quel budget pour une semaine ? 
+   - Une semaine de séjour coûte combien en moyenne ?
+
+- intent: faq/27
+  examples: |
+   - Combien d'heure de décalage il y a
+   - Est-ce qu'il y a un gros décalage horaire? 
+   - Combien d'heures de décalage horaire y a t-il entre la France et Bali?
+   - Combien d'heure de décalage à Paris part rapport à Bali ?
+   - Quel est le décalage horaire entre la France et Bali ?
+
+- intent: faq/28
+  examples: |
+   - Comment chercher des hôtels ?
+   - Où trouver un hotel ?
+   - Je voudrais une liste d'hotel pour comparer
+   - Ou puis-je comparer des hôtels pour mon voyage ? 
+   - Je souhaite comparer des hôtels
+   - Quels sont les meilleurs hôtels ?
+
+- intent: faq/29
+  examples: |
+   - Est ce que les animaux sont interdits dans les hotels ?
+   - Est-ce que je peux emmener mon chien à l'hotel ?
+   - Puis-je avoir mon animal de compagnie avec moi à l'hôtel   ? 
+   - Est-ce que les animaux sont autorisés dans les hôtels ? 
+   - Est-ce que je peux emmener mon lapin dans l'hôtel ?
+   - Les hôtels autorisent-ils les animaux ?
+
+- intent: faq/30
+  examples: |
+   - Et si je veux prolonger mon séjour ?
+   - Est-il possible de prolonger mon séjour sur place au dernier moment  ? 
+   - Comment rester sur place après mon voyage ?
+   - Quelles sont les modalités pour prolonger le séjour?
+   - Je veux rester plus longtemps à Bali
+   - comment prolonger mon séjour à Bali ?
+
+- intent: faq/31
+  examples: |
+   - Qui est le point de contact là-bas en cas de problème ?
+   - Qui contacter en cas de problème ?
+   - Comment faire en cas d'urgence sur place ? 
+   - Est-ce qu'il y a un numéro d'urgence à contacter en cas de problème?
+   - Quel est le numéro de la police à Bali ?
+   - Si j'ai un problème durant mon séjour, je contacte qui ?
+
+- intent: faq/32
+  examples: |
+   - Qu'est ce que je dois prendre dans ma trousse à pharmacie?
+   - Quels médicaments faut-il apporter ?
+   - Est-ce qu'il y a des médicaments sans ordonnance facilement accessible à Bali ? 
+   - Quels médicaments sont autorisés sans ordonnance ?
+   - Quels médicament je peux acheter sans ordonnance à Bali ? 
+   - Peut-on prendre certains médicament sans ordonnance à Bali ?
+
+- intent: faq/33
+  examples: |
+   - Quelles est la meilleure saison pour y voyager ?
+   - Est-ce qu'il y a différente saison à Bali  ? 
+   - Quelle est la météo ?
+   - Quelle est la température en Juin?
+   - Quel temps fait-il en juin ?
+   - En juin il fait quelle saison ?
+
+- intent: faq/34
+  examples: |
+   - Que faut-il penser à apporter ?
+   - Qu'est ce que je pourrais oublier ?
+   - Est-ce qu'il y a des affaires indispensables à emporter?
+   - Qu'est il indispensable d'apporter avec soit lors d'un voyage à Bali ? 
+   - Que me conseillez vous d'apporter ? 
+   - Quels objets me seront utiles ?
+
+- intent: faq/35
+  examples: |
+   - Quelle est la liste des objets interdits dans l'avion ?
+   - Qu'est ce que ne peux pas emmener dans l'avion ?
+   - Qu'est ce qui est interdit en bagage cabine?
+   - Qu'est-ce qu'il m'est interdit de prendre avec moi dans l'avion  ? 
+   - Est-ce que je peux emporter un couteau de cuisine dans l'avion ?
+   - Qu'est ce qui est interdit dans l'avion?
+
+- intent: faq/36
+  examples: |
+   - Quel est la taille autorisée pour un bagage à main pour un voyage en avion ? 
+   - Quelles sont les dimensions des bagages ?
+   - Quelles sont les dimensions pour un bagage à main ?
+   - Quel bagage à main puis-je emporter ?
+   - Taille maximum de ma valise
+   - C'est quoi les dimensions maximales des bagages dans l'avion ?
+
+- intent: faq/37
+  examples: |
+   - Quel est le poids maximum de ma valise pour l'avion ?
+   - Quel est le poids maximum pour ma valise ?
+   - Quel est le poids maximum autorisé dans l'avion pour mon bagage ? 
+   - Quel est le poids maximal du bagage autorisé en avion?
+   - Poids max valise
+   - Quel est le poids limite de bagage en avion ?
+
+- intent: faq/38
+  examples: |
+   - Combien coute un bagage en plus ?
+   - Est-ce qu'il faut payer un supplément pour un bagage en plus en soute ? 
+   - Combien coûte un bagage supplémentaire en soute?
+   - Quel est le prix des bagages supplémentaires ?
+   - Combien pour une valise en plus ?
+   - En soute, un supplément de bagage coûte combien ?
+
+- intent: faq/39
+  examples: |
+   - Est ce qu'il y a beaucoup de moustique
+   - Est-ce qu'il est conseillé de prendre de  l'anti-moustique ? 
+   - Est-ce que je dois prévoir une crème apaisante pour les piqûres d'insectes? 
+   - Y-a-til beaucoup de moustiques ?
+   - Est-ce qu'il y a des moustiques à Bali ?
+   - Est-ce nécessaire de prendre de l'anti-moustique ?
+
+- intent: faq/40
+  examples: |
+   - Où trouver un avion ?
+   - Ou est-ce que je peux acheter des billets d'avion pas trop cher  ? 
+   - Je voudrais réserver un billet d'avion
+   - Où trouver les meilleurs plan pour les billets d'avion?
+   - Où acheter mon billet d'avion ?
+   - Je chercher un billet d'avion pour Bali.
+
+- intent: faq/41
+  examples: |
+   - Combien coute approximativement un billet d'avion A/R à Bali à partir de la France ?
+   - Quel est le cout d'un billet aller-retour pour Bali ?
+   - Combien vais-je payer un aller-retour Paris- Bali ? 
+   - Quel est le budget avion pour un AR ?
+   - Quel budget pour un aller-retour France-Bali en avion ?
+   - Un billet aller-retour France-Bali coûte combien ?
+
+- intent: faq/42
+  examples: |
+   - Est-il possible de prendre un vol direct ? 
+   - Est ce qu'il y a des correspondances ?
+   - Je voudrais un vol direct
+   - Est-ce qu'il y a des vols sans escale?
+   - Je souhaite un vol direct
+   - Existe-t-il des vols directs à Bali ?
+
+- intent: faq/43
+  examples: |
+   - est-ce qu'une compagnie aérienne est plus conseillée qu'une autre pour ce type de voyage ? 
+   - Quelle est la meilleure compagnie pour le voyage ?
+   - Quelle est la meilleure compagnie ?
+   - Où trouver la meilleure compagnie aérienne?
+   - Quelle est la meilleure compagnie aérienne pour faire un aller-retour Paris - Bali ?
+   - Je cherche une compagnie aérienne.
+
+- intent: faq/44
+  examples: |
+   - A quelle heure faut-il se présenter à l'aéroport pour être sur de ne pas rater le vol?
+   - Combien de temps en avance faut-il arriver ?
+   - A quelle heure est le check-in de l'avion ?
+   - Faut-il que je me présente à l'aéroport en avance le jour du départ ? 
+   - Combien de temps en avance avant le vol ?
+   - Combien de temps avant l'heure de vol, dois-je me présenter à l'aéroport ?
+
+- intent: faq/45
+  examples: |
+   - Comment ça se passe si mon bagage est perdu ?
+   - Que faire si mon bagage est endommagés à sa récupération dans l'aéroport ? 
+   - Comment être remboursé si mon bagage est perdu ?
+   - Quelle est la procédure d'indemnisation en cas de perte de bagage? 
+   - Je me suis fais voler ma valise
+   - Si mes objets personnels sont perdus est-ce que je suis indemnisé ?
+
+- intent: faq/46
+  examples: |
+   - Est-ce que les animaux sont autorisés en avion?
+   - Les animaux sont-ils acceptés pour ce voyage ?
+   - Les animaux sont-ils acceptés dans l'avion ? 
+   - Est ce que les animaux sont autorisés dans l'avion ?
+   - Comment emmener mon lapin dans l'avion ?
+   - Les animaux sont-ils autorisés dans l'avion ?
+
+- intent: faq/47
+  examples: |
+   - Je voudrais emmener mon chien
+   - Dois-je paye pour emmener mon animal ?
+   - A combien s'élève le supplément pour voyager avec son animal ? 
+   - Est-ce qu'il faut payer des frais en plus pour transporter un animal en avion?
+   - Combien coûte un animal en soute ou en cabine ?
+   - Si je voyage avec un animal, je paye combien de plus ?
+
+- intent: faq/48
+  examples: |
+   - Que se passe-t-il en cas de modification de vol ?
+   - Mon vol est il annulé ?
+   - Est-ce que je serais prévenue en cas de modification de mon vol ? 
+   - Est-ce que je serai notifié s'il y a une modification sur le vol?
+   - Est-ce que mon vol a été modifié ?
+   - Si mon vol est modifié, comment le savoir ?
+
+- intent: faq/49
+  examples: |
+   - Est-ce que je peux recevoir un billet électronique ?
+   - Comment aurais-je le justificatif de voyage?
+   - Vais-je recevoir mon billet sous format papier ou électronique ?
+   - Est-ce que je vais recevoir mon billet par mail  ? 
+   - Comment est-ce que je récupère mon billet ?
+   - Mon billet est sous quel format ?
+
+- intent: faq/50
+  examples: |
+   - Y'a-t-il un médecin dans l'avion ?
+   - L'avion a t'il un médecin désigné ? 
+   - Est ce qu'un médecin sera à bord du vol ?
+   - Est-ce qu'il un du personnel soignant dans l'avion?
+   - Y a t-il un médecin dans l'avion ?
+   - Est ce qu'il des médecins dans l'avion ?
+
+- intent: faq/51
+  examples: |
+   - Est-ce qu'il y a la possibilité de commander un repas spécial en avion?
+   - Est ce que mes allergies sont prises en compte pour mes repas ?
+   - Comment signaler les allergies alimentaires ?
+   - Que faire pour mes repas dans l'avion si je suis allergique ? 
+   - Je veux un plat qui respecte mes allergies pendant le vol
+   - Si j'ai des allergies, est-ce qu'il m'est proposé des plats différents ?
+
+- intent: faq/52
+  examples: |
+   - Ai-je un transport entre l'hotel et l'aéroport ?
+   - Est-ce qu'il y a des moyens mis à la disposition des voyageurs pour faire le trajet aéroport-hôtel ? 
+   - Y'a-t-il une navette de l'hotel pour l'aéroport ?
+   - Est-ce qu'il y a une navette aéroport hôtel?
+   - Comment aller de l'aéroport à l'hôtel ?
+   - Existe-t-il un moyen de transport proposé par les hôtel depuis l'aéroport ?
+
+- intent: faq/53
+  examples: |
+   - Quel est le prix d'une navette hôtel aéroport?
+   - Quel est le tarif d'un taxi pour m'amener à l'aéroport ?
+   - Quels sont les prix pour prendre le taxi depuis l'aéroport à Bali ? 
+   - Quel est le prix de trajet hotel-aéroport ?
+   - Quel est le prix d'un déplacement de mon hôtel jusqu'à l'aéroport ?
+   - Un taxi vers l'aéroport coûte combien ?
+
+- intent: faq/54
+  examples: |
+   - Quelles sont les langues officielles ?
+   - Est-ce qu'ils parlent l'anglais à Bali  ? 
+   - Est-ce que le français est parlé là-bas ?
+   - Quelle est la langue officielle à Bali?
+   - Quel est la langue locale ?
+   - On parle quoi comme langues à Bali ?
+
+- intent: faq/55
+  examples: |
+   - Est-ce qu'il y a des activités incontournables à faire?
+   - Quelles activités me conseilles-tu ?
+   - Quel est le top 10 des activités recommandées à Bali ? 
+   - Quelles sont les activités sur place ?
+   - Liste des activités à faire à Bali
+   - Il y a quoi comme activité à Bali ?
+
+- intent: faq/56
+  examples: |
+   - Est-ce qu'il y a un code de conduite spécifique à respecter à Bali ? 
+   - Quelle coutume dois-je éviter ?
+   - Que faut-il savoir sur les moeurs ?
+   - Est-ce qu'il y a des comportements contraire aux moeurs des Balinais?
+   - Est-ce qu'il y a des choses à éviter à Bali ?
+   - Qu'est ce que je ne dois pas faire là bas ?
+
+- intent: faq/57
+  examples: |
+   - Est-il possible de se loger dans des hébergement atypiques sur place ? 
+   - Quels sont les lieux insolites où je peux dormir ?
+   - Est-ce qu'on peut loger chez l'habitant ?
+   - Existe-t-il des hébergement atypiques à louer?
+   - Je veux un logement atypique
+   - Des endroits atypiques pour dormir ?
+
+- intent: faq/58
+  examples: |
+   - Quels plats incontournables à gouter à Bali?
+   - Quels sont les spécialités culinaires de la région ?
+   - Quels sont les spécialités culinaires de Bali ?
+   - Quels sont les spécialités culinaires balinaise ? 
+   - Quels sont les spécialités culinaires locales ?
+   - Il y a quoi là bas comme bon plats ?
+
+- intent: faq/59
+  examples: |
+   - Je voudrais réserver mes activités
+   - Dois-je réserver les activités ?
+   - Est-il facile de réserver un place pour les activités sur place ? 
+   - Faut-il faire une réservation des activité avant de venir à Bali?
+   - Est-ce que je dois réserver mes activités
+   - Dois-je réserver les activités à l'avance ?
+
+- intent: faq/60
+  examples: |
+   - Les animaux de compagnie sont-ils acceptés lors d'un voyage à Bali ? 
+   - Est-ce que les animaux sont autorisés partout?
+   - Les chiens sont-ils acceptés partout ?
+   - Est ce que les animaux sont autorisés dans les lieux de cultes ?
+   - Est-ce que je peux emmener mon chien au temple Tanah Lot ?
+   - Les animaux de compagnies sont-ils autorisés dans les endroits culturels ?
+
+- intent: faq/61
+  examples: |
+   - Combien coutent les activités ?
+   - Quel est le cout moyen des activités ?
+   - Combien me coutera en moyenne une activité sur place ? 
+   - Quel budget faut-il prévoir par activité?
+   - Quel est le prix d'une activité à Bali ? 
+   - Un activité coûte combien en moyenne ?
+
+- intent: faq/62
+  examples: |
+   - Quelles sont les activités de l'hotel ?
+   - Quelles activités puis je faire à l'hotel ?
+   - Quelles activités sont inclues dans mon hôtel ? 
+   - Est-ce qu'il y a des activités à faire dans l'hôtel?
+   - Quelles activités propose mon hôtel ? 
+   - C'est quoi les activités dans les hôtels ?
+
+- intent: faq/63
+  examples: |
+   - Est-ce que je dois payer en supplément les frais des repas à l'hôtel?
+   - Les repas sont-ils prévus dans mon forfait ?
+   - Dois-je payer mes repas en plus de l'hotel ?
+   - Qu'est-ce qu'il y a dans mon forfait hôtel ? 
+   - Les repas font parti du forfait de l'hôtel ?
+   - Est-ce que le repas est inclus dans les frais d'hôtel ?
+
+- intent: faq/64
+  examples: |
+   - Quels sont les plus beaux sites à visiter ?
+   - Quels sont les lieux à visiter ?
+   - Quels endroits sont recommandés pour découvrir Bali  ? 
+   - Est-ce qu'il y a des endroits à visiter absolument?
+   - Qu'est-ce que je dois visiter à Bali ?
+   - Quels sont les meilleures places touristiques à Bali ?
+
+- intent: faq/65
+  examples: |
+   - Quels sont les évènements à ne pas rater pendant mon séjour ?
+   - Est ce qu'il y a des fêtes locales ?
+   - Est-ce qu'il y a des évènements spéciaux en Juin?
+   - Que faire à Bali pour découvrir la culture locale ? 
+   - Quels seront les évènements à Bali dans 4 mois ?
+   - Il y a-t-il des fêtes culturelles ?
+
+- intent: faq/66
+  examples: |
+   - Faut-il un permis pour rouler en scooter à Bali ? 
+   - Est ce qu'il faut un permis moto pour louer à Bali ?
+   - Est-ce qu'il y a la possibilité de louer des deux roues à Bali  ? 
+   - Est-ce qu'il faut un permis pour louer une moto ?
+   - Condition pour louer une moto à Bali
+   - Peut-on louer un deux roues sans permis ?
+
+- intent: faq/67
+  examples: |
+   - Est-il facile de rencontrer des étrangers là-bas ?
+   - Puis je rencontre d'autre voyages dans des lieux d'échanges ?
+   - Est-il possible de trouver des lieux de rencontre pour étrangers à Bali ? 
+   - Est-ce qu'il y a des lieux de rencontres pour des étrangers ?
+   - Comment rencontrer des étrangers à Bali ?
+   - Comment faire pour rencontrer des étrangers à Bali ?
+
+- intent: faq/68
+  examples: |
+   - Quelles sont les activités abordables à Bali?
+   - Quels sont les sports pratiqués à Bali ?
+   - Quels sports nautiques sont les plus pratiqués sur place ?
+   - Quels sports de mer puis je faire la bas ?
+   - Je veux faire des sports nautiques
+   - Quels sont les sports nautiques ?
+

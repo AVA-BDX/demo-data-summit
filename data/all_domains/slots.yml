@@ -1,0 +1,17 @@
+version: '2.0'
+
+slots:
+  user_ongoin_message:
+    type: any
+  time_user_question:
+    type: any
+  bot_ongoin_message:
+    type: list
+  time_bot_answer:
+    type: any
+  note:
+    type: any
+  user_current_intent:
+    type: any
+  response_selector_content:
+    type: any

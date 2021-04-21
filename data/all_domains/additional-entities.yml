@@ -1,0 +1,19 @@
+version: "2.0" 
+
+entities:
+- preconisation
+- recommander
+- comportement
+- prix
+- contacter
+- frais_supp
+- act_hotel
+- heure_arrivee
+- lieux_cult
+- annuler
+- reserver_act
+- prix_act
+- eve_fete
+- medicament
+- bagage_perdu
+

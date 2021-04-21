@@ -1,6 +1,8 @@
 
 import logging
+from typing import Any, Dict, List, Text, Optional
 from rasa_sdk import Action,  Tracker
+from rasa_sdk.types import DomainDict
 from rasa_sdk.executor import CollectingDispatcher
 from rasa_sdk.events import AllSlotsReset, SlotSet, EventType, SessionStarted, ActionExecuted
 from rasa_sdk.forms import FormAction, FormValidationAction, REQUESTED_SLOT
@@ -21,6 +23,30 @@ class user_inputs(Action):
         time_user_question = str(datetime.now())
         return [SlotSet("user_ongoin_message", user_ongoin_message),SlotSet("time_user_question", time_user_question)] 
 
+class ActionGetUserCurentIntent(Action):
+    """Returns the chitchat utterance dependent on the intent"""
+
+    def name(self) -> Text:
+        return "action_get_user_curent_intent"
+
+    def run(
+        self, dispatcher: CollectingDispatcher, tracker: Tracker, domain: DomainDict,
+    ) -> List[EventType]:
+        full_intent = (
+            tracker.latest_message.get("response_selector", {})
+            .get("faq", {})
+            .get("response", {})
+            .get("intent_response_key")
+        )
+        # response_selector_content = str((
+        #     tracker.latest_message.get("response_selector", {})
+        # ))
+        if full_intent:
+            user_current_intent = full_intent.split("/")[1]
+        else:
+            user_current_intent = None
+        # return [SlotSet("user_current_intent", user_current_intent),SlotSet("response_selector_content", response_selector_content)]
+        return [SlotSet("user_current_intent", user_current_intent)]
 
 class reset_note(Action):
 
@@ -37,8 +63,14 @@ class bot_outputs(Action):
 
     def run(self, dispatcher, tracker, domain):
         bot_last_event = next(e for e in reversed(tracker.events) if e["event"] == "bot")
+        # preview_messages = tracker.get_slot('bot_ongoin_message')
+        # if len(preview_messages) == 0:
+        #     bot_ongoin_message = list(bot_last_event['text'])
+        # else:
+        #      bot_ongoin_message =preview_messages.append(bot_last_event['text']) 
         bot_ongoin_message = bot_last_event['text']
         time_bot_answer = str(datetime.now())
+        dispatcher.utter_message(f"son type c'est {type(tracker.get_slot('bot_ongoin_message'))} ") 
         return [SlotSet("bot_ongoin_message", bot_ongoin_message),SlotSet("time_bot_answer", time_bot_answer)]
 
 class Record_user_note(Action):
@@ -107,3 +139,17 @@ class validatenoteForm(FormValidationAction):
             dispatcher.utter_message("veuillez renseigner une valeur entre 1 et 5")
             return {"note": None}
 
+class bot_reformulate(Action):
+    def name(self) -> Text:
+        return "action_utter_reformulate"
+
+    async def run(
+        self,
+        dispatcher: CollectingDispatcher,
+        tracker: Tracker,
+        domain: Dict[Text, Any],
+    ) -> List[EventType]:
+
+        dispatcher.utter_message(text = "D'accord je vais reformuler")
+
+        return []

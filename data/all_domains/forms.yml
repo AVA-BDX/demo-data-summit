@@ -1,0 +1,10 @@
+version: '2.0'
+
+forms:
+  note_asking_form:
+    note:
+      - type: from_text
+        intent: number
+        not_intent:
+          - faq
+          - deny
