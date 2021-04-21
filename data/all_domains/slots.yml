@@ -6,12 +6,13 @@ slots:
   time_user_question:
     type: any
   bot_ongoin_message:
-    type: list
+    type: any
   time_bot_answer:
     type: any
   note:
     type: any
   user_current_intent:
     type: any
-  response_selector_content:
+  bot_utterances_list_slot:
     type: any
+  

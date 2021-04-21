@@ -87,14 +87,14 @@ slots:
     time_user_question:
         type: any
     bot_ongoin_message:
-        type: list
+        type: any
     time_bot_answer:
         type: any
     note:
         type: any
     user_current_intent:
         type: any
-    response_selector_content:
+    bot_utterances_list_slot:
         type: any
 responses:
     utter_greet:
@@ -1393,6 +1393,7 @@ actions:
   - user_note_to_none
   - action_utter_reformulate
   - action_get_user_curent_intent
+  - action_bot_utterances_list
 forms:
     note_asking_form:
         note:

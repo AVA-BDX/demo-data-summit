@@ -63,15 +63,23 @@ class bot_outputs(Action):
 
     def run(self, dispatcher, tracker, domain):
         bot_last_event = next(e for e in reversed(tracker.events) if e["event"] == "bot")
-        # preview_messages = tracker.get_slot('bot_ongoin_message')
-        # if len(preview_messages) == 0:
-        #     bot_ongoin_message = list(bot_last_event['text'])
-        # else:
-        #      bot_ongoin_message =preview_messages.append(bot_last_event['text']) 
         bot_ongoin_message = bot_last_event['text']
         time_bot_answer = str(datetime.now())
-        dispatcher.utter_message(f"son type c'est {type(tracker.get_slot('bot_ongoin_message'))} ") 
         return [SlotSet("bot_ongoin_message", bot_ongoin_message),SlotSet("time_bot_answer", time_bot_answer)]
+
+class ActionBotUterranceList(Action):
+
+    def name(self):
+        return 'action_bot_utterances_list'
+
+    def run(self, dispatcher, tracker, domain):
+      
+        if not tracker.get_slot('bot_utterances_list_slot'):
+            bot_utterances_list_slot = [tracker.get_slot('bot_ongoin_message')]
+        else:
+            bot_utterances_list_slot = tracker.get_slot('bot_utterances_list_slot').append(tracker.get_slot('bot_ongoin_message'))
+        return [SlotSet("bot_utterances_list_slot", bot_utterances_list_slot)]
+    
 
 class Record_user_note(Action):
 

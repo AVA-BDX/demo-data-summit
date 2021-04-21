@@ -8,3 +8,4 @@ actions:
   - user_note_to_none
   - action_utter_reformulate
   - action_get_user_curent_intent
+  - action_bot_utterances_list
