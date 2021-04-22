@@ -79,11 +79,9 @@ class ActionBotUterranceList(Action):
         if actual_list_responses == None:
             actual_list_responses = bot_ongoin_message
             bot_utterances_list_slot = [bot_ongoin_message]
-        # elif len([actual_list_responses]) == 1:
-        #     bot_utterances_list_slot = [actual_list_responses]
         else:
             bot_utterances_list_slot = tracker.get_slot('bot_utterances_list_slot')
-            bot_utterances_list_slot = bot_utterances_list_slot + [bot_ongoin_message]
+            bot_utterances_list_slot = bot_utterances_list_slot + [bot_ongoin_message.replace("\xa0","")]
         dispatcher.utter_message(f"liste actuelle est {len([actual_list_responses]) } ") 
         return [SlotSet("bot_utterances_list_slot", bot_utterances_list_slot )]
     
