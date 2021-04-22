@@ -7,9 +7,9 @@ rules:
   - action: action_get_user_curent_intent
   - action: user_note_to_none
   - action: action_user_last_message
-  - action: action_bot_utterances_list
   - action: utter_faq
   - action: action_bot_last_message
+  - action: action_bot_utterances_list
   - action: note_asking_form
   - active_loop: note_asking_form
 
@@ -21,9 +21,9 @@ rules:
   - action: action_get_user_curent_intent
   - action: user_note_to_none
   - action: action_user_last_message
-  - action: action_bot_utterances_list
   - action: utter_faq
   - action: action_bot_last_message
+  - action: action_bot_utterances_list
   - action: note_asking_form
   - active_loop: note_asking_form
 

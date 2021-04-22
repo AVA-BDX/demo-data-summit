@@ -95,7 +95,7 @@ slots:
     user_current_intent:
         type: any
     bot_utterances_list_slot:
-        type: any
+        type: list
 responses:
     utter_greet:
       - text: salut comment vas-tu ?
