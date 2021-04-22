@@ -9,9 +9,27 @@ from rasa_sdk.forms import FormAction, FormValidationAction, REQUESTED_SLOT
 import psycopg2
 from psycopg2 import Error
 from datetime import datetime
+import random
+import pandas as pd
 
 
 
+
+
+class ActionStoreAllBotResponses(Action):
+
+    def name(self):
+        return 'action_store_all_bot_responses'
+
+    def run(self, dispatcher, tracker, domain):
+        path = r"data/qna_data_bases/reponses_bot_augmente.csv"
+        data_base = pd.read_csv(path,  sep=";", encoding="latin3")       
+        test_if_all_responses_was_stored = tracker.get_slot('strored_all_bot_responses')
+        if test_if_all_responses_was_stored == None:
+            strored_all_bot_responses = [{str(num_pivot): [data_base.reponse_pivot[idx].encode('utf8','ignore').decode('utf8').replace('\x92',"'").replace('\x9c','oe').replace('\x80','€').replace('\xa0',' ') for idx in range(len(data_base.id_question_pivot)) if data_base.id_question_pivot[idx] == num_pivot]} for num_pivot in set(data_base.id_question_pivot)]
+            return [SlotSet("strored_all_bot_responses", strored_all_bot_responses)]
+        else:
+            return [] 
 
 class user_inputs(Action):
 
@@ -42,11 +60,11 @@ class ActionGetUserCurentIntent(Action):
         #     tracker.latest_message.get("response_selector", {})
         # ))
         if full_intent:
-            user_current_intent = full_intent.split("/")[1]
+            user_current_intent_id = full_intent.split("/")[1]
         else:
-            user_current_intent = None
+            user_current_intent_id = None
         # return [SlotSet("user_current_intent", user_current_intent),SlotSet("response_selector_content", response_selector_content)]
-        return [SlotSet("user_current_intent", user_current_intent)]
+        return [SlotSet("user_current_intent_id", user_current_intent_id)]
 
 class reset_note(Action):
 
@@ -75,15 +93,22 @@ class ActionBotUterranceList(Action):
     def run(self, dispatcher, tracker, domain):
         actual_list_responses = tracker.get_slot('bot_utterances_list_slot')
         bot_ongoin_message = tracker.get_slot('bot_ongoin_message')
+        bot_reformulation = tracker.get_slot('bot_reformulation')
+
         bot_utterances_list_slot = []
         if actual_list_responses == None:
-            actual_list_responses = bot_ongoin_message
-            bot_utterances_list_slot = [bot_ongoin_message]
+            if bot_reformulation == None:
+                bot_utterances_list_slot = [bot_ongoin_message.replace("\xa0"," ")]
+            else:
+                bot_utterances_list_slot = [bot_ongoin_message.replace("\xa0"," ")] + [bot_reformulation.replace("\xa0"," ")]
         else:
             bot_utterances_list_slot = tracker.get_slot('bot_utterances_list_slot')
-            bot_utterances_list_slot = bot_utterances_list_slot + [bot_ongoin_message.replace("\xa0","")]
-        dispatcher.utter_message(f"liste actuelle est {len([actual_list_responses]) } ") 
-        return [SlotSet("bot_utterances_list_slot", bot_utterances_list_slot )]
+            if bot_reformulation == None:
+                bot_utterances_list_slot = bot_utterances_list_slot + [bot_ongoin_message.replace("\xa0"," ")] 
+            else:
+                bot_utterances_list_slot = bot_utterances_list_slot + [bot_ongoin_message.replace("\xa0"," ")] + [bot_reformulation.replace("\xa0"," ")]
+
+        return [SlotSet("bot_utterances_list_slot", list(set(bot_utterances_list_slot)) )]
     
 
 class Record_user_note(Action):
@@ -162,7 +187,23 @@ class bot_reformulate(Action):
         tracker: Tracker,
         domain: Dict[Text, Any],
     ) -> List[EventType]:
+    
+        already_uttered_responses = tracker.get_slot('bot_utterances_list_slot')
 
-        dispatcher.utter_message(text = "D'accord je vais reformuler")
+        #bot_responses_to_user_question_json contains all bot utterances regarding the user sub-intent in a list of json
+        bot_responses_to_user_question_json =  tracker.get_slot('strored_all_bot_responses')
+        user_current_intent_id = tracker.get_slot('user_current_intent_id')
 
+        bot_responses_to_user_question = list([list_utters for list_utters in bot_responses_to_user_question_json if user_current_intent_id in list_utters.keys()][0].values())[0]
+
+        bot_allowed_utterances = [bot_utterance for bot_utterance in bot_responses_to_user_question if bot_utterance not in already_uttered_responses]
+
+        
+        if len(bot_allowed_utterances) > 0:
+            Bot_chosed_utterance = bot_allowed_utterances[random.randint(0, len(bot_allowed_utterances) - 1)]
+            dispatcher.utter_message(text = Bot_chosed_utterance)
+            return [SlotSet("bot_reformulation", Bot_chosed_utterance )]
+        else:
+            Bot_chosed_utterance = "Désolé, Je n'ai plus d'autre reformulations de votre question"
+            dispatcher.utter_message(text = Bot_chosed_utterance)
         return []

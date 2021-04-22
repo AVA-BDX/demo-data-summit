@@ -11,7 +11,11 @@ slots:
     type: any
   note:
     type: any
-  user_current_intent:
+  user_current_intent_id:
     type: any
   bot_utterances_list_slot:
+    type: list
+  bot_reformulation:
+    type: any
+  strored_all_bot_responses:
     type: list

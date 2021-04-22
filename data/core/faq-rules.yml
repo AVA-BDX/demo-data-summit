@@ -4,6 +4,7 @@ rules:
 - rule: start note_asking_form and store times for both user question and bot answer
   steps:
   - intent: faq
+  - action: action_store_all_bot_responses
   - action: action_get_user_curent_intent
   - action: user_note_to_none
   - action: action_user_last_message
@@ -18,6 +19,7 @@ rules:
   - active_loop: note_asking_form
   steps:
   - intent: faq
+  - action: action_store_all_bot_responses
   - action: action_get_user_curent_intent
   - action: user_note_to_none
   - action: action_user_last_message
@@ -35,13 +37,19 @@ rules:
     - active_loop: null
     - action: action_record_the_user_note
 
+- rule: the bot reformulate any time the user ask him to reformulate
+  steps:
+  - intent: ask_reformulate
+  - action: action_utter_reformulate
+  - action: action_bot_utterances_list
+
 - rule: The chatbot says it does not understand when it doesn't understand
   steps:
   - intent: nlu_fallback
   - action: utter_dont_understand
 
-# - rule: bot verify identity
+# - rule: store bot responses in a slot at the begening of a conversation
 #   conversation_start: false
 #   steps:
 #   - action: action_session_start
-#   - action: utter_restart
+#   - action: action_store_all_bot_responses

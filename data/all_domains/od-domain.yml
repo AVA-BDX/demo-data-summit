@@ -6,6 +6,7 @@ intents:
 - affirm
 - deny
 - bot_challenge
+- ask_reformulate
 
 responses:
     utter_greet:

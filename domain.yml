@@ -6,6 +6,7 @@ intents:
   - affirm
   - deny
   - bot_challenge
+  - ask_reformulate
 entities:
   - PCR
   - activites
@@ -92,9 +93,13 @@ slots:
         type: any
     note:
         type: any
-    user_current_intent:
+    user_current_intent_id:
         type: any
     bot_utterances_list_slot:
+        type: list
+    bot_reformulation:
+        type: any
+    strored_all_bot_responses:
         type: list
 responses:
     utter_greet:
@@ -1394,6 +1399,7 @@ actions:
   - action_utter_reformulate
   - action_get_user_curent_intent
   - action_bot_utterances_list
+  - action_store_all_bot_responses
 forms:
     note_asking_form:
         note:
@@ -1402,6 +1408,7 @@ forms:
             not_intent:
               - faq
               - deny
+              - ask_reformulate
 session_config:
     session_expiration_time: 60
     carry_over_slots_to_new_session: false

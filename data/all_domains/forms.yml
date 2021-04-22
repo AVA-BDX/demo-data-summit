@@ -8,3 +8,4 @@ forms:
         not_intent:
           - faq
           - deny
+          - ask_reformulate
