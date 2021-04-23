@@ -7,6 +7,7 @@ intents:
   - deny
   - bot_challenge
   - ask_reformulate
+  - number
 entities:
   - PCR
   - activites

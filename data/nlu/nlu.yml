@@ -1,18 +1,18 @@
 version: "2.0"
 
 nlu:
-# - intent: number
-#   examples: |
-#     - 1
-#     - 2
-#     - 3
-#     - 4
-#     - 5
-#     - 6
-#     - 7
-#     - 8
-#     - 9
-#     - 10
+- intent: number
+  examples: |
+    - 1
+    - 2
+    - 3
+    - 4
+    - 5
+    - 6
+    - 7
+    - 8
+    - 9
+    - 10
 - intent: ask_reformulate
   examples: |
     - pouvez vous reformuler
@@ -30,6 +30,9 @@ nlu:
     - pouvez-vous reformuler s'il vous plait ?
     - pas compris
     - je ne comprends pas
+    - Pas compris
+    - j'ai pas compris
+    - Je n'ai pas compris
     
 - intent: greet
   examples: |
