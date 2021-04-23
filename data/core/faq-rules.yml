@@ -38,15 +38,46 @@ rules:
     - action: action_record_the_user_note
 
 - rule: the bot reformulate any time the user ask him to reformulate
+  condition:
+  - active_loop: note_asking_form
+  steps:
+  - action: note_asking_form
+  - active_loop: note_asking_form
+  - intent: deny
+  - action: utter_reformulate
+
+
+- rule: happy path, ask the user if he still want a response, user affirm
+  steps:
+  - action: action_utter_reformulate
+  - action: action_bot_utterances_list
+  - intent: affirm
+  - action: action_no_further_reformulation
+
+
+- rule: unhapppy path, ask the user if he still want a response, he deny
+  steps:
+  - action: action_utter_reformulate
+  - action: action_bot_utterances_list
+  - intent: deny
+  - action: utter_ask_another_question
+
+
+
+
+- rule: bot ask to reformulate if the user deny after a faq
   steps:
   - intent: ask_reformulate
   - action: action_utter_reformulate
   - action: action_bot_utterances_list
 
+
 - rule: The chatbot says it does not understand when it doesn't understand
   steps:
   - intent: nlu_fallback
   - action: utter_dont_understand
+
+
 
 # - rule: store bot responses in a slot at the begening of a conversation
 #   conversation_start: false

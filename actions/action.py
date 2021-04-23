@@ -4,7 +4,7 @@ from typing import Any, Dict, List, Text, Optional
 from rasa_sdk import Action,  Tracker
 from rasa_sdk.types import DomainDict
 from rasa_sdk.executor import CollectingDispatcher
-from rasa_sdk.events import AllSlotsReset, SlotSet, EventType, SessionStarted, ActionExecuted
+from rasa_sdk.events import AllSlotsReset, SlotSet, EventType, SessionStarted, ActionExecuted, Form
 from rasa_sdk.forms import FormAction, FormValidationAction, REQUESTED_SLOT
 import psycopg2
 from psycopg2 import Error
@@ -21,7 +21,7 @@ class ActionStoreAllBotResponses(Action):
     def name(self):
         return 'action_store_all_bot_responses'
 
-    def run(self, dispatcher, tracker, domain):
+    async def run(self, dispatcher, tracker, domain):
         path = r"data/qna_data_bases/reponses_bot_augmente.csv"
         data_base = pd.read_csv(path,  sep=";", encoding="latin3")       
         test_if_all_responses_was_stored = tracker.get_slot('strored_all_bot_responses')
@@ -186,6 +186,7 @@ class bot_reformulate(Action):
         dispatcher: CollectingDispatcher,
         tracker: Tracker,
         domain: Dict[Text, Any],
+
     ) -> List[EventType]:
     
         already_uttered_responses = tracker.get_slot('bot_utterances_list_slot')
@@ -204,6 +205,30 @@ class bot_reformulate(Action):
             dispatcher.utter_message(text = Bot_chosed_utterance)
             return [SlotSet("bot_reformulation", Bot_chosed_utterance )]
         else:
-            Bot_chosed_utterance = "Désolé, Je n'ai plus d'autre reformulations de votre question"
+            Bot_chosed_utterance = """😕 Désolé, Je n'ai plus d'autres reformulations de cette question\nVoulez vous quand même  que je vous propose une réponse que je vous ai déjà proposée ?"""
+           
             dispatcher.utter_message(text = Bot_chosed_utterance)
+            return [Form(None)]
+
+        return []
+
+
+
+class ActionNoFortherReformulation(Action):
+    def name(self) -> Text:
+        return "action_no_further_reformulation"
+
+    async def run(
+        self,
+        dispatcher: CollectingDispatcher,
+        tracker: Tracker,
+        domain: Dict[Text, Any],
+    ) -> List[EventType]:
+        #bot_responses_to_user_question_json contains all bot utterances regarding the user sub-intent in a list of json
+        bot_responses_to_user_question_json =  tracker.get_slot('strored_all_bot_responses')
+        user_current_intent_id = tracker.get_slot('user_current_intent_id')
+        bot_responses_to_user_question = list([list_utters for list_utters in bot_responses_to_user_question_json if user_current_intent_id in list_utters.keys()][0].values())[0]
+        Bot_chosed_utterance = bot_responses_to_user_question[random.randint(0, len(bot_responses_to_user_question) - 1)]
+        dispatcher.utter_message(text = Bot_chosed_utterance)
+
         return []

@@ -10,3 +10,4 @@ actions:
   - action_get_user_curent_intent
   - action_bot_utterances_list
   - action_store_all_bot_responses
+  - action_no_further_reformulation

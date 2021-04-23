@@ -51,7 +51,9 @@ nlu:
 
 - intent: affirm
   examples: |
-    - merci
+    - oui, biensûr
+    - je veux bien, oui
+    - oui, s'il te plaît
     - oui
     - très bien
     - compris
@@ -60,6 +62,8 @@ nlu:
     - oui, tout à fait
     - exact
     - bien
+    - ce serait super
+    - ce serait top
 
 - intent: deny
   examples: |

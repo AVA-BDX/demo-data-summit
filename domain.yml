@@ -134,6 +134,10 @@ responses:
       - text: très bien, reformulez votre question
     utter_dont_understand:
       - text: Désolé, je n'ai pas compris votre question
+    utter_ask_another_question:
+      - text: Très bien posez moi une autre quesstion
+      - text: Alors je suis prêt à répondre à votre prochaine question
+      - text: posez-moi une autre question alors
     utter_faq/1:
       - text: Si la durée de votre séjour est inférieure à 30 jours, votre passeport
             valide de 6 mois suffit.
@@ -1400,6 +1404,7 @@ actions:
   - action_get_user_curent_intent
   - action_bot_utterances_list
   - action_store_all_bot_responses
+  - action_no_further_reformulation
 forms:
     note_asking_form:
         note:
