@@ -6,29 +6,42 @@ intents:
 - affirm
 - deny
 - bot_challenge
+- ask_reformulate
 
 responses:
-  utter_greet:
-  - text: "salut comment vas-tu ?"
-  - text: "Bonjour ça va ?"
-
-  utter_goodbye:
-  - text: "Au revoir"
-
-  utter_iamabot:
-  - text: "Je suis un bot créé grâce à Rasa par Talan"
-
-  utter_did_that_help:
-  - text: "cela vous a-t-il aidé ?"
-
-  utter_super:
-  - text: "Top"
-  - text: "ravis de l'apprendre"
-  - text: "super alors"
-
-  utter_reformulate:
-  - text: "pouvez-vous reformuler la question ?"
-  - text: "très bien, reformulez votre question"
-
-  utter_dont_understand:
-  - text: Désolé, je n'ai pas compris votre question
+    utter_greet:
+      - text: salut comment vas-tu ?
+      - text: Bonjour ça va ?
+    utter_goodbye:
+      - text: Au revoir
+    utter_iamabot:
+      - text: Je suis un bot créé grâce à Rasa par Talan
+    utter_did_that_help:
+      - text: cela vous a-t-il aidé ?
+      - text: êtes vous satisfaits de la réponse ?
+    utter_ask_note:
+      - text: donnez une note entre 1 et 5 pour exprimer votre satisfaction
+        buttons:
+        - title: "1"
+          payload: "1"
+        - title: "2"
+          payload: "2"
+        - title: "3"
+          payload: "3"
+        - title: "4"
+          payload: "4"
+        - title: "5"
+          payload: "5"
+    utter_super:
+      - text: Top
+      - text: ravis de l'apprendre
+      - text: super alors
+    utter_reformulate:
+      - text: pouvez-vous reformuler la question ?
+      - text: très bien, reformulez votre question
+    utter_dont_understand:
+      - text: Désolé, je n'ai pas compris votre question
+    utter_ask_another_question:
+      - text: Très bien posez moi une autre quesstion
+      - text: Alors je suis prêt à répondre à votre prochaine question
+      - text : posez-moi une autre question alors

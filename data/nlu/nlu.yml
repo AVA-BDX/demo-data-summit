@@ -1,18 +1,36 @@
 version: "2.0"
 
 nlu:
-- intent: number
+# - intent: number
+#   examples: |
+#     - 1
+#     - 2
+#     - 3
+#     - 4
+#     - 5
+#     - 6
+#     - 7
+#     - 8
+#     - 9
+#     - 10
+- intent: ask_reformulate
   examples: |
-    - 1
-    - 2
-    - 3
-    - 4
-    - 5
-    - 6
-    - 7
-    - 8
-    - 9
-    - 10
+    - pouvez vous reformuler
+    - dis le moi autrement
+    - reformule
+    - dis le d'une autre manière
+    - dites le différemment
+    - je n'ai pas compris
+    - peux tu être plus clair
+    - soit plus explicite
+    - explique mieux
+    - parle français
+    - rien compris
+    - je n'ai pas compris
+    - pouvez-vous reformuler s'il vous plait ?
+    - pas compris
+    - je ne comprends pas
+    
 - intent: greet
   examples: |
     - Bonjour
@@ -33,7 +51,9 @@ nlu:
 
 - intent: affirm
   examples: |
-    - merci
+    - oui, biensûr
+    - je veux bien, oui
+    - oui, s'il te plaît
     - oui
     - très bien
     - compris
@@ -42,6 +62,8 @@ nlu:
     - oui, tout à fait
     - exact
     - bien
+    - ce serait super
+    - ce serait top
 
 - intent: deny
   examples: |

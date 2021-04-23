@@ -1,0 +1,13 @@
+version: "2.0" 
+
+actions:
+  - action_user_last_message
+  - action_bot_last_message
+  - action_record_the_user_note
+  - validate_note_asking_form
+  - user_note_to_none
+  - action_utter_reformulate
+  - action_get_user_curent_intent
+  - action_bot_utterances_list
+  - action_store_all_bot_responses
+  - action_no_further_reformulation
