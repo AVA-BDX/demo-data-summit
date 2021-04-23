@@ -1,6 +1,7 @@
 version: "2.0"
 
 nlu:
+<<<<<<< bot-adaptive-answers
 - intent: number
   examples: |
     - 1
@@ -13,6 +14,7 @@ nlu:
     - 8
     - 9
     - 10
+
 - intent: ask_reformulate
   examples: |
     - pouvez vous reformuler
