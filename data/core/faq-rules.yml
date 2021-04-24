@@ -8,7 +8,7 @@ rules:
   - action: action_get_user_curent_intent
   - action: user_note_to_none
   - action: action_user_last_message
-  - action: utter_faq
+  - action: action_bot_adaptive_answer
   - action: action_bot_last_message
   - action: action_bot_utterances_list
   - action: note_asking_form
@@ -23,7 +23,7 @@ rules:
   - action: action_get_user_curent_intent
   - action: user_note_to_none
   - action: action_user_last_message
-  - action: utter_faq
+  - action: action_bot_adaptive_answer
   - action: action_bot_last_message
   - action: action_bot_utterances_list
   - action: note_asking_form
@@ -46,6 +46,25 @@ rules:
   - intent: deny
   - action: utter_reformulate
 
+- rule: the user want to inform bot on his profile, the bot ask profile
+  steps:
+  - intent: want_inform_profile
+  - action: utter_ask_profil
+
+- rule: user just inform on his profile = short_utters
+  steps:
+  - intent: short_utters
+  - action: action_set_and_acknowledge_profile
+
+- rule: user just inform on his profile = dont_care
+  steps:
+  - intent: dont_care
+  - action: action_set_and_acknowledge_profile
+
+- rule: user just inform on his profile = long_utters
+  steps:
+  - intent: long_utters
+  - action: action_set_and_acknowledge_profile
 
 - rule: happy path, ask the user if he still want a response, user affirm
   steps:
@@ -54,7 +73,6 @@ rules:
   - intent: affirm
   - action: action_no_further_reformulation
 
-
 - rule: unhapppy path, ask the user if he still want a response, he deny
   steps:
   - action: action_utter_reformulate
@@ -62,22 +80,16 @@ rules:
   - intent: deny
   - action: utter_ask_another_question
 
-
-
-
 - rule: bot ask to reformulate if the user deny after a faq
   steps:
   - intent: ask_reformulate
   - action: action_utter_reformulate
   - action: action_bot_utterances_list
 
-
 - rule: The chatbot says it does not understand when it doesn't understand
   steps:
   - intent: nlu_fallback
   - action: utter_dont_understand
-
-
 
 # - rule: store bot responses in a slot at the begening of a conversation
 #   conversation_start: false

@@ -83,6 +83,10 @@ entities:
   - eve_fete
   - medicament
   - bagage_perdu
+  - profile_exple
+  - short_utters_entity
+  - dont_care_entity
+  - long_utters_entity
 slots:
     user_ongoin_message:
         type: any
@@ -102,6 +106,8 @@ slots:
         type: any
     strored_all_bot_responses:
         type: list
+    profile:
+        type: any
 responses:
     utter_greet:
       - text: salut comment vas-tu ?
@@ -139,6 +145,15 @@ responses:
       - text: Très bien posez moi une autre quesstion
       - text: Alors je suis prêt à répondre à votre prochaine question
       - text: posez-moi une autre question alors
+    utter_ask_profil:
+      - text: Quel serait votre profile ?
+        buttons:
+          - title: phrases courtes
+            payload: /short_utters
+          - title: indifférent
+            payload: /dont_care
+          - title: phrases longues
+            payload: /long_utters
     utter_faq/1:
       - text: Si la durée de votre séjour est inférieure à 30 jours, votre passeport
             valide de 6 mois suffit.
@@ -1406,6 +1421,8 @@ actions:
   - action_bot_utterances_list
   - action_store_all_bot_responses
   - action_no_further_reformulation
+  - action_set_and_acknowledge_profile
+  - action_bot_adaptive_answer
 forms:
     note_asking_form:
         note:

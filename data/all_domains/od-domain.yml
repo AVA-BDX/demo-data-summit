@@ -46,3 +46,12 @@ responses:
       - text: Très bien posez moi une autre quesstion
       - text: Alors je suis prêt à répondre à votre prochaine question
       - text : posez-moi une autre question alors
+    utter_ask_profil:
+    - text: "Quel serait votre profile ?"
+      buttons:
+      - title: "phrases courtes"
+        payload: "/short_utters"
+      - title: "indifférent"
+        payload: "/dont_care"    
+      - title: "phrases longues"
+        payload: "/long_utters"  
