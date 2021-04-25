@@ -89,10 +89,15 @@ class bot_outputs(Action):
     def run(self, dispatcher, tracker, domain):
         """Get the bot last response"""
 
+        user_intent = tracker.latest_message['intent'].get('name')
+        
         bot_last_event = next(e for e in reversed(tracker.events) if e["event"] == "bot")
         bot_ongoin_message = bot_last_event['text']       
         time_bot_answer = str(datetime.now())
-        return [SlotSet("bot_ongoin_message", bot_ongoin_message),SlotSet("time_bot_answer", time_bot_answer)]
+        if user_intent == "faq":
+            return [SlotSet("bot_ongoin_message",bot_ongoin_message),SlotSet("bot_last_faq_message", bot_ongoin_message),SlotSet("time_bot_answer", time_bot_answer)]
+        else:
+            return [SlotSet("bot_ongoin_message", bot_ongoin_message),SlotSet("time_bot_answer", time_bot_answer)]
 
 class ActionBotUterranceList(Action):
 
@@ -209,16 +214,16 @@ class bot_reformulate(Action):
         # #get intent to make sure at least one faq question was asked befor user ask reformulate
         # intent = tracker.latest_message['intent'].get('name')
 
-        #get user faq question, to make sure that he has asked at least one queston
-        user_last_faq_question = tracker.get_slot('user_ongoin_message')
+        #get bot faq response  to make sure that user has asked at least one faq queston
+        bot_last_faq_response = tracker.get_slot('bot_last_faq_message')
 
         #recall conversation memory
         already_uttered_responses = tracker.get_slot('bot_utterances_list_slot')
 
         #if the user ask to reformulate before asking any faq question notify he didn't ask any question
-        if user_last_faq_question == None :
+        if bot_last_faq_response == None:
             dispatcher.utter_message(text = "Mais vous n'avez encore posé aucune question ^^' !")
-            return []
+            return [] 
             
         #bot_responses_to_user_question_json contains all bot utterances regarding the user sub-intent in a list of json
         bot_responses_to_user_question_json =  tracker.get_slot('strored_all_bot_responses')
@@ -313,12 +318,13 @@ class ActionNoFortherReformulation(Action):
     ) -> List[EventType]:
         """ This function will give an answer to the user among those the bot has already given 
         when there is no other/further reformulation and will adapt those answers based on the user's profile"""
-        #bot_responses_to_user_question_json contains all bot utterances regarding the user sub-intent in a list of json
-        # bot_responses_to_user_question_json =  tracker.get_slot('strored_all_bot_responses')
-        # user_current_intent_id = tracker.get_slot('user_current_intent_id')
-        # bot_responses_to_user_question = list([list_utters for list_utters in bot_responses_to_user_question_json if user_current_intent_id in list_utters.keys()][0].values())[0]
-        bot_responses_to_user_question  = tracker.get_slot('bot_utterances_list_slot')
-        Bot_chosed_utterance = bot_responses_to_user_question[random.randint(0, len(bot_responses_to_user_question) - 1)]
+        # #bot_responses_to_user_question_json contains all bot utterances regarding the user sub-intent in a list of json
+        # # bot_responses_to_user_question_json =  tracker.get_slot('strored_all_bot_responses')
+        # # user_current_intent_id = tracker.get_slot('user_current_intent_id')
+        # # bot_responses_to_user_question = list([list_utters for list_utters in bot_responses_to_user_question_json if user_current_intent_id in list_utters.keys()][0].values())[0]
+        # bot_responses_to_user_question  = tracker.get_slot('bot_utterances_list_slot')
+        # Bot_chosed_utterance = bot_responses_to_user_question[random.randint(0, len(bot_responses_to_user_question) - 1)]
+        Bot_chosed_utterance = tracker.get_slot('bot_reformulation')
         dispatcher.utter_message(text = Bot_chosed_utterance)
 
         return []

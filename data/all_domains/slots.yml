@@ -21,3 +21,5 @@ slots:
     type: list
   profile:
     type: any
+  bot_last_faq_message:
+    type: any

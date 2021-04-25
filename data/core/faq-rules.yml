@@ -37,7 +37,7 @@ rules:
     - active_loop: null
     - action: action_record_the_user_note
 
-- rule: the bot reformulate any time the user ask him to reformulate
+- rule: bot ask to reformulate if the user deny after a faq 
   condition:
   - active_loop: note_asking_form
   steps:
@@ -80,7 +80,7 @@ rules:
   - intent: deny
   - action: utter_ask_another_question
 
-- rule: bot ask to reformulate if the user deny after a faq
+- rule: the bot reformulate any time the user ask him to reformulate
   steps:
   - intent: ask_reformulate
   - action: action_utter_reformulate

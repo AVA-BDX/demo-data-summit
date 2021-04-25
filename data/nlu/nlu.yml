@@ -35,6 +35,28 @@ nlu:
     - Je n'ai pas compris
 
 
+- intent: ask_reformulate
+  examples: |
+    - pouvez vous reformuler
+    - dis le moi autrement
+    - reformule
+    - dis le d'une autre manière
+    - dites le différemment
+    - je n'ai pas compris
+    - peux tu être plus clair
+    - soit plus explicite
+    - explique mieux
+    - parle français
+    - rien compris
+    - je n'ai pas compris
+    - pouvez-vous reformuler s'il vous plait ?
+    - pas compris
+    - je ne comprends pas
+    - Pas compris
+    - j'ai pas compris
+    - Je n'ai pas compris
+
+
 - intent: want_inform_profile
   examples: |
     - demande moi mon [profil](profile_exple)
@@ -47,6 +69,7 @@ nlu:
     - sais tu ce que je [préfère](profile_exple) ?
     - demande ce que [je veux](profile_exple)
     - tu connais mes phrases [préférées](profile_exple)
+    - tu connais mes réponses [préférées](profile_exple)
 
 - intent: short_utters
   examples: |
@@ -57,6 +80,13 @@ nlu:
     - phrases [courtes](short_utters_entity)
     - [concises](short_utters_entity)
     - des phrases [pas trop longues](short_utters_entity)
+    - J'aime les réponses [courtes](short_utters_entity)
+    - des réponses [concises](short_utters_entity)
+    - [court](short_utters_entity)
+    - [courtes](short_utters_entity)
+    - réponses [courtes](short_utters_entity)
+    - [concises](short_utters_entity)
+    - des réponses [pas trop longues](short_utters_entity)
 
 - intent: dont_care
   examples: |
@@ -72,7 +102,9 @@ nlu:
     - [toutes](dont_care_entity)
     - [toutes](dont_care_entity)
     - [toutes](dont_care_entity)
-
+    - donne moi [toutes]((dont_care_entity) ) les réponses
+    - tu peux me proposer [toutes](dont_care_entity) les réponses
+ 
 - intent: long_utters
   examples: |
     - j'ai les [longues](long_utters_entity) phrases
@@ -84,6 +116,11 @@ nlu:
     - [détaillées](long_utters_entity)
     - j'aime les phrases [longues](long_utters_entity)
     - j'adore les [longues](long_utters_entity) phrases
+    - j'ai les [longues](long_utters_entity) réponses
+    - je préfères les réponses [détaillées](long_utters_entity)
+    - réponses [longues](long_utters_entity)
+    - j'aime les réponses [longues](long_utters_entity)
+    - j'adore les [longues](long_utters_entity) réponses
 
 - intent: greet
   examples: |

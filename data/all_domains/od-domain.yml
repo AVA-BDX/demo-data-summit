@@ -8,6 +8,10 @@ intents:
 - bot_challenge
 - ask_reformulate
 - number
+- want_inform_profile
+- short_utters
+- dont_care
+- long_utters
 
 responses:
     utter_greet:
