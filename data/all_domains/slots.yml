@@ -19,3 +19,7 @@ slots:
     type: any
   strored_all_bot_responses:
     type: list
+  profile:
+    type: any
+  bot_last_faq_message:
+    type: any

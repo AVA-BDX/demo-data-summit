@@ -11,3 +11,5 @@ actions:
   - action_bot_utterances_list
   - action_store_all_bot_responses
   - action_no_further_reformulation
+  - action_set_and_acknowledge_profile
+  - action_bot_adaptive_answer

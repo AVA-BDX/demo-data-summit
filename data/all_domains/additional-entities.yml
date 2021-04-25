@@ -16,4 +16,8 @@ entities:
 - eve_fete
 - medicament
 - bagage_perdu
+- profile_exple
+- short_utters_entity
+- dont_care_entity
+- long_utters_entity
 
