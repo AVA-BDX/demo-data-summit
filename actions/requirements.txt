@@ -2,3 +2,4 @@ psycopg2
 typing-extensions
 pandas
 numpy
+nltk

@@ -20,4 +20,7 @@ entities:
 - short_utters_entity
 - dont_care_entity
 - long_utters_entity
+- gauche
+- milieu
+- droit
 

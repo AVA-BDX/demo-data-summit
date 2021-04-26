@@ -12,6 +12,9 @@ intents:
   - short_utters
   - dont_care
   - long_utters
+  - confusion_1
+  - confusion_2
+  - non_sense
 entities:
   - PCR
   - activites
@@ -91,6 +94,9 @@ entities:
   - short_utters_entity
   - dont_care_entity
   - long_utters_entity
+  - gauche
+  - milieu
+  - droit
 slots:
     user_ongoin_message:
         type: any
@@ -108,11 +114,23 @@ slots:
         type: list
     bot_reformulation:
         type: any
+    strored_all_bot_questions:
+        type: list
     strored_all_bot_responses:
         type: list
     profile:
         type: any
     bot_last_faq_message:
+        type: any
+    confusion_1_id:
+        type: any
+    confusion_2_id:
+        type: any
+    gauche:
+        type: any
+    milieu:
+        type: any
+    droit:
         type: any
 responses:
     utter_greet:
@@ -146,7 +164,9 @@ responses:
       - text: pouvez-vous reformuler la question ?
       - text: très bien, reformulez votre question
     utter_dont_understand:
-      - text: Désolé, je n'ai pas compris votre question
+      - text: Très bien, donnez-moi plus de détails alors
+      - text: Ok, on ne s'est pas compris, pouvez-vous reformuler votre question?
+      - text: Hmmm, je n'ai donc pas compris! pouvez-vous me le dire différements?
     utter_ask_another_question:
       - text: Très bien posez moi une autre quesstion
       - text: Alors je suis prêt à répondre à votre prochaine question
@@ -1426,9 +1446,12 @@ actions:
   - action_get_user_curent_intent
   - action_bot_utterances_list
   - action_store_all_bot_responses
+  - action_store_all_bot_questions
   - action_no_further_reformulation
   - action_set_and_acknowledge_profile
   - action_bot_adaptive_answer
+  - action_ask_for_clarification
+  - action_set_faq_confusion_id
 forms:
     note_asking_form:
         note:
