@@ -1,50 +1,42 @@
 version: "2.0"
 
 rules:
-- rule: start note_asking_form and store times for both user question and bot answer
+- rule: go through ask_for_clarification function
   steps:
   - intent: faq
   - action: action_store_all_bot_responses
+  - action: action_store_all_bot_questions
   - action: action_get_user_curent_intent
   - action: user_note_to_none
   - action: action_user_last_message
+  - action: action_ask_for_clarification
+  - action: action_bot_last_message
+  - action: action_bot_utterances_list
+
+
+- rule: confusion_1
+  steps:
+  - intent: confusion_1
+  - action: action_set_faq_confusion_id
   - action: action_bot_adaptive_answer
   - action: action_bot_last_message
   - action: action_bot_utterances_list
-  - action: note_asking_form
-  - active_loop: note_asking_form
 
-- rule: go back to another faq when the user ask so
-  condition:
-  - active_loop: note_asking_form
+- rule: confusion_2
   steps:
-  - intent: faq
-  - action: action_store_all_bot_responses
-  - action: action_get_user_curent_intent
-  - action: user_note_to_none
-  - action: action_user_last_message
+  - intent: confusion_2
+  - action: action_set_faq_confusion_id
   - action: action_bot_adaptive_answer
   - action: action_bot_last_message
   - action: action_bot_utterances_list
-  - action: note_asking_form
-  - active_loop: note_asking_form
 
-- rule: submit the note_asking_form
-  condition:
-      - active_loop: note_asking_form
+- rule: non_sense
   steps:
-    - action: note_asking_form
-    - active_loop: null
-    - action: action_record_the_user_note
-
-- rule: bot ask to reformulate if the user deny after a faq 
-  condition:
-  - active_loop: note_asking_form
-  steps:
-  - action: note_asking_form
-  - active_loop: note_asking_form
-  - intent: deny
-  - action: utter_reformulate
+  - intent: non_sense
+  - action: action_set_faq_confusion_id
+  - action: action_bot_adaptive_answer
+  - action: action_bot_last_message
+  - action: action_bot_utterances_list
 
 - rule: the user want to inform bot on his profile, the bot ask profile
   steps:
@@ -55,16 +47,34 @@ rules:
   steps:
   - intent: short_utters
   - action: action_set_and_acknowledge_profile
+  - action: action_bot_adaptive_answer
 
 - rule: user just inform on his profile = dont_care
   steps:
   - intent: dont_care
   - action: action_set_and_acknowledge_profile
+  - action: action_bot_adaptive_answer
 
 - rule: user just inform on his profile = long_utters
   steps:
   - intent: long_utters
   - action: action_set_and_acknowledge_profile
+  - action: action_bot_adaptive_answer
+
+- rule: user just inform on his profile happy
+  steps:
+  - action: action_set_and_acknowledge_profile
+  - action: action_bot_adaptive_answer
+  - intent: affirm
+  - action: utter_super
+
+
+- rule: user just inform on his profile not unhappy
+  steps:
+  - action: action_set_and_acknowledge_profile
+  - action: action_bot_adaptive_answer
+  - intent: deny
+  - action: utter_ask_profil
 
 - rule: happy path, ask the user if he still want a response, user affirm
   steps:
@@ -86,10 +96,10 @@ rules:
   - action: action_utter_reformulate
   - action: action_bot_utterances_list
 
-- rule: The chatbot says it does not understand when it doesn't understand
-  steps:
-  - intent: nlu_fallback
-  - action: utter_dont_understand
+# - rule: The chatbot says it does not understand when it doesn't understand
+#   steps:
+#   - intent: nlu_fallback
+#   - action: utter_dont_understand
 
 # - rule: store bot responses in a slot at the begening of a conversation
 #   conversation_start: false

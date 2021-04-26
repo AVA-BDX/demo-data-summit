@@ -9,4 +9,49 @@ stories:
     - intent: dont_care
     - intent: long_utters
   - action: action_set_and_acknowledge_profile
+  - action: action_bot_adaptive_answer
+  - intent: affirm
+  - action: utter_super
 
+- story: bot didn't get user profil well and ask him to chose 1
+  steps:
+  - action: utter_ask_profil
+  - or:
+    - intent: short_utters
+    - intent: dont_care
+    - intent: long_utters
+  - action: action_set_and_acknowledge_profile
+  - action: action_bot_adaptive_answer
+  - intent: deny
+  - action: utter_ask_profil
+
+- story: bot didn't get user profil well and ask him to chose 2
+  steps:
+  - or:
+    - intent: short_utters
+    - intent: dont_care
+    - intent: long_utters
+  - action: action_set_and_acknowledge_profile
+  - action: action_bot_adaptive_answer
+  - intent: deny
+  - action: utter_ask_profil
+
+- story: confusion story
+  steps:
+  - intent: faq
+  - action: action_store_all_bot_responses
+  - action: action_store_all_bot_questions
+  - action: action_get_user_curent_intent
+  - action: user_note_to_none
+  - action: action_user_last_message
+  - action: action_ask_for_clarification
+  - action: action_bot_last_message
+  - action: action_bot_utterances_list
+  - or:
+    - intent: confusion_1
+    - intent: confusion_2
+    - intent: non_sense
+  - action: action_set_faq_confusion_id
+  - action: action_bot_adaptive_answer
+  - action: action_bot_last_message
+  - action: action_bot_utterances_list

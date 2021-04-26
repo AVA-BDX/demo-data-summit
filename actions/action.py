@@ -12,6 +12,9 @@ from datetime import datetime
 import random
 import pandas as pd
 import numpy as np
+import nltk
+from nltk.corpus import stopwords
+from nltk import word_tokenize
 
 
 
@@ -34,12 +37,29 @@ class ActionStoreAllBotResponses(Action):
         else:
             return [] 
 
+class ActionStoreAllBotQuesstions(Action):
+
+    def name(self):
+        return 'action_store_all_bot_questions'
+
+    async def run(self, dispatcher, tracker, domain):
+        """This action will map and store all the bot's responses at the begining of the first user's question"""
+
+        path = r"data/qna_data_bases/questions_bot_augmente.csv"
+        data_base = pd.read_csv(path,  sep=";", encoding="latin3")       
+        test_if_all_questions_was_stored = tracker.get_slot('strored_all_bot_questions')
+        if test_if_all_questions_was_stored == None:
+            strored_all_bot_questions = [{str(num_pivot): [data_base.reponse_prop[idx].encode('utf8','ignore').decode('utf8').replace('\x92',"'").replace('\x9c','oe').replace('\x80','€').replace('\xa0',' ') for idx in range(len(data_base.id_question_pivot)) if data_base.id_question_pivot[idx] == num_pivot]} for num_pivot in set(data_base.id_question_pivot)]
+            return [SlotSet("strored_all_bot_questions", strored_all_bot_questions)]
+        else:
+            return [] 
+
 class user_inputs(Action):
 
     def name(self):
         return 'action_user_last_message'
 
-    def run(self, dispatcher, tracker, domain):
+    async def run(self, dispatcher, tracker, domain):
         """This action will store the last user faq question"""
 
         user_ongoin_message = tracker.latest_message['text']
@@ -52,7 +72,7 @@ class ActionGetUserCurentIntent(Action):
     def name(self) -> Text:
         return "action_get_user_curent_intent"
 
-    def run(
+    async def run(
         self, dispatcher: CollectingDispatcher, tracker: Tracker, domain: DomainDict,
     ) -> List[EventType]:
         full_intent = (
@@ -86,7 +106,7 @@ class bot_outputs(Action):
     def name(self):
         return 'action_bot_last_message'
 
-    def run(self, dispatcher, tracker, domain):
+    async def run(self, dispatcher, tracker, domain):
         """Get the bot last response"""
 
         user_intent = tracker.latest_message['intent'].get('name')
@@ -104,7 +124,7 @@ class ActionBotUterranceList(Action):
     def name(self):
         return 'action_bot_utterances_list'
 
-    def run(self, dispatcher, tracker, domain):
+    async def run(self, dispatcher, tracker, domain):
         """Store every bot's faq responses during conversation in a non duplicated list"""
 
         actual_list_responses = tracker.get_slot('bot_utterances_list_slot')
@@ -224,39 +244,42 @@ class bot_reformulate(Action):
         if bot_last_faq_response == None:
             dispatcher.utter_message(text = "Mais vous n'avez encore posé aucune question ^^' !")
             return [] 
-            
-        #bot_responses_to_user_question_json contains all bot utterances regarding the user sub-intent in a list of json
-        bot_responses_to_user_question_json =  tracker.get_slot('strored_all_bot_responses')
-        #get the user faq intent id
-        user_current_intent_id = tracker.get_slot('user_current_intent_id')
+        else:   
+            #bot_responses_to_user_question_json contains all bot utterances regarding the user sub-intent in a list of json
+            bot_responses_to_user_question_json =  tracker.get_slot('strored_all_bot_responses')
+            #get the user faq intent id
+            user_current_intent_id = tracker.get_slot('user_current_intent_id')
 
-        #get all responses for that id
-        bot_responses_to_user_question = list([list_utters for list_utters in bot_responses_to_user_question_json if user_current_intent_id in list_utters.keys()][0].values())[0]
-        #measure quantile to adapt responses to the user profile
-        bot_responses_lengths = [len(utter) for utter in bot_responses_to_user_question]
-        first_quantile = int(np.quantile(bot_responses_lengths, .25))
-        third_quentile = int(np.quantile(bot_responses_lengths, .75))
+            if user_current_intent_id == None:
+                dispatcher.utter_message(text = "Difficile de reformuler une réponse, à partir d'une question non comprise ^^'")
 
-        if user_profile == "short_utters":
-            responses_idx = [idx for idx in range(len(bot_responses_lengths)) if bot_responses_lengths[idx] <= first_quantile]
-            bot_responses_to_user_question = [bot_responses_to_user_question[idx] for idx in responses_idx]
-            choice = "réponses courtes"
-        elif user_profile == "long_utters":
-            responses_idx = [idx for idx in range(len(bot_responses_lengths)) if bot_responses_lengths[idx] >= third_quentile]
-            bot_responses_to_user_question = [bot_responses_to_user_question[idx] for idx in responses_idx]
-            choice = "réponses longues"
-        else:
-            bot_responses_to_user_question = bot_responses_to_user_question
-            choice = ""
-        bot_allowed_utterances = [bot_utterance for bot_utterance in bot_responses_to_user_question if bot_utterance not in already_uttered_responses]
-        if len(bot_allowed_utterances) > 0:
-            Bot_chosed_utterance = bot_allowed_utterances[random.randint(0, len(bot_allowed_utterances) - 1)]
-            dispatcher.utter_message(text = Bot_chosed_utterance)
-            return [SlotSet("bot_reformulation", Bot_chosed_utterance )]
-        else:
-            Bot_chosed_utterance = f"😕 Désolé, par rapport à vos goûts ({choice}) Je n'ai plus d'autres reformulations pour cette question.\nVoulez vous quand même  que je vous propose une réponse que je vous ai déjà proposée ?"
-            dispatcher.utter_message(text = Bot_chosed_utterance)
-            return [Form(None)]
+            #get all responses for that id
+            bot_responses_to_user_question = list([list_utters for list_utters in bot_responses_to_user_question_json if user_current_intent_id in list_utters.keys()][0].values())[0]
+            #measure quantile to adapt responses to the user profile
+            bot_responses_lengths = [len(utter) for utter in bot_responses_to_user_question]
+            first_quantile = int(np.quantile(bot_responses_lengths, .25))
+            third_quentile = int(np.quantile(bot_responses_lengths, .75))
+
+            if user_profile == "short_utters":
+                responses_idx = [idx for idx in range(len(bot_responses_lengths)) if bot_responses_lengths[idx] <= first_quantile]
+                bot_responses_to_user_question = [bot_responses_to_user_question[idx] for idx in responses_idx]
+                choice = "réponses courtes"
+            elif user_profile == "long_utters":
+                responses_idx = [idx for idx in range(len(bot_responses_lengths)) if bot_responses_lengths[idx] >= third_quentile]
+                bot_responses_to_user_question = [bot_responses_to_user_question[idx] for idx in responses_idx]
+                choice = "réponses longues"
+            else:
+                bot_responses_to_user_question = bot_responses_to_user_question
+                choice = ""
+            bot_allowed_utterances = [bot_utterance for bot_utterance in bot_responses_to_user_question if bot_utterance not in already_uttered_responses]
+            if len(bot_allowed_utterances) > 0:
+                Bot_chosed_utterance = bot_allowed_utterances[random.randint(0, len(bot_allowed_utterances) - 1)]
+                dispatcher.utter_message(text = Bot_chosed_utterance)
+                return [SlotSet("bot_reformulation", Bot_chosed_utterance )]
+            else:
+                Bot_chosed_utterance = f"😕 Désolé, par rapport à vos goûts ({choice}) Je n'ai plus d'autres reformulations pour cette question.\nVoulez vous quand même  que je vous propose une réponse que je vous ai déjà proposée ?"
+                dispatcher.utter_message(text = Bot_chosed_utterance)
+                return [Form(None)]
 
         return []
 
@@ -281,22 +304,32 @@ class ActionBotAdaptiveAnswer(Action):
         bot_responses_to_user_question_json =  tracker.get_slot('strored_all_bot_responses')
         #get the user faq intent id
         user_current_intent_id = tracker.get_slot('user_current_intent_id')
+        #get bot last_faq_message to check if at least one faq_message has been asked by the user
+        bot_last_faq_message = tracker.get_slot('bot_last_faq_message')
 
-        #get all responses for that id
-        bot_responses_to_user_question = list([list_utters for list_utters in bot_responses_to_user_question_json if user_current_intent_id in list_utters.keys()][0].values())[0]
-        #measure quantile to adapt responses to the user profile
-        bot_responses_lengths = [len(utter) for utter in bot_responses_to_user_question]
-        first_quantile = int(np.quantile(bot_responses_lengths, .25))
-        third_quentile = int(np.quantile(bot_responses_lengths, .75))
+        if bot_last_faq_message == None:
+            dispatcher.utter_message(text = "Je vous écoute pour votre question")
+            return []
 
-        if user_profile == "short_utters":
-            responses_idx = [idx for idx in range(len(bot_responses_lengths)) if bot_responses_lengths[idx] <= first_quantile]
-            bot_responses_to_user_question = [bot_responses_to_user_question[idx] for idx in responses_idx]
-        elif user_profile == "long_utters":
-            responses_idx = [idx for idx in range(len(bot_responses_lengths)) if bot_responses_lengths[idx] >= third_quentile]
-            bot_responses_to_user_question = [bot_responses_to_user_question[idx] for idx in responses_idx]
+        elif user_current_intent_id == None:
+            dispatcher.utter_message(template="utter_dont_understand")
+            return []
         else:
-            bot_responses_to_user_question = bot_responses_to_user_question
+            #get all responses for that id
+            bot_responses_to_user_question = list([list_utters for list_utters in bot_responses_to_user_question_json if user_current_intent_id in list_utters.keys()][0].values())[0]
+            #measure quantile to adapt responses to the user profile
+            bot_responses_lengths = [len(utter) for utter in bot_responses_to_user_question]
+            first_quantile = int(np.quantile(bot_responses_lengths, .25))
+            third_quentile = int(np.quantile(bot_responses_lengths, .75))
+
+            if user_profile == "short_utters":
+                responses_idx = [idx for idx in range(len(bot_responses_lengths)) if bot_responses_lengths[idx] <= first_quantile]
+                bot_responses_to_user_question = [bot_responses_to_user_question[idx] for idx in responses_idx]
+            elif user_profile == "long_utters":
+                responses_idx = [idx for idx in range(len(bot_responses_lengths)) if bot_responses_lengths[idx] >= third_quentile]
+                bot_responses_to_user_question = [bot_responses_to_user_question[idx] for idx in responses_idx]
+            else:
+                bot_responses_to_user_question = bot_responses_to_user_question
 
         Bot_chosed_utterance = bot_responses_to_user_question[random.randint(0, len(bot_responses_to_user_question) - 1)]
         dispatcher.utter_message(text = Bot_chosed_utterance)
@@ -318,12 +351,6 @@ class ActionNoFortherReformulation(Action):
     ) -> List[EventType]:
         """ This function will give an answer to the user among those the bot has already given 
         when there is no other/further reformulation and will adapt those answers based on the user's profile"""
-        # #bot_responses_to_user_question_json contains all bot utterances regarding the user sub-intent in a list of json
-        # # bot_responses_to_user_question_json =  tracker.get_slot('strored_all_bot_responses')
-        # # user_current_intent_id = tracker.get_slot('user_current_intent_id')
-        # # bot_responses_to_user_question = list([list_utters for list_utters in bot_responses_to_user_question_json if user_current_intent_id in list_utters.keys()][0].values())[0]
-        # bot_responses_to_user_question  = tracker.get_slot('bot_utterances_list_slot')
-        # Bot_chosed_utterance = bot_responses_to_user_question[random.randint(0, len(bot_responses_to_user_question) - 1)]
         Bot_chosed_utterance = tracker.get_slot('bot_reformulation')
         dispatcher.utter_message(text = Bot_chosed_utterance)
 
@@ -360,3 +387,160 @@ class ActionSetAndAcknowledgeProfile(Action):
 
         return []
 
+        
+
+
+class ActionAskClarification(Action):
+    """Asks for a clarification if confusion between two intentions"""
+
+    def name(self) -> Text:
+        return "action_ask_for_clarification"
+
+    async def run(
+        self, dispatcher: CollectingDispatcher, tracker: Tracker, domain: DomainDict,
+    ) -> List[EventType]:
+        #bot_responses_to_user_question_json contains all bot utterances regarding the user sub-intent in a list of json
+        bot_responses_to_user_question_json =  tracker.get_slot('strored_all_bot_responses') 
+        user_questions_to_bot_responses_json =  tracker.get_slot('strored_all_bot_questions')
+
+        french_stopwords = set(stopwords.words('french'))
+        filtre_stopfr =  lambda text: [token for token in text if token.lower() not in french_stopwords]
+        ponctuations = [",",".","?","[","]","(",")","{","}",";","!",":","/","'","-","_","«","»"]
+        
+        intent_ranking = (
+            tracker.latest_message.get("response_selector", {})
+            .get("faq", {})
+            .get("ranking", [])
+        )
+        if len(intent_ranking) > 1 :
+            #user question not clear enough
+            if intent_ranking[0].get("confidence")<0.4:
+                dispatcher.utter_message(text= f"Pouvez vous apporter plus de détails s'il vous plait ? \n je n'ai compris que {round(100*intent_ranking[0].get('confidence'),2)}% de ce que vous avez dit ^^'" )
+                return []
+            else:
+                diff_intent_confidence = intent_ranking[0].get(
+                    "confidence"
+                ) - intent_ranking[1].get("confidence")
+                #confusion case
+                if diff_intent_confidence < 0.5:
+                    intent_ranking = intent_ranking[:2]
+                    #get questions ids
+                    id1 = intent_ranking[0].get("intent_response_key").split("/")[1]
+                    id2 = intent_ranking[1].get("intent_response_key").split("/")[1]
+
+                    #get faq_1 2 key words
+                    # phrase1 = list([list_utters for list_utters in bot_responses_to_user_question_json if id1 in list_utters.keys()][0].values())[0]
+                    phrase1_q = list([list_utters for list_utters in user_questions_to_bot_responses_json if id1 in list_utters.keys()][0].values())[0]
+                    # phrase1 = phrase1 + phrase1_q
+                    phrase1 =  phrase1_q
+                    phrase1_to_one_str = ', '.join(phrase1)
+                    for ponc in ponctuations:
+                        phrase1_to_one_str = phrase1_to_one_str.replace(ponc," ")
+                    words_phrase1 = filtre_stopfr( word_tokenize(phrase1_to_one_str, language="french") )
+                    words_phrase1 = [word for word in words_phrase1 if len(word) > 3]
+                    words_phrase1_copy = words_phrase1
+                    count_phrase1 = [phrase1_to_one_str.count(word) for word in list(set(words_phrase1))]
+                    max_count_phrase1_idx = count_phrase1.index(max(count_phrase1))
+                    phrase1_key_word = list(set(words_phrase1))[max_count_phrase1_idx]
+
+                    words_phrase1 = [word for word in  words_phrase1 if  word != phrase1_key_word] 
+                    count_phrase1 = [phrase1_to_one_str.count(word) for word in list(set(words_phrase1))]
+                    max_count_phrase1_idx = count_phrase1.index(max(count_phrase1))
+                    phrase1_key_word2 = list(set(words_phrase1))[max_count_phrase1_idx]
+
+                    #get faq_2 2 key words
+                    # phrase2 = list([list_utters for list_utters in bot_responses_to_user_question_json if id2 in list_utters.keys()][0].values())[0]
+                    phrase2_q = list([list_utters for list_utters in user_questions_to_bot_responses_json if id2 in list_utters.keys()][0].values())[0]
+                    # phrase2 = phrase2 + phrase2_q
+                    phrase2 = phrase2_q
+                    phrase2_to_one_str = ', '.join(phrase2)
+                    for ponc in ponctuations:
+                        phrase2_to_one_str = phrase2_to_one_str.replace(ponc," ")                
+                    words_phrase2 = filtre_stopfr( word_tokenize(phrase2_to_one_str, language="french") )
+                    words_phrase2 = [word for word in words_phrase2 if len(word) > 3 and word not in words_phrase1_copy]
+                    count_phrase2 = [phrase2_to_one_str.count(word) for word in list(set(words_phrase2))]
+                    max_count_phrase2_idx = count_phrase2.index(max(count_phrase2))
+                    phrase2_key_word = list(set(words_phrase2))[max_count_phrase2_idx]
+
+                    words_phrase2 = [word for word in  words_phrase2 if  word != phrase2_key_word] 
+                    count_phrase2 = [phrase2_to_one_str.count(word) for word in list(set(words_phrase2))]
+                    max_count_phrase2_idx = count_phrase2.index(max(count_phrase2))
+                    phrase2_key_word2 = list(set(words_phrase2))[max_count_phrase2_idx]
+
+                    #create buttons titles
+                    title_1 = f"{phrase1_key_word},{phrase1_key_word2}"
+                    title_2 = f"{phrase2_key_word},{phrase2_key_word2}"
+                   
+                    message_title = (
+                        "Pardon, je ne suis pas sur d'avoir bien compris 🤔 "  "me parlez-vous de..."
+                    )
+                    buttons = []
+
+                    buttons.append({"title": title_1, "payload": f"/confusion_1"})                   
+                    buttons.append({"title": title_2, "payload": f"/confusion_2"})  
+                    buttons.append({"title": "autre", "payload": f"/non_sense"})
+
+                    dispatcher.utter_message(text=message_title, buttons=buttons)
+                    return [SlotSet("confusion_1_id", id1),SlotSet("confusion_2_id", id2)]
+                #no confison case
+                else:
+                    #get the user profile
+                    user_profile = tracker.get_slot('profile')
+
+                    #get the user faq intent id
+                    user_current_intent_id = tracker.get_slot('user_current_intent_id')
+                    #get bot last_faq_message to check if at least one faq_message has been asked by the user
+                    bot_last_faq_message = tracker.get_slot('bot_last_faq_message')
+
+                    if bot_last_faq_message == None:
+                        dispatcher.utter_message(text="Je vous écoute pour votre question")
+                        return []
+                    elif user_current_intent_id == None:
+                        dispatcher.utter_message(template="utter_dont_understand")
+                        return []
+                    else:
+                        #get all responses for that id
+                        bot_responses_to_user_question = list([list_utters for list_utters in bot_responses_to_user_question_json if user_current_intent_id in list_utters.keys()][0].values())[0]
+                        #measure quantile to adapt responses to the user profile
+                        bot_responses_lengths = [len(utter) for utter in bot_responses_to_user_question]
+                        first_quantile = int(np.quantile(bot_responses_lengths, .25))
+                        third_quentile = int(np.quantile(bot_responses_lengths, .75))
+
+                        if user_profile == "short_utters":
+                            responses_idx = [idx for idx in range(len(bot_responses_lengths)) if bot_responses_lengths[idx] <= first_quantile]
+                            bot_responses_to_user_question = [bot_responses_to_user_question[idx] for idx in responses_idx]
+                        elif user_profile == "long_utters":
+                            responses_idx = [idx for idx in range(len(bot_responses_lengths)) if bot_responses_lengths[idx] >= third_quentile]
+                            bot_responses_to_user_question = [bot_responses_to_user_question[idx] for idx in responses_idx]
+                        else:
+                            bot_responses_to_user_question = bot_responses_to_user_question
+
+                    Bot_chosed_utterance = bot_responses_to_user_question[random.randint(0, len(bot_responses_to_user_question) - 1)]
+                    dispatcher.utter_message(text = Bot_chosed_utterance)
+        return []
+
+class ActionSetFaqConfusionId(Action):
+    def name(self) -> Text:
+        return "action_set_faq_confusion_id"
+
+    async def run(
+        self,
+        dispatcher: CollectingDispatcher,
+        tracker: Tracker,
+        domain: Dict[Text, Any],
+    ) -> List[EventType]:
+        """ this function will indicate what to do after a clarification has been choosen"""
+
+        #get confusion ids
+        confusion_intent = tracker.latest_message['intent'].get('name')
+        #on determine le 1er quartile et le 3e quartile des nombres de caractere des reponses
+        if ((confusion_intent == "confusion_1") or (tracker.get_slot('gauche'))):
+            return [SlotSet("user_current_intent_id", tracker.get_slot('confusion_1_id'))]
+        elif ((confusion_intent == "confusion_2") or (tracker.get_slot('milieu'))):
+            dispatcher.utter_message(text = "J'enregistre que ça vous est égal")
+            return [SlotSet("user_current_intent_id", tracker.get_slot('confusion_2_id'))]
+        elif ((confusion_intent == "non_sense") or (tracker.get_slot('droit'))):
+            return [SlotSet("user_current_intent_id", None)]
+        else:
+            return [SlotSet("user_current_intent_id", None)]
+        return []

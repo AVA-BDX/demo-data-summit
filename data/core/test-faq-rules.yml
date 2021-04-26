@@ -1,8 +1,38 @@
 # version: "2.0"
 
 # rules:
-# - rule: utter user intention
+# - rule: go through ask_for_clarification function
 #   steps:
 #   - intent: faq
+#   - action: action_store_all_bot_responses
+#   - action: action_store_all_bot_questions
 #   - action: action_get_user_curent_intent
+#   - action: user_note_to_none
+#   - action: action_user_last_message
+#   - action: action_ask_for_clarification
+
+
+# - rule: confusion_1
+#   steps:
+#   - intent: confusion_1
+#   - action: action_set_faq_confusion_id
+#   - action: action_bot_adaptive_answer
+#   - action: action_bot_last_message
+#   - action: action_bot_utterances_list
+
+# - rule: confusion_2
+#   steps:
+#   - intent: confusion_2
+#   - action: action_set_faq_confusion_id
+#   - action: action_bot_adaptive_answer
+#   - action: action_bot_last_message
+#   - action: action_bot_utterances_list
+
+# - rule: non_sense
+#   steps:
+#   - intent: non_sense
+#   - action: action_set_faq_confusion_id
+#   - action: action_bot_adaptive_answer
+#   - action: action_bot_last_message
+#   - action: action_bot_utterances_list
 

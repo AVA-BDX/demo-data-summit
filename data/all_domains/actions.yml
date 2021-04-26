@@ -10,6 +10,10 @@ actions:
   - action_get_user_curent_intent
   - action_bot_utterances_list
   - action_store_all_bot_responses
+  - action_store_all_bot_questions
   - action_no_further_reformulation
   - action_set_and_acknowledge_profile
+  - action_set_and_acknowledge_profile2
   - action_bot_adaptive_answer
+  - action_ask_for_clarification
+  - action_set_faq_confusion_id

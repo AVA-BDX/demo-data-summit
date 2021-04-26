@@ -9,8 +9,8 @@ pipeline:
   - name: ResponseSelector
     epochs: 300
     retrieval_intent: faq
-  - name: FallbackClassifier
-    threshold: 0.8
+  # - name: FallbackClassifier
+  #   threshold: 0.7
 
 policies:
   - name: TEDPolicy
