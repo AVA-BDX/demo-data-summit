@@ -18,3 +18,4 @@ actions:
   - action_ask_for_clarification
   - action_set_faq_confusion_id
   - action_recommendation_algo
+  - action_restart
