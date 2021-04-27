@@ -311,8 +311,10 @@ class ActionBotAdaptiveAnswer(Action):
         user_current_intent_id = tracker.get_slot('user_current_intent_id')
         #get bot last_faq_message to check if at least one faq_message has been asked by the user
         bot_last_faq_message = tracker.get_slot('bot_last_faq_message')
+        #get bot last_faq_message to check if at least one faq_message has been asked by the user
+        user_ongoin_message = tracker.get_slot('user_ongoin_message')
 
-        if bot_last_faq_message == None:
+        if bot_last_faq_message == None and user_ongoin_message == None:
             dispatcher.utter_message(text = "Je vous écoute pour votre question")
             return []
 
@@ -401,7 +403,7 @@ class ActionAskClarification(Action):
     def name(self) -> Text:
         return "action_ask_for_clarification"
 
-    async def run(
+    def run(
         self, dispatcher: CollectingDispatcher, tracker: Tracker, domain: DomainDict,
     ) -> List[EventType]:
         #bot_responses_to_user_question_json contains all bot utterances regarding the user sub-intent in a list of json
@@ -496,8 +498,10 @@ class ActionAskClarification(Action):
                     user_current_intent_id = tracker.get_slot('user_current_intent_id')
                     #get bot last_faq_message to check if at least one faq_message has been asked by the user
                     bot_last_faq_message = tracker.get_slot('bot_last_faq_message')
+                    #get bot last_faq_message to check if at least one faq_message has been asked by the user
+                    user_ongoin_message = tracker.get_slot('user_ongoin_message')                  
 
-                    if bot_last_faq_message == None:
+                    if bot_last_faq_message == None and user_ongoin_message == None:
                         dispatcher.utter_message(text="Je vous écoute pour votre question")
                         return []
                     elif user_current_intent_id == None:
