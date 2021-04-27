@@ -96,13 +96,20 @@ rules:
   - action: action_utter_reformulate
   - action: action_bot_utterances_list
 
+- rule: use recommendation algorithme when user asks helpdesk intent
+  steps:
+  - intent: helpdesk
+  - action: action_user_last_message
+  - action: action_recommendation_algo
+
+
 # - rule: The chatbot says it does not understand when it doesn't understand
 #   steps:
 #   - intent: nlu_fallback
 #   - action: utter_dont_understand
 
-# - rule: store bot responses in a slot at the begening of a conversation
-#   conversation_start: false
-#   steps:
-#   - action: action_session_start
-#   - action: action_store_all_bot_responses
+- rule: send image at the begining of a session
+  conversation_start: false
+  steps:
+  - action: action_session_start
+  - action: action_restart

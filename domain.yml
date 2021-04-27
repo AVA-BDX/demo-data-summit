@@ -15,6 +15,7 @@ intents:
   - confusion_1
   - confusion_2
   - non_sense
+  - helpdesk
 entities:
   - PCR
   - activites
@@ -97,6 +98,7 @@ entities:
   - gauche
   - milieu
   - droit
+  - equipemnt_helpdesk
 slots:
     user_ongoin_message:
         type: any
@@ -1449,9 +1451,11 @@ actions:
   - action_store_all_bot_questions
   - action_no_further_reformulation
   - action_set_and_acknowledge_profile
+  - action_set_and_acknowledge_profile2
   - action_bot_adaptive_answer
   - action_ask_for_clarification
   - action_set_faq_confusion_id
+  - action_recommendation_algo
 forms:
     note_asking_form:
         note:
