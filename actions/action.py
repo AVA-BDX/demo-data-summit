@@ -16,6 +16,11 @@ import nltk
 from nltk.corpus import stopwords
 from nltk import word_tokenize
 
+import pickle
+from sklearn import preprocessing
+import unicodedata
+from fuzzywuzzy import fuzz
+
 
 
 
@@ -544,3 +549,153 @@ class ActionSetFaqConfusionId(Action):
         else:
             return [SlotSet("user_current_intent_id", None)]
         return []
+
+
+class ActionRecommendationAlgo(Action):
+
+    def __init__(self) -> None:
+        self.roles = ['administrateur', 'developpeur', 'manager']
+        self.materilasList = ['adminAccess',
+        'calendarAccess',
+        'clavier',
+        'devTools',
+        'ordinateur',
+        'smartphone',
+        'souris',
+        'vsCode']
+
+
+    def name(self) -> Text:
+        return "action_recommendation_algo"
+
+    
+    def distance_phrases(self,phrase1, phrase2):
+        """
+            cette fonction calcule la distance de Levenshtein 
+            tres amélioree entre deux phrases
+        """
+        """
+            lev.ratio
+            fuzz.ratio
+            fuzz.partial_ratio
+            fuzz.token_sort_ratio
+            fuzz.token_set_ratio
+        
+        """
+        #creation d'une fonction lambda qui transforme en minuscule et enleve les espaces
+        minusculeSansEspace = lambda x: x.lower().strip()
+        #creation d'une fonction qui enleve les accens
+        enleveurAccent = lambda x:unicodedata.normalize('NFKD', x).encode('ASCII', 'ignore').decode("utf-8") 
+        #Application des fonctions aux mots a comparer
+        phrase1 = enleveurAccent(minusculeSansEspace(phrase1))
+        phrase2 = enleveurAccent(minusculeSansEspace(phrase2))
+        return fuzz.token_set_ratio(phrase1,phrase2)
+
+    def extractKeyWords(self,givenEntitiesList,searchedEntitiesList):
+        """
+        extrait les mots de searchedEntitiesList presents dans givenEntitiesList
+        des lors que leurs ration de Levenshtein est suffisament grande <=> distance petite
+        """
+        extractedWords = []
+        for wordChecked in givenEntitiesList:
+            foundOrNot = [words for words in searchedEntitiesList if self.distance_phrases(words, wordChecked) > 80]
+            if len(foundOrNot) == 0:
+                next
+            else:
+                extractedWords.extend(foundOrNot)
+        return list(set(extractedWords))       
+
+    def convertToDigit(self,givenEntitiesList,searchedEntitiesList):
+        """
+        description : 
+            fonction that takes two lists of texts as parameters
+            (givenEntitiesList and searchedEntitiesList) and send back a binary vector 
+            of length #searchedEntitesList that indicates whether (1) or not (0) 
+            searchedEntitiesList texts are contained in givenEntitiesList ones
+        Parametres : 
+            givenEntitiesList : list of texts in which to look
+            searchedEntitiesList : list of texts looked for
+        Resultat : binary (0,1) vector of length #searchedEntitesList
+        """
+        lambdachecker = lambda x,y: 1 if x in y else 0
+        checkVector = [lambdachecker(searchedEntity, givenEntitiesList) for searchedEntity in  searchedEntitiesList]
+        return checkVector       
+
+    def transfoInput(self,inputUser):
+        """
+        Transforme l'input de l'utilisateur (liste de mots ou texte contenant les mots)
+        en un format reconnaissable et predictible par le model
+        """
+        #definition des materiels
+    
+        Xnew = pd.DataFrame(columns = self.materilasList)
+        Xnew.loc[len(Xnew)] = self.convertToDigit(inputUser, self.materilasList )
+        return Xnew
+
+
+    async def run(
+        self,
+        dispatcher: CollectingDispatcher,
+        tracker: Tracker,
+        domain: Dict[Text, Any],
+    ) -> List[EventType]:
+        """ this function will indicate what to do after a clarification has been choosen"""
+
+        path = r"data/qna_data_bases/donnees_pour_reco.csv"
+        data_base = pd.read_csv(path,  sep=";", encoding="latin3")
+
+        #importation du model
+        with open('actions/recoLightKnn.sav', 'rb') as modelknn:
+            model = pickle.load(modelknn)
+
+        #encodage
+        le = preprocessing.LabelEncoder()
+        #elements a encoder
+        le.fit(self.roles)       
+
+        user_ongoin_message = tracker.get_slot('user_ongoin_message')
+
+        inputUserTransformed = self.extractKeyWords(user_ongoin_message.split(), self.materilasList)
+
+        if set(self.convertToDigit(inputUserTransformed, self.materilasList)) != {0}:
+            prediction = le.inverse_transform(model.predict(self.transfoInput(inputUserTransformed)))[0] 
+
+            equipments_role = data_base.loc[data_base["role"]==prediction,]
+            name_values = list(equipments_role.iloc[0,])[1:]
+            idx = [idx for idx in range(len(name_values)) if name_values[idx] != 0]
+            equipments_role = list(equipments_role.iloc[0,].index.values)[1:]
+            equipments_role = [equipments_role[index] for index in idx if equipments_role[index] not in inputUserTransformed]
+            equipments_role[len(equipments_role)-1] = "et " + equipments_role[len(equipments_role)-1] 
+            equipments_role = ", ".join(equipments_role)          
+
+            if len(inputUserTransformed) == 1:
+
+                dispatcher.utter_message(text = f"Vous avez demandé l'équipement {inputUserTransformed[0]} \nJe prédis donc que vous êtes {prediction} \nVous aurez également besoin des équipements suivants: {equipments_role} ")
+
+                return []
+            else:
+                inputUserTransformed[len(inputUserTransformed)-1] = "et " + inputUserTransformed[len(inputUserTransformed)-1]
+                inputUserTransformed = ", ".join(inputUserTransformed)  
+
+                dispatcher.utter_message(text = f"Vous avez demandé les équiments {inputUserTransformed} \nJe prédis donc que vous êtes {prediction} \nVous aurez également besoin des équipements suivants: {equipments_role} ")
+
+                return []
+        else:
+            prediction = "Desole :(, nous n'avons pas trouve de role correspondant a votre requete"    
+            return [] 
+
+        return []
+
+class ActionRestart(Action):
+
+    def name(self) -> Text:
+        return "action_restart"
+
+    async def run(
+        self, dispatcher, tracker: Tracker, domain: Dict[Text, Any]
+    ) -> List[Dict[Text, Any]]:
+    
+        dispatcher.utter_message(image = "https://databricks.com/wp-content/uploads/2021/03/dais-na-21-OG.jpg")
+
+        return []
+        

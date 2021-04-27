@@ -3,3 +3,5 @@ typing-extensions
 pandas
 numpy
 nltk
+fuzzywuzzy
+sklearn
