@@ -5,6 +5,7 @@ COPY data /app/data
 
 USER root
 RUN pip install --upgrade pip
+RUN pip install conda
 RUN conda install -c conda-forge fuzzywuzzy
 RUN pip install --no-cache-dir -r /app/actions/requirements.txt
 
