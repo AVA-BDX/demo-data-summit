@@ -686,16 +686,5 @@ class ActionRecommendationAlgo(Action):
 
         return []
 
-class ActionRestart(Action):
 
-    def name(self) -> Text:
-        return "action_restart"
-
-    async def run(
-        self, dispatcher, tracker: Tracker, domain: Dict[Text, Any]
-    ) -> List[Dict[Text, Any]]:
-    
-        dispatcher.utter_message(image = "https://databricks.com/wp-content/uploads/2021/03/dais-na-21-OG.jpg")
-
-        return []
         

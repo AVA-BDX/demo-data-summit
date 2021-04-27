@@ -107,9 +107,3 @@ rules:
 #   steps:
 #   - intent: nlu_fallback
 #   - action: utter_dont_understand
-
-- rule: send image at the begining of a session
-  conversation_start: false
-  steps:
-  - action: action_session_start
-  - action: action_restart
