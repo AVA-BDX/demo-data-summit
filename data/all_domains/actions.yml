@@ -4,7 +4,6 @@ actions:
   - action_user_last_message
   - action_bot_last_message
   - action_record_the_user_note
-  - validate_note_asking_form
   - user_note_to_none
   - action_utter_reformulate
   - action_get_user_curent_intent
@@ -13,9 +12,7 @@ actions:
   - action_store_all_bot_questions
   - action_no_further_reformulation
   - action_set_and_acknowledge_profile
-  - action_set_and_acknowledge_profile2
   - action_bot_adaptive_answer
   - action_ask_for_clarification
   - action_set_faq_confusion_id
   - action_recommendation_algo
-  - action_restart
