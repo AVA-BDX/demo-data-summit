@@ -5,5 +5,4 @@ numpy
 nltk
 fuzzywuzzy
 sklearn
-unicodedata
 pickle
