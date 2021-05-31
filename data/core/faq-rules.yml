@@ -4,14 +4,49 @@ rules:
 - rule: go through ask_for_clarification function
   steps:
   - intent: faq
-  - action: action_store_all_bot_responses
-  - action: action_store_all_bot_questions
+  # - action: action_store_all_bot_responses
+  # - action: action_store_all_bot_questions
   - action: action_get_user_curent_intent
   - action: user_note_to_none
   - action: action_user_last_message
   - action: action_ask_for_clarification
   - action: action_bot_last_message
   - action: action_bot_utterances_list
+  - action: note_asking_form
+  - active_loop: note_asking_form
+
+- rule: go back to another faq when the user ask so
+  condition:
+  - active_loop: note_asking_form
+  steps:
+  - intent: faq
+  # - action: action_store_all_bot_responses
+  # - action: action_store_all_bot_questions
+  - action: action_get_user_curent_intent
+  - action: user_note_to_none
+  - action: action_user_last_message
+  - action: action_ask_for_clarification
+  - action: action_bot_last_message
+  - action: action_bot_utterances_list
+  - action: note_asking_form
+  - active_loop: note_asking_form
+
+- rule: submit the note_asking_form
+  condition:
+      - active_loop: note_asking_form
+  steps:
+    - action: note_asking_form
+    - active_loop: null
+    - action: action_record_the_user_note
+
+- rule: bot ask to reformulate if the user deny after a faq 
+  condition:
+  - active_loop: note_asking_form
+  steps:
+  - action: note_asking_form
+  - active_loop: note_asking_form
+  - intent: deny
+  - action: utter_reformulate
 
 
 - rule: confusion_1
@@ -96,11 +131,11 @@ rules:
   - action: action_utter_reformulate
   - action: action_bot_utterances_list
 
-- rule: use recommendation algorithme when user asks helpdesk intent
-  steps:
-  - intent: helpdesk
-  - action: action_user_last_message
-  - action: action_recommendation_algo
+# - rule: use recommendation algorithme when user asks helpdesk intent
+#   steps:
+#   - intent: helpdesk
+#   - action: action_user_last_message
+#   - action: action_recommendation_algo
 
 
 # - rule: The chatbot says it does not understand when it doesn't understand

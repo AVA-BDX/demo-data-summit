@@ -21,43 +21,44 @@ from sklearn import preprocessing
 import unicodedata
 from fuzzywuzzy import fuzz
 
+import json
 
 
 
 
-class ActionStoreAllBotResponses(Action):
+# class ActionStoreAllBotResponses(Action):
 
-    def name(self):
-        return 'action_store_all_bot_responses'
+#     def name(self):
+#         return 'action_store_all_bot_responses'
 
-    async def run(self, dispatcher, tracker, domain):
-        """This action will map and store all the bot's responses at the begining of the first user's question"""
+#     async def run(self, dispatcher, tracker, domain):
+#         """This action will map and store all the bot's responses at the begining of the first user's question"""
 
-        path = r"data/qna_data_bases/reponses_bot_augmente.csv"
-        data_base = pd.read_csv(path,  sep=";", encoding="latin3")       
-        test_if_all_responses_was_stored = tracker.get_slot('strored_all_bot_responses')
-        if test_if_all_responses_was_stored == None:
-            strored_all_bot_responses = [{str(num_pivot): [data_base.reponse_pivot[idx].encode('utf8','ignore').decode('utf8').replace('\x92',"'").replace('\x9c','oe').replace('\x80','€').replace('\xa0',' ') for idx in range(len(data_base.id_question_pivot)) if data_base.id_question_pivot[idx] == num_pivot]} for num_pivot in set(data_base.id_question_pivot)]
-            return [SlotSet("strored_all_bot_responses", strored_all_bot_responses)]
-        else:
-            return [] 
+#         path = r"data/qna_data_bases/reponses_bot_augmente.csv"
+#         data_base = pd.read_csv(path,  sep=";", encoding="latin3")       
+#         test_if_all_responses_was_stored = tracker.get_slot('strored_all_bot_responses')
+#         if test_if_all_responses_was_stored == None:
+#             strored_all_bot_responses = [{str(num_pivot): [data_base.reponse_pivot[idx].encode('utf8','ignore').decode('utf8').replace('\x92',"'").replace('\x9c','oe').replace('\x80','€').replace('\xa0',' ') for idx in range(len(data_base.id_question_pivot)) if data_base.id_question_pivot[idx] == num_pivot]} for num_pivot in set(data_base.id_question_pivot)]
+#             return [SlotSet("strored_all_bot_responses", strored_all_bot_responses)]
+#         else:
+#             return [] 
 
-class ActionStoreAllBotQuesstions(Action):
+# class ActionStoreAllBotQuesstions(Action):
 
-    def name(self):
-        return 'action_store_all_bot_questions'
+#     def name(self):
+#         return 'action_store_all_bot_questions'
 
-    async def run(self, dispatcher, tracker, domain):
-        """This action will map and store all the bot's responses at the begining of the first user's question"""
+#     async def run(self, dispatcher, tracker, domain):
+#         """This action will map and store all the bot's responses at the begining of the first user's question"""
 
-        path = r"data/qna_data_bases/questions_bot_augmente.csv"
-        data_base = pd.read_csv(path,  sep=";", encoding="latin3")       
-        test_if_all_questions_was_stored = tracker.get_slot('strored_all_bot_questions')
-        if test_if_all_questions_was_stored == None:
-            strored_all_bot_questions = [{str(num_pivot): [data_base.reponse_prop[idx].encode('utf8','ignore').decode('utf8').replace('\x92',"'").replace('\x9c','oe').replace('\x80','€').replace('\xa0',' ') for idx in range(len(data_base.id_question_pivot)) if data_base.id_question_pivot[idx] == num_pivot]} for num_pivot in set(data_base.id_question_pivot)]
-            return [SlotSet("strored_all_bot_questions", strored_all_bot_questions)]
-        else:
-            return [] 
+#         path = r"data/qna_data_bases/questions_bot_augmente.csv"
+#         data_base = pd.read_csv(path,  sep=";", encoding="latin3")       
+#         test_if_all_questions_was_stored = tracker.get_slot('strored_all_bot_questions')
+#         if test_if_all_questions_was_stored == None:
+#             strored_all_bot_questions = [{str(num_pivot): [data_base.reponse_prop[idx].encode('utf8','ignore').decode('utf8').replace('\x92',"'").replace('\x9c','oe').replace('\x80','€').replace('\xa0',' ') for idx in range(len(data_base.id_question_pivot)) if data_base.id_question_pivot[idx] == num_pivot]} for num_pivot in set(data_base.id_question_pivot)]
+#             return [SlotSet("strored_all_bot_questions", strored_all_bot_questions)]
+#         else:
+#             return [] 
 
 class user_inputs(Action):
 
@@ -167,12 +168,12 @@ class Record_user_note(Action):
         time_user_question = datetime.strptime(tracker.get_slot('time_user_question'), "%Y-%m-%d %H:%M:%S.%f") 
         time_bot_answer = datetime.strptime(tracker.get_slot('time_bot_answer'), "%Y-%m-%d %H:%M:%S.%f")    
         try:
-            # Connect to an existing database
+            # Connect to an existing database (should put these in a config file for more safe)
             connection = psycopg2.connect(user="civadev",
                                         password="civa",
-                                        host="35.192.219.219",
+                                        host="20.199.107.202",
                                         port="5432",
-                                        database="civadatabases")
+                                        database="postgres")
             # Create a cursor to perform database operations
             cursor = connection.cursor()
             # Executing a SQL query to insert data into  table
@@ -251,7 +252,9 @@ class bot_reformulate(Action):
             return [] 
         else:   
             #bot_responses_to_user_question_json contains all bot utterances regarding the user sub-intent in a list of json
-            bot_responses_to_user_question_json =  tracker.get_slot('strored_all_bot_responses')
+            with open('data/qna_data_bases/strored_all_bot_responses.txt') as json_file:
+                bot_responses_to_user_question_json = json.load(json_file)
+            #bot_responses_to_user_question_json =  tracker.get_slot('strored_all_bot_responses')
             #get the user faq intent id
             user_current_intent_id = tracker.get_slot('user_current_intent_id')
 
@@ -306,7 +309,9 @@ class ActionBotAdaptiveAnswer(Action):
         user_profile = tracker.get_slot('profile')
 
         #bot_responses_to_user_question_json contains all bot utterances regarding the user sub-intent in a list of json
-        bot_responses_to_user_question_json =  tracker.get_slot('strored_all_bot_responses')
+        with open('data/qna_data_bases/strored_all_bot_responses.txt') as json_file:
+            bot_responses_to_user_question_json = json.load(json_file)       
+        #bot_responses_to_user_question_json =  tracker.get_slot('strored_all_bot_responses')
         #get the user faq intent id
         user_current_intent_id = tracker.get_slot('user_current_intent_id')
         #get bot last_faq_message to check if at least one faq_message has been asked by the user
@@ -407,8 +412,12 @@ class ActionAskClarification(Action):
         self, dispatcher: CollectingDispatcher, tracker: Tracker, domain: DomainDict,
     ) -> List[EventType]:
         #bot_responses_to_user_question_json contains all bot utterances regarding the user sub-intent in a list of json
-        bot_responses_to_user_question_json =  tracker.get_slot('strored_all_bot_responses') 
-        user_questions_to_bot_responses_json =  tracker.get_slot('strored_all_bot_questions')
+        with open('data/qna_data_bases/strored_all_bot_responses.txt') as json_file:
+            bot_responses_to_user_question_json = json.load(json_file)
+        #bot_responses_to_user_question_json =  tracker.get_slot('strored_all_bot_responses') 
+        with open('data/qna_data_bases/strored_all_bot_responses.txt') as json_file:
+            user_questions_to_bot_responses_json = json.load(json_file)
+        #user_questions_to_bot_responses_json =  tracker.get_slot('strored_all_bot_questions')
 
         french_stopwords = set(stopwords.words('french'))
         filtre_stopfr =  lambda text: [token for token in text if token.lower() not in french_stopwords]
@@ -555,140 +564,140 @@ class ActionSetFaqConfusionId(Action):
         return []
 
 
-class ActionRecommendationAlgo(Action):
+# class ActionRecommendationAlgo(Action):
 
-    def __init__(self) -> None:
-        self.roles = ['administrateur', 'developpeur', 'manager']
-        self.materilasList = ['adminAccess',
-        'calendarAccess',
-        'clavier',
-        'devTools',
-        'ordinateur',
-        'smartphone',
-        'souris',
-        'vsCode']
+#     def __init__(self) -> None:
+#         self.roles = ['administrateur', 'developpeur', 'manager']
+#         self.materilasList = ['adminAccess',
+#         'calendarAccess',
+#         'clavier',
+#         'devTools',
+#         'ordinateur',
+#         'smartphone',
+#         'souris',
+#         'vsCode']
 
 
-    def name(self) -> Text:
-        return "action_recommendation_algo"
+#     def name(self) -> Text:
+#         return "action_recommendation_algo"
 
     
-    def distance_phrases(self,phrase1, phrase2):
-        """
-            cette fonction calcule la distance de Levenshtein 
-            tres amélioree entre deux phrases
-        """
-        """
-            lev.ratio
-            fuzz.ratio
-            fuzz.partial_ratio
-            fuzz.token_sort_ratio
-            fuzz.token_set_ratio
+#     def distance_phrases(self,phrase1, phrase2):
+#         """
+#             cette fonction calcule la distance de Levenshtein 
+#             tres amélioree entre deux phrases
+#         """
+#         """
+#             lev.ratio
+#             fuzz.ratio
+#             fuzz.partial_ratio
+#             fuzz.token_sort_ratio
+#             fuzz.token_set_ratio
         
-        """
-        #creation d'une fonction lambda qui transforme en minuscule et enleve les espaces
-        minusculeSansEspace = lambda x: x.lower().strip()
-        #creation d'une fonction qui enleve les accens
-        enleveurAccent = lambda x:unicodedata.normalize('NFKD', x).encode('ASCII', 'ignore').decode("utf-8") 
-        #Application des fonctions aux mots a comparer
-        phrase1 = enleveurAccent(minusculeSansEspace(phrase1))
-        phrase2 = enleveurAccent(minusculeSansEspace(phrase2))
-        return fuzz.token_set_ratio(phrase1,phrase2)
+#         """
+#         #creation d'une fonction lambda qui transforme en minuscule et enleve les espaces
+#         minusculeSansEspace = lambda x: x.lower().strip()
+#         #creation d'une fonction qui enleve les accens
+#         enleveurAccent = lambda x:unicodedata.normalize('NFKD', x).encode('ASCII', 'ignore').decode("utf-8") 
+#         #Application des fonctions aux mots a comparer
+#         phrase1 = enleveurAccent(minusculeSansEspace(phrase1))
+#         phrase2 = enleveurAccent(minusculeSansEspace(phrase2))
+#         return fuzz.token_set_ratio(phrase1,phrase2)
 
-    def extractKeyWords(self,givenEntitiesList,searchedEntitiesList):
-        """
-        extrait les mots de searchedEntitiesList presents dans givenEntitiesList
-        des lors que leurs ration de Levenshtein est suffisament grande <=> distance petite
-        """
-        extractedWords = []
-        for wordChecked in givenEntitiesList:
-            foundOrNot = [words for words in searchedEntitiesList if self.distance_phrases(words, wordChecked) > 80]
-            if len(foundOrNot) == 0:
-                next
-            else:
-                extractedWords.extend(foundOrNot)
-        return list(set(extractedWords))       
+#     def extractKeyWords(self,givenEntitiesList,searchedEntitiesList):
+#         """
+#         extrait les mots de searchedEntitiesList presents dans givenEntitiesList
+#         des lors que leurs ration de Levenshtein est suffisament grande <=> distance petite
+#         """
+#         extractedWords = []
+#         for wordChecked in givenEntitiesList:
+#             foundOrNot = [words for words in searchedEntitiesList if self.distance_phrases(words, wordChecked) > 80]
+#             if len(foundOrNot) == 0:
+#                 next
+#             else:
+#                 extractedWords.extend(foundOrNot)
+#         return list(set(extractedWords))       
 
-    def convertToDigit(self,givenEntitiesList,searchedEntitiesList):
-        """
-        description : 
-            fonction that takes two lists of texts as parameters
-            (givenEntitiesList and searchedEntitiesList) and send back a binary vector 
-            of length #searchedEntitesList that indicates whether (1) or not (0) 
-            searchedEntitiesList texts are contained in givenEntitiesList ones
-        Parametres : 
-            givenEntitiesList : list of texts in which to look
-            searchedEntitiesList : list of texts looked for
-        Resultat : binary (0,1) vector of length #searchedEntitesList
-        """
-        lambdachecker = lambda x,y: 1 if x in y else 0
-        checkVector = [lambdachecker(searchedEntity, givenEntitiesList) for searchedEntity in  searchedEntitiesList]
-        return checkVector       
+#     def convertToDigit(self,givenEntitiesList,searchedEntitiesList):
+#         """
+#         description : 
+#             fonction that takes two lists of texts as parameters
+#             (givenEntitiesList and searchedEntitiesList) and send back a binary vector 
+#             of length #searchedEntitesList that indicates whether (1) or not (0) 
+#             searchedEntitiesList texts are contained in givenEntitiesList ones
+#         Parametres : 
+#             givenEntitiesList : list of texts in which to look
+#             searchedEntitiesList : list of texts looked for
+#         Resultat : binary (0,1) vector of length #searchedEntitesList
+#         """
+#         lambdachecker = lambda x,y: 1 if x in y else 0
+#         checkVector = [lambdachecker(searchedEntity, givenEntitiesList) for searchedEntity in  searchedEntitiesList]
+#         return checkVector       
 
-    def transfoInput(self,inputUser):
-        """
-        Transforme l'input de l'utilisateur (liste de mots ou texte contenant les mots)
-        en un format reconnaissable et predictible par le model
-        """
-        #definition des materiels
+#     def transfoInput(self,inputUser):
+#         """
+#         Transforme l'input de l'utilisateur (liste de mots ou texte contenant les mots)
+#         en un format reconnaissable et predictible par le model
+#         """
+#         #definition des materiels
     
-        Xnew = pd.DataFrame(columns = self.materilasList)
-        Xnew.loc[len(Xnew)] = self.convertToDigit(inputUser, self.materilasList )
-        return Xnew
+#         Xnew = pd.DataFrame(columns = self.materilasList)
+#         Xnew.loc[len(Xnew)] = self.convertToDigit(inputUser, self.materilasList )
+#         return Xnew
 
 
-    async def run(
-        self,
-        dispatcher: CollectingDispatcher,
-        tracker: Tracker,
-        domain: Dict[Text, Any],
-    ) -> List[EventType]:
-        """ this function will indicate what to do after a clarification has been choosen"""
+#     async def run(
+#         self,
+#         dispatcher: CollectingDispatcher,
+#         tracker: Tracker,
+#         domain: Dict[Text, Any],
+#     ) -> List[EventType]:
+#         """ this function will indicate what to do after a clarification has been choosen"""
 
-        path = r"data/qna_data_bases/donnees_pour_reco.csv"
-        data_base = pd.read_csv(path,  sep=";", encoding="latin3")
+#         path = r"data/qna_data_bases/donnees_pour_reco.csv"
+#         data_base = pd.read_csv(path,  sep=";", encoding="latin3")
 
-        #importation du model
-        with open('actions/recoLightKnn.sav', 'rb') as modelknn:
-            model = pickle.load(modelknn)
+#         #importation du model
+#         with open('actions/recoLightKnn.sav', 'rb') as modelknn:
+#             model = pickle.load(modelknn)
 
-        #encodage
-        le = preprocessing.LabelEncoder()
-        #elements a encoder
-        le.fit(self.roles)       
+#         #encodage
+#         le = preprocessing.LabelEncoder()
+#         #elements a encoder
+#         le.fit(self.roles)       
 
-        user_ongoin_message = tracker.get_slot('user_ongoin_message')
+#         user_ongoin_message = tracker.get_slot('user_ongoin_message')
 
-        inputUserTransformed = self.extractKeyWords(user_ongoin_message.split(), self.materilasList)
+#         inputUserTransformed = self.extractKeyWords(user_ongoin_message.split(), self.materilasList)
 
-        if set(self.convertToDigit(inputUserTransformed, self.materilasList)) != {0}:
-            prediction = le.inverse_transform(model.predict(self.transfoInput(inputUserTransformed)))[0] 
+#         if set(self.convertToDigit(inputUserTransformed, self.materilasList)) != {0}:
+#             prediction = le.inverse_transform(model.predict(self.transfoInput(inputUserTransformed)))[0] 
 
-            equipments_role = data_base.loc[data_base["role"]==prediction,]
-            name_values = list(equipments_role.iloc[0,])[1:]
-            idx = [idx for idx in range(len(name_values)) if name_values[idx] != 0]
-            equipments_role = list(equipments_role.iloc[0,].index.values)[1:]
-            equipments_role = [equipments_role[index] for index in idx if equipments_role[index] not in inputUserTransformed]
-            equipments_role[len(equipments_role)-1] = "et " + equipments_role[len(equipments_role)-1] 
-            equipments_role = ", ".join(equipments_role)          
+#             equipments_role = data_base.loc[data_base["role"]==prediction,]
+#             name_values = list(equipments_role.iloc[0,])[1:]
+#             idx = [idx for idx in range(len(name_values)) if name_values[idx] != 0]
+#             equipments_role = list(equipments_role.iloc[0,].index.values)[1:]
+#             equipments_role = [equipments_role[index] for index in idx if equipments_role[index] not in inputUserTransformed]
+#             equipments_role[len(equipments_role)-1] = "et " + equipments_role[len(equipments_role)-1] 
+#             equipments_role = ", ".join(equipments_role)          
 
-            if len(inputUserTransformed) == 1:
+#             if len(inputUserTransformed) == 1:
 
-                dispatcher.utter_message(text = f"Vous avez demandé l'équipement {inputUserTransformed[0]} \nJe prédis donc que vous êtes {prediction} \nVous aurez également besoin des équipements suivants: {equipments_role} ")
+#                 dispatcher.utter_message(text = f"Vous avez demandé l'équipement {inputUserTransformed[0]} \nJe prédis donc que vous êtes {prediction} \nVous aurez également besoin des équipements suivants: {equipments_role} ")
 
-                return []
-            else:
-                inputUserTransformed[len(inputUserTransformed)-1] = "et " + inputUserTransformed[len(inputUserTransformed)-1]
-                inputUserTransformed = ", ".join(inputUserTransformed)  
+#                 return []
+#             else:
+#                 inputUserTransformed[len(inputUserTransformed)-1] = "et " + inputUserTransformed[len(inputUserTransformed)-1]
+#                 inputUserTransformed = ", ".join(inputUserTransformed)  
 
-                dispatcher.utter_message(text = f"Vous avez demandé les équiments {inputUserTransformed} \nJe prédis donc que vous êtes {prediction} \nVous aurez également besoin des équipements suivants: {equipments_role} ")
+#                 dispatcher.utter_message(text = f"Vous avez demandé les équiments {inputUserTransformed} \nJe prédis donc que vous êtes {prediction} \nVous aurez également besoin des équipements suivants: {equipments_role} ")
 
-                return []
-        else:
-            prediction = "Desole :(, nous n'avons pas trouve de role correspondant a votre requete"    
-            return [] 
+#                 return []
+#         else:
+#             prediction = "Desole :(, nous n'avons pas trouve de role correspondant a votre requete"    
+#             return [] 
 
-        return []
+#         return []
 
 
         

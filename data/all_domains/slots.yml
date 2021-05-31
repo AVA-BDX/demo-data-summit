@@ -17,10 +17,10 @@ slots:
     type: list
   bot_reformulation:
     type: any
-  strored_all_bot_questions:
-    type: list
-  strored_all_bot_responses:
-    type: list
+  # strored_all_bot_questions:
+  #   type: list
+  # strored_all_bot_responses:
+  #   type: list
   profile:
     type: any
   bot_last_faq_message:
