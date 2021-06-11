@@ -166,7 +166,9 @@ class Record_user_note(Action):
         bot_answer = tracker.get_slot('bot_ongoin_message')
         user_note = tracker.get_slot('note')
         time_user_question = datetime.strptime(tracker.get_slot('time_user_question'), "%Y-%m-%d %H:%M:%S.%f") 
-        time_bot_answer = datetime.strptime(tracker.get_slot('time_bot_answer'), "%Y-%m-%d %H:%M:%S.%f")    
+        time_bot_answer = datetime.strptime(tracker.get_slot('time_bot_answer'), "%Y-%m-%d %H:%M:%S.%f") 
+        bot_question_confusion =  tracker.get_slot('bot_question_confusion')
+        bot_question_incomprehension =  tracker.get_slot('bot_question_incomprehension')
         try:
             # Connect to an existing database (should put these in a config file for more safe)
             connection = psycopg2.connect(user="civadev",
@@ -177,23 +179,27 @@ class Record_user_note(Action):
             # Create a cursor to perform database operations
             cursor = connection.cursor()
             # Executing a SQL query to insert data into  table
-            insert_query = """ INSERT INTO user_bot_augmented_recordings 
+            insert_query = """ INSERT INTO user_bot_augmented_captor
             (user_question,
             bot_answer, 
             user_note,
             time_user_question, 
-            time_bot_answer) VALUES 
-            (%s, %s, %s, %s, %s);"""
+            time_bot_answer,
+            bot_question_confusion,
+            bot_question_incomprehension) VALUES 
+            (%s, %s, %s, %s, %s, %s, %s);"""
             item_tuple = (user_question,
                         bot_answer,
                         user_note,
                         time_user_question,
-                        time_bot_answer)
+                        time_bot_answer,
+                        bot_question_confusion,
+                        bot_question_incomprehension)
             cursor.execute(insert_query, item_tuple)
             connection.commit()
             print("1 Record inserted successfully")
             # Fetch result
-            cursor.execute("SELECT * from user_bot_augmented_recordings")
+            cursor.execute("SELECT * from user_bot_augmented_captor")
             record = cursor.fetchall()
             print("Result ", record)
         except (Exception, Error) as error:
@@ -563,7 +569,24 @@ class ActionSetFaqConfusionId(Action):
             return [SlotSet("user_current_intent_id", None)]
         return []
 
-
+class ActionIncrementIncomprehensionConfusion(Action):
+    def name(self) -> Text:
+        return "action_increment_confusion_incomprehension"
+    
+    def run(self, dispatcher: CollectingDispatcher, tracker: Tracker, domain: DomainDict):
+        intent_ranking = (
+        tracker.latest_message.get("response_selector", {})
+        .get("faq", {})
+        .get("ranking", [])
+        )
+        var_bot_question_incomprehension = 0
+        var_bot_question_confusion = 0
+        if len(intent_ranking) > 1 :
+            if intent_ranking[0].get("confidence") < 0.4:
+                var_bot_question_incomprehension = 1
+            elif 0.4 <= intent_ranking[0].get("confidence") <= 0.6:
+                var_bot_question_confusion = 1
+        return [SlotSet("bot_question_incomprehension", var_bot_question_incomprehension),SlotSet("bot_question_confusion", var_bot_question_confusion) ]
 # class ActionRecommendationAlgo(Action):
 
 #     def __init__(self) -> None:
