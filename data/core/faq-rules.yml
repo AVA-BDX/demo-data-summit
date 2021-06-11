@@ -4,12 +4,11 @@ rules:
 - rule: go through ask_for_clarification function
   steps:
   - intent: faq
-  # - action: action_store_all_bot_responses
-  # - action: action_store_all_bot_questions
   - action: action_get_user_curent_intent
   - action: user_note_to_none
   - action: action_user_last_message
   - action: action_ask_for_clarification
+  - action: action_increment_confusion_incomprehension
   - action: action_bot_last_message
   - action: action_bot_utterances_list
   - action: note_asking_form
@@ -20,12 +19,11 @@ rules:
   - active_loop: note_asking_form
   steps:
   - intent: faq
-  # - action: action_store_all_bot_responses
-  # - action: action_store_all_bot_questions
   - action: action_get_user_curent_intent
   - action: user_note_to_none
   - action: action_user_last_message
   - action: action_ask_for_clarification
+  - action: action_increment_confusion_incomprehension
   - action: action_bot_last_message
   - action: action_bot_utterances_list
   - action: note_asking_form
