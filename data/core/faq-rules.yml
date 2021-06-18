@@ -1,35 +1,93 @@
 version: "2.0"
 
 rules:
-- rule: go through ask_for_clarification function
+
+- rule: go through ask_for_clarification function no confusion
   steps:
   - intent: faq
-  # - action: action_store_all_bot_responses
-  # - action: action_store_all_bot_questions
+  # - action: action_set_user_wants_precision_0
+  # - slot_was_set:
+  #   - user_wants_precision: null
+  - action: action_set_confusion_slot_to_none
+  - slot_was_set:
+    - confusion: null
   - action: action_get_user_curent_intent
   - action: user_note_to_none
   - action: action_user_last_message
   - action: action_ask_for_clarification
+  - slot_was_set:
+    - confusion: null
+  - action: action_increment_confusion_incomprehension
   - action: action_bot_last_message
   - action: action_bot_utterances_list
   - action: note_asking_form
   - active_loop: note_asking_form
 
-- rule: go back to another faq when the user ask so
+
+- rule: go back to another faq when the user ask so no confusion
   condition:
   - active_loop: note_asking_form
   steps:
   - intent: faq
-  # - action: action_store_all_bot_responses
-  # - action: action_store_all_bot_questions
+  # - action: action_set_user_wants_precision_0
+  # - slot_was_set:
+  #   - user_wants_precision: null
+  - action: action_set_confusion_slot_to_none
+  - slot_was_set:
+    - confusion: null
   - action: action_get_user_curent_intent
   - action: user_note_to_none
   - action: action_user_last_message
   - action: action_ask_for_clarification
+  - slot_was_set:
+    - confusion: null
+  - action: action_increment_confusion_incomprehension
   - action: action_bot_last_message
   - action: action_bot_utterances_list
   - action: note_asking_form
   - active_loop: note_asking_form
+
+
+- rule: go through ask_for_clarification function confusion
+  steps:
+  - intent: faq
+  # - action: action_set_user_wants_precision_0
+  # - slot_was_set:
+  #   - user_wants_precision: null
+  - action: action_set_confusion_slot_to_none
+  - slot_was_set:
+    - confusion: null
+  - action: action_get_user_curent_intent
+  - action: user_note_to_none
+  - action: action_user_last_message
+  - action: action_ask_for_clarification
+  - slot_was_set:
+    - confusion: true
+  - action: action_increment_confusion_incomprehension
+  - action: action_bot_last_message
+  - action: action_bot_utterances_list
+
+
+- rule: go back to another faq when the user ask so confusion
+  condition:
+  - active_loop: note_asking_form
+  steps:
+  - intent: faq
+  # - action: action_set_user_wants_precision_0
+  # - slot_was_set:
+  #   - user_wants_precision: null
+  - action: action_set_confusion_slot_to_none
+  - slot_was_set:
+    - confusion: null
+  - action: action_get_user_curent_intent
+  - action: user_note_to_none
+  - action: action_user_last_message
+  - action: action_ask_for_clarification
+  - slot_was_set:
+    - confusion: true
+  - action: action_increment_confusion_incomprehension
+  - action: action_bot_last_message
+  - action: action_bot_utterances_list
 
 - rule: submit the note_asking_form
   condition:
@@ -38,6 +96,29 @@ rules:
     - action: note_asking_form
     - active_loop: null
     - action: action_record_the_user_note
+
+
+# - rule: submit the pseudo_asking_form no confusion
+#   condition:
+#       - active_loop: pseudo_asking_form
+#   steps:
+#     - action: pseudo_asking_form
+#     - active_loop: null
+#     - action: action_set_confusion_slot_to_none
+#     - slot_was_set:
+#       - confusion: null
+#     - action: action_get_user_curent_intent
+#     - action: user_note_to_none
+#     - action: action_user_last_message
+#     - action: action_ask_for_clarification
+#     - slot_was_set:
+#       - confusion: null
+#     - action: action_increment_confusion_incomprehension
+#     - action: action_bot_last_message
+#     - action: action_bot_utterances_list
+#     - action: note_asking_form
+#     - active_loop: note_asking_form
+ 
 
 - rule: bot ask to reformulate if the user deny after a faq 
   condition:
@@ -48,7 +129,6 @@ rules:
   - intent: deny
   - action: utter_reformulate
 
-
 - rule: confusion_1
   steps:
   - intent: confusion_1
@@ -56,6 +136,9 @@ rules:
   - action: action_bot_adaptive_answer
   - action: action_bot_last_message
   - action: action_bot_utterances_list
+  - action: note_asking_form
+  - active_loop: note_asking_form
+
 
 - rule: confusion_2
   steps:
@@ -64,6 +147,8 @@ rules:
   - action: action_bot_adaptive_answer
   - action: action_bot_last_message
   - action: action_bot_utterances_list
+  - action: note_asking_form
+  - active_loop: note_asking_form
 
 - rule: non_sense
   steps:
@@ -72,44 +157,68 @@ rules:
   - action: action_bot_adaptive_answer
   - action: action_bot_last_message
   - action: action_bot_utterances_list
+  - action: note_asking_form
+  - active_loop: note_asking_form
 
 - rule: the user want to inform bot on his profile, the bot ask profile
   steps:
   - intent: want_inform_profile
   - action: utter_ask_profil
 
+
+- rule: the user want to inform bot on his profile, tform activated
+  condition:
+  - active_loop: note_asking_form
+  steps:
+  - intent: want_inform_profile
+  - action: action_deactivate_loop
+  - active_loop: null
+  - action: utter_ask_profil
+
+
+- rule: the user want to inform bot on his profile, tform activated
+  condition:
+  - active_loop: note_asking_form
+  steps:
+  - action: note_asking_form
+  - active_loop: note_asking_form
+  - intent: deny
+  - action: utter_reformulate
+
+
 - rule: user just inform on his profile = short_utters
   steps:
   - intent: short_utters
   - action: action_set_and_acknowledge_profile
   - action: action_bot_adaptive_answer
+  - action: note_asking_form
+  - active_loop: note_asking_form
 
 - rule: user just inform on his profile = dont_care
   steps:
   - intent: dont_care
   - action: action_set_and_acknowledge_profile
   - action: action_bot_adaptive_answer
+  - action: note_asking_form
+  - active_loop: note_asking_form
 
 - rule: user just inform on his profile = long_utters
   steps:
   - intent: long_utters
   - action: action_set_and_acknowledge_profile
   - action: action_bot_adaptive_answer
+  - action: note_asking_form
+  - active_loop: note_asking_form
 
-- rule: user just inform on his profile happy
+- rule: rule bot didn't get user profil well and ask him to chose
   steps:
   - action: action_set_and_acknowledge_profile
   - action: action_bot_adaptive_answer
-  - intent: affirm
-  - action: utter_super
-
-
-- rule: user just inform on his profile not unhappy
-  steps:
-  - action: action_set_and_acknowledge_profile
-  - action: action_bot_adaptive_answer
+  - action: note_asking_form
+  - active_loop: note_asking_form
   - intent: deny
   - action: utter_ask_profil
+
 
 - rule: happy path, ask the user if he still want a response, user affirm
   steps:
@@ -117,6 +226,8 @@ rules:
   - action: action_bot_utterances_list
   - intent: affirm
   - action: action_no_further_reformulation
+  - action: note_asking_form
+  - active_loop: note_asking_form
 
 - rule: unhapppy path, ask the user if he still want a response, he deny
   steps:
@@ -124,21 +235,17 @@ rules:
   - action: action_bot_utterances_list
   - intent: deny
   - action: utter_ask_another_question
+  - action: note_asking_form
+  - active_loop: note_asking_form
 
 - rule: the bot reformulate any time the user ask him to reformulate
   steps:
   - intent: ask_reformulate
+  # - action: action_set_user_wants_precision_1
+  # - slot_was_set:
+  #   - user_wants_precision: true
   - action: action_utter_reformulate
   - action: action_bot_utterances_list
+  - action: note_asking_form
+  - active_loop: note_asking_form
 
-# - rule: use recommendation algorithme when user asks helpdesk intent
-#   steps:
-#   - intent: helpdesk
-#   - action: action_user_last_message
-#   - action: action_recommendation_algo
-
-
-# - rule: The chatbot says it does not understand when it doesn't understand
-#   steps:
-#   - intent: nlu_fallback
-#   - action: utter_dont_understand

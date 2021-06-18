@@ -64,4 +64,7 @@ responses:
       - title: "indifférent"
         payload: "/dont_care"    
       - title: "phrases longues"
-        payload: "/long_utters"  
+        payload: "/long_utters" 
+    utter_ask_pseudo:
+      - text: Quel est votre pseudo ?
+

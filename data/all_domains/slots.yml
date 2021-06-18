@@ -17,10 +17,6 @@ slots:
     type: list
   bot_reformulation:
     type: any
-  # strored_all_bot_questions:
-  #   type: list
-  # strored_all_bot_responses:
-  #   type: list
   profile:
     type: any
   bot_last_faq_message:
@@ -29,9 +25,20 @@ slots:
     type: any
   confusion_2_id:
     type: any
+  confusion:
+    type: bool
+    influence_conversation: true
   gauche:
     type: any
   milieu:
     type: any
   droit:
     type: any    
+  pseudo:
+    type: any
+  bot_question_confusion:
+    type: any
+  bot_question_incomprehension:
+    type: any
+  user_wants_precision:
+    type: bool

@@ -163,10 +163,14 @@ class Record_user_note(Action):
         the times of the latest and the user's note in a database"""
 
         user_question = tracker.get_slot('user_ongoin_message')
+        pseudo = tracker.get_slot('pseudo')
         bot_answer = tracker.get_slot('bot_ongoin_message')
         user_note = tracker.get_slot('note')
         time_user_question = datetime.strptime(tracker.get_slot('time_user_question'), "%Y-%m-%d %H:%M:%S.%f") 
         time_bot_answer = datetime.strptime(tracker.get_slot('time_bot_answer'), "%Y-%m-%d %H:%M:%S.%f")    
+        bot_question_confusion =  tracker.get_slot('bot_question_confusion')
+        bot_question_incomprehension =  tracker.get_slot('bot_question_incomprehension')
+        user_wants_precision = tracker.get_slot('user_wants_precision')
         try:
             # Connect to an existing database (should put these in a config file for more safe)
             connection = psycopg2.connect(user="civadev",
@@ -178,17 +182,25 @@ class Record_user_note(Action):
             cursor = connection.cursor()
             # Executing a SQL query to insert data into  table
             insert_query = """ INSERT INTO user_bot_augmented_recordings 
-            (user_question,
+            (pseudo,
+            user_question,
             bot_answer, 
             user_note,
             time_user_question, 
-            time_bot_answer) VALUES 
-            (%s, %s, %s, %s, %s);"""
-            item_tuple = (user_question,
+            time_bot_answer,
+            bot_question_confusion,
+            bot_question_incomprehension,
+            user_wants_precision) VALUES 
+            (%s, %s, %s, %s, %s, %s, %s, %s,%s);"""
+            item_tuple = (pseudo,
+                        user_question,
                         bot_answer,
                         user_note,
                         time_user_question,
-                        time_bot_answer)
+                        time_bot_answer,
+                        bot_question_confusion,
+                        bot_question_incomprehension,
+                        user_wants_precision)
             cursor.execute(insert_query, item_tuple)
             connection.commit()
             print("1 Record inserted successfully")
@@ -213,6 +225,20 @@ class validatenoteForm(FormValidationAction):
     def name(self):
         return 'validate_note_asking_form'
 
+    # async def required_slots(
+    #     self,
+    #     slots_mapped_in_domain: List[Text],
+    #     dispatcher: "CollectingDispatcher",
+    #     tracker: "Tracker",
+    #     domain: "DomainDict"
+    # ) -> List[Text]:
+    #     if tracker.get_slot("note") is False and tracker.get_slot("pseudo") is True:
+    #         return ["note"]
+    #     elif tracker.get_slot("note") is True and tracker.get_slot("pseudo") is False:
+    #         return ["pseudo"]
+    #     else:
+    #         return ["note", "pseudo"]
+
     def validate_note(self, slot_value, dispatcher, tracker, domain):
         """Check if the note given by the user is within 1 and 5"""
 
@@ -221,6 +247,36 @@ class validatenoteForm(FormValidationAction):
         else:
             dispatcher.utter_message("veuillez renseigner une valeur entre 1 et 5")
             return {"note": None}
+
+    def validate_pseudo(self, slot_value, dispatcher, tracker, domain):
+        """Check if the user pseudo already exists"""
+
+        try:
+            # Connect to an existing database (should put these in a config file for more safe)
+            connection = psycopg2.connect(user="civadev",
+                                        password="civa",
+                                        host="20.199.107.202",
+                                        port="5432",
+                                        database="postgres")
+            # Create a cursor to perform database operations
+            cursor = connection.cursor()
+            cursor.execute("SELECT pseudo from user_bot_augmented_recordings")
+            record = cursor.fetchall()
+            pseudos = list(set(list(pd.DataFrame(record)[0].values)))
+        except (Exception, Error) as error:
+            print("Error while connecting to PostgreSQL", error)
+        finally:
+            if (connection):
+                cursor.close()
+                connection.close()
+                print("PostgreSQL connection is closed")
+                
+        if slot_value not in pseudos:
+            return {"pseudo": slot_value}
+        else:
+            dispatcher.utter_message("Ce pseudo existe déjà. Veuillez en renseigner un autre s'il vous plait.")
+            return {"pseudo": None}
+
 
 class bot_reformulate(Action):
     def name(self) -> Text:
@@ -285,9 +341,14 @@ class bot_reformulate(Action):
                 dispatcher.utter_message(text = Bot_chosed_utterance)
                 return [SlotSet("bot_reformulation", Bot_chosed_utterance )]
             else:
-                Bot_chosed_utterance = f"😕 Désolé, par rapport à vos goûts ({choice}) Je n'ai plus d'autres reformulations pour cette question.\nVoulez vous quand même  que je vous propose une réponse que je vous ai déjà proposée ?"
-                dispatcher.utter_message(text = Bot_chosed_utterance)
-                return [Form(None)]
+                if choice != "":
+                    Bot_chosed_utterance = f"😕 Désolé, par rapport à vos goûts ({choice}) je n'ai plus d'autres reformulations pour cette question.\nVoulez vous quand même  que je vous propose une réponse que je vous ai déjà proposée ?"
+                    dispatcher.utter_message(text = Bot_chosed_utterance)
+                    return [Form(None)]
+                else:
+                    Bot_chosed_utterance = f"😕 Désolé, je n'ai plus d'autres reformulations pour cette question.\nVoulez vous quand même  que je vous propose une réponse que je vous ai déjà proposée ?"
+                    dispatcher.utter_message(text = Bot_chosed_utterance)
+                    return [Form(None)]
 
         return []
 
@@ -497,7 +558,7 @@ class ActionAskClarification(Action):
                     buttons.append({"title": "autre", "payload": f"/non_sense"})
 
                     dispatcher.utter_message(text=message_title, buttons=buttons)
-                    return [SlotSet("confusion_1_id", id1),SlotSet("confusion_2_id", id2)]
+                    return [SlotSet("confusion_1_id", id1),SlotSet("confusion_2_id", id2), SlotSet("confusion", True)]
                 #no confison case
                 else:
                     #get the user profile
@@ -562,6 +623,87 @@ class ActionSetFaqConfusionId(Action):
         else:
             return [SlotSet("user_current_intent_id", None)]
         return []
+
+class ActionIncrementIncomprehensionConfusion(Action):
+    def name(self) -> Text:
+        return "action_increment_confusion_incomprehension"
+    
+    def run(self, dispatcher: CollectingDispatcher, tracker: Tracker, domain: DomainDict):
+        intent_ranking = (
+        tracker.latest_message.get("response_selector", {})
+        .get("faq", {})
+        .get("ranking", [])
+        )
+        var_bot_question_incomprehension = 0
+        var_bot_question_confusion = 0
+        if len(intent_ranking) > 1 :
+            if intent_ranking[0].get("confidence") < 0.4:
+                var_bot_question_incomprehension = 1
+            elif 0.4 <= intent_ranking[0].get("confidence") <= 0.6:
+                var_bot_question_confusion = 1
+        return [SlotSet("bot_question_incomprehension", var_bot_question_incomprehension),SlotSet("bot_question_confusion", var_bot_question_confusion) ]
+
+class SetUserWantsPrecision1(Action):
+    def name(self) -> Text:
+        return "action_set_user_wants_precision_1"
+
+    async def run(
+        self,
+        dispatcher: CollectingDispatcher,
+        tracker: Tracker,
+        domain: Dict[Text, Any],
+    ) -> List[EventType]:
+        """This action will set the slot user_wants_precision to 1 """
+      
+        return [SlotSet("user_wants_precision"), True] 
+
+class SetUserWantsPrecision0(Action):
+    def name(self) -> Text:
+        return "action_set_user_wants_precision_0"
+
+    async def run(
+        self,
+        dispatcher: CollectingDispatcher,
+        tracker: Tracker,
+        domain: Dict[Text, Any],
+    ) -> List[EventType]:
+        """This action will set the slot user_wants_precision to 0 """
+      
+        return [SlotSet("user_wants_precision"), None] 
+
+
+
+# class TriggerNoteForm(Action):
+#     def name(self) -> Text:
+#         return "action_trigger_note_form"
+
+#     async def run(
+#         self,
+#         dispatcher: CollectingDispatcher,
+#         tracker: Tracker,
+#         domain: Dict[Text, Any],
+
+#     ) -> List[EventType]:
+#         """This action will trigger the note_asking_form """
+      
+#         return [Form("note_asking_form")] 
+       
+            
+
+class SetConfusionSlotToNone(Action):
+    def name(self) -> Text:
+        return "action_set_confusion_slot_to_none"
+
+    async def run(
+        self,
+        dispatcher: CollectingDispatcher,
+        tracker: Tracker,
+        domain: Dict[Text, Any],
+
+    ) -> List[EventType]:
+        """This action will set the slot named confusion to None"""
+   
+        return [SlotSet("confusion", None)]
 
 
 # class ActionRecommendationAlgo(Action):
@@ -648,56 +790,4 @@ class ActionSetFaqConfusionId(Action):
 
 #     async def run(
 #         self,
-#         dispatcher: CollectingDispatcher,
-#         tracker: Tracker,
-#         domain: Dict[Text, Any],
-#     ) -> List[EventType]:
-#         """ this function will indicate what to do after a clarification has been choosen"""
-
-#         path = r"data/qna_data_bases/donnees_pour_reco.csv"
-#         data_base = pd.read_csv(path,  sep=";", encoding="latin3")
-
-#         #importation du model
-#         with open('actions/recoLightKnn.sav', 'rb') as modelknn:
-#             model = pickle.load(modelknn)
-
-#         #encodage
-#         le = preprocessing.LabelEncoder()
-#         #elements a encoder
-#         le.fit(self.roles)       
-
-#         user_ongoin_message = tracker.get_slot('user_ongoin_message')
-
-#         inputUserTransformed = self.extractKeyWords(user_ongoin_message.split(), self.materilasList)
-
-#         if set(self.convertToDigit(inputUserTransformed, self.materilasList)) != {0}:
-#             prediction = le.inverse_transform(model.predict(self.transfoInput(inputUserTransformed)))[0] 
-
-#             equipments_role = data_base.loc[data_base["role"]==prediction,]
-#             name_values = list(equipments_role.iloc[0,])[1:]
-#             idx = [idx for idx in range(len(name_values)) if name_values[idx] != 0]
-#             equipments_role = list(equipments_role.iloc[0,].index.values)[1:]
-#             equipments_role = [equipments_role[index] for index in idx if equipments_role[index] not in inputUserTransformed]
-#             equipments_role[len(equipments_role)-1] = "et " + equipments_role[len(equipments_role)-1] 
-#             equipments_role = ", ".join(equipments_role)          
-
-#             if len(inputUserTransformed) == 1:
-
-#                 dispatcher.utter_message(text = f"Vous avez demandé l'équipement {inputUserTransformed[0]} \nJe prédis donc que vous êtes {prediction} \nVous aurez également besoin des équipements suivants: {equipments_role} ")
-
-#                 return []
-#             else:
-#                 inputUserTransformed[len(inputUserTransformed)-1] = "et " + inputUserTransformed[len(inputUserTransformed)-1]
-#                 inputUserTransformed = ", ".join(inputUserTransformed)  
-
-#                 dispatcher.utter_message(text = f"Vous avez demandé les équiments {inputUserTransformed} \nJe prédis donc que vous êtes {prediction} \nVous aurez également besoin des équipements suivants: {equipments_role} ")
-
-#                 return []
-#         else:
-#             prediction = "Desole :(, nous n'avons pas trouve de role correspondant a votre requete"    
-#             return [] 
-
-#         return []
-
-
-        
+#         dispatcher: Collecting

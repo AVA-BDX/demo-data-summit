@@ -123,7 +123,7 @@ nlu:
  
 - intent: long_utters
   examples: |
-    - j'ai les [longues](long_utters_entity) phrases
+    - j'aime les [longues](long_utters_entity) phrases
     - je préfères les phrases [détaillées](long_utters_entity)
     - j'aime les [détails](long_utters_entity)
     - [longues](long_utters_entity)

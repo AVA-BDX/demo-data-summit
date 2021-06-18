@@ -9,3 +9,8 @@ forms:
           - faq
           - deny
           - ask_reformulate
+    pseudo:
+      - type: from_text
+  
+
+

@@ -124,12 +124,23 @@ slots:
         type: any
     confusion_2_id:
         type: any
+    confusion:
+        type: bool
+        influence_conversation: true
     gauche:
         type: any
     milieu:
         type: any
     droit:
         type: any
+    pseudo:
+        type: any
+    bot_question_confusion:
+        type: any
+    bot_question_incomprehension:
+        type: any
+    user_wants_precision:
+        type: bool
 responses:
     utter_greet:
       - text: salut comment vas-tu ?
@@ -178,6 +189,8 @@ responses:
             payload: /dont_care
           - title: phrases longues
             payload: /long_utters
+    utter_ask_pseudo:
+      - text: Quel est votre pseudo ?
     utter_faq/1:
       - text: Si la durée de votre séjour est inférieure à 30 jours, votre passeport
             valide de 6 mois suffit.
@@ -1437,6 +1450,7 @@ responses:
 actions:
   - action_user_last_message
   - action_bot_last_message
+  - validate_note_asking_form
   - action_record_the_user_note
   - user_note_to_none
   - action_utter_reformulate
@@ -1447,6 +1461,10 @@ actions:
   - action_bot_adaptive_answer
   - action_ask_for_clarification
   - action_set_faq_confusion_id
+  - action_increment_confusion_incomprehension
+  - action_set_confusion_slot_to_none
+  - action_set_user_wants_precision_1
+  - action_set_user_wants_precision_0
 forms:
     note_asking_form:
         note:
@@ -1456,6 +1474,8 @@ forms:
               - faq
               - deny
               - ask_reformulate
+        pseudo:
+          - type: from_text
 session_config:
     session_expiration_time: 60
-    carry_over_slots_to_new_session: false
+    carry_over_slots_to_new_session: true
