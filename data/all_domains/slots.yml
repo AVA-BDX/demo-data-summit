@@ -36,9 +36,11 @@ slots:
     type: any    
   pseudo:
     type: any
+  pseudo2:
+    type: any
   bot_question_confusion:
     type: any
   bot_question_incomprehension:
     type: any
-  user_wants_precision:
-    type: bool
+  user_wants_details:
+    type: any

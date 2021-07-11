@@ -16,5 +16,4 @@ actions:
   - action_set_faq_confusion_id
   - action_increment_confusion_incomprehension
   - action_set_confusion_slot_to_none
-  - action_set_user_wants_precision_1
-  - action_set_user_wants_precision_0
+

@@ -9,8 +9,8 @@ stories:
     - intent: long_utters
   - action: action_set_and_acknowledge_profile
   - action: action_bot_adaptive_answer
-  - action: note_asking_form
-  - active_loop: note_asking_form
+  - action: note_and_pseudo_asking_form
+  - active_loop: note_and_pseudo_asking_form
 
 - story: bot didn't get user profil well and ask him to chose 1
   steps:
@@ -21,8 +21,8 @@ stories:
     - intent: long_utters
   - action: action_set_and_acknowledge_profile
   - action: action_bot_adaptive_answer
-  - action: note_asking_form
-  - active_loop: note_asking_form
+  - action: note_and_pseudo_asking_form
+  - active_loop: note_and_pseudo_asking_form
 
 
 

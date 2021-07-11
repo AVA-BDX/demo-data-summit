@@ -135,12 +135,14 @@ slots:
         type: any
     pseudo:
         type: any
+    pseudo2:
+        type: any
     bot_question_confusion:
         type: any
     bot_question_incomprehension:
         type: any
-    user_wants_precision:
-        type: bool
+    user_wants_details:
+        type: any
 responses:
     utter_greet:
       - text: salut comment vas-tu ?
@@ -1463,10 +1465,8 @@ actions:
   - action_set_faq_confusion_id
   - action_increment_confusion_incomprehension
   - action_set_confusion_slot_to_none
-  - action_set_user_wants_precision_1
-  - action_set_user_wants_precision_0
 forms:
-    note_asking_form:
+    note_and_pseudo_asking_form:
         note:
           - type: from_text
             intent: number

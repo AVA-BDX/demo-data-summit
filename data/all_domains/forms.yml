@@ -1,7 +1,7 @@
 version: '2.0'
 
 forms:
-  note_asking_form:
+  note_and_pseudo_asking_form:
     note:
       - type: from_text
         intent: number

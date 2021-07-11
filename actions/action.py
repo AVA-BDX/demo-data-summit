@@ -105,7 +105,7 @@ class reset_note(Action):
     def run(self, dispatcher, tracker, domain):
         """ Reset the user's note to None"""
 
-        return [SlotSet("note", None)]
+        return [SlotSet("note", None),SlotSet("user_wants_details",0)]
 
 class bot_outputs(Action):
 
@@ -162,6 +162,12 @@ class Record_user_note(Action):
         """Records the user's question, the bot answer, 
         the times of the latest and the user's note in a database"""
 
+        intent_ranking = (
+            tracker.latest_message.get("response_selector", {})
+            .get("faq", {})
+            .get("ranking", [])
+        )       
+        question_id = tracker.get_slot('user_current_intent_id')
         user_question = tracker.get_slot('user_ongoin_message')
         pseudo = tracker.get_slot('pseudo')
         bot_answer = tracker.get_slot('bot_ongoin_message')
@@ -170,7 +176,9 @@ class Record_user_note(Action):
         time_bot_answer = datetime.strptime(tracker.get_slot('time_bot_answer'), "%Y-%m-%d %H:%M:%S.%f")    
         bot_question_confusion =  tracker.get_slot('bot_question_confusion')
         bot_question_incomprehension =  tracker.get_slot('bot_question_incomprehension')
-        user_wants_precision = tracker.get_slot('user_wants_precision')
+        user_wants_details = tracker.get_slot('user_wants_details')
+        bot_confid_to_user_question = intent_ranking[0].get("confidence")
+        
         try:
             # Connect to an existing database (should put these in a config file for more safe)
             connection = psycopg2.connect(user="civadev",
@@ -183,24 +191,28 @@ class Record_user_note(Action):
             # Executing a SQL query to insert data into  table
             insert_query = """ INSERT INTO user_bot_augmented_recordings 
             (pseudo,
+            question_id,
             user_question,
-            bot_answer, 
+            bot_answer,
+            bot_confid_to_user_question, 
             user_note,
             time_user_question, 
             time_bot_answer,
             bot_question_confusion,
             bot_question_incomprehension,
-            user_wants_precision) VALUES 
-            (%s, %s, %s, %s, %s, %s, %s, %s,%s);"""
+            user_wants_details) VALUES 
+            (%s, %s, %s, %s, %s, %s, %s, %s,%s,%s,%s);"""
             item_tuple = (pseudo,
+                        question_id,
                         user_question,
                         bot_answer,
+                        bot_confid_to_user_question,
                         user_note,
                         time_user_question,
                         time_bot_answer,
                         bot_question_confusion,
                         bot_question_incomprehension,
-                        user_wants_precision)
+                        user_wants_details)
             cursor.execute(insert_query, item_tuple)
             connection.commit()
             print("1 Record inserted successfully")
@@ -225,19 +237,17 @@ class validatenoteForm(FormValidationAction):
     def name(self):
         return 'validate_note_asking_form'
 
-    # async def required_slots(
-    #     self,
-    #     slots_mapped_in_domain: List[Text],
-    #     dispatcher: "CollectingDispatcher",
-    #     tracker: "Tracker",
-    #     domain: "DomainDict"
-    # ) -> List[Text]:
-    #     if tracker.get_slot("note") is False and tracker.get_slot("pseudo") is True:
-    #         return ["note"]
-    #     elif tracker.get_slot("note") is True and tracker.get_slot("pseudo") is False:
-    #         return ["pseudo"]
-    #     else:
-    #         return ["note", "pseudo"]
+    async def required_slots(
+        self,
+        slots_mapped_in_domain: List[Text],
+        dispatcher: "CollectingDispatcher",
+        tracker: "Tracker",
+        domain: "DomainDict"
+    ) -> List[Text]:
+        if tracker.get_slot("pseudo2") is True:
+            return ["note"]
+        else:
+            return ["note", "pseudo"]
 
     def validate_note(self, slot_value, dispatcher, tracker, domain):
         """Check if the note given by the user is within 1 and 5"""
@@ -251,6 +261,7 @@ class validatenoteForm(FormValidationAction):
     def validate_pseudo(self, slot_value, dispatcher, tracker, domain):
         """Check if the user pseudo already exists"""
 
+        
         try:
             # Connect to an existing database (should put these in a config file for more safe)
             connection = psycopg2.connect(user="civadev",
@@ -272,7 +283,7 @@ class validatenoteForm(FormValidationAction):
                 print("PostgreSQL connection is closed")
                 
         if slot_value not in pseudos:
-            return {"pseudo": slot_value}
+            return {"pseudo": slot_value, "pseudo2" : slot_value}
         else:
             dispatcher.utter_message("Ce pseudo existe déjà. Veuillez en renseigner un autre s'il vous plait.")
             return {"pseudo": None}
@@ -453,7 +464,7 @@ class ActionSetAndAcknowledgeProfile(Action):
             return [SlotSet("profile", "dont_care")]
         elif user_profile == "long_utters":
             dispatcher.utter_message(text = "J'enregistre que vous aimez les réponses détaillées")
-            return [SlotSet("profile", "long_utters")]
+            return [SlotSet("profile", "long_utters"),SlotSet("user_wants_details",1)]
         else:
             dispatcher.utter_message(text = "Je n'ai pas encore cerné votre profil")
             return [SlotSet("profile", None)]
@@ -643,34 +654,6 @@ class ActionIncrementIncomprehensionConfusion(Action):
                 var_bot_question_confusion = 1
         return [SlotSet("bot_question_incomprehension", var_bot_question_incomprehension),SlotSet("bot_question_confusion", var_bot_question_confusion) ]
 
-class SetUserWantsPrecision1(Action):
-    def name(self) -> Text:
-        return "action_set_user_wants_precision_1"
-
-    async def run(
-        self,
-        dispatcher: CollectingDispatcher,
-        tracker: Tracker,
-        domain: Dict[Text, Any],
-    ) -> List[EventType]:
-        """This action will set the slot user_wants_precision to 1 """
-      
-        return [SlotSet("user_wants_precision"), True] 
-
-class SetUserWantsPrecision0(Action):
-    def name(self) -> Text:
-        return "action_set_user_wants_precision_0"
-
-    async def run(
-        self,
-        dispatcher: CollectingDispatcher,
-        tracker: Tracker,
-        domain: Dict[Text, Any],
-    ) -> List[EventType]:
-        """This action will set the slot user_wants_precision to 0 """
-      
-        return [SlotSet("user_wants_precision"), None] 
-
 
 
 # class TriggerNoteForm(Action):
@@ -703,7 +686,7 @@ class SetConfusionSlotToNone(Action):
     ) -> List[EventType]:
         """This action will set the slot named confusion to None"""
    
-        return [SlotSet("confusion", None)]
+        return [SlotSet("confusion", None), SlotSet("user_wants_details", 0)]
 
 
 # class ActionRecommendationAlgo(Action):
