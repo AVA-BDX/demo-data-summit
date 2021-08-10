@@ -17,7 +17,7 @@ entities:
 - billet_aller_retour
 - billet_avion
 - carte_credit
-- carte_européenne
+- carte_europeenne
 - change
 - compagnie_aerienne
 - culturelles

@@ -1,3 +1,7 @@
 {
-    "python.pythonPath": "/home/tchala/anaconda3/envs/civa-stand-qna/bin/python"
+    "python.pythonPath": "/home/tchala/anaconda3/envs/civa-stand-qna/bin/python",
+    "workbench.colorTheme": "Dark+ Python",
+    "workbench.preferredDarkColorTheme": "Visual Studio Dark",
+    "workbench.preferredHighContrastColorTheme": "Visual Studio Dark",
+    "workbench.preferredLightColorTheme": "Visual Studio Dark"
 }

@@ -12,9 +12,11 @@ from datetime import datetime
 import random
 import pandas as pd
 import numpy as np
-import nltk
-from nltk.corpus import stopwords
-from nltk import word_tokenize
+
+import spacy
+from collections import Counter
+import math
+nlp = spacy.load("fr_core_news_sm")
 
 import pickle
 from sklearn import preprocessing
@@ -290,14 +292,14 @@ class validatenoteForm(FormValidationAction):
 
 
 class bot_reformulate(Action):
-    def name(self) -> Text:
+    def name(self) :
         return "action_utter_reformulate"
 
     async def run(
         self,
         dispatcher: CollectingDispatcher,
         tracker: Tracker,
-        domain: Dict[Text, Any],
+        domain: Dict[Text, Any]
 
     ) -> List[EventType]:
         """This action will reformulate bot answers when the user ask to reformulate and will adapt those answers to the user profile"""
@@ -366,7 +368,7 @@ class bot_reformulate(Action):
 
 
 class ActionBotAdaptiveAnswer(Action):
-    def name(self) -> Text:
+    def name(self) :
         return "action_bot_adaptive_answer"
 
     async def run(
@@ -383,13 +385,14 @@ class ActionBotAdaptiveAnswer(Action):
         #bot_responses_to_user_question_json contains all bot utterances regarding the user sub-intent in a list of json
         with open('data/qna_data_bases/strored_all_bot_responses.txt') as json_file:
             bot_responses_to_user_question_json = json.load(json_file)       
-        #bot_responses_to_user_question_json =  tracker.get_slot('strored_all_bot_responses')
         #get the user faq intent id
         user_current_intent_id = tracker.get_slot('user_current_intent_id')
         #get bot last_faq_message to check if at least one faq_message has been asked by the user
         bot_last_faq_message = tracker.get_slot('bot_last_faq_message')
         #get bot last_faq_message to check if at least one faq_message has been asked by the user
         user_ongoin_message = tracker.get_slot('user_ongoin_message')
+        #get already given answers
+        bot_utterances_list_slot = tracker.get_slot('bot_utterances_list_slot')
 
         if bot_last_faq_message == None and user_ongoin_message == None:
             dispatcher.utter_message(text = "Je vous écoute pour votre question")
@@ -409,14 +412,19 @@ class ActionBotAdaptiveAnswer(Action):
             if user_profile == "short_utters":
                 responses_idx = [idx for idx in range(len(bot_responses_lengths)) if bot_responses_lengths[idx] <= first_quantile]
                 bot_responses_to_user_question = [bot_responses_to_user_question[idx] for idx in responses_idx]
+                #bot_responses_to_user_question = [bot_responses_to_user_question[idx] for idx in responses_idx and bot_responses_to_user_question[idx] not in bot_utterances_list_slot]
             elif user_profile == "long_utters":
                 responses_idx = [idx for idx in range(len(bot_responses_lengths)) if bot_responses_lengths[idx] >= third_quentile]
                 bot_responses_to_user_question = [bot_responses_to_user_question[idx] for idx in responses_idx]
             else:
                 bot_responses_to_user_question = bot_responses_to_user_question
-
+        #if len(bot_responses_to_user_question) != 0:
         Bot_chosed_utterance = bot_responses_to_user_question[random.randint(0, len(bot_responses_to_user_question) - 1)]
         dispatcher.utter_message(text = Bot_chosed_utterance)
+        #else:   
+        #Bot_chosed_utterance = f"😕 Désolé, par rapport à vos goûts, je n'ai plus d'autres reformulations pour cette question.\nVoulez vous quand même  que je vous propose une réponse que je vous ai déjà proposée ?"
+        #dispatcher.utter_message(text = Bot_chosed_utterance)
+        # dispatcher.utter_message(text = Bot_chosed_utterance)
 
         return []
 
@@ -424,7 +432,7 @@ class ActionBotAdaptiveAnswer(Action):
 
 
 class ActionNoFortherReformulation(Action):
-    def name(self) -> Text:
+    def name(self) :
         return "action_no_further_reformulation"
 
     async def run(
@@ -443,7 +451,7 @@ class ActionNoFortherReformulation(Action):
 
 
 class ActionSetAndAcknowledgeProfile(Action):
-    def name(self) -> Text:
+    def name(self) :
         return "action_set_and_acknowledge_profile"
 
     async def run(
@@ -477,24 +485,18 @@ class ActionSetAndAcknowledgeProfile(Action):
 class ActionAskClarification(Action):
     """Asks for a clarification if confusion between two intentions"""
 
-    def name(self) -> Text:
+    def name(self) :
         return "action_ask_for_clarification"
 
     def run(
         self, dispatcher: CollectingDispatcher, tracker: Tracker, domain: DomainDict,
-    ) -> List[EventType]:
+    ) :
         #bot_responses_to_user_question_json contains all bot utterances regarding the user sub-intent in a list of json
         with open('data/qna_data_bases/strored_all_bot_responses.txt') as json_file:
             bot_responses_to_user_question_json = json.load(json_file)
-        #bot_responses_to_user_question_json =  tracker.get_slot('strored_all_bot_responses') 
-        with open('data/qna_data_bases/strored_all_bot_responses.txt') as json_file:
+        with open('data/qna_data_bases/strored_all_bot_questions.txt') as json_file:
             user_questions_to_bot_responses_json = json.load(json_file)
-        #user_questions_to_bot_responses_json =  tracker.get_slot('strored_all_bot_questions')
 
-        french_stopwords = set(stopwords.words('french'))
-        filtre_stopfr =  lambda text: [token for token in text if token.lower() not in french_stopwords]
-        ponctuations = [",",".","?","[","]","(",")","{","}",";","!",":","/","'","-","_","«","»"]
-        
         intent_ranking = (
             tracker.latest_message.get("response_selector", {})
             .get("faq", {})
@@ -502,15 +504,15 @@ class ActionAskClarification(Action):
         )
         if len(intent_ranking) > 1 :
             #user question not clear enough
-            if intent_ranking[0].get("confidence")<0.4:
+            if intent_ranking[0].get("confidence")<0.8:
                 dispatcher.utter_message(text= f"Pouvez vous apporter plus de détails s'il vous plait ? \n je n'ai compris que {round(100*intent_ranking[0].get('confidence'),2)}% de ce que vous avez dit ^^'" )
-                return []
+                return [SlotSet("test_sentences", intent_ranking) ]
             else:
                 diff_intent_confidence = intent_ranking[0].get(
                     "confidence"
                 ) - intent_ranking[1].get("confidence")
                 #confusion case
-                if diff_intent_confidence < 0.5:
+                if diff_intent_confidence < 0.2:
                     intent_ranking = intent_ranking[:2]
                     #get questions ids
                     id1 = intent_ranking[0].get("intent_response_key").split("/")[1]
@@ -520,44 +522,57 @@ class ActionAskClarification(Action):
                     # phrase1 = list([list_utters for list_utters in bot_responses_to_user_question_json if id1 in list_utters.keys()][0].values())[0]
                     phrase1_q = list([list_utters for list_utters in user_questions_to_bot_responses_json if id1 in list_utters.keys()][0].values())[0]
                     # phrase1 = phrase1 + phrase1_q
-                    phrase1 =  phrase1_q
-                    phrase1_to_one_str = ', '.join(phrase1)
-                    for ponc in ponctuations:
-                        phrase1_to_one_str = phrase1_to_one_str.replace(ponc," ")
-                    words_phrase1 = filtre_stopfr( word_tokenize(phrase1_to_one_str, language="french") )
-                    words_phrase1 = [word for word in words_phrase1 if len(word) > 3]
-                    words_phrase1_copy = words_phrase1
-                    count_phrase1 = [phrase1_to_one_str.count(word) for word in list(set(words_phrase1))]
-                    max_count_phrase1_idx = count_phrase1.index(max(count_phrase1))
-                    phrase1_key_word = list(set(words_phrase1))[max_count_phrase1_idx]
-
-                    words_phrase1 = [word for word in  words_phrase1 if  word != phrase1_key_word] 
-                    count_phrase1 = [phrase1_to_one_str.count(word) for word in list(set(words_phrase1))]
-                    max_count_phrase1_idx = count_phrase1.index(max(count_phrase1))
-                    phrase1_key_word2 = list(set(words_phrase1))[max_count_phrase1_idx]
-
+                    s_id1 =  phrase1_q
+                    N_id1 = len(s_id1)
+                   
                     #get faq_2 2 key words
                     # phrase2 = list([list_utters for list_utters in bot_responses_to_user_question_json if id2 in list_utters.keys()][0].values())[0]
                     phrase2_q = list([list_utters for list_utters in user_questions_to_bot_responses_json if id2 in list_utters.keys()][0].values())[0]
                     # phrase2 = phrase2 + phrase2_q
-                    phrase2 = phrase2_q
-                    phrase2_to_one_str = ', '.join(phrase2)
-                    for ponc in ponctuations:
-                        phrase2_to_one_str = phrase2_to_one_str.replace(ponc," ")                
-                    words_phrase2 = filtre_stopfr( word_tokenize(phrase2_to_one_str, language="french") )
-                    words_phrase2 = [word for word in words_phrase2 if len(word) > 3 and word not in words_phrase1_copy]
-                    count_phrase2 = [phrase2_to_one_str.count(word) for word in list(set(words_phrase2))]
-                    max_count_phrase2_idx = count_phrase2.index(max(count_phrase2))
-                    phrase2_key_word = list(set(words_phrase2))[max_count_phrase2_idx]
+                    s_id2 = phrase2_q
+                    N_id2 = len(s_id2)
 
-                    words_phrase2 = [word for word in  words_phrase2 if  word != phrase2_key_word] 
-                    count_phrase2 = [phrase2_to_one_str.count(word) for word in list(set(words_phrase2))]
-                    max_count_phrase2_idx = count_phrase2.index(max(count_phrase2))
-                    phrase2_key_word2 = list(set(words_phrase2))[max_count_phrase2_idx]
+                    #transform quesitons list into spacy's set of docs
+                    docs_1 = list(nlp.pipe(s_id1))
+                    docs_2 = list(nlp.pipe(s_id2))
+                    #get rid of useless strings in the sentences
+                    id1_pur = [',  '.join([w.lemma_.lower() for w in doc if (not w.is_stop and not w.is_punct and not w.like_num and (w.pos_ not in ["VERB","ADJ","ADV","SPACE", "AUX","PRON", "ADP"]))]) for doc in docs_1]
+                    id2_pur =  [',  '.join([w.lemma_.lower() for w in doc if (not w.is_stop and not w.is_punct and not w.like_num and (w.pos_ not in ["VERB","ADJ","ADV","SPACE", "AUX","PRON", "ADP"]))]) for doc in docs_2]
 
+                    #get unique unique words in each set of questions for id1 and id2
+                    #transform the list of sentences into single character
+                    fulltext_id1 = ', '.join(id1_pur)
+                    fulltext_id2 = ', '.join(id2_pur)
+
+                    unique_word_id1 = list(set(fulltext_id1.split(",")))
+                    unique_word_id1 = list(set([word.strip() for word in unique_word_id1]))
+
+                    unique_word_id2 = list(set(fulltext_id2.split(",")))
+                    unique_word_id2 = list(set([word.strip() for word in unique_word_id2]))
+
+                    words_importance_id1 = []
+                    words_importance_id2 = []
+
+                    #Extract key word for id1 questions
+                    for word in unique_word_id1:
+                        nb_occur_word_id1 = len([list_w for list_w in id1_pur if word in list_w ])
+                        nb_occur_word_id2 = len([list_w for list_w in id2_pur if word in list_w ])
+                        words_importance_id1.append((nb_occur_word_id1/N_id1)*math.log(N_id2/(nb_occur_word_id2 + 1)))
+                    Id1_key_word_idx = words_importance_id1.index(max(words_importance_id1))
+                    Id1_key_word = unique_word_id1[Id1_key_word_idx]
+                    
+                    #Extract key word for id2 questions
+                    for word in unique_word_id2:
+                        nb_occur_word_id2 = len([list_w for list_w in id2_pur if word in list_w ])
+                        nb_occur_word_id1 = len([list_w for list_w in id1_pur if word in list_w ])
+                        words_importance_id2.append((nb_occur_word_id2/N_id2)*math.log(N_id1/(nb_occur_word_id1 + 1)))
+                    Id2_key_word_idx = words_importance_id2.index(max(words_importance_id2))
+                    Id2_key_word = unique_word_id2[Id2_key_word_idx]
+                    
+                    
                     #create buttons titles
-                    title_1 = f"{phrase1_key_word},{phrase1_key_word2}"
-                    title_2 = f"{phrase2_key_word},{phrase2_key_word2}"
+                    title_1 = f"{Id1_key_word}"
+                    title_2 = f"{Id2_key_word}"
                    
                     message_title = (
                         "Pardon, je ne suis pas sur d'avoir bien compris 🤔 "  "me parlez-vous de..."
@@ -569,7 +584,7 @@ class ActionAskClarification(Action):
                     buttons.append({"title": "autre", "payload": f"/non_sense"})
 
                     dispatcher.utter_message(text=message_title, buttons=buttons)
-                    return [SlotSet("confusion_1_id", id1),SlotSet("confusion_2_id", id2), SlotSet("confusion", True)]
+                    return [SlotSet("test_sentences", intent_ranking) ,SlotSet("confusion_1_id", id1),SlotSet("confusion_2_id", id2), SlotSet("confusion", True)]
                 #no confison case
                 else:
                     #get the user profile
@@ -607,10 +622,12 @@ class ActionAskClarification(Action):
 
                     Bot_chosed_utterance = bot_responses_to_user_question[random.randint(0, len(bot_responses_to_user_question) - 1)]
                     dispatcher.utter_message(text = Bot_chosed_utterance)
-        return []
+        return [SlotSet("test_sentences", intent_ranking)]
+    
+    
 
 class ActionSetFaqConfusionId(Action):
-    def name(self) -> Text:
+    def name(self):
         return "action_set_faq_confusion_id"
 
     async def run(
@@ -627,7 +644,6 @@ class ActionSetFaqConfusionId(Action):
         if ((confusion_intent == "confusion_1") or (tracker.get_slot('gauche'))):
             return [SlotSet("user_current_intent_id", tracker.get_slot('confusion_1_id'))]
         elif ((confusion_intent == "confusion_2") or (tracker.get_slot('milieu'))):
-            dispatcher.utter_message(text = "J'enregistre que ça vous est égal")
             return [SlotSet("user_current_intent_id", tracker.get_slot('confusion_2_id'))]
         elif ((confusion_intent == "non_sense") or (tracker.get_slot('droit'))):
             return [SlotSet("user_current_intent_id", None)]
@@ -636,7 +652,7 @@ class ActionSetFaqConfusionId(Action):
         return []
 
 class ActionIncrementIncomprehensionConfusion(Action):
-    def name(self) -> Text:
+    def name(self) :
         return "action_increment_confusion_incomprehension"
     
     def run(self, dispatcher: CollectingDispatcher, tracker: Tracker, domain: DomainDict):
@@ -674,7 +690,7 @@ class ActionIncrementIncomprehensionConfusion(Action):
             
 
 class SetConfusionSlotToNone(Action):
-    def name(self) -> Text:
+    def name(self) :
         return "action_set_confusion_slot_to_none"
 
     async def run(

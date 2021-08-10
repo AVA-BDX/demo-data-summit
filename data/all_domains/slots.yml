@@ -44,3 +44,5 @@ slots:
     type: any
   user_wants_details:
     type: any
+  test_sentences:
+    type: any
