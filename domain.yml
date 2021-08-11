@@ -177,19 +177,19 @@ responses:
       - text: pouvez-vous reformuler la question ?
       - text: tr�s bien, reformulez votre question
     utter_dont_understand:
-      - text: Tr�s bien, donnez-moi plus de d�tails alors
+      - text: Très bien, donnez-moi plus de détails alors
       - text: Ok, on ne s'est pas compris, pouvez-vous reformuler votre question?
-      - text: Hmmm, je n'ai donc pas compris! pouvez-vous me le dire diff�rements?
+      - text: Hmmm, je n'ai donc pas compris! pouvez-vous me le dire différements?
     utter_ask_another_question:
-      - text: Tr�s bien posez moi une autre question
-      - text: Alors je suis pr�t � r�pondre � votre prochaine question
+      - text: Très bien posez moi une autre question
+      - text: Alors je suis prêt à répondre à votre prochaine question
       - text: posez-moi une autre question alors
     utter_ask_profil:
       - text: Quel serait votre profile ?
         buttons:
           - title: phrases courtes
             payload: /short_utters
-          - title: indiff�rent
+          - title: indifférent
             payload: /dont_care
           - title: phrases longues
             payload: /long_utters

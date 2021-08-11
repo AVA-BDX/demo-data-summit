@@ -392,14 +392,14 @@ class ActionBotAdaptiveAnswer(Action):
         #get bot last_faq_message to check if at least one faq_message has been asked by the user
         user_ongoin_message = tracker.get_slot('user_ongoin_message')
         #get already given answers
-        bot_utterances_list_slot = tracker.get_slot('bot_utterances_list_slot')
+        already_uttered_responses = tracker.get_slot('bot_utterances_list_slot')
 
         if bot_last_faq_message == None and user_ongoin_message == None:
             dispatcher.utter_message(text = "Je vous écoute pour votre question")
             return []
 
         elif user_current_intent_id == None:
-            dispatcher.utter_message(template="utter_dont_understand")
+            dispatcher.utter_message(template="utter_dont_understand") #bizarre comme reponses (voir domaine)
             return []
         else:
             #get all responses for that id
@@ -412,20 +412,28 @@ class ActionBotAdaptiveAnswer(Action):
             if user_profile == "short_utters":
                 responses_idx = [idx for idx in range(len(bot_responses_lengths)) if bot_responses_lengths[idx] <= first_quantile]
                 bot_responses_to_user_question = [bot_responses_to_user_question[idx] for idx in responses_idx]
-                #bot_responses_to_user_question = [bot_responses_to_user_question[idx] for idx in responses_idx and bot_responses_to_user_question[idx] not in bot_utterances_list_slot]
+                choice = "réponses courtes"
             elif user_profile == "long_utters":
                 responses_idx = [idx for idx in range(len(bot_responses_lengths)) if bot_responses_lengths[idx] >= third_quentile]
                 bot_responses_to_user_question = [bot_responses_to_user_question[idx] for idx in responses_idx]
+                choice = "réponses longues"
             else:
                 bot_responses_to_user_question = bot_responses_to_user_question
-        #if len(bot_responses_to_user_question) != 0:
-        Bot_chosed_utterance = bot_responses_to_user_question[random.randint(0, len(bot_responses_to_user_question) - 1)]
-        dispatcher.utter_message(text = Bot_chosed_utterance)
-        #else:   
-        #Bot_chosed_utterance = f"😕 Désolé, par rapport à vos goûts, je n'ai plus d'autres reformulations pour cette question.\nVoulez vous quand même  que je vous propose une réponse que je vous ai déjà proposée ?"
-        #dispatcher.utter_message(text = Bot_chosed_utterance)
-        # dispatcher.utter_message(text = Bot_chosed_utterance)
-
+                choice = ""
+            bot_allowed_utterances = [bot_utterance for bot_utterance in bot_responses_to_user_question if bot_utterance not in already_uttered_responses]
+            if len(bot_allowed_utterances) > 0:
+                Bot_chosed_utterance = bot_allowed_utterances[random.randint(0, len(bot_allowed_utterances) - 1)]
+                dispatcher.utter_message(text = Bot_chosed_utterance)
+                return [SlotSet("bot_reformulation", Bot_chosed_utterance )]
+            else:
+                if choice != "":
+                    Bot_chosed_utterance = f"😕 Désolé, par rapport à vos goûts ({choice}) je n'ai plus d'autres reformulations pour cette question.\nVoulez vous quand même  que je vous propose une réponse que je vous ai déjà proposée ?"
+                    dispatcher.utter_message(text = Bot_chosed_utterance)
+                    return [Form(None)]
+                else:
+                    Bot_chosed_utterance = f"😕 Désolé, je n'ai plus d'autres reformulations pour cette question.\nVoulez vous quand même  que je vous propose une réponse que je vous ai déjà proposée ?"
+                    dispatcher.utter_message(text = Bot_chosed_utterance)
+                    return [Form(None)]
         return []
 
 

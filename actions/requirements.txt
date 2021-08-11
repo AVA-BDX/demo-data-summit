@@ -2,6 +2,6 @@ psycopg2
 typing-extensions
 pandas
 numpy
-nltk
+spacy
 fuzzywuzzy
 sklearn
