@@ -25,5 +25,18 @@ stories:
   - active_loop: note_and_pseudo_asking_form
 
 
+- story: happy path, ask the user if he still want a response, user affirm (story)
+  steps:
+  - intent: ask_reformulate
+  - action: action_utter_reformulate
+  - action: action_bot_utterances_list
+  - intent: affirm
+  - action: action_no_further_reformulation
 
-
+- story: unhapppy path, ask the user if he still want a response, he deny (story)
+  steps:
+  - intent: ask_reformulate
+  - action: action_utter_reformulate
+  - action: action_bot_utterances_list
+  - intent: deny
+  - action: action_ask_another_question

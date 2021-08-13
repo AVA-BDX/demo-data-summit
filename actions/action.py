@@ -352,7 +352,7 @@ class bot_reformulate(Action):
             if len(bot_allowed_utterances) > 0:
                 Bot_chosed_utterance = bot_allowed_utterances[random.randint(0, len(bot_allowed_utterances) - 1)]
                 dispatcher.utter_message(text = Bot_chosed_utterance)
-                return [SlotSet("bot_reformulation", Bot_chosed_utterance )]
+                return [SlotSet("bot_reformulation", Bot_chosed_utterance ),]
             else:
                 if choice != "":
                     Bot_chosed_utterance = f"😕 Désolé, par rapport à vos goûts ({choice}) je n'ai plus d'autres reformulations pour cette question.\nVoulez vous quand même  que je vous propose une réponse que je vous ai déjà proposée ?"
@@ -438,6 +438,24 @@ class ActionBotAdaptiveAnswer(Action):
 
 
 
+class SetUserWantGivenAnws(Action):
+    def name(self) :
+        return "action_set_user_want_given_anws"
+
+    async def run(
+        self,
+        dispatcher: CollectingDispatcher,
+        tracker: Tracker,
+        domain: Dict[Text, Any],
+
+    ) -> List[EventType]:
+        """This action will set the slot named confusion to None"""
+        intent = tracker.latest_message['intent'].get('name')
+        if intent == "affirm":
+            return [ SlotSet("user_want_given_anws", True)]
+        elif intent == "deny":
+             return [ SlotSet("user_want_given_anws", False)]
+        return[]
 
 class ActionNoFortherReformulation(Action):
     def name(self) :
@@ -451,10 +469,27 @@ class ActionNoFortherReformulation(Action):
     ) -> List[EventType]:
         """ This function will give an answer to the user among those the bot has already given 
         when there is no other/further reformulation and will adapt those answers based on the user's profile"""
+        
         Bot_chosed_utterance = tracker.get_slot('bot_reformulation')
         dispatcher.utter_message(text = Bot_chosed_utterance)
 
-        return []
+        return [Form("note_and_pseudo_asking_form")]
+    
+class ActionAskAnotherQuestion(Action):
+    def name(self) :
+        return "action_ask_another_question"
+
+    async def run(
+        self,
+        dispatcher: CollectingDispatcher,
+        tracker: Tracker,
+        domain: Dict[Text, Any],
+    ) -> List[EventType]:
+        """ This function will ask the user to ask another question"""
+        
+        dispatcher.utter_message(template="utter_ask_another_question")
+
+        return [Form("note_and_pseudo_asking_form")]
 
 
 
@@ -710,7 +745,7 @@ class SetConfusionSlotToNone(Action):
     ) -> List[EventType]:
         """This action will set the slot named confusion to None"""
    
-        return [SlotSet("confusion", None), SlotSet("user_wants_details", 0)]
+        return [SlotSet("confusion", None)]
 
 
 # class ActionRecommendationAlgo(Action):

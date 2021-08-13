@@ -25,7 +25,7 @@ entities:
 - dimensions
 - endroits
 - eviter
-- forfaits_téléphonique
+- forfaits_telephonique
 - format
 - guide_touristique
 - hebergement_atypiques

@@ -46,3 +46,6 @@ slots:
     type: any
   test_sentences:
     type: any
+  user_want_given_anws:
+    type: bool
+    influence_conversation: true

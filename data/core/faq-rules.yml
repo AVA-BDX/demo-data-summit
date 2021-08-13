@@ -2,7 +2,7 @@ version: "2.0"
 
 rules:
 
-- rule: go through ask_for_clarification function no confusion
+- rule: go through ask_for_clarification function (no confusion)
   steps:
   - intent: faq
   - action: action_set_confusion_slot_to_none
@@ -21,7 +21,7 @@ rules:
   - active_loop: note_and_pseudo_asking_form
 
 
-- rule: go back to another faq when the user ask so no confusion
+- rule: go back to another faq when the user ask so (no confusion)
   condition:
   - active_loop: note_and_pseudo_asking_form
   steps:
@@ -42,7 +42,7 @@ rules:
   - active_loop: note_and_pseudo_asking_form
 
 
-- rule: go through ask_for_clarification function confusion
+- rule: go through ask_for_clarification function so(confusion)
   steps:
   - intent: faq
   - action: action_set_confusion_slot_to_none
@@ -59,7 +59,7 @@ rules:
   - action: action_bot_utterances_list
 
 
-- rule: go back to another faq when the user ask so confusion
+- rule: go back to another faq when the user ask so (confusion)
   condition:
   - active_loop: note_and_pseudo_asking_form
   steps:
@@ -76,6 +76,8 @@ rules:
   - action: action_increment_confusion_incomprehension
   - action: action_bot_last_message
   - action: action_bot_utterances_list
+
+
 
 - rule: submit the note_and_pseudo_asking_form
   condition:
@@ -84,28 +86,6 @@ rules:
     - action: note_and_pseudo_asking_form
     - active_loop: null
     - action: action_record_the_user_note
-
-
-# - rule: submit the pseudo_asking_form no confusion
-#   condition:
-#       - active_loop: pseudo_asking_form
-#   steps:
-#     - action: pseudo_asking_form
-#     - active_loop: null
-#     - action: action_set_confusion_slot_to_none
-#     - slot_was_set:
-#       - confusion: null
-#     - action: action_get_user_curent_intent
-#     - action: user_note_to_none
-#     - action: action_user_last_message
-#     - action: action_ask_for_clarification
-#     - slot_was_set:
-#       - confusion: null
-#     - action: action_increment_confusion_incomprehension
-#     - action: action_bot_last_message
-#     - action: action_bot_utterances_list
-#     - action: note_asking_form
-#     - active_loop: note_asking_form
  
 
 - rule: bot ask to reformulate if the user deny after a faq 
@@ -154,7 +134,7 @@ rules:
   - action: utter_ask_profil
 
 
-- rule: the user want to inform bot on his profile, tform activated
+- rule: the user want to inform bot on his profile, form activated
   condition:
   - active_loop: note_and_pseudo_asking_form
   steps:
@@ -162,17 +142,6 @@ rules:
   - action: action_deactivate_loop
   - active_loop: null
   - action: utter_ask_profil
-
-
-- rule: the user want to inform bot on his profile, tform activated
-  condition:
-  - active_loop: note_and_pseudo_asking_form
-  steps:
-  - action: note_and_pseudo_asking_form
-  - active_loop: note_and_pseudo_asking_form
-  - intent: deny
-  - action: utter_reformulate
-
 
 - rule: user just inform on his profile = short_utters
   steps:
@@ -198,7 +167,7 @@ rules:
   - action: note_and_pseudo_asking_form
   - active_loop: note_and_pseudo_asking_form
 
-- rule: rule bot didn't get user profil well and ask him to chose
+- rule: bot didn't get user profil well and ask him to chose
   steps:
   - action: action_set_and_acknowledge_profile
   - action: action_bot_adaptive_answer
@@ -214,23 +183,46 @@ rules:
   - action: action_bot_utterances_list
   - intent: affirm
   - action: action_no_further_reformulation
-  - action: note_and_pseudo_asking_form
-  - active_loop: note_and_pseudo_asking_form
+  # - action: note_and_pseudo_asking_form
+  # - active_loop: note_and_pseudo_asking_form
 
 - rule: unhapppy path, ask the user if he still want a response, he deny
   steps:
   - action: action_utter_reformulate
   - action: action_bot_utterances_list
   - intent: deny
-  - action: utter_ask_another_question
-  - action: note_and_pseudo_asking_form
-  - active_loop: note_and_pseudo_asking_form
+  - action: action_ask_another_question
+  # - action: note_and_pseudo_asking_form
+  # - active_loop: note_and_pseudo_asking_form
 
 - rule: the bot reformulate any time the user ask him to reformulate
   steps:
   - intent: ask_reformulate
   - action: action_utter_reformulate
   - action: action_bot_utterances_list
-  - action: note_and_pseudo_asking_form
-  - active_loop: note_and_pseudo_asking_form
+  # - action: note_and_pseudo_asking_form
+  # - active_loop: note_and_pseudo_asking_form
 
+#   - rule: happy path, ask the user if he still want a response, user affirm
+#   steps:
+#   - action: action_utter_reformulate
+#   - action: action_bot_utterances_list
+#   - intent: affirm
+#   - action: action_set_user_want_given_anws
+#   - slot_was_set:
+#     - user_want_given_anws: true
+#   - action: action_no_further_reformulation
+#   - action: note_and_pseudo_asking_form
+#   - active_loop: note_and_pseudo_asking_form
+
+# - rule: unhapppy path, ask the user if he still want a response, he deny
+#   steps:
+#   - action: action_utter_reformulate
+#   - action: action_bot_utterances_list
+#   - intent: deny
+#   - action: action_set_user_want_given_anws
+#   - slot_was_set:
+#     - user_want_given_anws: false
+#   - action: utter_ask_another_question
+#   - action: note_and_pseudo_asking_form
+#   - active_loop: note_and_pseudo_asking_form
