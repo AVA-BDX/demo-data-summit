@@ -78,7 +78,6 @@ rules:
   - action: action_bot_utterances_list
 
 
-
 - rule: submit the note_and_pseudo_asking_form
   condition:
       - active_loop: note_and_pseudo_asking_form
@@ -96,6 +95,7 @@ rules:
   - active_loop: note_and_pseudo_asking_form
   - intent: deny
   - action: utter_reformulate
+
 
 - rule: confusion_1
   steps:
@@ -118,6 +118,7 @@ rules:
   - action: note_and_pseudo_asking_form
   - active_loop: note_and_pseudo_asking_form
 
+
 - rule: non_sense
   steps:
   - intent: non_sense
@@ -127,6 +128,7 @@ rules:
   - action: action_bot_utterances_list
   - action: note_and_pseudo_asking_form
   - active_loop: note_and_pseudo_asking_form
+
 
 - rule: the user want to inform bot on his profile, the bot ask profile
   steps:
@@ -143,6 +145,7 @@ rules:
   - active_loop: null
   - action: utter_ask_profil
 
+
 - rule: user just inform on his profile = short_utters
   steps:
   - intent: short_utters
@@ -150,6 +153,7 @@ rules:
   - action: action_bot_adaptive_answer
   - action: note_and_pseudo_asking_form
   - active_loop: note_and_pseudo_asking_form
+
 
 - rule: user just inform on his profile = dont_care
   steps:
@@ -159,6 +163,7 @@ rules:
   - action: note_and_pseudo_asking_form
   - active_loop: note_and_pseudo_asking_form
 
+
 - rule: user just inform on his profile = long_utters
   steps:
   - intent: long_utters
@@ -166,6 +171,7 @@ rules:
   - action: action_bot_adaptive_answer
   - action: note_and_pseudo_asking_form
   - active_loop: note_and_pseudo_asking_form
+
 
 - rule: bot didn't get user profil well and ask him to chose
   steps:
@@ -183,8 +189,7 @@ rules:
   - action: action_bot_utterances_list
   - intent: affirm
   - action: action_no_further_reformulation
-  # - action: note_and_pseudo_asking_form
-  # - active_loop: note_and_pseudo_asking_form
+
 
 - rule: unhapppy path, ask the user if he still want a response, he deny
   steps:
@@ -192,37 +197,10 @@ rules:
   - action: action_bot_utterances_list
   - intent: deny
   - action: action_ask_another_question
-  # - action: note_and_pseudo_asking_form
-  # - active_loop: note_and_pseudo_asking_form
+
 
 - rule: the bot reformulate any time the user ask him to reformulate
   steps:
   - intent: ask_reformulate
   - action: action_utter_reformulate
   - action: action_bot_utterances_list
-  # - action: note_and_pseudo_asking_form
-  # - active_loop: note_and_pseudo_asking_form
-
-#   - rule: happy path, ask the user if he still want a response, user affirm
-#   steps:
-#   - action: action_utter_reformulate
-#   - action: action_bot_utterances_list
-#   - intent: affirm
-#   - action: action_set_user_want_given_anws
-#   - slot_was_set:
-#     - user_want_given_anws: true
-#   - action: action_no_further_reformulation
-#   - action: note_and_pseudo_asking_form
-#   - active_loop: note_and_pseudo_asking_form
-
-# - rule: unhapppy path, ask the user if he still want a response, he deny
-#   steps:
-#   - action: action_utter_reformulate
-#   - action: action_bot_utterances_list
-#   - intent: deny
-#   - action: action_set_user_want_given_anws
-#   - slot_was_set:
-#     - user_want_given_anws: false
-#   - action: utter_ask_another_question
-#   - action: note_and_pseudo_asking_form
-#   - active_loop: note_and_pseudo_asking_form

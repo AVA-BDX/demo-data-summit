@@ -1,276 +1,268 @@
 id_question_pivot;reponse_pivot
-1;Si la durée de votre séjour est inférieure à 30 jours, votre passeport valide de 6 mois suffit.
-1;Le visa est obligatoire pour les ressortissant français effectuant un séjour de plus de 30 jours sur le territoire. Concernant les séjours de moins de 30 jours, le visa peut vous être demandé dans certains aéroports (voir liste), pour les aéroport principaux seul votre passeport est nécessaire et il doit comporter deux pages vierges et être encore valide 6 mois après la date d'arrivée. Pour plus d'informations et renseignement veuillez cliquer ici : 
-1;Les ressortissants français arrivant dans les principaux aéroports du pays n'ont plus besoin de visa pour un séjour inférieur à 30 jours. Leur passeport doit toutefois comporter 2 pages vierges et être encore valide 6 mois après la date d'arrivée.
-1;Vous n'avez pas besoin de visa pour un séjour inférieur à 30 jours. 
-1;Non si vous êtes ressortissant français et si votre séjour est inférieur à 30 jours. Cependant votre passeport doit comporter 2 pages vierges et être valide 6 mois après votre arrivée.
 1;Avec un passeport Français, il n'y a pas besoin d'un visa si la durée du séjour est inférieure à 30 jours, néanmoins il faudra que votre passeport comporte 2 pages vierges et être encore valide 6 mois après la date d'arrivée.
-1;Pour un séjour de moins de 30 le visa n'est pas obligatoire si votre passeport comporte 2 pages vierges et qu'il est encore valide 6 mois après la date d'arrivée.
-2;Oui, le passeport est obligatoire.
-2;Oui le passeport est obligatoire. 
+1;Le visa est obligatoire pour les ressortissants français effectuant un séjour de plus de 30 jours sur le territoire. Concernant les séjours de moins de 30 jours, le visa peut vous être demandé dans certains aéroports (voir liste), pour les aéroport principaux seul votre passeport est nécessaire et il doit comporter deux pages vierges et être encore valide 6 mois après la date d'arrivée. 
+1;Les ressortissants français arrivant dans les principaux aéroports du pays n'ont plus besoin de visa pour un séjour inférieur à 30 jours. Leur passeport doit toutefois comporter 2 pages vierges et être encore valide 6 mois après la date d'arrivée.
+1;Non si vous êtes ressortissant français et si votre séjour est inférieur à 30 jours. Cependant votre passeport doit comporter 2 pages vierges et être valide 6 mois après votre arrivée.
+1;Pour un séjour de moins de 30 jours le visa n'est pas obligatoire si votre passeport comporte 2 pages vierges et qu'il est encore valide 6 mois après la date d'arrivée.
+1;Si la durée de votre séjour est inférieure à 30 jours, votre passeport valide de 6 mois suffit.
+1;Vous n'avez pas besoin de visa pour un séjour inférieur à 30 jours. 
+2;Il vous faut un passeport, celui-ci doit comporter 3 pages vierges et être valide au moins 6 mois après la date d'arrivée. 
 2;"Le passeport est obligatoire pour tout voyage hors la France.
 Veuillez vérifier sa validité d'au moins 6 moins après la date d'arrivée."
-2;Le passeport est obligatoire, il doit comporter 2 pages vierges et être encore valide  6 mois après la date d'arrivée. Le visa en revanche n'est pas obligatoire selon la durée du séjour pour plus d'information cliquez ici : 
-2;Oui. En plus il doit comporter 2 pages vierges et être valide 6 mois après votre arrivée
-2;Il vous faut un passeport, celui-ci doit comporter 3 pages vierges et être valide au moins 6 mois après la date d'arrivée. 
+2;Le passeport est obligatoire, il doit comporter 2 pages vierges et être encore valide  6 mois après la date d'arrivée. Le visa en revanche n'est pas obligatoire selon la durée du séjour.
+2;Oui, le passeport est obligatoire.
 2;Oui, le passeport est obligatoire. Il doit toutefois comporter 2 pages vierges et être encore valide 6 mois après la date d'arrivée.
+2;Oui. En plus il doit comporter 2 pages vierges et être valide 6 mois après votre arrivée
+3;En période sanitaire liées au covid 19 il est obligatoire de réaliser un test PCR de moins de 72h avant le vol. 
+3;Oui et il doit dater de moins de 72h avant le départ du vol.
 3;Oui, le test PCR est obligatoire si vous n'êtes pas vacciné.
 3;Oui, moins de 72 heures avant votre départ.
-3;Oui et il doit dater de moins de 72h avant le départ du vol.
-3;Oui, un test PCR de moins de 72h est nécessaire avant le vol. 
 3;Oui, selon la situation sanitaire, il faut un test PCR de moins de 72h avant le vol.
+3;Oui, un test PCR de moins de 72h est nécessaire avant le vol. 
 3;Un test PCR doit être fait moins de 72h avant le vol.
-3;En période sanitaire liées au covid 19 il est obligatoire de réaliser un test PCR de moins de 72h avant le vol. 
-4;Il n'existe pas de vaccins obligatoires pour Bali.
-4;Il n'y a pas de vaccins obligatoires pour Bali.
-4;Vous devez être à jour dans les vaccinations suivantes : la fièvre typhoïde, les hépatites A et B, la diphtérie, tétanos et la poliomyélite.
 4;Comme dans le reste de l'Indonésie, il n'existe pas de vaccins obligatoires pour Bali. Toutefois, vous devez veiller à la mise à jour de certaines vaccinations. Celles contre la fièvre typhoïde, les hépatites A et B, la diphtérie, tétanos, poliomyélite, sont concernées.
-4;Non, mais il est fortement recommandé de vérifier la mise à jour des vaccins contre la typhoïde, les hépatites A et B, la diphtérie, le tétanos et la poliomyélite.
+4;Il n'existe pas de vaccins obligatoires pour Bali.
 4;"Il n'y a pas de vaccin obligatoire, néanmoins les rappels des vaccins de la fièvre typhoïde, les hépatites A et B, la diphtérie, tétanos, poliomyélite sont recommandé. 
 Pour avoir une liste plus exhaustive je vous recommande ce lien : 
 https://www.pasteur.fr/fr/centre-medical/preparer-son-voyage/indonesie"
-5;Oui, Dans les hôtels et boutiques haut de gamme des villes et régions touristiques (comme Bali).
-5;Oui mais seulement dans certains endroits, comme les villes et les régions touristique (comme Bali). De plus seul les enseigne de luxe, les touropérateurs (avec une majoration de 3 % environ), les hotels et les resorts accepteront la carte bancaire (Mastercard et visa le plus souvent). La carte bancaire vous permettra également de retirer de l'argent dans les distributeurs et banques. Pour plus d'information veuillez cliquer ici :   N'hésitez pas a vous rapprocher de  votre banque en cas de questions.  
-5;Les cartes bancaires sont acceptées dans les hôtels et resorts des catégories moyenne et supérieure, ainsi que dans les boutiques haut de gamme et les tour opérateurs
+4;Il n'y a pas de vaccins obligatoires pour Bali.
+4;Non, mais il est fortement recommandé de vérifier la mise à jour des vaccins contre la typhoïde, les hépatites A et B, la diphtérie, le tétanos et la poliomyélite.
+4;Vous devez être à jour dans les vaccinations suivantes : la fièvre typhoïde, les hépatites A et B, la diphtérie, tétanos et la poliomyélite.
+5;Dans les villes et les régions touristiques (comme Bali), les cartes bancaires sont acceptées dans les hôtels et resorts des catégories moyennes et supérieures, ainsi que dans les boutiques haut de gamme et les touropérateurs, qui appliquent une majoration de 3% environ. Les cartes MasterCard et Visa sont les plus couramment acceptées. Elles permettent de retirer de l’argent dans de nombreux distributeurs et banques.
 5;Il est possible de payer avec la CB, mais il vaut mieux avoir de l'espèce car il y a des commerçants qui ne l'acceptent pas.
-5;Dans les villes et les régions touristiques (comme Bali), les cartes bancaires sont acceptées dans les hôtels et resorts des catégories moyenne et supérieure, ainsi que dans les boutiques haut de gamme et les touropérateurs, qui appliquent une majoration de 3% environ. Les cartes MasterCard et Visa sont les plus couramment acceptées. Elles permettent de retirer de l’argent dans de nombreux distributeurs et banques.
-5;Les cartes MasterCard et Visa sont couramment acceptées à Bali. Néanmoins, vérifier avec votre banque les conditions d'utilisation à l'étranger. 
 5;"La carte bancaire n'est pas utilisable partout, pour votre hôtel ça ne devrait pas poser de problème, mais pour les boutiques et restaurants il est conseillé d'avoir de l'argent liquide.
 Pour retirer de l'argent aux distributeurs et banques les cartes MasterCard et Visa sont les plus couramment acceptées."
+5;Les cartes bancaires sont acceptées dans les hôtels et << resorts >> des catégories moyennes et supérieures, ainsi que dans les boutiques haut de gamme et les tour opérateurs
+5;Les cartes MasterCard et Visa sont couramment acceptées à Bali. Néanmoins, vérifier avec votre banque les conditions d'utilisation à l'étranger. 
+5;Oui mais seulement dans certains endroits, comme les villes et les régions touristiques (comme Bali). De plus seul les enseigne de luxe, les touropérateurs (avec une majoration de 3 % environ), les hotels et les resorts accepteront la carte bancaire (Mastercard et visa le plus souvent). La carte bancaire vous permettra également de retirer de l'argent dans les distributeurs et banques.    N'hésitez pas a vous rapprocher de  votre banque en cas de questions.  
+5;Oui, Dans les hôtels et boutiques haut de gamme des villes et régions touristiques (comme Bali).
+6;Avant votre départ rapprochez vous de votre banque pour savoir si vous allez avoir des frais supplémentaire avec votre Visa ou Mastercard. Il est recommandez de retirer directement dans les DAB des banques car il y a des risques d'arnaques a la carte bancaire dans les DAB. 
+6;Avant votre départ, renseignez vous auprès de votre banque de votre voyage sur les frais liés aux retraits dans les DAB.
+6;Cela dépend de votre banque et de sa politique financière.
+6;Cela dépend de votre banque, renseignez vous auprès de votre conseiller en ce qui concernes  les différents frais supplémentaires.  
 6;"Les cartes MasterCard et Visa sont les plus couramment acceptées. Elles permettent de retirer de l’argent dans de nombreux distributeurs et banques.
 Avant votre départ, informez votre banque de votre voyage et renseignezvous sur les frais liés aux retraits dans les DAB.
 Les risques d’arnaque à la carte bancaire dans les DAB sont réels, surtout à Bali. Mieux vaut utiliser les DAB des banques."
-6;Cela dépend de votre banque et de sa politique financière.
 6;Les frais de retrait sont à vérifier avec votre banque. Les conditions à l'étranger sont différentes.
-6;Avant votre départ, renseignez vous auprès de votre banque de votre voyage sur les frais liés aux retraits dans les DAB.
-6;Cela dépend de votre banque, renseignez vous auprès de votre conseiller en ce qui concernes  les différents frais supplémentaires.  
-6;Avant votre départ rapprochez vous de votre banque pour savoir si vous allez avoir des frais supplémentaire avec votre Visa ou Mastercard. Il est recommandez de retirer directement dans les DAB des banques car il y a des risques d'arnaques a la carte bancaire dans les DAB. 
-7;Oui, pour vos achats en dehors des hotels et boutiques de luxe
-7;Oui, c'est nécessaire.
+7;À Bali, on peut utiliser sa carte de paiement pour les hôtels de luxe, certaines boutiques assez chic, les compagnies aériennes ou pour les gros achats. Partout ailleurs, il est nécessaire d'avoir de l'argent liquide.
 7;Certains hôtels et boutiques acceptent la CB, mais il vaut mieux prévoir de l'argent liquide.
+7;Il est conseillé d'avoir de l'argent liquide pour voyager à Bali. Beaucoup de boutiques ne proposent pas les paiements par carte bancaire. 
 7;Il est conseillé d'avoir de l'argent liquide, en effet les paiements par carte bancaire sont assez rare à Bali. 
 7;Oui car seuls certains endroits accepteront la carte de paiement : Hôtel de luxe, boutique chic/luxe, compagnie aérienne ou gros achats. Partout ailleurs il vous sera demandé de payer en liquide. Pour vous assurer que votre carte bancaire sera bien utilisable veuillez a vous rapprocher de votre banque.
-7;À Bali, on peut utiliser sa carte de paiement pour les hôtels de luxe, certaines boutiques assez chic, les compagnies aériennes ou pour les gros achats. Partout ailleurs, il est nécessaire d'avoir de l'argent liquide.
-7;Il est conseillé d'avoir de l'argent liquide pour voyager à Bali. Beaucoup de boutiques ne proposent pas les paiements par carte bancaire. 
-8;Voir les conditions auprès de votre agence de voyage, de l'hotel ou de la compagnie aérienne que vous avez choisis
+7;Oui, c'est nécessaire.
+7;Oui, pour vos achats en dehors des hotels et boutiques de luxe
 8;Cela dépend de votre agence de voyage.
 8;Cela va dépendre de votre agence de voyage et/ou de votre compagnie aérienne. Pour prendre connaissance de toutes les modalités concernant l'annulation et le remboursement veuillez vous rapprocher de ces dernières.
 8;Oui c'est possible, par contre il faut voir les modalités de remboursement avec votre agence de voyage.
-8;Vous devez vous rapprocher de votre agence de voyage qui pourra vous proposer un avoir ou un remboursement. 
 8;Si vous souhaitez annuler votre voyage il faudra contacter votre agence de voyage, c'est elle qui vous proposera une offre de remboursement ou un avoir.
+8;Voir les conditions auprès de votre agence de voyage, de l'hotel ou de la compagnie aérienne que vous avez choisis
+8;Vous devez vous rapprocher de votre agence de voyage qui pourra vous proposer un avoir ou un remboursement. 
 8;Vous pouvez annuler à tout moment mais les conditions de remboursement sont à vérifier avec votre agence.
-9;Le moyen d'échange à Bali est la roupie indonésienne ou rupiah (Rps).
-9;Il s'agit de la roupie indonésienne ou rupiah (Rps). Pour plus d'information sur les monnaie utilisée à Bali veuillez cliquer ici :
+9;A Bali, la monnaie local est la roupie indonésienne aussi appelée rupiah (Rps).
+9;Il s'agit de la roupie indonésienne ou rupiah (Rps). Pour plus d'information sur les monnaie utilisée à Bali 
+9;La monnaie de Bali est la roupie indonésienne (Rps).
 9;La roupie indonésienne aussi appelée rupiah (Rps)
 9;La roupie indonésienne ou rupiah (Rps)
 9;La monnaie nationale est la roupie indonésienne ou rupiah (Rps).
-9;A Bali, la monnaie local est la roupie indonésienne aussi appelée rupiah (Rps).
-9;La monnaie de Bali est la roupie indonésienne (Rps).
-10;Voir les conditions avec votre agence de voyage
-10;Vous devez voir avec votre compagnie. Elle pourrait vous proposer un avoir à la place d'un remboursement.
+9;Le moyen d'échange à Bali est la roupie indonésienne ou rupiah (Rps).
 10;Cela va dépendre de votre compagnie aérienne ou de votre agence de voyage, veillez a vous raprocher de ces dernières pour en connaitres les modalités
-10;Vous devez vous rapprocher de votre agence de voyage qui pourra vous proposer un avoir à la place d'un remboursement. 
-10;En cas d'annulation du voyage, nous vous invitons à vous rapprocher de votre agence de voyage qui pourra vous proposer un avoir ou un remboursement.  
-10;En cas d'annulation de votre voyage, veuillez contacter l'agence pour obtenir un remboursement ou un avoir selon les conditions de remboursement de la compagnie.
 10;"Certaines agences de voyages ou compagnies aérienne proposent un remboursement intégral, d'autres, un avoir.
 Veuillez vous rapprocher de votre agence de voyage pour vérifier les modalités de remboursement."
-11;"Attention à la provenance de l'eau
-"
-11;Vous devez faire attention à vérifier que l'eau est potable.
-11;Il faut faire attention à son alimentation et la provenance de l'eau potable.
-11;Il faut éviter la nourriture (fruit de mer spécialement) exposée longtemps au soleil et faire attention à ce que vous buvez.
-11;Il est important de faire attention à son alimentation et bien vérifier la provenance de l'eau potable (favoriser l'eau en bouteille). Bali n'est pas une région du monde à risque. 
+10;En cas d'annulation de votre voyage, veuillez contacter l'agence pour obtenir un remboursement ou un avoir selon les conditions de remboursement de la compagnie.
+10;En cas d'annulation du voyage, nous vous invitons à vous rapprocher de votre agence de voyage qui pourra vous proposer un avoir ou un remboursement.  
+10;Voir les conditions avec votre agence de voyage
+10;Vous devez voir avec votre compagnie. Elle pourrait vous proposer un avoir à la place d'un remboursement.
+10;Vous devez vous rapprocher de votre agence de voyage qui pourra vous proposer un avoir à la place d'un remboursement. 
+11;Attention à la provenance de l'eau
 11;Bali n’est pas une région du monde à risque, à condition de faire attention à son alimentation ainsi qu’à la provenance de l’eau potable.
+11;Il est important de faire attention à son alimentation et bien vérifier la provenance de l'eau potable (favoriser l'eau en bouteille). Bali n'est pas une région du monde à risque. 
 11;"Il est préférable de faire attention à son alimentation ainsi qu'à la provenance de l'eau potable, 
 vous pouvez aussi retrouver la liste des vaccins recommandés sur : https://www.pasteur.fr/fr/centre-medical/preparer-son-voyage/indonesie"
-12;Voir les modalités sur le site de votre compagnie aérienne
+11;Il faut éviter la nourriture (fruit de mer spécialement) exposée longtemps au soleil et faire attention à ce que vous buvez.
+11;Il faut faire attention à son alimentation et la provenance de l'eau potable.
+11;Vous devez faire attention à vérifier que l'eau est potable.
 12;Contacter la compagnie aérienne dont vous dépendez.
 12;Il vous faudra contacter directement votre compagnie aérienne ou agence de voyage ou si cela vous est permis depuis leur site internet. 
-12;Vous pouvez contacter la compagnie aérienne ou le faire vous-même sur le site de la compagnie.
-12;Veuillez vous rendre sur le site de la compagnie aérienne ou les contacter par mail ou téléphone.
-12;Pour modifier votre réservation, contactez la compagnie aérienne sur leur site.
 12;Pour modifier votre réservation vous pouvez le faire sur le site de la compagnie ou la contacter directement au 01 99 99 99 99.
-13;Vous pouvez vous rendre sur le site de la compagnie.
-13;Il faut contacter l'agence et regarder votre contrat.
-13;Voir le site de votre compagnie aérienne ou de votre hotel.
+12;Pour modifier votre réservation, contactez la compagnie aérienne sur leur site.
+12;Veuillez vous rendre sur le site de la compagnie aérienne ou les contacter par mail ou téléphone.
+12;Voir les modalités sur le site de votre compagnie aérienne
+12;Vous pouvez contacter la compagnie aérienne ou le faire vous-même sur le site de la compagnie.
 13;Cela va dépendre des modalités d'annulation de votre compagnie aérienne. Il vous faut contacter cette dernière pour avoir ces informations sur leur modalités d'annulation soit en les contactant  directement par téléphone, soit par leur sites et applications mobiles.
+13;Il faut contacter l'agence et regarder votre contrat.
 13;Il faut se rendre sur le site de la compagnie ou les contactez directement pour voir les modalités d'annulation.
-13;Vous pouvez vous rendre directement sur votre espace personnel de la compagnie aérienne ou les contacter par mail ou téléphone.
 13;Pour annuler votre réservation, rendez-vous sur le site de la compagnie ou contactez les directement au 01 99 99 99 99. 
-14;Il est impératif de souscrire avant le départ une assurance privée pour Bali.
-14;Elle n'est pas obligatoire , cependant elle est vivement conseillée car les frais médicaux pour les étrangers dans les pays étrangers sont dans la plupart des pays très élevés. Pour anticiper un maximum les risques sur place il vous est recommandé de souscrire a une assurance prenant en charge les points suivants : un plafond de prise en charge élevé, une assistance rapatriement pour éviter une facture de soins de plusieurs milliers d'euros. Pour plus d'informations quant aux assurances disponible veuillez cliquer ici ou vous rapprocher de votre agence de voyage. 
-14;Les frais médicaux pour les étrangers étant particulièrement élevés dans les pays asiatiques, il est impératif de souscrire avant le départ une assurance privée pour Bali, avec un plafond de prise en charge élevé et une assistance rapatriement, et ce afin de vous éviter une facture de soins de plusieurs milliers d'euros.
-14;Elle n'est pas obligatoire, mais recommandée car les frais médicaux pour les étrangers sont particulièrement élevés dans les pays asiatiques.
-14;Ce n'est pas obligatoire, mais très fortement recommandé car les frais de soins à Bali sont extrêmement élevés pour les étrangers.
-14;Elle n'est pas obligatoire mais fortement conseillée en raison de frais médicaux très élevés.
+13;Voir le site de votre compagnie aérienne ou de votre hotel.
+13;Vous pouvez vous rendre directement sur votre espace personnel de la compagnie aérienne ou les contacter par mail ou téléphone.
+13;Vous pouvez vous rendre sur le site de la compagnie.
 14;Aucune assurance n'est obligatoire, mais les frais médicaux sont extrêmement élevés en Asie. Il est donc conseillé de souscrire a une assurance privée pour Bali avec un plafond de prise en charge élevé et une assistance rapatriement. 
-15;Pour vous faire rembourser vos frais médicaux il est impératif de garder l'ensemble des factures et justificatifs de paiement de les adresser à l'assurance maladie accompagnés du formulaire S3125.
-15;Non, il n'existe pas d'équivalent à la Carte Européenne d'Assurance Maladie. Seuls les soins médicaux urgents et imprévus peuvent être pris en charge. Pensez à conserver l'ensemble des factures acquittées et des justificatifs de paiement et adressez-les, accompagnés du formulaire S3125 Soins reçus à l'étranger (PDF), à votre caisse d'assurance maladie. Vous serez remboursé sur la base des tarifs en vigueur de l'État de séjour et dans la limite des dépenses engagées.
-15;Non, par contre, en cas d'incident, gardez bien vos factures et justificatifs de paiement pour demander un remboursement à votre retour en France.
-15;"Non, il n'y a pas d'équivalence, c'est pourquoi seuls les soins médicaux urgents et imprévus peuvent être pris en charge. Pour être remboursé par votre caisse d'assurance maladie, il faut que vous conserviez bien l'ensemble des factures acquittées et des justificatifs de paiement afin de les adresser, accompagnés du formulaire ""S3125 Soin reçus à l'étranger"" (PDF). Vous serez remboursé sur la base des tarifs en vigueur de l'état de séjour et dans la limite des dépenses engagées. "
-15;Non. Seuls les soins médicaux urgents et imprévus peuvent être pris en charge.
+14;Ce n'est pas obligatoire, mais très fortement recommandé car les frais de soins à Bali sont extrêmement élevés pour les étrangers.
+14;Elle n'est pas obligatoire , cependant elle est vivement conseillée car les frais médicaux pour les étrangers dans les pays étrangers sont dans la plupart des pays très élevés. Pour anticiper un maximum les risques sur place il vous est recommandé de souscrire a une assurance prenant en charge les points suivants : un plafond de prise en charge élevé, une assistance rapatriement pour éviter une facture de soins de plusieurs milliers d'euros. Pour plus d'informations quant aux assurances disponible veuillez  vous rapprocher de votre agence de voyage. 
+14;Elle n'est pas obligatoire mais fortement conseillée en raison de frais médicaux très élevés.
+14;Elle n'est pas obligatoire, mais recommandée car les frais médicaux pour les étrangers sont particulièrement élevés dans les pays asiatiques.
+14;Il est impératif de souscrire avant le départ une assurance privée pour Bali.
+14;Les frais médicaux pour les étrangers étant particulièrement élevés dans les pays asiatiques, il est impératif de souscrire avant le départ une assurance privée pour Bali, avec un plafond de prise en charge élevé et une assistance rapatriement, et ce afin de vous éviter une facture de soins de plusieurs milliers d'euros.
 15;Non, il n'existe pas d'équivalent à la Carte Européenne d'Assurance Maladie
+15;Non, il n'existe pas d'équivalent à la Carte Européenne d'Assurance Maladie. Seuls les soins médicaux urgents et imprévus peuvent être pris en charge. Pensez à conserver l'ensemble des factures acquittées et des justificatifs de paiement et adressez-les, accompagnés du formulaire S3125 Soins reçus à l'étranger (PDF), à votre caisse d'assurance maladie. Vous serez remboursé sur la base des tarifs en vigueur de l'État de séjour et dans la limite des dépenses engagées.
+15;"Non, il n'y a pas d'équivalence, c'est pourquoi seuls les soins médicaux urgents et imprévus peuvent être pris en charge. Pour être remboursé par votre caisse d'assurance maladie, il faut que vous conserviez bien l'ensemble des factures acquittées et des justificatifs de paiement afin de les adresser, accompagnés du formulaire \""S3125 Soin reçus à l'étranger\"" (PDF). Vous serez remboursé sur la base des tarifs en vigueur de l'état de séjour et dans la limite des dépenses engagées. "
+15;Non, par contre, en cas d'incident, gardez bien vos factures et justificatifs de paiement pour demander un remboursement à votre retour en France.
+15;Non. Seuls les soins médicaux urgents et imprévus peuvent être pris en charge.
 15;Non. Si vous avez besoin de soins médicaux urgents, ils seront pris en charge. Conservez les factures et les justificatifs de paiements accompagnez les du formulaire S3125 et envoyez les à votre caisse d'assurance maladie. 
+15;Pour vous faire rembourser vos frais médicaux il est impératif de garder l'ensemble des factures et justificatifs de paiement de les adresser à l'assurance maladie accompagnés du formulaire S3125.
+16;Je vous envoie le lien d'un comparateur d'assurance voyage, https://reassurez-moi.fr/comparateur-assurance-voyage. Vous pouvez choisir selon vos critères.
+16;Voici un comparateur d'assurance voyage : https://reassurez-moi.fr/comparateur-assurance-voyage
+16;Voici un exemple de comparateur d'assurance : https://reassurez-moi.fr/comparateur-assurance-voyage
+16;Voici un lien de comparateur d'assurance voyage :  https://reassurez-moi.fr/comparateur-assurance-voyage .  Vous pouvez également vous rapprochez d'une agence de voyage si besoin. 
 16;"Vous pouvez consulter le lien suivant:
 
 https://reassurez-moi.fr/comparateur-assurance-voyage"
-16;Voici un lien de comparateur d'assurance voyage :  https://reassurez-moi.fr/comparateur-assurance-voyage .  Vous pouvez également vous rapprochez d'une agence de voyage si besoin. Pour plus d'information veuillez cliquer ici : 
 16;"Vous pouvez trouver des dizaines de compagnies d'assurance qui peuvent vous le faire.
 N'hésitez pas à chercher sur les comparateurs d'assurance pour choisir la meilleure selon vos critères.
 Voici un exemple: https://reassurez-moi.fr/comparateur-assurance-voyage. "
-16;Je vous envoie le lien d'un comparateur d'assurance voyage, https://reassurez-moi.fr/comparateur-assurance-voyage. Vous pouvez choisir selon vos critères.
 16;Vous pouvez trouver une assurance voyage sur différents sites, nous vous conseille d'utiliser ce comparateur pour choisir celle qui vous correspond : https://reassurez-moi.fr/comparateur-assurance-voyage
-16;"Voici un exemple de comparateur d'assurance : https://reassurez-moi.fr/comparateur-assurance-voyage
-"
-16;Voici un comparateur d'assurance voyage : https://reassurez-moi.fr/comparateur-assurance-voyage
-17;"Il faut consulter un comparateur d'assurance voyage pour vous donner la meilleure assurance selon vos critères de choix.
-Voici un exemple: https://reassurez-moi.fr/comparateur-assurance-voyage"
-17;Je vous envoie le lien d'un comparateur d'assurance voyage, https://reassurez-moi.fr/comparateur-assurance-voyage. Vous pouvez choisir selon vos critères.
-17;Voici une liste de comparateurs d'assurance voyage, n'hésitez pas à regarder les avis des utilisateurs : https://reassurez-moi.fr/comparateur-assurance-voyage
 17;"Consultez le lien suivant :
 
 https://reassurez-moi.fr/comparateur-assurance-voyage"
+17;"Il faut consulter un comparateur d'assurance voyage pour vous donner la meilleure assurance selon vos critères de choix.
+Voici un exemple: https://reassurez-moi.fr/comparateur-assurance-voyage"
+17;Je vous envoie le lien d'un comparateur d'assurance voyage, https://reassurez-moi.fr/comparateur-assurance-voyage. Vous pouvez choisir selon vos critères.
 17;Si vous souhaitez comparer les différentes assurances voyage, je vous conseille ce lien qui vous permettra de les comparer selon vos critères : https://reassurez-moi.fr/comparateur-assurance-voyage  
 17;Voici un comparateur d'assurance : https://reassurez-moi.fr/comparateur-assurance-voyage. Je vous laisse définir vos critères.
+17;Voici une liste de comparateurs d'assurance voyage, n'hésitez pas à regarder les avis des utilisateurs : https://reassurez-moi.fr/comparateur-assurance-voyage
 18;"Consultez l'un des sites suivants : 
 https://www.booking.com/ ou https://www.trivago.fr/
 "
+18;"Il y a des comparateurs d'hôtels qui peuvent vous recommander certains hôtels selon vos critères de choix tel que https://www.booking.com/ ; https://www.trivago.fr/ "
+18;"Je vous conseille des comparateurs pour avoir une idées des plus populaires https://www.booking.com/ ; https://www.trivago.fr/ ."
+18;"Pour avoir connaissance des hôtels les plus populaire vous pouvez consulter des comparateurs tel que : https://www.booking.com/ ; https://www.trivago.fr/ . Pour réserver un hôtel, vous pouvez contacter l'hôtel directement en envoyant un email avec les détails du séjour, celui-ci vous recontactera en faisant une offre de séjour au meilleur prix. Vous pouvez également  passer par le biais d'une plateforme spécialisée dans la réservation d'hôtels."
 18;"Voici des comparateurs d'hôtel : https://www.booking.com/ ; https://www.trivago.fr/
 "
-18;"Pour avoir connaissance des hôtels les plus populaire vous pouvez consulter des comparateurs tel que : https://www.booking.com/ ; https://www.trivago.fr/ . Pour réserver un hôtel, vous pouvez contacter l'hôtel directement en envoyant un email avec les détails du séjour, celui-ci vous recontactera en faisant une offre de séjour au meilleur prix. Vous pouvez également  passer par le biais d'une plateforme spécialisée dans la réservation d'hotels."
-18;"Il y a des comparateurs d'hôtels qui peuvent vous recommander certains hôtels selon vos critères de choix tel que https://www.booking.com/ ; https://www.trivago.fr/ "
-18;Vous pouvez consulter des comparateurs tel que : https://www.booking.com/ ou https://www.trivago.fr/ 
-18;"Je vous conseille des comparateurs pour avoir une idées des plus populaires https://www.booking.com/ ; https://www.trivago.fr/ ."
 18;"Voici des comparateurs qui vous permettront de choisir les meilleurs hôtels en fonction de vos critères : https://www.booking.com/ ; https://www.trivago.fr/. "
-19;Il est possible de tout régler par CB.
+18;Vous pouvez consulter des comparateurs tel que : https://www.booking.com/ ou https://www.trivago.fr/ 
 19;Carte bancaire Visa ou MasterCard
+19;Depuis le site, il n'est possible que de régler par carte bancaire Visa ou MasterCard. 
+19;Il est possible de tout régler par CB.
+19;Pour régler votre voyage il vous faut payer par carte bancaire.
 19;Sur le site vous pouvez payer votre billet par carte bancaire Visa ou MasterCard. Veuillez prendre en considération, qu'il est impossible d'effectuer le paiement partiel sur le site. Avant d'effectuer le paiement, veuillez contacter votre banque afin de vous assurer qu'il n'y ait pas de plafond d'utilisation de votre carte bancaire.
 19;Une fois sur Bali, vous pouvez payer par carte bancaire Visa ou MasterCard, mais assurez-vous auprès de votre banque qu'il n'y ait pas de plafond de payement. De plus le payement partiel n'est pas possible.
-19;Pour régler votre voyage il vous faut payer par carte bancaire.
 19;Vous pouvez régler votre billet par carte bancaire sur le site internet (Visa ou MasterCard).
-19;Depuis le site, il n'est possible que de régler par carte bancaire Visa ou mastercard. Pour d'information sur les modalités de paiements proposées veuillez cliquer ici :
-20;"Voir sue ces liens : https://www.promovacances.com/vacances/circuit-touristique/sejour-circuit-bali/theme,/pays,20/ville,/ ; https://www.partir.com/Bali/voyage-organise/
-"
-20;"Oui, voici différents sites d'agence et CE permettant de choisir un voyage organisé :   https://www.promovacances.com/vacances/circuit-touristique/sejour-circuit-bali/theme,/pays,20/ville,/ ; https://www.partir.com/Bali/voyage-organise/ ."
-20;"Vous pouvez trouver des voyages organisés pour Bali dans les agences suivantes : https://www.promovacances.com/vacances/circuit-touristique/sejour-circuit-bali/theme,/pays,20/ville,/ ; https://www.partir.com/Bali/voyage-organise/ ."
 20;"Il y a des agences de voyages qui organisent des voyages à Bali.
 Voici des exemples:
 https://www.promovacances.com/vacances/circuit-touristique/sejour-circuit-bali/theme,/pays,20/ville,/ ; https://www.partir.com/Bali/voyage-organise/ ."
 20;"Oui, il existe des voyages organisés. Vous pouvez consulter le site suivant pour en savoir plus :
  
 https://www.promovacances.com/vacances/circuit-touristique/sejour-circuit-bali/theme,/pays,20/ville,/ ; https://www.partir.com/Bali/voyage-organise/"
+20;"Oui, il existe différents sites et agences touristiques qui proposent des voyages organisés à Bali, personnalisable ou non. Voici quelques exemples de sites et agences : https://www.promovacances.com/vacances/circuit-touristique/sejour-circuit-bali/theme,/pays,20/ville,/ ; https://www.partir.com/Bali/voyage-organise/ ."
+20;"Oui, voici différents sites d'agence et CE permettant de choisir un voyage organisé :   https://www.promovacances.com/vacances/circuit-touristique/sejour-circuit-bali/theme,/pays,20/ville,/ ; https://www.partir.com/Bali/voyage-organise/ ."
 20;"Oui, vous pouvez d'ailleurs les comparer sur des sites tels que : 
 https://www.promovacances.com/vacances/circuit-touristique/sejour-circuit-bali/theme,/pays,20/ville,/ 
 ou
 https://www.partir.com/Bali/voyage-organise/"
-20;"Oui, il existe différents sites et agences touristiques qui proposent des voyages organisés à Bali, personnalisable ou non. Voici quelques exemples de sites et agences : https://www.promovacances.com/vacances/circuit-touristique/sejour-circuit-bali/theme,/pays,20/ville,/ ; https://www.partir.com/Bali/voyage-organise/ ."
+20;"Voir sue ces liens : https://www.promovacances.com/vacances/circuit-touristique/sejour-circuit-bali/theme,/pays,20/ville,/ ; https://www.partir.com/Bali/voyage-organise/
+"
+20;"Vous pouvez trouver des voyages organisés pour Bali dans les agences suivantes : https://www.promovacances.com/vacances/circuit-touristique/sejour-circuit-bali/theme,/pays,20/ville,/ ; https://www.partir.com/Bali/voyage-organise/ ."
+21;"Oui, il est tout a fait possible de réserver un guide touristique sur place mais aussi en amont du voyage. Voici quelques sites ou vous pouvez également réserver votre guide en avance : https://balisolo.com/liste-de-guides-a-bali-en-indonesie/ ; https://www.alibabuy.com/guide-touristique/bali.html ."
 21;"Oui, vous pouvez en réserver un sur place. si vous souhaitez réserver en avance vous pouvez consulter le site suivant : 
 
 https://balisolo.com/liste-de-guides-a-bali-en-indonesie/"
 21;"Oui, vous pouvez réserver un guide touristique soit en demandant des contacts à l'hôtel soit en ligne sur ces sites:  https://balisolo.com/liste-de-guides-a-bali-en-indonesie/ ; https://www.alibabuy.com/guide-touristique/bali.html ."
-21;"Réserver votre guide en avance : https://balisolo.com/liste-de-guides-a-bali-en-indonesie/ ; https://www.alibabuy.com/guide-touristique/bali.html ."
-21;"Vous pouvez voyager avec un guide touristique à votre arrivée. Vous pouvez réserver en avance si vous préférez : https://balisolo.com/liste-de-guides-a-bali-en-indonesie/ ; https://www.alibabuy.com/guide-touristique/bali.html
-Il est conseillé de réserver si vous souhaitez un guide français."
-21;"Oui, il est tout a fait possible de réserver un guide touristique sur place mais aussi en amont du voyage. Voici quelques sites ou vous pouvez également réserver votre guide en avance : https://balisolo.com/liste-de-guides-a-bali-en-indonesie/ ; https://www.alibabuy.com/guide-touristique/bali.html ."
-21;"Vous pouvez tout à fait réserver un guide touristique sur place ou en avance pour plus de confort. Pour avoir un guide français il est fortement recommandé de reserver à l'avance. Voici des sites de reservation de guide : https://balisolo.com/liste-de-guides-a-bali-en-indonesie/ ; https://www.alibabuy.com/guide-touristique/bali.html ."
 21;"Pour un guide Francophone il est recommandé de réserver en amont, pour un guide Anglophone pouvez le faire à tout moment.
 Pour réserver un guide nous vous recommandons les liens suivants : 
 https://balisolo.com/liste-de-guides-a-bali-en-indonesie/ 
 https://www.alibabuy.com/guide-touristique/bali.html"
-22;Vous pouvez retirer très facilement à Bali avec votre carte bancaire ou simplement changer votre monnaie
-22;De nos jour, vous pouvez retirer très facilement à Bali avec votre carte bancaire ou simplement changer votre monnaie à Bali directement dans un bureau de change. Le taux de change sera bien meilleur a Bali qu'en France, il est en général recommendé d'attendre d'etre a Bali pour obtenir des roupies. Les changeurs a Bali changent les devises principales. Les Billets de forte valeur (50€ ou 100€) auront un meilleur taux de change, de meme que les billets neufs en bon etat.
-22;Il est plus simple et intéressant de changer votre monnaie (surtout des billets de forte valeur (50€ ou 100€)) sur place plutôt qu'avant votre voyage car le taux de change y est meilleur. Il est important de noter qu'il est très simple de retirer avec votre carte bancaire ou d'effectuer le change dans un bureau de change.  
-22;Il est recommandé de faire attention aux arnaques, mais à Bali vous obtiendrez un meilleur taux de change. Les billets en meilleurs état et de forte valeur (50€ ou 100€) auront auss un meilleur taux. 
+21;"Réserver votre guide en avance : https://balisolo.com/liste-de-guides-a-bali-en-indonesie/ ; https://www.alibabuy.com/guide-touristique/bali.html ."
+21;"Vous pouvez tout à fait réserver un guide touristique sur place ou en avance pour plus de confort. Pour avoir un guide français il est fortement recommandé de réserver à l'avance. Voici des sites de réservation de guide : https://balisolo.com/liste-de-guides-a-bali-en-indonesie/ ; https://www.alibabuy.com/guide-touristique/bali.html ."
+21;"Vous pouvez voyager avec un guide touristique à votre arrivée. Vous pouvez réserver en avance si vous préférez : https://balisolo.com/liste-de-guides-a-bali-en-indonesie/ ; https://www.alibabuy.com/guide-touristique/bali.html
+Il est conseillé de réserver si vous souhaitez un guide français."
+22;De nos jours, vous pouvez retirer très facilement à Bali avec votre carte bancaire ou simplement changer votre monnaie à Bali directement dans un bureau de change. Le taux de change sera bien meilleur a Bali qu'en France, il est en général recommandé d'attendre d'être a Bali pour obtenir des roupies. Les changeurs a Bali changent les devises principales. Les Billets de forte valeur (50€ ou 100€) auront un meilleur taux de change, de même que les billets neufs en bon état.
 22;Il est plus avantageux d'échanger votre argent à Bali. Pour avoir de meilleurs taux il est préférable d'échanger des billets de 50 ou 100€.
+22;Il est plus simple et intéressant de changer votre monnaie (surtout des billets de forte valeur (50€ ou 100€)) sur place plutôt qu'avant votre voyage car le taux de change y est meilleur. Il est important de noter qu'il est très simple de retirer avec votre carte bancaire ou d'effectuer le change dans un bureau de change.  
+22;Il est recommandé de faire attention aux arnaques, mais à Bali vous obtiendrez un meilleur taux de change. Les billets en meilleurs état et de forte valeur (50€ ou 100€) auront aussi un meilleur taux. 
 22;Il vaut mieux attendre d'être sur place car le taux de change est bien meilleur à Bali qu'en France.
 22;Non, il est préférable de le faire sur place pour bénéficier d'un meilleur taux de change
-23;"Voici plusieurs sites comparateurs d'hotel :  https://www.booking.com/ ; https://www.trivago.fr/."
+22;Vous pouvez retirer très facilement à Bali avec votre carte bancaire ou simplement changer votre monnaie
+23;Avant la réservation de l'hôtel, vérifier que celui-ci offre une connexion internet (wifi).
 23;"Consulter l'un des liens suivants :
 
 https://www.booking.com/
 https://www.trivago.fr/"
+23;"Il y a des hôtels qui proposent une connexion internet wifi a ces clients, il suffit de choisir l'offre qui permet d'y accéder lors du choix du forfait et de l'hôtel. Voici plusieurs sites comparateur d'hôtel :  https://www.booking.com/ ; https://www.trivago.fr/. Cependant, il est important de noter que bien que certains hôtel possède une connexion internet tous ne présente pas nécessairement une très bonne connexion. "
 23;"Plusieurs comparateurs vous offre des options dans le choix de votre hôtel : https://www.booking.com/ ; https://www.trivago.fr/. Utilisez les filtres pour trouver vos options."
-23;"Voici des sites de comparateur d'hotel ayant pour critère la connexion internet : https://www.booking.com/ ; https://www.trivago.fr/ . Il est cependant possible que la connexion internet qui sera a votre disposition ne soit pas très bonne, il vous faudra faire attention aux avis utilisateurs. "
-23;Avant la réservation de l'hôtel, vérifier que celui-ci offre une connexion internet (wifi).
 23;"Pour savoir si votre hôtel propose une connexion internet à ses clients il vous suffit de regarder les options lors de la réservation, vous pouvez aussi retrouver cette informations sur différents comparateurs : 
 https://www.booking.com/
 https://www.trivago.fr/"
-23;"Il y a des hôtels qui proposent une connexion internet wifi a ces clients, il suffit de choisir l'offre qui permet d'y accèder lors du choix du forfait et de l'hotel. Voici plusieurs sites comparateur d'hotel :  https://www.booking.com/ ; https://www.trivago.fr/. Cependant, il est important de noter que bien que certains hotel possede une connexion internet tous ne présente pas nécessairement une très bonne connexion. "
-24;Oui
-24;Oui, si vous passé par les bons forfaits téléphoniques.
-24;La 4G est disponible a Bali a condition d'avoir un forfait téléphonique adaptés. Cliquez ici pour avoir plus de renseignement sur les forfaits téléphoniques : 
+23;"Voici des sites de comparateur d'hôtel ayant pour critère la connexion internet : https://www.booking.com/ ; https://www.trivago.fr/ . Il est cependant possible que la connexion internet qui sera a votre disposition ne soit pas très bonne, il vous faudra faire attention aux avis utilisateurs. "
+23;"Voici plusieurs sites comparateurs d'hôtel :  https://www.booking.com/ ; https://www.trivago.fr/."
 24;Il faudra acheter un forfait téléphonique pour pouvoir bénéficier de la 4G.
+24;La 4G est disponible a Bali a condition d'avoir un forfait téléphonique adaptés. 
+24;Oui
 24;Oui certains opérateurs proposent la 4G à Bali.
-24;Oui, vous pouvez avoir la 4G à Bali en passant par des forfaits téléphoniques proposés par des opérateurs. 
 24;Oui, la 4G est disponible à Bali. Si besoin des forfaits téléphoniques sont disponible sur place. 
-25;Oui. 
+24;Oui, si vous passé par les bons forfaits téléphoniques.
+24;Oui, vous pouvez avoir la 4G à Bali en passant par des forfaits téléphoniques proposés par des opérateurs. 
+25;Oui il y a des forfaits téléphonique à Bali. Pour plus d'information sur les risques et les moyens d'en acquérir un 
 25;Oui, cependant il est important de savoir qu'une nouvelle loi est entrée en vigueur en Indonésie en 2018 et requiert que toute carte Sim soit enregistrée avec une pièce d’identité auprès de l’opérateur. Il est donc conseillé d’acheter votre carte Sim à l’aéroport dès votre arrivée au stands officiels des opérateurs Telkomsel et XL  avec votre passeport, pour 150-300 000 roupies vous aurez un package incluant internet et appels. Si vous n’achetez pas votre carte à l’aéroport vous pouvez acheter en ville mais uniquement dans une boutique officielle TELKOMSEL ou XL car le risque d’acheter auprès d’un revendeur non officiel est que la Sim ne sera pas enregistrée avec votre passeport et donc risquera d’être bloquée sous quelques jours
-25;Oui il y a des forfaits téléphonique à Bali. Pour plus d'information sur les risques et les moyens d'en acquérir un veuillez cliquer ici : 
-25;"Oui, vous pouvez acheter un forfait téléphonique à l'aéroport.
-"
-25;Oui, vous pouvez en acheter en ville ou en aéroport.
+25;Oui, mais il faut s'assurer que votre carte Sim soit enregistrée avec une pièce d'identité auprès de l'opérateur sinon elle sera bloquée sous quelques jours.
 25;"Oui, mais il vous faudra une pièce d'identité pour qu'une nouvelle carte SIM soit enregistrée auprès de l'opérateur. 
 Conseils : 
 - Vous pouvez acheter une carte SIM à votre arrivée à l'aéroport auprès des opérateurs Telkomsel et XL (entre 7€ et 16€ pour un package internet et appels.
 - Si vous l'achetez en ville, allez uniquement dans une boutique officielle sinon chez un autre revendeur votre SIM risque d'être bloquée. "
-25;Oui, mais il faut s'assurer que votre carte Sim soit enregistrée avec une pièce d'identité auprès de l'opérateur sinon elle sera bloquée sous quelques jours.
+25;"Oui, vous pouvez acheter un forfait téléphonique à l'aéroport.
+"
+25;Oui, vous pouvez en acheter en ville ou en aéroport.
+25;Oui. 
 26;700 €
-26;Entre 600€ et 800€
-26;Selon les critères choisis de l'hébergement, votre séjour peut coûter entre 600 et 800 euros la semaine.
-26;Pour un touriste un séjour de une semaine à Bali coute entre 600 et 800 euros, dépendant du nombre d'étoile de l'hotel dans lequel il se loge.  
 26;Comptez entre 600€ et 800€, ce nombre peut varier en fonction de la qualité du logement choisit.
-26;En moyenne un voyageur va dépenser sur une semaine entre 600 et 800 euros. Mais cela dépend évidemment du type d'hébergement (hôtel 4-5 etoile, des activités réalisées (restaurant, visites etc...). Cette moyenne a été calculée avec les éléments suivant :  Hotel 3 étoiles, 1-2 activités simple par jour. 
+26;En moyenne un voyageur va dépenser sur une semaine entre 600 et 800 euros. Mais cela dépend évidemment du type d'hébergement (hôtel 4-5 étoiles, des activités réalisées (restaurant, visites etc...). Cette moyenne a été calculée avec les éléments suivant :  Hotels 3 étoiles, 1-2 activités simple par jour. 
 26;Entre 600 et 800 euros selon votre hôtel et vos activités.
-27;Il y a un décalage horaire de 7 heure entre la France et Bali. Pour plus d'informations cliquez ici : 
-27;Le décalage entre la France et Bali est de 7h.
-27;Il y a 7 heures de plus à Bali par rapport à la France
+26;Entre 600€ et 800€
+26;Pour un touriste un séjour de une semaine à Bali coute entre 600 et 800 euros, dépendant du nombre d'étoile de l'hôtel dans lequel il se loge.  
+26;Selon les critères choisis de l'hébergement, votre séjour peut coûter entre 600 et 800 euros la semaine.
 27;Bali a 7 h de décalage sur la France.
-27;Il y a 7 heures de décalage horaire entre la France et Bali. En effet Bali a 7 heures d'avance sur la France ex: 15h30 en France contre 22h30 à Bali. 
 27;Bali a 7 heures d'avance sur la France.
 27;"Bali a 7 heures d'avance sur Paris, s'il est 15h30 en France, alors il sera 22h30 à Bali. 
 "
+27;Il y a 7 heures de décalage horaire entre la France et Bali. En effet Bali a 7 heures d'avance sur la France ex: 15h30 en France contre 22h30 à Bali. 
+27;Il y a 7 heures de plus à Bali par rapport à la France
+27;Il y a un décalage horaire de 7 heure entre la France et Bali. 
+27;Le décalage entre la France et Bali est de 7h.
+28;"Il existe plusieurs sites de comparateurs d'hôtels voici les plus populaires : https://www.booking.com/ ; https://www.trivago.fr/ "
+28;"Via des comparateurs d'hôtel tel que :  https://www.booking.com/ ; https://www.trivago.fr/ "
 28;"Voici 2 comparateurs que vous pouvez utiliser : https://www.booking.com/ ; https://www.trivago.fr/"
-28;"Voici quelques exemple de comparateur :  https://www.booking.com/ ; https://www.trivago.fr/ "
-28;"Vous pouvez trouver des comparateurs d'hotel via des moteurs de recherche tel que google. Voici quelques exemples de comparateur :  https://www.booking.com/ ; https://www.trivago.fr/ "
 28;"Voici deux comparateurs d'hôtels :  
 https://www.booking.com/
 https://www.trivago.fr/ "
-28;"Il existe plusieurs sites de comparateurs d'hôtels voici les plus populaires : https://www.booking.com/ ; https://www.trivago.fr/ "
+28;"Voici quelques exemple de comparateur :  https://www.booking.com/ ; https://www.trivago.fr/ "
 28;"Vous pouvez consulter les liens suivants:
 
 https://www.booking.com/
 
 https://www.trivago.fr/"
-28;"Via des comparateurs d'hôtel tel que :  https://www.booking.com/ ; https://www.trivago.fr/ "
-29;Les animaux sont autorisés dans certains hôtel, n'hésitez pas à vérifier avec le votre.
-29;Voici une liste des hôtels acceptant les animaux : https://www.kayak.fr/Ubud-Hotels-Bali-Bohemia.2375637.ksp
+28;"Vous pouvez trouver des comparateurs d'hôtel via des moteurs de recherche tel que google. Voici quelques exemples de comparateur :  https://www.booking.com/ ; https://www.trivago.fr/ "
 29;Bien qu'il ne soit pas recommandé de voyage avec vos animaux les hôtels suivant acceptent les animaux : https://www.kayak.fr/Ubud-Hotels-Bali-Bohemia.2375637.ksp
+29;Les animaux sont autorisés dans certains hôtel, n'hésitez pas à vérifier avec le votre.
 29;Les animaux sont autorisés dans certains hôtel. Voici une liste des hôtels acceptant les animaux : https://www.kayak.fr/Ubud-Hotels-Bali-Bohemia.2375637.ksp
+29;Oui mais uniquement dans ces hôtels : https://www.kayak.fr/Ubud-Hotels-Bali-Bohemia.2375637.ksp
+29;Oui, dans certains hôtels les animaux sont admis, voici la liste de ces hôtels : https://www.kayak.fr/Ubud-Hotels-Bali-Bohemia.2375637.ksp
 29;"Oui, dans certains hôtels. Vous pouvez voir la liste de ces hôtels en cliquant sur le lien suivant : 
 https://www.kayak.fr/Ubud-Hotels-Bali-Bohemia.2375637.ksp
 "
-29;Oui mais uniquement dans ces hôtels : https://www.kayak.fr/Ubud-Hotels-Bali-Bohemia.2375637.ksp
-29;Oui, dans certains hôtels les animaux sont admis, voici la liste de ces hôtels : https://www.kayak.fr/Ubud-Hotels-Bali-Bohemia.2375637.ksp
-30;Il faut d'abord vérifier la validité de votre visa si elle vous permet d'étendre le séjour.
-30;Pour prolonger votre séjour il est obligatoire d'obtenir un visa de 30 jours.
-30;Prenez-contact auprès de l'agence pour être guidé dans les démarches necessaires.
-30;Pour pouvoir prolonger facilement votre séjour sur place, il vous faudra obtenir un visa de 30 jours payant qui est renouvelable une fois lorsque celui-ci arrive au bout. Votre visa touriste payant initial est valide 30 jours. Ensuite il faudra le renouveler au bureau d’immigration pour obtenir les 30 jours supplémentaires. Si vous prenez le visa 30 jour gratuit, vous serez obligé de sortir du territoire une fois les 30 jours écoulé et refaire les démarches pour un visa. Il est également possible de prendre un visa payant de 60 jours dès le départ qui pourra être prolongé jusqu'a 180 jours maximum. Cependant, sachez  que les justifications et démarches sont plus complexes à réaliser. Voici un site qui vous donnent des informations complémentaires : https://lebaliblog.com/visa-indonesie-bali-guide-complet-2016-visa-touriste-et-renouvellement/ .
-30;Si vous avez un visa gratuit de 30 jour, vous ne pouvez pas le prolonger, vous serez obligé de sortir du pays et de refaire un visa payant et toutes les procédures administratifs affiliées. Si vous avez pris un visa payant de 30 jours ou de 60 jours, il vous sera permis de les renouveler une fois en suivant les instructions suivantes dans les liens : 30 jours.... 60 jours 
+29;Voici une liste des hôtels acceptant les animaux : https://www.kayak.fr/Ubud-Hotels-Bali-Bohemia.2375637.ksp
 30;"Il faudra un visa de 30 jours payant, renouvelable au bureau d'immigration. Vous pouvez consulter le lien suivant :
 
 https://lebaliblog.com/visa-indonesie-bali-guide-complet-2016-visa-touriste-et-renouvellement/
 "
+30;Il faut d'abord vérifier la validité de votre visa si elle vous permet d'étendre le séjour.
 30;"Il vous faudra un visa obtenable au bureau d'immigration valable 30 jours (payant) et renouvelable ou un visa gratuit de 30 jour mais non renouvelable.
 Vous pouvez aussi obtenir directement un visa de 60 jours (payant) prolongeable jusqu'à 180 jours mais plus compliqué à obtenir.
 Pour plus d'informations : 
 https://lebaliblog.com/visa-indonesie-bali-guide-complet-2016-visa-touriste-et-renouvellement/"
-31;"Votre agence si vous voyagez via une agence. Mais vous pouvez consulter le site suivant : 
-
-https://www.diplomatie.gouv.fr/fr/conseils-aux-voyageurs/conseils-par-pays-destination/indonesie/"
+30;Pour pouvoir prolonger facilement votre séjour sur place, il vous faudra obtenir un visa de 30 jours payant qui est renouvelable une fois lorsque celui-ci arrive au bout. Votre visa touriste payant initial est valide 30 jours. Ensuite il faudra le renouveler au bureau d’immigration pour obtenir les 30 jours supplémentaires. Si vous prenez le visa 30 jour gratuit, vous serez obligé de sortir du territoire une fois les 30 jours écoulé et refaire les démarches pour un visa. Il est également possible de prendre un visa payant de 60 jours dès le départ qui pourra être prolongé jusqu'a 180 jours maximum. Cependant, sachez  que les justifications et démarches sont plus complexes à réaliser. Voici un site qui vous donnent des informations complémentaires : https://lebaliblog.com/visa-indonesie-bali-guide-complet-2016-visa-touriste-et-renouvellement/ .
+30;Pour prolonger votre séjour il est obligatoire d'obtenir un visa de 30 jours.
+30;Prenez-contact auprès de l'agence pour être guidé dans les démarches nécessaires.
+30;Si vous avez un visa gratuit de 30 jour, vous ne pouvez pas le prolonger, vous serez obligé de sortir du pays et de refaire un visa payant et toutes les procédures administratifs affiliées. Si vous avez pris un visa payant de 30 jours ou de 60 jours, il vous sera permis de les renouveler une fois en suivant les instructions suivantes dans les liens : 30 jours.... 60 jours 
 31;"Durant votre séjour pensez à noter les différents numéros suivants en cas de problèmes :https://www.expat.com/fr/guide/asie/indonesie/11275-numeros-utiles-en-indonesie.html. Pour plus d'informations, vous pouvez également consulter le site officiel du gouvernement : 
 https://www.diplomatie.gouv.fr/fr/conseils-aux-voyageurs/conseils-par-pays-destination/indonesie/"
-31;Si vous partez via un CE  ou une agence de voyage n'hésitez pas à les contacter en cas de problème. De même, votre assurance voyage est sensé couvrir un certain nombre de cas critique. Vous pouvez composer le 119 si vous avez besoin d'une ambulance une fois sur place. Composez le 113 si vous avez besoin de pompier et le 110/112 (SMS 117) pour la police. Voici un site centralisant les différents numéro important : https://www.expat.com/fr/guide/asie/indonesie/11275-numeros-utiles-en-indonesie.html . Pour plus d'information sur les procédure en cas de problème, vous pouvez consulter ce site officiel : https://www.diplomatie.gouv.fr/fr/conseils-aux-voyageurs/conseils-par-pays-destination/indonesie/
-31;Vous pouvez composer le 119 si vous avez besoin d'une ambulance une fois sur place. Composez le 113 si vous avez besoin de pompier et le 110/112 (SMS 117) pour la police.
 31;"En cas de problèmes pour les voyages via CE et  agence de voyage contactez les, de même si vous avez une assurance voyage.
 Sur place vous pouvez composer le :
 119 pour une Ambulance
@@ -280,41 +272,47 @@ Pour plus de numéros utiles :
 https://www.expat.com/fr/guide/asie/indonesie/11275-numeros-utiles-en-indonesie.html
 Pour plus d'informations : 
 https://www.diplomatie.gouv.fr/fr/conseils-aux-voyageurs/conseils-par-pays-destination/indonesie/"
-31;Voici un site centralisant les différents contacts utiles : https://www.expat.com/fr/guide/asie/indonesie/11275-numeros-utiles-en-indonesie.html . Pour plus d'information sur les procédure en cas de problème, vous pouvez consulter ce site officiel : https://www.diplomatie.gouv.fr/fr/conseils-aux-voyageurs/conseils-par-pays-destination/indonesie/
 31;"Si vous dépendez d'un organisme (CE, agence de voyage...) il ne faut pas hésitez à les contacter en cas d'urgence, il sauront vous renseigner sur certaines choses. De même que votre assurance de voyage vous aiguillera en cas de doute. Composez le 113 si vous avez besoin de pompier et le 110/112 (SMS 117) pour la police  Voici un lien vers une page de numéro a faire en cas d'urgence (police, pompier, ambulance...)  :https://www.expat.com/fr/guide/asie/indonesie/11275-numeros-utiles-en-indonesie.html . 
 Vous pouvez aussi vous rapprocher des ambassades. "
+31;Si vous partez via un CE  ou une agence de voyage n'hésitez pas à les contacter en cas de problème. De même, votre assurance voyage est sensé couvrir un certain nombre de cas critique. Vous pouvez composer le 119 si vous avez besoin d'une ambulance une fois sur place. Composez le 113 si vous avez besoin de pompier et le 110/112 (SMS 117) pour la police. Voici un site centralisant les différents numéro important : https://www.expat.com/fr/guide/asie/indonesie/11275-numeros-utiles-en-indonesie.html . Pour plus d'information sur les procédure en cas de problème, vous pouvez consulter ce site officiel : https://www.diplomatie.gouv.fr/fr/conseils-aux-voyageurs/conseils-par-pays-destination/indonesie/
+31;Voici un site centralisant les différents contacts utiles : https://www.expat.com/fr/guide/asie/indonesie/11275-numeros-utiles-en-indonesie.html . Pour plus d'information sur les procédure en cas de problème, vous pouvez consulter ce site officiel : https://www.diplomatie.gouv.fr/fr/conseils-aux-voyageurs/conseils-par-pays-destination/indonesie/
+31;"Votre agence si vous voyagez via une agence. Mais vous pouvez consulter le site suivant : 
+
+https://www.diplomatie.gouv.fr/fr/conseils-aux-voyageurs/conseils-par-pays-destination/indonesie/"
+31;Vous pouvez composer le 119 si vous avez besoin d'une ambulance une fois sur place. Composez le 113 si vous avez besoin de pompier et le 110/112 (SMS 117) pour la police.
+32;Le paracétamol, les médicaments contre la diarrhée et le talc sont des produits que vous pouvez prendre sans ordonnance.
+32;Nous ne vous recommandons pas les pharmacies sur place, néanmoins vous pouvez prévoir à l'avance du paracétamol et des médicaments contre la diarrhée. 
 32;Paracétamol, anti-diarrhéique
 32;Paracétamol, médicaments contre la diarrhée, talc. Vous pouvez également prendre du coton hydrophile.
-32;Vous pouvez amenez avec vous du paracétamol et certains antidiarrhéiques. Pour une liste plus exhaustive cliquez ici : . Nous vous conseillons cependant pour cette destination de prendre avec vous les éléments suivant :  paracétamol, antidiarrhéiques, talc et du coton hydrophile. Pour plus d'information cliquez ici. 
-32;Vous pouvez prendre du paracétamol et des médicaments contre  la diarrhée.
-32;Nous ne vous recommandons pas les pharmacies sur place, néanmoins vous pouvez prévoir à l'avance du paracétamol et des médicaments contre la diarrhée. 
 32;Pour la trousse à pharmacie, je te conseille de prendre : paracétamol, médicaments contre la diarrhée, talc et du coton hydrophile.
-32;Le paracétamol, les médicaments contre la diarrhée et le talc sont des produits que vous pouvez prendre sans ordonnance.
-33;En juin la saison sera sèche et ce jusqu'en septembre. En moyenne il fait 32° et il pleut rarement. Pour plus d'information veuillez cliquer ici :
-33;La saison est sèche en juin avec quelques rares pluies.
+32;Vous pouvez amenez avec vous du paracétamol et certains antidiarrhéiques . Nous vous conseillons cependant pour cette destination de prendre avec vous les éléments suivant :  paracétamol, antidiarrhéiques, talc et du coton hydrophile. 
+32;Vous pouvez prendre du paracétamol et des médicaments contre  la diarrhée.
+33;De mai à septembre la saison est sèche. Il fait environ 32° avec de rares pluies.
+33;En juin la saison sera sèche et ce jusqu'en septembre. En moyenne il fait 32° et il pleut rarement. 
 33;Il fait environ 32° avec de rares pluies.
 33;Il fera chaud avec une température d'environ 32° avec de rares pluies.
-33;Le mois de Juin se situe pendant la période sèche qui se déroule de Mai à Septembre. Durant cette saison, il fera environ 32°C et les pluies seront rares.
-33;De mai à septembre la saison est sèche. Il fait environ 32° avec de rares pluies.
 33;La saison en Juin de Bali est sèche et la température est en moyenne de 32°C avec peu de pluies.
-34;N'oublie surtout pas ton appareil photo et ton maillot de bain. Un cadenas peut également s'avérer utile pour fermer ton sac à dos.
+33;La saison est sèche en juin avec quelques rares pluies.
+33;Le mois de Juin se situe pendant la période sèche qui se déroule de Mai à Septembre. Durant cette saison, il fera environ 32°C et les pluies seront rares.
+34;Il peut être intéressant d'apporter un cadenas pour fermer votre sac à dos en vue des éventuels pickpocket. Veillez a bien vous renseigner sur la saison lors de votre voyage. 
 34;"Il vous faut un appareil photo pour immortaliser les lieux incontournables.
 Et un maillot de bain, si vous avez prévu des activités nautiques."
-34;Votre appareil photo, votre maillot de bain et un cadenas pour fermer votre sac à dos.
-34;Il peut être intéressant d'apporter un cadena pour fermer votre sac à dos en vue des éventuels pickpocket. Veillez a bien vous renseigner sur la saison lors de votre voyage. 
+34;N'oublie surtout pas ton appareil photo et ton maillot de bain. Un cadenas peut également s'avérer utile pour fermer ton sac à dos.
 34;Pour immortaliser ces moments je vous conseille un appareil photo. un maillot de bain est aussi recommandé pour profiter de l'eau. Enfin si vous voulez garder votre sac à dos sécurisé, un cadenas sera aussi utile. 
 34;Un cadenas peut être utile pour fermer votre sac à dos. Prenez également un appareil photo et votre maillot de bain.
+34;Votre appareil photo, votre maillot de bain et un cadenas pour fermer votre sac à dos.
 35;"Il faut éviter tout produits dangereux en avion.
 Les liquides sont limité à 100 ml par personne."
-35;Les matières dangereuses, les armes, les outils de travail non réglementés, les liquides et aérosols dont le contenant est supérieur à 100 ml et les médicaments sans ordonnance.
-35;"Plusieurs produits sont interdits dans l'avion. Vous pouvez trouver une liste détaillée ici : 
-https://www.airfrance.fr/FR/fr/common/guidevoyageur/pratique/produits-interdits-et-reglementes-airfrance.htm"
 35;"Les armes (objets tranchants, couteaux, ciseaux) interdites en cabine.
 Les matières dangereuses (explosifs, produits radioactifs ou inflammables, produits toxiques, poison) sont interdits en cabine ou en soute.
 Les liquides et aérosols doivent tenir dans des contenants ne dépassant 100ml.
 les médicaments doivent être munis d'une ordonnance.
 Les outils de travail et les équipements sportifs sont également réglementés (voir selon la compagnie)."
+35;Les matières dangereuses (explosifs, produits radioactifs ou inflammables, produits toxiques, poison) sont interdits en cabine ou en soute. Les armes sont également interdites en cabine (objets tranchants, couteaux, ciseaux). Les outils de travail et les équipements sportifs sont également réglementés. Enfin les liquides et aérosols doivent tenir dans des contenants de 100ml et les médicaments doivent être munis d'une ordonnance.
 35;Les matières dangereuses et les armes sont également interdites en cabine. Voir la liste complète et à jour auprès de votre compagnie aérienne.
+35;Les matières dangereuses, les armes, les outils de travail non réglementés, les liquides et aérosols dont le contenant est supérieur à 100 ml et les médicaments sans ordonnance.
+35;"Plusieurs produits sont interdits dans l'avion. Vous pouvez trouver une liste détaillée ici : 
+https://www.airfrance.fr/FR/fr/common/guidevoyageur/pratique/produits-interdits-et-reglementes-airfrance.htm"
 35;"Voici la liste des objets non autorisés dans l'avions : 
 - Les matières dangereuses (explosifs, produits radioactifs ou inflammables, produits toxiques, poison)
 - Les armes (objet tranchant, couteaux, ciseaux, arme à feu...)
@@ -325,50 +323,49 @@ Voici des objets réglementés pour lesquels il vous faudra vous rapprocher de vot
 -les médicaments doivent être munis d'une ordonnance. 
 
 Pour plus d'information ou en cas de doutes contactez votre compagnie aérienne. "
-35;Les matières dangereuses (explosifs, produits radioactifs ou inflammables, produits toxiques, poison) sont interdits en cabine ou en soute. Les armes sont également interdites en cabine (objets tranchants, couteaux, ciseaux). Les outils de travail et les équipements sportifs sont également réglementés. Enfin les liquides et aérosols doivent tenir dans des contenants de 100ml et les médicaments doivent être munis d'une ordonance.
-36;Voir sur le site de votre compagnie aérienne
-36;"Vous avez droit à une petite valise avec des roues de taille 55 cm max.
-Et un sac à main ou sac à dos, tout en respectant un total de 12 kg."
-36;Votre bagage cabine peut mesurer jusqu'à 55 x 35 x 25 cm maximum, poches, roues et poignées comprises. En supplément de votre bagage en cabine, vous pouvez emporter 1 accessoire personnel, dont les dimensions maximum sont de 40 x 30 x 15 cm. L'ensemble de votre bagage cabine et de votre accessoire peut peser jusqu'à 12 kg maximum.
-36;Un bagage cabine peut mesurer  55 x 35 x 25 maximum, poches, roues et poignées comprises (une petite valise, un sac de sport de 40L...) . Il est possible en complément d'avoir un accessoire personnel dont les dimensions maximum sont de 40 x 30 x 15 cm (par exemple un ordinateur, une tablette, un livre, un petit sac à main). Le bagage et l'accessoire doivent a eux deux ne pas dépasser les 12kg. 
-36;Votre bagage en cabine doit mesurer moins de 55 x 35 x 25 cm maximum.
 36;Les dimensions maximales d'un bagage à main sont de : 55 cm x 35 cm x 25 cm, poches, roues et poignées comprises. Un accessoire personnel est aussi autorisé aux dimension maximales de : 40 cm x 30 cm x 15 cm. Le poids total de ces deux bagages ne devra pas excéder 12 kg. 
 36;Les dimensions maximales sont 55 x 35 x 25 cm, poches, roues et poignées comprises.
-37;Voir sur votre site
-37;En cabine le poids maximal par bagage est de 23 Kg, en soute il est de  35kg. Faites attention car vos bagage seront soumis a une pesée et on peut vous empêcher de prendre votre vol si vos bagages excèdent les poids réglementaire. Pour plus d'information  cliquez ici : 
-37;"Pour un bagage cabine, la taille ne doit pas dépasser 55 cm et le poids 10 Kg.
-Pour un bagage en soute, la taille ne doit pas dépasser 90 cm et le poids 23 Kg. "
-37;Le poids maximal autorisé par bagage est de 23 kg en cabines et de 35 en soute
+36;Un bagage cabine peut mesurer  55 x 35 x 25 maximum, poches, roues et poignées comprises (une petite valise, un sac de sport de 40L...) . Il est possible en complément d'avoir un accessoire personnel dont les dimensions maximum sont de 40 x 30 x 15 cm (par exemple un ordinateur, une tablette, un livre, un petit sac à main). Le bagage et l'accessoire doivent a eux deux ne pas dépasser les 12kg. 
+36;Voir sur le site de votre compagnie aérienne
+36;Votre bagage cabine peut mesurer jusqu'à 55 x 35 x 25 cm maximum, poches, roues et poignées comprises. En supplément de votre bagage en cabine, vous pouvez emporter 1 accessoire personnel, dont les dimensions maximum sont de 40 x 30 x 15 cm. L'ensemble de votre bagage cabine et de votre accessoire peut peser jusqu'à 12 kg maximum.
+36;Votre bagage en cabine doit mesurer moins de 55 x 35 x 25 cm maximum.
+36;"Vous avez droit à une petite valise avec des roues de taille 55 cm max.
+Et un sac à main ou sac à dos, tout en respectant un total de 12 kg."
+37;23 kg en cabine et 35 kg en soute.
+37;En cabine le poids maximal par bagage est de 23 Kg, en soute il est de  35kg. Faites attention car vos bagage seront soumis a une pesée et on peut vous empêcher de prendre votre vol si vos bagages excèdent les poids réglementaire. 
 37;En cabine, la valise ne doit pas peser plus de 23kg et 35kg en soute.
 37;Le poids de vos bagages ne doit pas dépasser 23kg en cabine et 35kg en soute.
-37;23 kg en cabine et 35 kg en soute.
-38;Cela dépend des compagnies mais compter 300€ si vous partez avec AirFrance.
+37;Le poids maximal autorisé par bagage est de 23 kg en cabines et de 35 en soute
+37;"Pour un bagage cabine, la taille ne doit pas dépasser 55 cm et le poids 10 Kg.
+Pour un bagage en soute, la taille ne doit pas dépasser 90 cm et le poids 23 Kg. "
+37;Voir sur votre site
+38;Cela dépend des compagnies mais compter 300€ si vous partez avec Air-France.
 38;Le prix dépend de votre destination et de votre compagnie aérienne
-38;Le prix varie entre 40 € et 300 € selon votre destination.
 38;Le prix dépend de votre destination, 40€ en France Métropolitaine, 75€ en Europe et Afrique du Nord, 100€ pour les DOM, 300€ pour le reste du monde.
-38;Pour un voyage à Bali il faudra compter 300 euros pour un bagage supplémentaire. Pour plus de renseignements cliquez ici : 
 38;"Le prix du bagage supplémentaire varie de 40 à 300 €.
 Veuillez vérifier les conditions avec votre compagnie aérienne."
+38;Le prix varie entre 40 € et 300 € selon votre destination.
+38;Pour un voyage à Bali il faudra compter 300 euros pour un bagage supplémentaire.
 38;"Selon votre destination le prix peut varier : 
 - 40€ en France Métropolitaine
 - 75€ en Europe et Afrique du Nord
 - 100€ pour les DOM
 - 300€ pour le reste du monde"
-39;Oui
-39;Oui, absolument.
-39;Il est fortement recommandé d'en apporter avec soi. 
 39;C'est un indispensable à Bali. 
-39;Pour des nuits tranquilles je vous conseille de prévoir de l'anti-moustique.
+39;Il est fortement recommandé d'en apporter avec soi. 
 39;Il est recommandé d'avoir de anti-moustique.
+39;Oui
 39;Oui car il y a beaucoup de moustiques.
-40;Je vous envoie le lien d'un comparateur de vol : https://www.kayak.fr/flights
-40;"Vous pouvez consulter ce lien par exemple
-https://www.kayak.fr/flights"
-40;Sur le site de votre compagnie aérienne ou sur les comparateurs comme https://www.kayak.fr/flights
-40;Vous pouvez par exemple utiliser : https://www.kayak.fr/flights
-40;Nous vous conseillons d'utiliser un comparateur de vol pour choisir vos billets d'avion : https://www.kayak.fr/flights
+39;Oui, absolument.
+39;Pour des nuits tranquilles je vous conseille de prévoir de l'anti-moustique.
 40;"Il y a des dizaines de comparateurs de vol qui pourront vous aiguiller dans vos recherches.
 Ci-dessous un exemple: https://www.kayak.fr/flights"
+40;Je vous envoie le lien d'un comparateur de vol : https://www.kayak.fr/flights
+40;Nous vous conseillons d'utiliser un comparateur de vol pour choisir vos billets d'avion : https://www.kayak.fr/flights
+40;Sur le site de votre compagnie aérienne ou sur les comparateurs comme https://www.kayak.fr/flights
+40;"Vous pouvez consulter ce lien par exemple
+https://www.kayak.fr/flights"
+40;Vous pouvez par exemple utiliser : https://www.kayak.fr/flights
 40;Vous pouvez réserver votre billet soit par le site de compagnie aérienne, soit par une agence de voyage ou un organisme. Voici un lien de comparateur de vol : https://www.kayak.fr/flights
 41;800 €
 41;800€ A/R en moyenne
@@ -376,120 +373,117 @@ Ci-dessous un exemple: https://www.kayak.fr/flights"
 41;Le prix moyen des vols aller-retours est d'environ 800€
 41;Les prix pour vol aller-retour sont autour de 800€.
 41;Pour un aller-retour, comptez 800€ en moyenne. 
-42;Non, de nos jours les vols vers cette destination effectue tous au minimum une escale dans les endroits suivants : Shanghai , Singapour, Bangkok, ou Kuala Lumpur. La durée du vol  est comprise en moyenne entre 17h et 25h de vol. Pour réserver votre vol cliquez ici : 
-42;Non, pas depuis la France.
-42;Non, pas depuis la France
-42;Il n'existe pas de vol direct vers Bali depuis la France. Vous devez faire au minimum une escale. Le vol durera entre 17 et 25 heures.
 42;Il n' y a pas de vol direct, tous les vols sont avec une escale soit à Shanghai, Singapour, Bangkok, ou Kuala Lumpur.
-42;Les vols depuis la France en direction de Bali ne sont pas directs, il y aura une escale dans l'une des villes suivante :  Shanghai, Singapour, Bangkok, ou Kuala Lumpur. La durée de vol est comprise entre 17 et 25 heures en moyenne.
 42;Il n’existe pas de vol direct pour Bali depuis la France. Vous ferez au minimum une escale à Shanghai, Singapour, Bangkok, ou Kuala Lumpur. Comptez en moyenne entre 17 et 25 heures de vol.
-43;Vous pouvez utiliser les sites suivants :  https://www.skyscanner.fr/vols-a/dps/compagnies-qui-proposent-des-vols-a-bali-(denpasar)-aeroport.html et https://www.kayak.fr/flights
+42;Il n'existe pas de vol direct vers Bali depuis la France. Vous devez faire au minimum une escale. Le vol durera entre 17 et 25 heures.
+42;Les vols depuis la France en direction de Bali ne sont pas directs, il y aura une escale dans l'une des villes suivante :  Shanghai, Singapour, Bangkok, ou Kuala Lumpur. La durée de vol est comprise entre 17 et 25 heures en moyenne.
+42;Non, de nos jours les vols vers cette destination effectue tous au minimum une escale dans les endroits suivants : Shanghai , Singapour, Bangkok, ou Kuala Lumpur. La durée du vol  est comprise en moyenne entre 17h et 25h de vol. 
+42;Non, pas depuis la France.
+43;Nous vous conseillons de passer par les site https://www.skyscanner.fr/vols-a/dps/compagnies-qui-proposent-des-vols-a-bali-(denpasar)-aeroport.html et https://www.kayak.fr/flightssi vous souhaitez comparer les différentes compagnies aériennes. 
+43;Pour trouver les meilleures compagnies aériennes pour réaliser votre vol entre Paris et Bali vous pouvez utiliser les sites suivants :  https://www.skyscanner.fr/vols-a/dps/compagnies-qui-proposent-des-vols-a-bali-(denpasar)-aeroport.html et https://www.kayak.fr/flights
 43;"Veuillez consulter l'un des sites suivants : 
 
 https://www.skyscanner.fr/vols-a/dps/compagnies-qui-proposent-des-vols-a-bali-(denpasar)-aeroport.htm
 
 https://www.kayak.fr/flights"
-43;Vous pouvez consulter les comparateurs de vol suivant: https://www.skyscanner.fr/vols-a/dps/compagnies-qui-proposent-des-vols-a-bali-(denpasar)-aeroport.html et https://www.kayak.fr/flights
-43;Nous vous conseillons de passer par les site https://www.skyscanner.fr/vols-a/dps/compagnies-qui-proposent-des-vols-a-bali-(denpasar)-aeroport.html et https://www.kayak.fr/flightssi vous souhaitez comparer les différentes compagnies aériennes. 
-43;Pour trouver les meilleures compagnies aériennes pour réaliser votre vol entre Paris et Bali vous pouvez utiliser les sites suivants :  https://www.skyscanner.fr/vols-a/dps/compagnies-qui-proposent-des-vols-a-bali-(denpasar)-aeroport.html et https://www.kayak.fr/flights
-43;Voici des comparateurs pour vous permettre de choisir les meilleures compagnie aérienne et les vols les plus intéressant sur votre destination Bali : https://www.skyscanner.fr/vols-a/dps/compagnies-qui-proposent-des-vols-a-bali-(denpasar)-aeroport.html et https://www.kayak.fr/flights
 43;"Voici des comparateurs de compagnies aériennes pour votre vol :
 https://www.skyscanner.fr/vols-a/dps/compagnies-qui-proposent-des-vols-a-bali-(denpasar)-aeroport.html et https://www.kayak.fr/flights"
+43;Voici des comparateurs pour vous permettre de choisir les meilleures compagnie aérienne et les vols les plus intéressant sur votre destination Bali : https://www.skyscanner.fr/vols-a/dps/compagnies-qui-proposent-des-vols-a-bali-(denpasar)-aeroport.html et https://www.kayak.fr/flights
+43;Vous pouvez consulter les comparateurs de vol suivant: https://www.skyscanner.fr/vols-a/dps/compagnies-qui-proposent-des-vols-a-bali-(denpasar)-aeroport.html et https://www.kayak.fr/flights
+43;Vous pouvez utiliser les sites suivants :  https://www.skyscanner.fr/vols-a/dps/compagnies-qui-proposent-des-vols-a-bali-(denpasar)-aeroport.html et https://www.kayak.fr/flights
+44;2h avant le décollage pour les vols courts et moyens courriers et 3 heures pour les vols longs courriers
 44;Il est recommandé d'arriver à l'aéroport 3h à 4h avant le décollage.
+44;Il est recommandé d'arriver au moins 2h en avance pour les vols courts et moyens courriers et 3h pour les vols longs courriers.
+44;Il est recommandé d'arriver au moins trois heures avant le départ du vol pour les longs courriers afin d'avoir le temps de s'acquitter sereinement des différentes opération de police et de sûreté. 
+44;Le check-in de l'avion ouvre 3h avant pour les vols long-courriers. Il est donc conseillé d'arriver à cette heure pour réaliser les différentes démarches administratives et les contrôles de sûreté.
 44;Nous vous recommandons d'arriver au moins 2h avant le décollage pour les vols courts et moyens courriers et 3 heures pour les vols longs courriers afin d'avoir le temps d'effectuer sereinement les différentes opérations de police et de sûreté.
 44;Pour avoir la conscience tranquille, allez y avant 3H du vol.
-44;2h avant le décollage pour les vols courts et moyens courriers et 3 heures pour les vols longs courriers
-44;Il est recommandé d'arriver au moins 2h en avance pour les vols courts et moyens courriers et 3h pour les vols longs courriers.
-44;Le check-in de l'avion ouvre 3h avant pour les vols long-courriers. Il est donc conseillé d'arriver à cette heure pour réaliser les différentes démarches administratives et les contrôles de sûreté.
-44;Il est recommandé d'arriver au moins trois heures avant le départ du vol pour les longs courriers afin d'avoir le temps de s'acquitter sereinement des différentes opération de police et de sûreté. 
-45;Lorsque vous ne retrouvez pas votre bagage à la fin de votre vol, vous devez le signaler car il est peut etre perdu  ou a du retard. Si après 14 ou 21 jours d’attente rien n’a changé, alors votre bagage est officiellement déclaré perdu. Lorsque vous êtes victime de la perte d’un bagage, vous pouvez réclamer le remboursement des frais de première nécessité. De façon générale, vous trouverez sur votre billet d'avion la convention qui s'applique à votre vol. En cas de doute, vous pouvez contacter la compagnie aérienne pour en être sûr. Si la responsabilité de la compagnie aérienne est confirmée, vous pouvez obtenir votre indemnité pour perte de bagage. En cas de dommage, Votre bagage est dit abîmé ou endommagé lorsque vous ne le retrouvez pas dans son état initial. Il peut aussi s’agir d’une modification ou disparition d’un élément contenu dans le bagage. Si vous vous retrouvez dans l’une de ces situations, vous êtes en droit d’effectuer une réclamation bagage abîmé. Vous devez donc vous rapprocher de la compagnie aérienne qui a effectué le vol. Pour plus d'information sur les démarches a suivre voici un site : https://www.indemniflight.com/blog/bagage-perdu-retarde-abime-demarches-indemnisations/
-45;Si votre baggage est perdu ou endommagé, contactez votre compagnie aérienne.
-45;Pour être indemnisé vous devez vous rapprocher de la compagnie aérienne avec laquelle vous avez effectué le vol.
-45;Il est nécessaire de déclarer et signaler dès la fin de votre vol si vous avez une suspicion de perte de bagage ou de dommage. Il faudra attendre entre 14  et 21 jours dépendant de la compagnie aérienne pour le déclarer officiellement perdu. Pour connaitre les modalités de remboursement il vous faudra vous rapprocher de votre compagnie aérienne . Pour plus d'information sur les démarches à suivre veuillez cliquer ici : 
-45;Pour être indemnisé en cas de perte de votre bagage vous devez contacter la compagnie qui vous indiquera les démarches à suivre pour être indemniser.
-45;"Vous devez contacter la compagnie aérienne dont votre voyage à dépendu.  Pour plus d'infos consultez le lien suivant :
-
-https://www.indemniflight.com/blog/bagage-perdu-retarde-abime-demarches-indemnisations/"
 45;"D'abord vous devez le signaler car il est peut être perdu ou a du retard.
 S'il est déclaré perdu, vous pourrez être indemnisé.
 Pour plus d'information sur les démarches a suivre voici un site : https://www.indemniflight.com/blog/bagage-perdu-retarde-abime-demarches-indemnisations/"
-46;Oui, généralement les animaux sont acceptés dans les vols cependant certaines conditions devront être respectées et cela entrainera des frais supplémentaires, de plus tous les animaux et toutes les races ne sont pas forcément autorisées dans l'avion et pour toutes les destinations. Il faut savoir que les chats et les chiens de plus de 8 kg et 75 kg maximum doivent obligatoirement voyager en soute. Le transport en soute est limité à 3 animaux maximum par passager. Veuillez noter que ce nombre peut être restreint selon le type d'avion. Pour plus d'information consultez la compagnie aérienne avec laquelle vous effectuerez votre vol afin d'avoir toutes les informations nécessaires. ex : airfrance : https://www.airfrance.fr/FR/fr/common/voyage-en-avion/preparation-voyage/animaux-avion.htm
-46;"Oui, sous certaines conditions. Les chats de plus de 8 kg et chiens de plus de 75kg  doivent obligatoirement voyager en soute. les conditions tarifaires et le nombre d'animaux maximum par personnes sont variable. 
-Pour plus d'informations, consulter consultez la compagnie aérienne avec laquelle vous effectuerez votre vol."
+45;Il est nécessaire de déclarer et signaler dès la fin de votre vol si vous avez une suspicion de perte de bagage ou de dommage. Il faudra attendre entre 14  et 21 jours dépendant de la compagnie aérienne pour le déclarer officiellement perdu. Pour connaitre les modalités de remboursement il vous faudra vous rapprocher de votre compagnie aérienne . 
+45;Lorsque vous ne retrouvez pas votre bagage à la fin de votre vol, vous devez le signaler car il est peut être perdu  ou a du retard. Si après 14 ou 21 jours d’attente rien n’a changé, alors votre bagage est officiellement déclaré perdu. Lorsque vous êtes victime de la perte d’un bagage, vous pouvez réclamer le remboursement des frais de première nécessité. De façon générale, vous trouverez sur votre billet d'avion la convention qui s'applique à votre vol. En cas de doute, vous pouvez contacter la compagnie aérienne pour en être sûr. Si la responsabilité de la compagnie aérienne est confirmée, vous pouvez obtenir votre indemnité pour perte de bagage. En cas de dommage, Votre bagage est dit abîmé ou endommagé lorsque vous ne le retrouvez pas dans son état initial. Il peut aussi s’agir d’une modification ou disparition d’un élément contenu dans le bagage. Si vous vous retrouvez dans l’une de ces situations, vous êtes en droit d’effectuer une réclamation bagage abîmé. Vous devez donc vous rapprocher de la compagnie aérienne qui a effectué le vol. Pour plus d'information sur les démarches a suivre voici un site : https://www.indemniflight.com/blog/bagage-perdu-retarde-abime-demarches-indemnisations/
+45;Pour être indemnisé en cas de perte de votre bagage vous devez contacter la compagnie qui vous indiquera les démarches à suivre pour être indemniser.
+45;Pour être indemnisé vous devez vous rapprocher de la compagnie aérienne avec laquelle vous avez effectué le vol.
+45;Si votre bagage est perdu ou endommagé, contactez votre compagnie aérienne.
+45;"Vous devez contacter la compagnie aérienne dont votre voyage à dépendu.  Pour plus d'infos consultez le lien suivant :
+
+https://www.indemniflight.com/blog/bagage-perdu-retarde-abime-demarches-indemnisations/"
+46;Les animaux sont autorisés mais sous certaines conditions que vous pouvez retrouver sur le site suivant : https://www.airfrance.fr/FR/fr/common/voyage-en-avion/preparation-voyage/animaux-avion.htm
+46;Oui, généralement les animaux sont acceptés dans les vols cependant certaines conditions devront être respectées et cela entrainera des frais supplémentaires, de plus tous les animaux et toutes les races ne sont pas forcément autorisées dans l'avion et pour toutes les destinations. Il faut savoir que les chats et les chiens de plus de 8 kg et 75 kg maximum doivent obligatoirement voyager en soute. Le transport en soute est limité à 3 animaux maximum par passager. Veuillez noter que ce nombre peut être restreint selon le type d'avion. Pour plus d'information consultez la compagnie aérienne avec laquelle vous effectuerez votre vol afin d'avoir toutes les informations nécessaires. ex : Air-France : https://www.airfrance.fr/FR/fr/common/voyage-en-avion/preparation-voyage/animaux-avion.htm
+46;Oui, généralement les animaux sont acceptés dans les vols. Voir les conditions avec votre compagnie aérienne.
+46;Oui, généralement vous pouvez voyager avec vos animaux. Néanmoins, Il faut que vous vous rapprochiez de votre compagnie aérienne qui vous renseignera sur les conditions d'acceptation pour votre animal de compagnie (en fonction de la destination, de la taille et du poids de votre animal (chien, chat etc..), de la race de votre animal, du type d'avion.
 46;"Oui, les animaux de compagnie sont acceptés en avion.
 Pour plus d'information, veuillez vérifier auprès de votre compagnie de voyage."
 46;"Oui, pour certains animaux si vous respectez toutes les conditions . Vous pouvez consulter le lien suivant:
 
 https://www.airfrance.fr/FR/fr/common/voyage-en-avion/preparation-voyage/animaux-avion.htm"
-46;Oui, généralement les animaux sont acceptés dans les vols. Voir les conditions avec votre compagnie aérienne.
-46;Les animaux sont autorisés mais sous certaines conditions que vous pouvez retrouver sur le site suivant : https://www.airfrance.fr/FR/fr/common/voyage-en-avion/preparation-voyage/animaux-avion.htm
-46;Oui, généralement vous pouvez voyager avec vos animaux. Néanmoins, Il faut que vous vous rapprochiez de votre compagnie aérienne qui vous renseignera sur les conditions d'acceptation pour votre animal de compagnie (en fonction de la destination, de la taille et du poids de votre animal (chien, chat etc..), de la race de votre animal, du type d'avion.
+46;"Oui, sous certaines conditions. Les chats de plus de 8 kg et chiens de plus de 75kg  doivent obligatoirement voyager en soute. les conditions tarifaires et le nombre d'animaux maximum par personnes sont variable. 
+Pour plus d'informations,  consultez la compagnie aérienne avec laquelle vous effectuerez votre vol."
+47;Cela va dépendre de plusieurs critères tel que la taille, la race, la destination etc... Pour pouvoir avoir un montant exact veuillez vous rapprocher de votre compagnie aérienne. 
+47;Cela varie en fonction de la destination et s'il est en soute ou en cabine, pour tous renseignements nous vous invitons à consulter le site de la compagnie aérienne concernée. 
+47;il y a des frais supplémentaires qui varient en fonction des points suivants : s'il est en soute ou en cabine et de la destinations du vols. Pour plus d'informations veuillez consulter le site de la compagnie aérienne concernées, exemple :  Air-France : https://www.airfrance.fr/FR/fr/common/voyage-en-avion/preparation-voyage/animaux-avion.htm
+47;"Les frais supplémentaires varient en fonction des points suivants : s'il est en soute ou en cabine et de la destinations du vols. 
+Pour plus d'informations veuillez consulter le site de votre compagnie aérienne."
 47;Veuillez consulter le site de la compagnie aérienne concernées.
 47;"Vous pouvez consulter le lien suivant :
 
 https://www.airfrance.fr/FR/fr/common/voyage-en-avion/preparation-voyage/animaux-avion.htm
 "
-47;il y a des frais supplémentaires qui varient en fonction des points suivants : s'il est en soute ou en cabine et de la destinations du vols. Pour plus d'informations veuillez consulter le site de la compagnie aérienne concernées, exemple :  airfrance : https://www.airfrance.fr/FR/fr/common/voyage-en-avion/preparation-voyage/animaux-avion.htm
 47;Vous trouverez les frais supplémentaires sur le site suivant : https://www.airfrance.fr/FR/fr/common/voyage-en-avion/preparation-voyage/animaux-avion.htm
-47;"Les frais supplémentaires varient en fonction des points suivants : s'il est en soute ou en cabine et de la destinations du vols. 
-Pour plus d'informations veuillez consulter le site de votre compagnie aérienne."
-47;Cela va dépendre de plusieurs critères tel que la taille, la race, la destination etc... Pour pouvoir avoir un montant exact veuillez vous rapprocher de votre compagnie aérienne. 
-47;Cela varie en fonction de la destination et s'il est en soute ou en cabine, pour tous renseignements nous vous invitons à consulter le site de la compagnie aérienne concernée. 
-48;Si des changements s'appliquent à votre vol, soyez assuré(e) que votre compagnie aérienne vous en informera par téléphone, SMS ou e-mail. En cas de modification du vol, nous vous proposerons des solutions alternatives. Veuillez noter que vous pouvez demander à être averti(e) de toute éventuelle modification par leur centre d'appels. En outre, vous pouvez vous tenir informé(e) en consultant la page du statut des vols sur leur sites internet ou leur application mobile.
-48;Votre compagnie aérienne vous enverrai une notification en cas de changement du vol.
-48;Vous serez avertit par mail ou par SMS s'il y a des modifications, vous pouvez aussi être avertit de toute modification par le centre d'appels de la compagnie si vous en choisissez l'option lors de la réservation. 
 48;En cas de changement vous serez immédiatement contacté par votre compagnie aérienne par téléphone SMS ou email. Veillez a vous rapprocher de vos compagnies aérienne pour voir les conditions liées aux modifications (remboursement, annulation, solution alternatives...). Vous pouvez également vous tenir informé en consultant leurs sites ou applications mobiles. 
+48;Si des changements s'appliquent à votre vol, soyez assuré(e) que votre compagnie aérienne vous en informera par téléphone, SMS ou e-mail. En cas de modification du vol, nous vous proposerons des solutions alternatives. Veuillez noter que vous pouvez demander à être averti(e) de toute éventuelle modification par leur centre d'appels. En outre, vous pouvez vous tenir informé(e) en consultant la page du statut des vols sur leur sites internet ou leur application mobile.
 48;Si votre vol est modifié la compagnie aérienne vous préviendra par mail et par SMS. Vous pouvez également suivre les changements en consultant la page de statut des vols sur le site internet de la compagnie.
-48;Vous en serez informé par téléphone, SMS ou e-mail.
 48;Votre compagnie aérienne vous en informera par téléphone, SMS ou e-mail. Mais vous pouvez consulter la page du statut des vols sur le site de votre compagnie.
-49;Les billets acheté en ligne vous seront communiqué par email. Pour avoir un billet papier veuillez soit l'acheter sur place à l'aéroport soit en faire la demande directement lorsque cela est possible. Pour plus d'information veuillez cliquer ici : 
+48;Votre compagnie aérienne vous enverrai une notification en cas de changement du vol.
+48;Vous en serez informé par téléphone, SMS ou e-mail.
+48;Vous serez avertit par mail ou par SMS s'il y a des modifications, vous pouvez aussi être avertit de toute modification par le centre d'appels de la compagnie si vous en choisissez l'option lors de la réservation. 
+49;Les billets acheté en ligne vous seront communiqué par email. Pour avoir un billet papier veuillez soit l'acheter sur place à l'aéroport soit en faire la demande directement lorsque cela est possible. 
 49;Par email, mais vous pouvez demander à aller le récupérer sur place.
-49;Vous allez recevoir votre billet par email dès que vous aurez réglé votre billet. Si vous souhaitez recevoir votre billet sous le format papier ou aller directement le retirer en borne ou au guichet, il va falloir en faire la demande lors de votre paiement. 
-49;"Selon le format que vous souhaitez, électronique si vous avez mentionné votre mail, papier si vous avez coché la case ""envoyer chez moi""."
-49;Vous allez recevoir votre billet par mail.
+49;"Selon le format que vous souhaitez, électronique si vous avez mentionné votre mail, papier si vous avez coché la case \""envoyer chez moi\""."
 49;Vous allez recevoir un billet électronique par mail.
+49;Vous allez recevoir votre billet par email dès que vous aurez réglé votre billet. Si vous souhaitez recevoir votre billet sous le format papier ou aller directement le retirer en borne ou au guichet, il va falloir en faire la demande lors de votre paiement. 
+49;Vous allez recevoir votre billet par mail.
 49;Vous recevrez votre billet par email, si vous souhaitez votre ticket au format papier (Par la poste, borne ou guichet) il faudra en faire la demande lors du paiement. 
-50;La réponse est non, Il n’y pas d’obligation d’embarquer du personnel soignant à bord d’un vol et ce, qu’il soit, court, moyen ou long-courrier. En revanche, les personnels de cabine et les pilotes qui volent en Europe ont obligatoirement une formation de secouriste. Depuis juillet 2008, un règlement européen impose aux PNC (personnels navigants commerciaux) d’être titulaires du CFS, Certificat de Formation à la Sécurité. Ils sont formés pour pouvoir prodiguer les gestes de premiers secours. 
 50;Il n'y a aucune obligation aujourd'hui d'embarquer du personnel soignant (médecin...) à bord d'un vol. La réponse est donc non. Cependant, les personnels de cabines et les pilotes qui volent en Europe ont obligatoirement une formation de secouriste permettant de  prodiguer  les gestes de premiers secours (depuis 2008).  
+50;Il n'y aura pas de médecin dans l'avion, néanmoins les personnels de cabine et les pilotes qui volent en Europe sont formés pour pouvoir prodiguer les gestes de premiers secours.
+50;La réponse est non, Il n’y pas d’obligation d’embarquer du personnel soignant à bord d’un vol et ce, qu’il soit, court, moyen ou long-courrier. En revanche, les personnels de cabine et les pilotes qui volent en Europe ont obligatoirement une formation de secouriste. Depuis juillet 2008, un règlement européen impose aux PNC (personnels navigants commerciaux) d’être titulaires du CFS, Certificat de Formation à la Sécurité. Ils sont formés pour pouvoir prodiguer les gestes de premiers secours. 
+50;Non un médecin n'est pas obligatoire dans les vols. Cependant l'équipage de l'avion ont tous une formation de secouriste.
+50;Non, il n'y a pas de médecin parmi l'équipage, mais ils sont formés pour pouvoir prodiguer les gestes de premiers secours. 
 50;Non.
 50;Non. Mais les personnels de cabine et les pilotes ont une formation de secouriste.
-50;Non, il n'y a pas de médecin parmi l'équipage, mais ils sont formés pour pouvoir prodiguer les gestes de premiers secours. 
-50;Il n'y aura pas de médecin dans l'avion, néanmoins les personnels de cabine et les pilotes qui volent en Europe sont formés pour pouvoir prodiguer les gestes de premiers secours.
-50;Non un médecin n'est pas obligatoire dans les vols. Cependant l'équipage de l'avion ont tous une formation de secouriste.
-51;Oui si vous le demandez.
-51;Pour toute question concernant les repas en vol, voir les conditions auprès de votre compagnie aérienne.
-51;Oui, il faut notifier la compagnie aérienne lors de votre réservation de vol.
-51;Oui, vous pouvez commander un repas spécial si votre vol dure plus de 2 h 30. Il vous suffit d'en faire la demande lors de votre réservation ou au plus tard 48 h avant votre vol. À noter : selon les destinations, il est possible que certains repas ne soient pas disponibles.
 51;Oui mais seulement pour les vol de plus de 2h30. La demande s'effectue au moment de la réservation ou au plus tard 48h avant le vol. La disponibilité dépends également de la destination, donc veillez a vous rapprocher de la compagnie aérienne avant le voyage. 
+51;Oui si vous le demandez.
+51;Oui, il faut notifier la compagnie aérienne lors de votre réservation de vol.
 51;Oui, si votre vol dure plus de 2h30 et si vous faite la demande 48h avant le vol.
 51;Oui, si votre vol dure plus de 2h30, vous pourrez commander un repas adapté à vos allergies, Pour y avoir accès, il faut faire la demande lors de la réservation ou au plus tard 48h avant le vol. Attention, selon la destination certains repas ne sont pas disponibles.
-52;Oui, certains hôtels fournissent un moyen de transport entre l'aéroport et l'hôtel. 
+51;Oui, vous pouvez commander un repas spécial si votre vol dure plus de 2 h 30. Il vous suffit d'en faire la demande lors de votre réservation ou au plus tard 48 h avant votre vol. À noter : selon les destinations, il est possible que certains repas ne soient pas disponibles.
+51;Pour toute question concernant les repas en vol, voir les conditions auprès de votre compagnie aérienne.
+52;Cela va dépendre de votre hôtel et des prestations et services auxquelles vous avez souscrit. Veuillez vous rapprocher de votre hôtel ou agence de voyage pour plus d'informations. 
+52;Certains hôtels fournissent ce service, renseignez vous en amont pour savoir si votre hôtel le propose. 
 52;Certains hôtels oui, selon le forfait que vous choisissez.
 52;Il existe des navettes hôtel/aéroport, il faudra vérifier avec votre hôtel si ce service est payant ou gratuit.
-52;Certains hôtels fournissent ce service, renseignez vous en amont pour savoir si votre hôtel le propose. 
 52;Oui certaines hôtels proposent se service. Si vous êtes intéressé, faites en la demande.
+52;Oui, certains hôtels fournissent un moyen de transport entre l'aéroport et l'hôtel. 
 52;Oui, certains hôtels fournissent un moyen de transport entre l'aéroport et l'hôtel. Il faudra juste vous assurez en amont que cela fait partie des prestations et services dans votre forfait.
-52;Cela va dépendre de votre hôtel et des prestations et services auxquelles vous avez souscrit. Veuillez vous rapprocher de votre hôtel ou agence de voyage pour plus d'informations. 
 53;50 € en moyenne. Mais il faut souvent négocier car les chauffeurs ont tendance à gonfler les prix.
-53;En moyenne un taxi pour se rendre à l'aéroport coûte 50 euros pour 20km. Voici un lien pour réserver dès aujourd'hui un taxi : comparateur
-53;Le taxi coûte environ 15 Euros.
+53;En moyenne un taxi pour se rendre à l'aéroport coûte 50 euros pour 20km. 
 53;Le prix est variable mais comptez 8 à 10€ pour un trajet de quelques kilomètres.
-54;Les langues sont le Bahasa Indonesia (langue officielle), le libanais et aussi l'anglais
-54;"Les Indonésiens parlent le Bahasa Indonesia, aussi appelé indonésien et le balinais.
-Mais la plupart parlent Anglais également surtout dans les lieux touristiques."
-54;La langue officielle est l'indonésien mais le balinais est aussi beaucoup parlé par ses habitants, mais les Balinais sont aussi nombreux à parler anglais, notamment dans les commerces et restaurants. 
+53;Le taxi coûte environ 15 Euros.
+54;La langue officielle de Bali est l'indonésien. Le balinais et l'anglais sont aussi des langues parlées couramment par les habitants, surtout dans les zones touristiques. 
 54;La langue officielle est le Bahasa Indonesia
 54;La langue officielle est le Bahasa Indonesia, aussi appelé indonésien. Le balinais est également une autre langue parlée par ses habitants. Aussi, de nombreux Balinais parlent anglais, surtout dans les hôtels, les magasins et les restaurants.
-54;La langue officielle de Bali est l'indonésien. Le balinais et l'anglais sont aussi des langues parlées couramment par les habitants, surtout dans les zones touristiques. 
+54;La langue officielle est l'indonésien mais le balinais est aussi beaucoup parlé par ses habitants, mais les Balinais sont aussi nombreux à parler anglais, notamment dans les commerces et restaurants. 
+54;"Les Indonésiens parlent le Bahasa Indonesia, aussi appelé indonésien et le balinais.
+Mais la plupart parlent Anglais également surtout dans les lieux touristiques."
+54;Les langues sont le Bahasa Indonesia (langue officielle), le libanais et aussi l'anglais
 54;Les trois langues les plus utilisée sont le Bahasa indonesia (langue officielle indonésienne), le balinais (langue utilisée par les habitants de Bali) et l'anglais (utilisée dans les restaurants, hôtels et certains magasins)
-55;Les randonnées et les sports nautiques, visites de temples.
-55;Les randonnées et les sports nautiques sont de superbes activités à faire à Bali. Vous pourrez visiter les temples d'Uluwatu, de Tanah Lot ou le lac Bratan. Vous pouvez également vous approchez des rizières  ou randonnez sur le volcan Batur. Le surf et la plongée sont également de activités incontournables à faire à Bali et si vous êtes chanceux, vous pourrez même observer des dauphins. Puisque vous partez en Juin, vous pourrez également admirer le festival des arts de Bali ! Pour plus d'infos : https://generationvoyage.fr/visiter-bali-faire-voir/
-55;Bali offre des paysages magnifiques. Vous pouvez visiter les rizières, les villages de pêcheurs ou encore le volcan Batur. Le festival des arts de Bali a lieu en Juin durant plusieurs jours. Enfin de nombreuses activités sportives sont également disponibles tels que le surf ou la plongée.
 55;"Bali est connue pour les activités nautiques tel que le surf et la plongée.
 Mais il y a aussi des endroits incontournables à visiter tel que les temples d'Uluwatu, de Tanah Lot ou le lac Bratan."
-55;"Vous avez les sports nautiques, la visite des temples d'Uluwatu, de Tanah Lot ou le lac Bratan, des rizières ou randonnée sur le volcan Batur. Pour plus d'infos consultez le lien suivant :
-
-https://generationvoyage.fr/visiter-bali-faire-voir/"
+55;Bali offre des paysages magnifiques. Vous pouvez visiter les rizières, les villages de pêcheurs ou encore le volcan Batur. Le festival des arts de Bali a lieu en Juin durant plusieurs jours. Enfin de nombreuses activités sportives sont également disponibles tels que le surf ou la plongée.
+55;Les activités phares sont les randonnées et les sports nautiques lorsque vous allez à Bali. Les lieux culturels tel que les temples d'Uluwatu, de Tanah Lot sont également très prisés.  De très beaux paysages sont également très visitées tel que le lac Bratan, les rizières ou encore le Volcan Baltur. 
+55;Les randonnées et les sports nautiques sont de superbes activités à faire à Bali. Vous pourrez visiter les temples d'Uluwatu, de Tanah Lot ou le lac Bratan. Vous pouvez également vous approchez des rizières  ou randonnez sur le volcan Batur. Le surf et la plongée sont également de activités incontournables à faire à Bali et si vous êtes chanceux, vous pourrez même observer des dauphins. Puisque vous partez en Juin, vous pourrez également admirer le festival des arts de Bali ! Pour plus d'infos : https://generationvoyage.fr/visiter-bali-faire-voir/
+55;Les randonnées et les sports nautiques, visites de temples.
 55;"Nous vous recommandons : 
 - les randonnées
 - les sports nautiques (surf, plongée) 
@@ -500,28 +494,33 @@ https://generationvoyage.fr/visiter-bali-faire-voir/"
 - le volcan Batur
 
 Pour plus d'évènements : https://generationvoyage.fr/visiter-bali-faire-voir/"
-55;Les activités phares sont les randonnées et les sports nautiques lorsque vous allez à Bali. Les lieux culturels tel que les temples d'Uluwatu, de Tanah Lot sont également très prisés.  De très beaux paysages sont également très visitées tel que le lac Bratan, les rizières ou encore le Volcan Baltur. Pour plus d'idées d'activité veuillez cliquer ici : 
-56;Attention aux témoignages d'affections en public
-56;"Il faut bien lire les consignes et respecter les règles pour visiter un temple.
-Il faut éviter les embrassades en publiques."
-56;Il est recommandé d'éviter les témoignages d'affection en public. De même, la main gauche étant considérée comme impur il est fortement recommandé de ne pas l'utiliser pour donner des choses aux habitants (monnaie etc...). Il est interdit de toucher la tête de quelqu'un car dans leur croyance la tête est le siège de l'âme et par conséquent intouchable. Concernant les temple il est respectueux de demandz l'autorisation avant d'entrer et d'enlever ses chaussures.
-56;Les balinais n'acceptent pas les témoignages d'affections en public, même s'il sagit de la personne qui partage votre vie. Eviter les embrassades en publique. La main gauche est considérée comme impure, ne donnez rien aux habitants avec cette main. La tête est le siège de l'âme dans leur croyance, il est donc interdit de toucher la tête de quelqu'un. SI vous visiter un temple, demandez l'autorisation et enlever vos chaussures.
-56;Oui. Evitez de vous embrasser en publique, de donner quoi que ce soit avec votre main gauche, de toucher la tête de quelqu'un et surtout avant de rentrer dans un temple, demander l'autorisation et enlever vos chaussures.
+55;"Vous avez les sports nautiques, la visite des temples d'Uluwatu, de Tanah Lot ou le lac Bratan, des rizières ou randonnée sur le volcan Batur. Pour plus d'infos consultez le lien suivant :
+
+https://generationvoyage.fr/visiter-bali-faire-voir/"
 56;"- Les témoignages d'affections divers en public
 - Ne donnez rien aux habitant avec la main gauche, elle est considérée comme impure
 - De part leurs croyances il est interdit de toucher la tête de quelqu'un
 - Lorsque vous visiter un temple, demandez l'autorisation et enlevez vos chaussures"
+56;Attention aux témoignages d'affections en public
 56;Attention les habitants de Bali sont religieux et certaines pratiques ne sont pas autorisées. Éviter les signes d'affections en publique, ne toucher rien avec votre main gauche (elle est considérée comme impure) et ne toucher pas la tête des habitants.
-57;Il y en a pour tous les goûts et tous les conforts. Cela va de la villa atypique dans la jungle ou en bords de mer à aux igloos gonflable et cabane dans les arbres. Vous pouvez également louer des ancienne grande à riz. Voici un comparateur pour préparer votre séjour : 
-57;Vous avez le choix entre une villas dans la jungle ou en bord de mer, une cabane dans un arbre, une grange à riz ou un igloo gonflable.
-57;Il existe des biens dans la jungle, au bord de la mer, dans une cabane dans les arbres, dans une ancienne grange à riz ou encore dans un igloo gonflable.
-57;Si vous souhaiter un hébergement atypique, des villas sont disponible dans la jungle ou en bords de mers sinon, des cabanes dans les arbres, une ancienne grange à riz ou un igloo gonflable sont aussi d'excellents choix pour se dépayser. 
-57;De nombreuses villas atypiques sont disponibles pour des nuits paisibles dans la jungle ou en bords de mers. Vous pourrez aussi tenter des nuits dans une cabane dans les arbres, dans une ancienne grange à riz ou encore dans un igloo gonflable !
+56;Il est recommandé d'éviter les témoignages d'affection en public. De même, la main gauche étant considérée comme impur il est fortement recommandé de ne pas l'utiliser pour donner des choses aux habitants (monnaie etc...). Il est interdit de toucher la tête de quelqu'un car dans leur croyance la tête est le siège de l'âme et par conséquent intouchable. Concernant les temple il est respectueux de demandez l'autorisation avant d'entrer et d'enlever ses chaussures.
+56;"Il faut bien lire les consignes et respecter les règles pour visiter un temple.
+Il faut éviter les embrassades en publiques."
+56;Les balinais n'acceptent pas les témoignages d'affections en public, même s'il s'agit de la personne qui partage votre vie. Eviter les embrassades en publique. La main gauche est considérée comme impure, ne donnez rien aux habitants avec cette main. La tête est le siège de l'âme dans leur croyance, il est donc interdit de toucher la tête de quelqu'un. SI vous visiter un temple, demandez l'autorisation et enlever vos chaussures.
+56;Oui. Evitez de vous embrasser en publique, de donner quoi que ce soit avec votre main gauche, de toucher la tête de quelqu'un et surtout avant de rentrer dans un temple, demander l'autorisation et enlever vos chaussures.
 57;De nombreuses villas atypiques sont disponibles pour des nuits paisibles dans la jungle ou en bords de mers. 
+57;De nombreuses villas atypiques sont disponibles pour des nuits paisibles dans la jungle ou en bords de mers. Vous pourrez aussi tenter des nuits dans une cabane dans les arbres, dans une ancienne grange à riz ou encore dans un igloo gonflable !
 57;Des cabanes, des igloos gonflable, des anciennes granges, des villas dans la jungle, Bali offre de nombreux lieux atypiques pour dormir.
+57;Il existe des biens dans la jungle, au bord de la mer, dans une cabane dans les arbres, dans une ancienne grange à riz ou encore dans un igloo gonflable.
+57;Il y en a pour tous les goûts et tous les conforts. Cela va de la villa atypique dans la jungle ou en bords de mer à aux igloos gonflable et cabane dans les arbres. Vous pouvez également louer des ancienne grande à riz. 
+57;Si vous souhaiter un hébergement atypique, des villas sont disponible dans la jungle ou en bords de mers sinon, des cabanes dans les arbres, une ancienne grange à riz ou un igloo gonflable sont aussi d'excellents choix pour se dépayser. 
+57;Vous avez le choix entre une villas dans la jungle ou en bord de mer, une cabane dans un arbre, une grange à riz ou un igloo gonflable.
+58;Bœuf Rendang, brochettes Sate Ayam et Gule, Ayam Betutu, Nassi Goreng et Ikan Bakar.
 58;Bœuf Rendang, des brochettes Sate Ayam et Gule ou du Ayam Betutu, 
 58;Le bœuf Rendang, les brochettes Sate Ayam et Gule ou le Ayam Betutu, Nasi Goreng et l'Ikan Bakar.
-58;Bœuf Rendang, brochettes Sate Ayam et Gule, Ayam Betutu, Nassi Goreng et Ikan Bakar.
+58;Les spécialités culinaires de Bali sont des plats à base de riz avec différentes viandes (poulet, bœuf, poisson). Le Nasi Goreng ou l'Ikan Bakar sont des plats à goûter à Bali.
+58;Ne passez pas à coter du bœuf Rendang, des brochettes Sate Ayam et Gule ou du Ayam Betutu, plat typique balinais à base de poulet. Le Nasi Goreng, l'originale recette de riz frit saura vous divertir. L'Ikan Bakar sera préféré pour les amateurs de poissons.
+58;Si vous aimez les plats à base de poulet, je vous conseille le Ayam Betutu, si vous voulez découvrir une recette à base de riz frit je vous conseille le Nasi Goreng. Si vous êtes plutôt amateur de poisson Ikan Bakar est un incontournable. Enfin si aucun de ces plats ne vous attire, vous pouvez essayer le bœuf Rendang ou les brochettes Sate Ayam et Gule.
 58;"Voici quelques plats typiques pour les adorateurs de la gastronomie : 
 - bœuf Rendang : voir recette
 - brochettes Sate Ayam et Gule : voir recette
@@ -529,83 +528,80 @@ Il faut éviter les embrassades en publiques."
 - Le Nasi Goreng original recette de riz frit : voir recette
 - Pour les amateurs de poissons : voir recette
 
-Si vous voulez plus d'information ou plus de plat en fonction de vos préférence culinaire (végétarien, vegan ...) veuillez cliquer ici"
-58;Ne passez pas à coter du bœuf Rendang, des brochettes Sate Ayam et Gule ou du Ayam Betutu, plat typique balinais à base de poulet. Le Nasi Goreng, l'originale recette de riz frit saura vous divertir. L'Ikan Bakar sera préféré pour les amateurs de poissons.
-58;Si vous aimez les plats à base de poulet, je vous conseille le Ayam Betutu, si vous voulez découvrir une recette à base de riz frit je vous conseille le Nasi Goreng. Si vous êtes plutôt amateur de poisson Ikan Bakar est un incontournable. Enfin si aucun de ces plats ne vous attire, vous pouvez essayer le bœuf Rendang ou les brochettes Sate Ayam et Gule.
-58;Les spécialités culinaires de Bali sont des plats à base de riz avec différentes viandes (poulet, bœuf, poisson). Le Nasi Goreng ou l'Ikan Bakar sont des plats à goûter à Bali.
-59;Il n'est pas nécessaire de réserver les activités à l'avance
-59;Hormis si vous souhaitez voyager avec un guide français ou si vous souhaitez réaliser les excursions Bromo et Ijien sur Java.
-59;Il n'est pas nécessaire de réserver les actvités à l'avance sauf si : - vous souhaitez voyager avec un guide français (pas besoin si vous cherchez un guide anglais) - Si vous souhiatez réaliser les excursions Bromo et Ijien sur Java
-59;Vous pouvez réserver vos activité une fois sur place, à moins d'avoir besoin d'un guide touristique Français ou de vouloir faire les excursions Bromo et Ijien sur Java.
+Si vous voulez plus d'information ou plus de plat en fonction de vos préférence culinaire (végétarien, végan ...) "
 59;En général non sauf si vous voulez soit un guide français soit faire les excursions Bromo et Ijien sur Java
+59;Hormis si vous souhaitez voyager avec un guide français ou si vous souhaitez réaliser les excursions Bromo et Ijien sur Java.
 59;Il faut réserver à l'avance que s'il vous faut un guide français pendant le voyage et pour les excursions Bromo et Ijien sur java.  Pour le reste cela n'est pas nécessaire.
+59;Il n'est pas nécessaire de réserver les activités à l'avance
+59;Il n'est pas nécessaire de réserver les activités à l'avance sauf si : - vous souhaitez voyager avec un guide français (pas besoin si vous cherchez un guide anglais) - Si vous souhaitez réaliser les excursions Bromo et Ijien sur Java
 59;"Vous n'avez pas obligé de réserver vos activités à l'avance sauf pour :
 -  voyager avec un guide français 
 -  réaliser les excursions Bromo et Ijien sur Java"
+59;Vous pouvez réserver vos activité une fois sur place, à moins d'avoir besoin d'un guide touristique Français ou de vouloir faire les excursions Bromo et Ijien sur Java.
 60;C'est possible, mais ce n'est pas recommandé.
 60;Il est assez difficile de voyager avec ses animaux domestiques.  Notamment car de nombreuses maladies tel que la rage sont encore en vigueur sur place. Donc bien qu'ils soient autorisés il vaut mieux ne pas voyager avec eux à Bali. 
 60;Il n'est pas recommandé de voyager avec ses animaux domestiques à Bali.
-60;Oui, mais cela est déconseillé à cause de la présence de maladies comme la rage.
-60;Les animaux sont autorisés mais il n'est pas conseillé de les emmener en raison de nombreuses maladies présentes telles que la rage.
-60;Il n'est pas récommandé de voyager avec ses animaux domestiques à Bali. De nombreuses maladies dont la rage sont présentes chez beaucoup d'animaux. 
+60;Il n'est pas recommandé de voyager avec ses animaux domestiques à Bali. De nombreuses maladies dont la rage sont présentes chez beaucoup d'animaux. 
 60;Les animaux ne sont pas autorisés dans les lieux culturels.
+60;Les animaux sont autorisés mais il n'est pas conseillé de les emmener en raison de nombreuses maladies présentes telles que la rage.
+60;Oui, mais cela est déconseillé à cause de la présence de maladies comme la rage.
 61;50 €.
 61;Compter 50€ par personne par activité en moyenne.
 61;En moyenne il vous faudra compter 50 euros par personne par activité (sport nautique, visites guidées etc...). L'entrée des parcs et des temples est payante (inférieures a 5 euros)
-61;Le prix d'une activité coûte en moyenne 50€ par personne.
 61;Le budget moyen d'une activité est de 50€ par personne. 
 61;Le budget moyen d'une activité est de 50€ par personne. L'entrée des parcs et temples est inférieure à 5€.
+61;Le prix d'une activité coûte en moyenne 50€ par personne.
 61;"Pour les activités le budget moyen et de 50€/personne, en ce qui concerne les parcs et temples,
 le prix de l'entrée est inférieur à 5€."
-62;La piscine
-62;Vous accès à la piscine.
-62;La piscine est accessible pour tous les résidents de l'hôtel.
-62;Une piscine est disponible dans votre hotel
-62;L'hotel que vous avez choisi vous propose une piscine.
-62;Veuillez vous référer aux prestations et services disponible dans l'hôtel dans lequel vous avez reserver. Voici un comparateur d'hôtel en fonction des services souhaités : 
 62;"Dans votre hôtel, une piscine avec toboggan, un spa, une salle de jeux et une salle de sport sont disponibles.
 Pour faire garder vos enfants, un service de baby-sitting ainsi qu'un club enfant sont disponibles.
 
 
 
 "
-63;Oui.
-63;Oui.
-63;Oui, les repas ne seront pas facturés en supplément.
+62;La piscine
+62;La piscine est accessible pour tous les résidents de l'hôtel.
+62;L'hôtel que vous avez choisi vous propose une piscine.
+62;Une piscine est disponible dans votre hôtel
+62;Veuillez vous référer aux prestations et services disponible dans l'hôtel dans lequel vous avez réservé.
+62;Vous accès à la piscine.
 63;Les repas sont inclus dans votre forfait
-63;Oui, ils sont inclus dans le forfait de l'hôtel. 
 63;Oui vos repas sont déjà compris dans le prix de l'hôtel.
+63;Oui, ils sont inclus dans le forfait de l'hôtel. 
+63;Oui, les repas ne seront pas facturés en supplément.
+63;Oui.
+63;Oui.
+64;Le Mont Agung et le temple Besakih sont situé à l'Est de l'île. Le mont Agung est un volcan, c'est le point le plus haut de l'île. Conseillé aux sportifs. Si vous préférez un cadre plus tranquille, le village de pecheur Amed saura vous offrir un cadre magnifique.
 64;Le Mont Agung et le temple Besakih, le village de pecheur Amed.
 64;Le Mont Agung, le temple Besakih et le village de pecheur Amed.
-64;Nous vous recommandons le Mont Agung et le temple Besakih ainsi que village de pécheur Amed.
-64;Le Mont Agung et le temple Besakih sont situé à l'Est de l'île. Le mont Agung est un volcan, c'est le point le plus haut de l'île. Conseillé aux sportifs. Si vous préférez un cadre plus tranquille, le village de pecheur Amed saura vous offrir un cadre magnifique.
 64;Les endroits les plus touristiques sont: le Mont Agung, le temple Besakih et le village de pecheur Amed
 64;Les villages de pêcheurs et les différents temple tel que le temple Besakih valent le détour.
+64;Nous vous recommandons le Mont Agung et le temple Besakih ainsi que village de pécheur Amed.
 65;En Juin, il y a le festival d’arts balinais.
 65;Le festival d’arts balinais !
-65;Le festival d'arts balinais à lieu en Juin. Des représentations ont lieu tous les jours.
 65;Le festival d’arts balinais, expositions d’artisanat et bien d’autres activités artistiques.
+65;Le festival d'arts balinais à lieu en Juin. Des représentations ont lieu tous les jours.
 65;Puisque vous partez vers juin, vous aurez de grandes chances de découvrir le festival d’arts balinais, un événement connu mondialement pour ses représentations culturelles quotidiennes, expositions d’artisanat et bien d’autres activités artistiques.
 65;"Voici l'agenda des fêtes culturels à Bali : 
 https://www.routard.com/guide_agenda/bali.htm"
-66;Oui il faut un permis de conduire pour conduire un deux roues à Bali qu'il soit de 50 cc ou 125cc il faut le permis international avec le tampon du permis moto. 
-66;Oui, il vous faut un permis international avec le tampon de votre permis moto.
-66;Il faut obligatoirement un permis international avec le tampon de votre permis moto.
-66;Le permis voiture permet de conduire un scooter jusqu'à 125cm3. Pour conduire une moto en revanche il faudra un permis international avec le tampon de votre permis moto
 66;En Indonésie, le permis voiture ne te permet pas de conduire un scooter de moins de 125m^3, il faut obligatoirement un permis international avec le tampon de votre permis moto.
 66;Il faut obligatoirement un permis international avec le tampon de votre permis moto.
+66;Il faut obligatoirement un permis international avec le tampon de votre permis moto.
+66;Le permis voiture permet de conduire un scooter jusqu'à 125cm3. Pour conduire une moto en revanche il faudra un permis international avec le tampon de votre permis moto
+66;Oui il faut un permis de conduire pour conduire un deux roues à Bali qu'il soit de 50 cc ou 125cc il faut le permis international avec le tampon du permis moto. 
+66;Oui, il vous faut un permis international avec le tampon de votre permis moto.
 66;Pour conduire un 2 roues il faut obligatoire un permis moto avec le permis international.
-67;Il y a des forums de voyageurs en ligne, il vaut mieux les contacter plutôt que de les rencontrer sur place.
-67;Il est conseillé de co-organisé votre voyage avec des personnes sur les forums
-67;Pas vraiment, pour des raison d'organisation et sécurité il fortement conseillé de co-organiser votre voyage avec des personnes sur les forums de voyageurs en ligne plutôt que d'essayer de les rencontrer sur place. Voici quelques sites d'organisations de rencontre à l'etranger : ...
-67;Oui, mais il est conseillé de co-organiser votre voyage en amont avec d'autres personnes sur les forums de voyageurs en ligne.
+67;Il est conseillé de coorganisé votre voyage avec des personnes sur les forums
+67;Il est conseillé de coorganisé votre voyage avec des personnes sur les forums de voyageurs en ligne plutôt que de les rencontrer la bas 
 67;Il vaut mieux organiser votre voyage avec des étrangers avant que vous partiez plutôt que sur place.
-67;Il est conseillé de co-organisé votre voyage avec des personnes sur les forums de voyageurs en ligne plutôt que de les rencontrer la bas 
-67;Je vous conseille de passer par des forums de voyageurs afin de co-organiser votre voyage plutôt que de les rencontrer sur place. 
-68;Les sport nautiques les plus populaire et accessible  Bali son le surf, le fly board et la plongée. n'hesitez pas à réserver à l'avance vos activités. Pour choisir plus d'activités veuillez consulter le sites suivants : 
+67;Il y a des forums de voyageurs en ligne, il vaut mieux les contacter plutôt que de les rencontrer sur place.
+67;Je vous conseille de passer par des forums de voyageurs afin de coorganiser votre voyage plutôt que de les rencontrer sur place. 
+67;Oui, mais il est conseillé de coorganiser votre voyage en amont avec d'autres personnes sur les forums de voyageurs en ligne.
+67;Pas vraiment, pour des raison d'organisation et sécurité il fortement conseillé de coorganiser votre voyage avec des personnes sur les forums de voyageurs en ligne plutôt que d'essayer de les rencontrer sur place.
 68;Il y a des tas de sports nautiques à Bali tel que le surf, la plongée et le fly board.
-68;Le surf, la plongée et le fly board.
-68;Les sports nautiques populaires à Bali sont le surf et la plongée. Si vous souhaitez découvrir de nouvelles sensation le fly board sera une activité de choix. 
+68;Je vous conseille le surf, la plongée ou le fly-board pour les plus téméraires. 
 68;Le surf et la plongée sont 2 activités nautiques abordables à Bali. 
 68;Le surf et la plongée sont 2 activités nautiques abordables à Bali. Vous pouvez également découvrir de nouvelles sensations avec le fly board !
-68;Je vous conseille le surf, la plongée ou le fly-board pour les plus téméraires. 
+68;Le surf, la plongée et le fly board.
+68;Les sport nautiques les plus populaire et accessible  Bali son le surf, le fly board et la plongée. n'hésitez pas à réserver à l'avance vos activités. 
+68;Les sports nautiques populaires à Bali sont le surf et la plongée. Si vous souhaitez découvrir de nouvelles sensation le fly board sera une activité de choix. 

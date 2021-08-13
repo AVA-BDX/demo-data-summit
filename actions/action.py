@@ -27,41 +27,6 @@ import json
 
 
 
-
-# class ActionStoreAllBotResponses(Action):
-
-#     def name(self):
-#         return 'action_store_all_bot_responses'
-
-#     async def run(self, dispatcher, tracker, domain):
-#         """This action will map and store all the bot's responses at the begining of the first user's question"""
-
-#         path = r"data/qna_data_bases/reponses_bot_augmente.csv"
-#         data_base = pd.read_csv(path,  sep=";", encoding="latin3")       
-#         test_if_all_responses_was_stored = tracker.get_slot('strored_all_bot_responses')
-#         if test_if_all_responses_was_stored == None:
-#             strored_all_bot_responses = [{str(num_pivot): [data_base.reponse_pivot[idx].encode('utf8','ignore').decode('utf8').replace('\x92',"'").replace('\x9c','oe').replace('\x80','€').replace('\xa0',' ') for idx in range(len(data_base.id_question_pivot)) if data_base.id_question_pivot[idx] == num_pivot]} for num_pivot in set(data_base.id_question_pivot)]
-#             return [SlotSet("strored_all_bot_responses", strored_all_bot_responses)]
-#         else:
-#             return [] 
-
-# class ActionStoreAllBotQuesstions(Action):
-
-#     def name(self):
-#         return 'action_store_all_bot_questions'
-
-#     async def run(self, dispatcher, tracker, domain):
-#         """This action will map and store all the bot's responses at the begining of the first user's question"""
-
-#         path = r"data/qna_data_bases/questions_bot_augmente.csv"
-#         data_base = pd.read_csv(path,  sep=";", encoding="latin3")       
-#         test_if_all_questions_was_stored = tracker.get_slot('strored_all_bot_questions')
-#         if test_if_all_questions_was_stored == None:
-#             strored_all_bot_questions = [{str(num_pivot): [data_base.reponse_prop[idx].encode('utf8','ignore').decode('utf8').replace('\x92',"'").replace('\x9c','oe').replace('\x80','€').replace('\xa0',' ') for idx in range(len(data_base.id_question_pivot)) if data_base.id_question_pivot[idx] == num_pivot]} for num_pivot in set(data_base.id_question_pivot)]
-#             return [SlotSet("strored_all_bot_questions", strored_all_bot_questions)]
-#         else:
-#             return [] 
-
 class user_inputs(Action):
 
     def name(self):
@@ -306,7 +271,7 @@ class bot_reformulate(Action):
         #get the user profile
         user_profile = tracker.get_slot('profile')
 
-        # #get intent to make sure at least one faq question was asked befor user ask reformulate
+        # #get intent to make sure at least one faq question was asked before user ask reformulate
         # intent = tracker.latest_message['intent'].get('name')
 
         #get bot faq response  to make sure that user has asked at least one faq queston
@@ -323,8 +288,6 @@ class bot_reformulate(Action):
             #bot_responses_to_user_question_json contains all bot utterances regarding the user sub-intent in a list of json
             with open('data/qna_data_bases/strored_all_bot_responses.txt') as json_file:
                 bot_responses_to_user_question_json = json.load(json_file)
-            #bot_responses_to_user_question_json =  tracker.get_slot('strored_all_bot_responses')
-            #get the user faq intent id
             user_current_intent_id = tracker.get_slot('user_current_intent_id')
 
             if user_current_intent_id == None:
@@ -399,7 +362,7 @@ class ActionBotAdaptiveAnswer(Action):
             return []
 
         elif user_current_intent_id == None:
-            dispatcher.utter_message(template="utter_dont_understand") #bizarre comme reponses (voir domaine)
+            dispatcher.utter_message(template="utter_dont_understand") # If the user doesn't choose anything among confusion'propositions (make sense when adaptive anwser comes after confusion)
             return []
         else:
             #get all responses for that id
@@ -437,25 +400,6 @@ class ActionBotAdaptiveAnswer(Action):
         return []
 
 
-
-class SetUserWantGivenAnws(Action):
-    def name(self) :
-        return "action_set_user_want_given_anws"
-
-    async def run(
-        self,
-        dispatcher: CollectingDispatcher,
-        tracker: Tracker,
-        domain: Dict[Text, Any],
-
-    ) -> List[EventType]:
-        """This action will set the slot named confusion to None"""
-        intent = tracker.latest_message['intent'].get('name')
-        if intent == "affirm":
-            return [ SlotSet("user_want_given_anws", True)]
-        elif intent == "deny":
-             return [ SlotSet("user_want_given_anws", False)]
-        return[]
 
 class ActionNoFortherReformulation(Action):
     def name(self) :
@@ -547,7 +491,7 @@ class ActionAskClarification(Action):
         )
         if len(intent_ranking) > 1 :
             #user question not clear enough
-            if intent_ranking[0].get("confidence")<0.8:
+            if intent_ranking[0].get("confidence")<0.7:
                 dispatcher.utter_message(text= f"Pouvez vous apporter plus de détails s'il vous plait ? \n je n'ai compris que {round(100*intent_ranking[0].get('confidence'),2)}% de ce que vous avez dit ^^'" )
                 return [SlotSet("test_sentences", intent_ranking) ]
             else:
@@ -643,9 +587,9 @@ class ActionAskClarification(Action):
                     if bot_last_faq_message == None and user_ongoin_message == None:
                         dispatcher.utter_message(text="Je vous écoute pour votre question")
                         return []
-                    elif user_current_intent_id == None:
-                        dispatcher.utter_message(template="utter_dont_understand")
-                        return []
+                    # elif user_current_intent_id == None:
+                    #     dispatcher.utter_message(template="utter_dont_understand")
+                    #     return []
                     else:
                         #get all responses for that id
                         bot_responses_to_user_question = list([list_utters for list_utters in bot_responses_to_user_question_json if user_current_intent_id in list_utters.keys()][0].values())[0]
@@ -707,10 +651,14 @@ class ActionIncrementIncomprehensionConfusion(Action):
         var_bot_question_incomprehension = 0
         var_bot_question_confusion = 0
         if len(intent_ranking) > 1 :
-            if intent_ranking[0].get("confidence") < 0.4:
+            if intent_ranking[0].get("confidence") < 0.7:
                 var_bot_question_incomprehension = 1
-            elif 0.4 <= intent_ranking[0].get("confidence") <= 0.6:
-                var_bot_question_confusion = 1
+            else:
+                diff_intent_confidence = intent_ranking[0].get(
+                    "confidence"
+                ) - intent_ranking[1].get("confidence")                          
+                if diff_intent_confidence < 0.2:
+                    var_bot_question_confusion = 1
         return [SlotSet("bot_question_incomprehension", var_bot_question_incomprehension),SlotSet("bot_question_confusion", var_bot_question_confusion) ]
 
 

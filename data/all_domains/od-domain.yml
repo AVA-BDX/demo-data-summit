@@ -23,6 +23,7 @@ responses:
       - text: Bonjour ça va ?
     utter_goodbye:
       - text: Au revoir
+      - text: A plus
     utter_iamabot:
       - text: Je suis un bot créé grâce à Rasa par Talan
     utter_did_that_help:
@@ -48,7 +49,8 @@ responses:
     utter_reformulate:
       - text: pouvez-vous reformuler la question ?
       - text: très bien, reformulez votre question
-    utter_dont_understand:
+      - text: Merci de formuler différemment votre question
+    utter_dont_understand: # If the user doesn't choose anything among confusion'propositions
       - text: Très bien, donnez-moi plus de détails alors
       - text: Ok, on ne s'est pas compris, pouvez-vous reformuler votre question?
       - text: Hmmm, je n'ai donc pas compris! pouvez-vous me le dire différements?
