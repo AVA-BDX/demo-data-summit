@@ -183,20 +183,20 @@ rules:
   - action: utter_ask_profil
 
 
-# - rule: happy path, ask the user if he still want a response, user affirm
-#   steps:
-#   - action: action_utter_reformulate
-#   - action: action_bot_utterances_list
-#   - intent: affirm
-#   - action: action_no_further_reformulation
+- rule: happy path, ask the user if he still want a response, user affirm
+  steps:
+  - action: action_utter_reformulate
+  - action: action_bot_utterances_list
+  - intent: affirm
+  - action: action_no_further_reformulation
 
 
-# - rule: unhapppy path, ask the user if he still want a response, he deny
-#   steps:
-#   - action: action_utter_reformulate
-#   - action: action_bot_utterances_list
-#   - intent: deny
-#   - action: action_ask_another_question
+- rule: unhapppy path, ask the user if he still want a response, he deny
+  steps:
+  - action: action_utter_reformulate
+  - action: action_bot_utterances_list
+  - intent: deny
+  - action: action_ask_another_question
 
 
 - rule: the bot reformulate any time the user ask him to reformulate

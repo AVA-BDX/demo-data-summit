@@ -362,7 +362,7 @@ class ActionBotAdaptiveAnswer(Action):
             return []
 
         elif user_current_intent_id == None:
-            dispatcher.utter_message(template="utter_give_more_details") # If the user doesn't choose anything among confusion'propositions (make sense when adaptive anwser comes after confusion)
+            dispatcher.utter_message(response = "utter_give_more_details") # If the user doesn't choose anything among confusion'propositions (make sense when adaptive anwser comes after confusion)
             return []
         else:
             #get all responses for that id
@@ -431,7 +431,7 @@ class ActionAskAnotherQuestion(Action):
     ) -> List[EventType]:
         """ This function will ask the user to ask another question"""
         
-        dispatcher.utter_message(template="utter_ask_another_question")
+        dispatcher.utter_message(response ="utter_ask_another_question")
 
         return [Form("note_and_pseudo_asking_form")]
 
@@ -494,8 +494,8 @@ class ActionAskClarification(Action):
             var_confidence = intent_ranking[0].get("confidence")
             if var_confidence < 0.7:
                 dispatcher.utter_message(
-                    template="utter_dont_understand",
-                    name="round(100*var_confidence,2)}%"
+                    response ="utter_dont_understand",
+                    name= f"{round(100*var_confidence,2)} %"
                 )               
                 return [SlotSet("test_sentences", intent_ranking) ]
             else:
@@ -592,7 +592,7 @@ class ActionAskClarification(Action):
                         dispatcher.utter_message(text="Je vous écoute pour votre question")
                         return []
                     # elif user_current_intent_id == None:
-                    #     dispatcher.utter_message(template="utter_give_more_details")
+                    #     dispatcher.utter_message(response ="utter_give_more_details")
                     #     return []
                     else:
                         #get all responses for that id

@@ -1,6 +1,5 @@
 id_question_pivot;reponse_prop
-1;"Quelles sont les conditions de validit? du visa ?
-"
+1;Quelles sont les conditions de validit? du visa ?
 1;Un visa est obligatoire ?
 1;Le visa est-il obligatoire pour ce voyage ? 
 1;Faut-il un visa pour se rendre ? ce Pays?
@@ -197,8 +196,7 @@ id_question_pivot;reponse_prop
 33;Quelle est la temp?rature en Juin?
 33;Quel temps fait-il en juin ?
 33;En juin il fait quelle saison ?
-34;"Que faut-il penser ? apporter ?
-"
+34;Que faut-il penser ? apporter ?
 34;Qu'est ce que je pourrais oublier ?
 34;Est-ce qu'il y a des affaires indispensables ? emporter?
 34;Qu'est il indispensable d'apporter avec soit lors d'un voyage ? Bali ? 
@@ -228,8 +226,7 @@ id_question_pivot;reponse_prop
 38;Quel est le prix des bagages suppl?mentaires ?
 38;Combien pour une valise en plus ?
 38;En soute, un suppl?ment de bagage co?te combien ?
-39;"Est ce qu'il y a beaucoup de moustique
-"
+39;Est ce qu'il y a beaucoup de moustique
 39;Est-ce qu'il est conseill? de prendre de  l'anti-moustique ? 
 39;Est-ce que je dois pr?voir une cr?me apaisante pour les piq?res d'insectes? 
 39;Y-a-til beaucoup de moustiques ?
@@ -261,8 +258,7 @@ id_question_pivot;reponse_prop
 43;Je cherche une compagnie a?rienne.
 44;A quelle heure faut-il se pr?senter ? l'a?roport pour ?tre sur de ne pas rater le vol?
 44;Combien de temps en avance faut-il arriver ?
-44;"A quelle heure est le check-in de l'avion ?
-"
+44;A quelle heure est le check-in de l'avion ?
 44;Faut-il que je me pr?sente ? l'a?roport en avance le jour du d?part ? 
 44;Combien de temps en avance avant le vol ?
 44;Combien de temps avant l'heure de vol, dois-je me pr?senter ? l'a?roport ?
@@ -362,8 +358,7 @@ id_question_pivot;reponse_prop
 60;Est ce que les animaux sont autoris?s dans les lieux de cultes ?
 60;Est-ce que je peux emmener mon chien au temple Tanah Lot ?
 60;Les animaux de compagnies sont-ils autoris?s dans les endroits culturels ?
-61;"Combien coutent les activit?s ?
-"
+61;Combien coutent les activit?s ?
 61;Quel est le cout moyen des activit?s ?
 61;Combien me coutera en moyenne une activit? sur place ? 
 61;Quel budget faut-il pr?voir par activit??
@@ -385,8 +380,7 @@ id_question_pivot;reponse_prop
 64;Quels sont les lieux ? visiter ?
 64;Quels endroits sont recommand?s pour d?couvrir Bali  ? 
 64;Est-ce qu'il y a des endroits ? visiter absolument?
-64;"Qu'est-ce que je dois visiter ? Bali ?
-"
+64;Qu'est-ce que je dois visiter ? Bali ?
 64;Quels sont les meilleures places touristiques ? Bali ?
 65;Quels sont les ?v?nements ? ne pas rater pendant mon s?jour ?
 65;Est ce qu'il y a des f?tes locales ?

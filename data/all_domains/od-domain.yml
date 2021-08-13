@@ -59,9 +59,9 @@ responses:
     utter_dont_understand: # diffrerent form the previous utterance
       - text: "Pouvez vous apporter plus de détails s'il vous plait ? \n je n'ai compris que {name} de ce que vous avez dit ^^'"
       - text: Pardon, je n'ai pas compris votre question.
-      - text: Pardon, je n'ai compris que {name} de votre question.
+      - text: "Pardon, je n'ai compris que {name} de votre question"
       - text: Hmmm, pas clair pour moi. Pouvez-vous reformuler ?
-      - text: Hmmm, merci de  reformuler. Je n'ai compris que {name} de votre question
+      - text: "Hmmm, merci de  reformuler. Je n'ai compris que {name} de votre question"
     utter_ask_another_question:
       - text: Très bien posez moi une autre quesstion
       - text: Alors je suis prêt à répondre à votre prochaine question

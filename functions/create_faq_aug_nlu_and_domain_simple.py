@@ -40,20 +40,20 @@ with open("data/all_domains/faq-aug-domain.yml", "wt", encoding="utf-8") as f:
 
 
 
-#pas utile
+# #pas utile
 
-#merge des deux nlu
-#combiner les deux fichiers faq-domain.yml et od-domain.yml en commun de manière automatique
-#ouverture des deux fichiers yml
-#importation de faq-domain.yml
-with open("data/nlu/faq-nlu.yml", 'rb') as stream:
-        faq_domain = yaml.load(stream)
-#importation de od-domain.yml
-with open("data/nlu/faq-aug-nlu.yml", 'rb') as stream:
-        od_domain = yaml.load(stream) 
-for num_pivot in range(0,len(set(data_base["id_question_pivot"]))):
-    od_domain['nlu'][num_pivot]['examples'] = od_domain['nlu'][num_pivot]['examples'] + faq_domain['nlu'][num_pivot]['examples'][:-1] 
-    od_domain['nlu'][num_pivot]['examples'] = od_domain['nlu'][num_pivot]['examples'].replace("-","").split("\n")
-with open("stand-and-aug-bot-nlu-merged.yml", 'w') as stream:
-    ruamel.yaml.round_trip_dump(od_domain, stream, indent=2, block_seq_indent=0)   
+# #merge des deux nlu
+# #combiner les deux fichiers faq-domain.yml et od-domain.yml en commun de manière automatique
+# #ouverture des deux fichiers yml
+# #importation de faq-domain.yml
+# with open("data/nlu/faq-nlu.yml", 'rb') as stream:
+#         faq_domain = yaml.load(stream)
+# #importation de od-domain.yml
+# with open("data/nlu/faq-aug-nlu.yml", 'rb') as stream:
+#         od_domain = yaml.load(stream) 
+# for num_pivot in range(0,len(set(data_base["id_question_pivot"]))):
+#     od_domain['nlu'][num_pivot]['examples'] = od_domain['nlu'][num_pivot]['examples'] + faq_domain['nlu'][num_pivot]['examples'][:-1] 
+#     od_domain['nlu'][num_pivot]['examples'] = od_domain['nlu'][num_pivot]['examples'].replace("-","").split("\n")
+# with open("stand-and-aug-bot-nlu-merged.yml", 'w') as stream:
+#     ruamel.yaml.round_trip_dump(od_domain, stream, indent=2, block_seq_indent=0)   
 
