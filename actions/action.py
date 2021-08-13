@@ -362,7 +362,7 @@ class ActionBotAdaptiveAnswer(Action):
             return []
 
         elif user_current_intent_id == None:
-            dispatcher.utter_message(template="utter_dont_understand") # If the user doesn't choose anything among confusion'propositions (make sense when adaptive anwser comes after confusion)
+            dispatcher.utter_message(template="utter_give_more_details") # If the user doesn't choose anything among confusion'propositions (make sense when adaptive anwser comes after confusion)
             return []
         else:
             #get all responses for that id
@@ -491,8 +491,12 @@ class ActionAskClarification(Action):
         )
         if len(intent_ranking) > 1 :
             #user question not clear enough
-            if intent_ranking[0].get("confidence")<0.7:
-                dispatcher.utter_message(text= f"Pouvez vous apporter plus de détails s'il vous plait ? \n je n'ai compris que {round(100*intent_ranking[0].get('confidence'),2)}% de ce que vous avez dit ^^'" )
+            var_confidence = intent_ranking[0].get("confidence")
+            if var_confidence < 0.7:
+                dispatcher.utter_message(
+                    template="utter_dont_understand",
+                    name="round(100*var_confidence,2)}%"
+                )               
                 return [SlotSet("test_sentences", intent_ranking) ]
             else:
                 diff_intent_confidence = intent_ranking[0].get(
@@ -588,7 +592,7 @@ class ActionAskClarification(Action):
                         dispatcher.utter_message(text="Je vous écoute pour votre question")
                         return []
                     # elif user_current_intent_id == None:
-                    #     dispatcher.utter_message(template="utter_dont_understand")
+                    #     dispatcher.utter_message(template="utter_give_more_details")
                     #     return []
                     else:
                         #get all responses for that id

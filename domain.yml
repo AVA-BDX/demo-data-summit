@@ -150,15 +150,15 @@ slots:
         influence_conversation: true
 responses:
     utter_greet:
-      - text: salut comment vas-tu ?
-      - text: Bonjour ça va ?
+      - text: salut ?
+      - text: Bonjour ?
+      - text: Hello ?
     utter_goodbye:
       - text: Au revoir
+      - text: A plus
+      - text: A bientôt ?
     utter_iamabot:
       - text: Je suis un bot créé grâce à Rasa par Talan
-    utter_did_that_help:
-      - text: cela vous a-t-il aidé ?
-      - text: êtes vous satisfaits de la réponse ?
     utter_ask_note:
       - text: donnez une note entre 1 et 5 pour exprimer votre satisfaction
         buttons:
@@ -179,10 +179,19 @@ responses:
     utter_reformulate:
       - text: pouvez-vous reformuler la question ?
       - text: très bien, reformulez votre question
-    utter_dont_understand:
+      - text: Merci de formuler différemment votre question
+    utter_give_more_details:
       - text: Très bien, donnez-moi plus de détails alors
       - text: Ok, on ne s'est pas compris, pouvez-vous reformuler votre question?
       - text: Hmmm, je n'ai donc pas compris! pouvez-vous me le dire différements?
+    utter_dont_understand:
+      - text: "Pouvez vous apporter plus de détails s'il vous plait ? \n je n'ai compris\
+            \ que {var_confidence} de ce que vous avez dit ^^'"
+      - text: Pardon, je n'ai pas compris votre question.
+      - text: Pardon, je n'ai compris que {var_confidence} de votre question.
+      - text: Hmmm, pas clair pour moi. Pouvez-vous reformuler ?
+      - text: Hmmm, merci de  reformuler. Je n'ai compris que {var_confidence} de
+            votre question
     utter_ask_another_question:
       - text: Très bien posez moi une autre quesstion
       - text: Alors je suis prêt à répondre à votre prochaine question
