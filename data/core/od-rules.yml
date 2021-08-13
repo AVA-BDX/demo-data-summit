@@ -1,0 +1,13 @@
+version: "2.0"
+
+rules:
+
+- rule: bot says hello if the user says hello
+  steps:
+  - intent: greet
+  - action: utter_greet
+
+- rule: bot anwser to the challenge
+  steps:
+  - intent: bot_challenge
+  - action: utter_iamabot

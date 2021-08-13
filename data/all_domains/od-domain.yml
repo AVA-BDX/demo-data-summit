@@ -19,16 +19,18 @@ intents:
 
 responses:
     utter_greet:
-      - text: salut comment vas-tu ?
-      - text: Bonjour ça va ?
+      - text: salut ?
+      - text: Bonjour ?
+      - text: Hello ?
     utter_goodbye:
       - text: Au revoir
       - text: A plus
+      - text: A bientôt ?
     utter_iamabot:
       - text: Je suis un bot créé grâce à Rasa par Talan
-    utter_did_that_help:
-      - text: cela vous a-t-il aidé ?
-      - text: êtes vous satisfaits de la réponse ?
+    # utter_did_that_help:
+    #   - text: cela vous a-t-il aidé ?
+    #   - text: êtes vous satisfaits de la réponse ?
     utter_ask_note:
       - text: donnez une note entre 1 et 5 pour exprimer votre satisfaction
         buttons:

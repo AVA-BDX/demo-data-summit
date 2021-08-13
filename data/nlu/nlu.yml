@@ -147,7 +147,6 @@ nlu:
     - hello
     - hey
     - salut
-    - hey ça va ?
 
 - intent: goodbye
   examples: |
@@ -204,20 +203,20 @@ nlu:
     - es tu un bot ?
     - es tu un humain ?
     - suis-je en train de parler à un bot ?
-    - am I talking to a human?
+    - suis-je en train de parler à un humain ?
 
-- intent: helpdesk
-  examples: |
-    - je voudrais un [ordinateur](equipemnt_helpdesk) et un [smartphone](equipemnt_helpdesk)
-    - il me faut [devTools](equipemnt_helpdesk) et un [clavier](equipemnt_helpdesk)
-    - j'ai besoin d'installer [vsCode](equipemnt_helpdesk)
-    - je veux un [adminAccess](equipemnt_helpdesk), d'un [ordinateur](equipemnt_helpdesk) et d'une [souris](equipemnt_helpdesk)
-    - il me faut une [souris](equipemnt_helpdesk) et un [clavier](equipemnt_helpdesk)
-    - je voudrais installer [devTools](equipemnt_helpdesk), un [clavier](equipemnt_helpdesk) et [vsCode](equipemnt_helpdesk)
-    - [vsCode](equipemnt_helpdesk)
-    - [vs code](equipemnt_helpdesk)
-    - j'ai besoin d'un [smart phone](equipemnt_helpdesk)
-    - je voudrais avoir des [droits](equipemnt_helpdesk) [admin](equipemnt_helpdesk)
-    - il me faut un [calendarAccess](equipemnt_helpdesk)
-    - j'aimerais avoir [accès](equipemnt_helpdesk) au [calendrier](equipemnt_helpdesk)
+# - intent: helpdesk
+#   examples: |
+#     - je voudrais un [ordinateur](equipemnt_helpdesk) et un [smartphone](equipemnt_helpdesk)
+#     - il me faut [devTools](equipemnt_helpdesk) et un [clavier](equipemnt_helpdesk)
+#     - j'ai besoin d'installer [vsCode](equipemnt_helpdesk)
+#     - je veux un [adminAccess](equipemnt_helpdesk), d'un [ordinateur](equipemnt_helpdesk) et d'une [souris](equipemnt_helpdesk)
+#     - il me faut une [souris](equipemnt_helpdesk) et un [clavier](equipemnt_helpdesk)
+#     - je voudrais installer [devTools](equipemnt_helpdesk), un [clavier](equipemnt_helpdesk) et [vsCode](equipemnt_helpdesk)
+#     - [vsCode](equipemnt_helpdesk)
+#     - [vs code](equipemnt_helpdesk)
+#     - j'ai besoin d'un [smart phone](equipemnt_helpdesk)
+#     - je voudrais avoir des [droits](equipemnt_helpdesk) [admin](equipemnt_helpdesk)
+#     - il me faut un [calendarAccess](equipemnt_helpdesk)
+#     - j'aimerais avoir [accès](equipemnt_helpdesk) au [calendrier](equipemnt_helpdesk)
  
