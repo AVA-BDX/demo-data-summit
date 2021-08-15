@@ -143,8 +143,6 @@ slots:
         type: any
     user_wants_details:
         type: any
-    test_sentences:
-        type: any
     user_want_given_anws:
         type: bool
         influence_conversation: true
@@ -1458,6 +1456,7 @@ actions:
   - action_increment_confusion_incomprehension
   - action_set_confusion_slot_to_none
   - action_ask_another_question
+  - action_session_start
 forms:
     note_and_pseudo_asking_form:
         note:

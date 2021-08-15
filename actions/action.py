@@ -4,7 +4,7 @@ from typing import Any, Dict, List, Text, Optional
 from rasa_sdk import Action,  Tracker
 from rasa_sdk.types import DomainDict
 from rasa_sdk.executor import CollectingDispatcher
-from rasa_sdk.events import AllSlotsReset, SlotSet, EventType, SessionStarted, ActionExecuted, Form
+from rasa_sdk.events import AllSlotsReset, SlotSet, EventType, SessionStarted, ActionExecuted, Form, UserUtteranceReverted
 from rasa_sdk.forms import FormAction, FormValidationAction, REQUESTED_SLOT
 import psycopg2
 from psycopg2 import Error
@@ -24,6 +24,37 @@ import unicodedata
 from fuzzywuzzy import fuzz
 
 import json
+
+
+
+class ActionSessionStart(Action):
+    def name(self) :
+        return "action_session_start"
+
+    @staticmethod
+    def fetch_slots(tracker: Tracker):
+        """Collect slots that contain the user's name and phone number."""
+
+        slots = []
+        for key in ("name", "phone_number"):
+            value = tracker.get_slot(key)
+            if value is not None:
+                slots.append(SlotSet(key=key, value=value))
+        return slots
+
+    async def run(
+      self, dispatcher: CollectingDispatcher, tracker: Tracker, domain: Dict[Text, Any]
+    ) -> List[Dict[Text, Any]]:
+
+        # the session should begin with a `session_started` event
+        events = [SessionStarted()]
+
+        dispatcher.utter_message(text="Message d'accueil pour voir comment cela fonctionne sur rasa X")
+
+        # # an `action_listen` should be added at the end as a user message follows
+        # events.append(ActionExecuted("action_listen"))
+
+        return [UserUtteranceReverted(),Form("note_and_pseudo_asking_form")]
 
 
 
@@ -575,7 +606,7 @@ class ActionAskClarification(Action):
                     buttons.append({"title": "autre", "payload": f"/non_sense"})
 
                     dispatcher.utter_message(text=message_title, buttons=buttons)
-                    return [SlotSet("test_sentences", intent_ranking) ,SlotSet("confusion_1_id", id1),SlotSet("confusion_2_id", id2), SlotSet("confusion", True)]
+                    return [SlotSet("confusion_1_id", id1),SlotSet("confusion_2_id", id2), SlotSet("confusion", True)]
                 #no confison case
                 else:
                     #get the user profile
