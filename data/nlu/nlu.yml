@@ -1,222 +1,222 @@
 version: "2.0"
 
 nlu:
-- intent: number
-  examples: |
-    - 1
-    - 2
-    - 3
-    - 4
-    - 5
-    - 6
-    - 7
-    - 8
-    - 9
-    - 10
+  - intent: number
+    examples: |
+      - 1
+      - 2
+      - 3
+      - 4
+      - 5
+      - 6
+      - 7
+      - 8
+      - 9
+      - 10
 
-- intent: ask_reformulate
-  examples: |
-    - pouvez vous reformuler
-    - dis le moi autrement
-    - reformule
-    - dis le d'une autre manière
-    - dites le différemment
-    - je n'ai pas compris
-    - peux tu être plus clair
-    - soit plus explicite
-    - explique mieux
-    - parle français
-    - rien compris
-    - je n'ai pas compris
-    - pouvez-vous reformuler s'il vous plait ?
-    - pas compris
-    - je ne comprends pas
-    - Pas compris
-    - j'ai pas compris
-    - Je n'ai pas compris
+  - intent: ask_reformulate
+    examples: |
+      - pouvez vous reformuler
+      - dis le moi autrement
+      - reformule
+      - dis le d'une autre manière
+      - dites le différemment
+      - je n'ai pas compris
+      - peux tu être plus clair
+      - soit plus explicite
+      - explique mieux
+      - parle français
+      - rien compris
+      - je n'ai pas compris
+      - pouvez-vous reformuler s'il vous plait ?
+      - pas compris
+      - je ne comprends pas
+      - Pas compris
+      - j'ai pas compris
+      - Je n'ai pas compris
 
 
-- intent: confusion_1
-  examples: |
-    - la réponse de [gauche]gauche
-    - [gauche](gauche)
-    - [première](gauche) propositon
-    - celle de [gauche](gauche)
-    - [premiere](gauche) option
-    - [1er][gauche] choix
-    - [1e](gauche) choix
+  - intent: confusion_1
+    examples: |
+      - la réponse de [gauche]gauche
+      - [gauche](gauche)
+      - [première](gauche) propositon
+      - celle de [gauche](gauche)
+      - [premiere](gauche) option
+      - [1er][gauche] choix
+      - [1e](gauche) choix
 
-- intent: confusion_2
-  examples: |
-    - la réponse du [milieux](milieu)
-    - [milieu](milieu)
-    - [deuxième](milieu) propositon
-    - celle du [milieu](milieu)
-    - [deuxieme](milieu) option
-    - [2e]milieu choix
-    - [2em]milieu choix
+  - intent: confusion_2
+    examples: |
+      - la réponse du [milieux](milieu)
+      - [milieu](milieu)
+      - [deuxième](milieu) propositon
+      - celle du [milieu](milieu)
+      - [deuxieme](milieu) option
+      - [2e]milieu choix
+      - [2em]milieu choix
 
-- intent: non_sense
-  examples: |
-    - [autre](droit)
-    - je choisis l'[autre](droit)
-    - ni l'un ni l'[autre](droit)
-    - [troisième](droit) option
-    - [3e](droit) choix
-    - [droit](droit)
-    - la réponse tout à [droite](droit)
-    - celle de [droite](droit)
+  - intent: non_sense
+    examples: |
+      - [autre](droit)
+      - je choisis l'[autre](droit)
+      - ni l'un ni l'[autre](droit)
+      - [troisième](droit) option
+      - [3e](droit) choix
+      - [droit](droit)
+      - la réponse tout à [droite](droit)
+      - celle de [droite](droit)
 
-- intent: want_inform_profile
-  examples: |
-    - demande moi mon [profil](profile_exple)
-    - je veux changer mon [profil](profile_exple)
-    - [profil](profile_exple)
-    - ce [profile](profile_exple) ne me convient plus
-    - connais-tu mon [profile](profile_exple)
-    - sais tu ce [que j'aime ](profile_exple)?
-    - demande-moi mes [préférences](profile_exple)
-    - sais tu ce que je [préfère](profile_exple) ?
-    - demande ce que [je veux](profile_exple)
-    - tu connais mes phrases [préférées](profile_exple)
-    - tu connais mes réponses [préférées](profile_exple)
+  - intent: want_inform_profile
+    examples: |
+      - demande moi mon [profil](profile_exple)
+      - je veux changer mon [profil](profile_exple)
+      - [profil](profile_exple)
+      - ce [profile](profile_exple) ne me convient plus
+      - connais-tu mon [profile](profile_exple)
+      - sais tu ce [que j'aime ](profile_exple)?
+      - demande-moi mes [préférences](profile_exple)
+      - sais tu ce que je [préfère](profile_exple) ?
+      - demande ce que [je veux](profile_exple)
+      - tu connais mes phrases [préférées](profile_exple)
+      - tu connais mes réponses [préférées](profile_exple)
 
-- intent: short_utters
-  examples: |
-    - J'aime les phrases [courtes](short_utters_entity)
-    - des phrases [concises](short_utters_entity)
-    - [court](short_utters_entity)
-    - [courtes](short_utters_entity)
-    - phrases [courtes](short_utters_entity)
-    - [concises](short_utters_entity)
-    - des phrases [pas trop longues](short_utters_entity)
-    - J'aime les réponses [courtes](short_utters_entity)
-    - des réponses [concises](short_utters_entity)
-    - [court](short_utters_entity)
-    - [courtes](short_utters_entity)
-    - réponses [courtes](short_utters_entity)
-    - [concises](short_utters_entity)
-    - des réponses [pas trop longues](short_utters_entity)
-    - fais plus [court](short_utters_entity) dans des réponses
-    - [droit au but](short_utters_entity)
-    - va droit au but
+  - intent: short_utters
+    examples: |
+      - J'aime les phrases [courtes](short_utters_entity)
+      - des phrases [concises](short_utters_entity)
+      - [court](short_utters_entity)
+      - [courtes](short_utters_entity)
+      - phrases [courtes](short_utters_entity)
+      - [concises](short_utters_entity)
+      - des phrases [pas trop longues](short_utters_entity)
+      - J'aime les réponses [courtes](short_utters_entity)
+      - des réponses [concises](short_utters_entity)
+      - [court](short_utters_entity)
+      - [courtes](short_utters_entity)
+      - réponses [courtes](short_utters_entity)
+      - [concises](short_utters_entity)
+      - des réponses [pas trop longues](short_utters_entity)
+      - fais plus [court](short_utters_entity) dans des réponses
+      - [droit au but](short_utters_entity)
+      - va droit au but
 
-- intent: dont_care
-  examples: |
-    - ça m'est [égal](dont_care_entity)
-    - je [m'en fiche](dont_care_entity)
-    - peu [importe](dont_care_entity)
-    - comme [tu veux](dont_care_entity)
-    - [indifférent](dont_care_entity)
-    - j'aime [toutes](dont_care_entity) les réponses
-    - tu peux me donner n'[importe](dont_care_entity) qu'elle réponse
-    - donne moi [toutes](dont_care_entity)les phrases
-    - tu peux me proposer [toutes](dont_care_entity) les phrases
-    - [toutes](dont_care_entity)
-    - [toutes](dont_care_entity)
-    - [toutes](dont_care_entity)
-    - donne moi [toutes](dont_care_entity)  les réponses
-    - tu peux me proposer [toutes](dont_care_entity) les réponses
-    - [pas d'importance](dont_care_entity)
-    - bof
-    - Bof
- 
-- intent: long_utters
-  examples: |
-    - j'aime les [longues](long_utters_entity) phrases
-    - je préfères les phrases [détaillées](long_utters_entity)
-    - j'aime les [détails](long_utters_entity)
-    - [longues](long_utters_entity)
-    - [long](long_utters_entity)
-    - phrases [longues](long_utters_entity)
-    - [détaillées](long_utters_entity)
-    - j'aime les phrases [longues](long_utters_entity)
-    - j'adore les [longues](long_utters_entity) phrases
-    - j'ai les [longues](long_utters_entity) réponses
-    - je préfères les réponses [détaillées](long_utters_entity)
-    - réponses [longues](long_utters_entity)
-    - j'aime les réponses [longues](long_utters_entity)
-    - j'adore les [longues](long_utters_entity) réponses
-    - donne moi une réponse [détaillée](long_utters_entity)
-    - donne moi des réponses [longues](long_utters_entity) 
-    - finallement, je préfère les [longues](long_utters_entity)  réponses
+  - intent: dont_care
+    examples: |
+      - ça m'est [égal](dont_care_entity)
+      - je [m'en fiche](dont_care_entity)
+      - peu [importe](dont_care_entity)
+      - comme [tu veux](dont_care_entity)
+      - [indifférent](dont_care_entity)
+      - j'aime [toutes](dont_care_entity) les réponses
+      - tu peux me donner n'[importe](dont_care_entity) qu'elle réponse
+      - donne moi [toutes](dont_care_entity)les phrases
+      - tu peux me proposer [toutes](dont_care_entity) les phrases
+      - [toutes](dont_care_entity)
+      - [toutes](dont_care_entity)
+      - [toutes](dont_care_entity)
+      - donne moi [toutes](dont_care_entity)  les réponses
+      - tu peux me proposer [toutes](dont_care_entity) les réponses
+      - [pas d'importance](dont_care_entity)
+      - bof
+      - Bof
 
-- intent: greet
-  examples: |
-    - Bonjour
-    - hello
-    - hey
-    - salut
+  - intent: long_utters
+    examples: |
+      - j'aime les [longues](long_utters_entity) phrases
+      - je préfères les phrases [détaillées](long_utters_entity)
+      - j'aime les [détails](long_utters_entity)
+      - [longues](long_utters_entity)
+      - [long](long_utters_entity)
+      - phrases [longues](long_utters_entity)
+      - [détaillées](long_utters_entity)
+      - j'aime les phrases [longues](long_utters_entity)
+      - j'adore les [longues](long_utters_entity) phrases
+      - j'ai les [longues](long_utters_entity) réponses
+      - je préfères les réponses [détaillées](long_utters_entity)
+      - réponses [longues](long_utters_entity)
+      - j'aime les réponses [longues](long_utters_entity)
+      - j'adore les [longues](long_utters_entity) réponses
+      - donne moi une réponse [détaillée](long_utters_entity)
+      - donne moi des réponses [longues](long_utters_entity) 
+      - finallement, je préfère les [longues](long_utters_entity)  réponses
 
-- intent: goodbye
-  examples: |
-    - a plus
-    - ciao
-    - a plus tard
-    - au revoir
-    - bye
-    - a plus tard
-    - bye bye
+  - intent: greet
+    examples: |
+      - Bonjour
+      - hello
+      - hey
+      - salut
 
-- intent: affirm
-  examples: |
-    - oui, biensûr
-    - je veux bien, oui
-    - oui, s'il te plaît
-    - oui
-    - très bien
-    - compris
-    - super
-    - c'est cool
-    - oui, tout à fait
-    - exact
-    - bien
-    - ce serait super
-    - ce serait top
-    - merci
-    - tu es top
-    - Parfait
-    - Exellent !!
-    - Exellent
-    - Génial
-    - C'est Génial !!
+  - intent: goodbye
+    examples: |
+      - a plus
+      - ciao
+      - a plus tard
+      - au revoir
+      - bye
+      - a plus tard
+      - bye bye
 
-- intent: deny
-  examples: |
-    - c'est pas ma question
-    - mais non
-    - non
-    - Non
-    - NON
-    - pas du tout
-    - absolument pas
-    - pas ma question
-    - pas ce que j'ai demandé
-    - Pas ce que j'ai demandé
-    - ce n'est pas ma question
-    - Tu n'as rien compris
-    - Ce n'est pas ma question
-    - j'ai pas demandé ça
+  - intent: affirm
+    examples: |
+      - oui, biensûr
+      - je veux bien, oui
+      - oui, s'il te plaît
+      - oui
+      - très bien
+      - compris
+      - super
+      - c'est cool
+      - oui, tout à fait
+      - exact
+      - bien
+      - ce serait super
+      - ce serait top
+      - merci
+      - tu es top
+      - Parfait
+      - Exellent !!
+      - Exellent
+      - Génial
+      - C'est Génial !!
 
-- intent: bot_challenge
-  examples: |
-    - es tu un bot ?
-    - es tu un humain ?
-    - suis-je en train de parler à un bot ?
-    - suis-je en train de parler à un humain ?
+  - intent: deny
+    examples: |
+      - c'est pas ma question
+      - mais non
+      - non
+      - Non
+      - NON
+      - pas du tout
+      - absolument pas
+      - pas ma question
+      - pas ce que j'ai demandé
+      - Pas ce que j'ai demandé
+      - ce n'est pas ma question
+      - Tu n'as rien compris
+      - Ce n'est pas ma question
+      - j'ai pas demandé ça
 
-# - intent: helpdesk
-#   examples: |
-#     - je voudrais un [ordinateur](equipemnt_helpdesk) et un [smartphone](equipemnt_helpdesk)
-#     - il me faut [devTools](equipemnt_helpdesk) et un [clavier](equipemnt_helpdesk)
-#     - j'ai besoin d'installer [vsCode](equipemnt_helpdesk)
-#     - je veux un [adminAccess](equipemnt_helpdesk), d'un [ordinateur](equipemnt_helpdesk) et d'une [souris](equipemnt_helpdesk)
-#     - il me faut une [souris](equipemnt_helpdesk) et un [clavier](equipemnt_helpdesk)
-#     - je voudrais installer [devTools](equipemnt_helpdesk), un [clavier](equipemnt_helpdesk) et [vsCode](equipemnt_helpdesk)
-#     - [vsCode](equipemnt_helpdesk)
-#     - [vs code](equipemnt_helpdesk)
-#     - j'ai besoin d'un [smart phone](equipemnt_helpdesk)
-#     - je voudrais avoir des [droits](equipemnt_helpdesk) [admin](equipemnt_helpdesk)
-#     - il me faut un [calendarAccess](equipemnt_helpdesk)
-#     - j'aimerais avoir [accès](equipemnt_helpdesk) au [calendrier](equipemnt_helpdesk)
+  - intent: bot_challenge
+    examples: |
+      - es tu un bot ?
+      - es tu un humain ?
+      - suis-je en train de parler à un bot ?
+      - suis-je en train de parler à un humain ?
+
+  # - intent: helpdesk
+  #   examples: |
+  #     - je voudrais un [ordinateur](equipemnt_helpdesk) et un [smartphone](equipemnt_helpdesk)
+  #     - il me faut [devTools](equipemnt_helpdesk) et un [clavier](equipemnt_helpdesk)
+  #     - j'ai besoin d'installer [vsCode](equipemnt_helpdesk)
+  #     - je veux un [adminAccess](equipemnt_helpdesk), d'un [ordinateur](equipemnt_helpdesk) et d'une [souris](equipemnt_helpdesk)
+  #     - il me faut une [souris](equipemnt_helpdesk) et un [clavier](equipemnt_helpdesk)
+  #     - je voudrais installer [devTools](equipemnt_helpdesk), un [clavier](equipemnt_helpdesk) et [vsCode](equipemnt_helpdesk)
+  #     - [vsCode](equipemnt_helpdesk)
+  #     - [vs code](equipemnt_helpdesk)
+  #     - j'ai besoin d'un [smart phone](equipemnt_helpdesk)
+  #     - je voudrais avoir des [droits](equipemnt_helpdesk) [admin](equipemnt_helpdesk)
+  #     - il me faut un [calendarAccess](equipemnt_helpdesk)
+  #     - j'aimerais avoir [accès](equipemnt_helpdesk) au [calendrier](equipemnt_helpdesk)
  
