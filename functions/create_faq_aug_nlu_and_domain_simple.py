@@ -17,7 +17,7 @@ with open("data/nlu/faq-aug-nlu.yml", "wt", encoding="utf-8") as f:
         for row in range(len(data_base_pivot)):
             text = str(data_base_pivot.iloc[row,1])
             text = text.encode('utf8','ignore').decode('utf8').replace('\x92',"'").replace('\x9c','oe').replace('\x80','€').replace('\xa0',' ')
-            f.write(f"   - {text}\n")
+            f.write(f"    - {text}\n")
         f.write("\n")
 
 path2 = r"data/qna_data_bases/reponses_bot_augmente.csv"
