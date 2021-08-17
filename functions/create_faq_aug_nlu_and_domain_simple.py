@@ -60,7 +60,7 @@ for num_pivot in range(0,len(set(data_base["id_question_pivot"]))):
 faq_aug_nlu_yml['nlu'].extend(nlu_yml['nlu']) 
 for intent in range(len(set(data_base["id_question_pivot"])),len(nlu_yml['nlu']) + len(set(data_base["id_question_pivot"]))):
     faq_aug_nlu_yml['nlu'][intent]['examples'] =   faq_aug_nlu_yml['nlu'][intent]['examples'][:-1].replace("-","").encode('utf8', 'ignore').decode().replace('\x92',"'").replace('\x9c','oe').replace('\x80','€').replace('\xa0',' ').split("\n")
-with open("data/all-nlu.yml", 'w', encoding = "utf-8") as stream:
+with open("data/nlu.yml", 'w', encoding = "utf-8") as stream:
     ruamel.yaml.round_trip_dump(faq_aug_nlu_yml, stream, indent=4, block_seq_indent=2)   
 
 
