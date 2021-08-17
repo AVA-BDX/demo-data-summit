@@ -1,0 +1,1222 @@
+version: '2.0'
+nlu:
+  - intent: faq/1
+    examples: |
+      - ' Quelles sont les conditions de validit? du visa ?'
+      - ' Un visa est obligatoire ?'
+      - ' Le visa estil obligatoire pour ce voyage ? '
+      - ' Fautil un visa pour se rendre ? ce Pays?'
+      - ' Fautil avoir un visa pour aller ? Bali ?'
+      - " aije besoin d'un visa ?"
+      - " Estce qu'il faut un [visa](visa) ?"
+      - " Estce que j'ai besoin d'un [visa](visa) ?"
+      - ' Quel est le [visa](visa)'
+      - ' Estce qu’il faut un [visa](visa) ?'
+      - " Aije besoin d'un [visa](visa)"
+      - ' [visa](visa)'
+      - " Est ce qu'il faut un [visa](visa)"
+      - ' Dois je prendre un [visa](visa)'
+      - ' un [visa](visa) est il obligatoire ?'
+  - intent: faq/2
+    examples: |
+      - ' Fautil un passeport pour ce voyage ?'
+      - ' Ai je besoin de mon passeport ?'
+      - " Est ce qu'un passeport valide est obligatoire?"
+      - ' Le passeport estil n?cessaire pour voyage ? Bali ? '
+      - ' Je dois avoir un passeport ?'
+      - ' Un passeport est obligatoire ?'
+      - " Estce qu'il faut un [passeport](passeport) ?"
+      - ' [passeport](passeport)'
+      - " Est ce qu'il faut un [passeport](passeport)"
+      - ' Dois je prendre mon [passeport](passeport)'
+  - intent: faq/3
+    examples: |
+      - ' Fautil faire un test Covid avant de partir ?'
+      - ' Le test PCR est il oblig? pour entrer ? Bali ?'
+      - ' Fautil faire le test PCR ? '
+      - " Avant combien d'heure du vol doisje faire un test PCR?"
+      - " Quelles sont les confitions pour prendre l'avions en cette p?riode de coronavirus\
+        \ ?"
+      - ' estce obligatoire de faire un test de Corona ?'
+      - " Estce qu''un [test PCR](PCR) est obligatoire ?"
+      - ' il faut faire un [PCR](PCR) ?'
+      - ' il faut faire un test [PCR](PCR) ?'
+  - intent: faq/4
+    examples: |
+      - ' Doisje me faire vacciner pour aller ? Bali ? '
+      - ' Fautil se faire vacciner ?'
+      - ' Quels vaccins sont obligatoires ?'
+      - ' Doisje me vacciner avant de me rendre ? Bali?'
+      - ' Quels sont les vaccins ? faire ? '
+      - ' Il y atil des vaccins obligatoires ?'
+      - " Estce qu'il y a des [vaccins](vaccins) obligatoires?"
+      - ' Les [vaccins](vaccins) sont il obligatoires ?'
+      - ' doisje faire un [vaccin](vaccins) ?'
+      - ' Estce que je dois faire un [vaccin](vaccins)'
+      - ' quels sont les [vaccins](vaccins) que je dois faire ?'
+      - ' [vaccins](vaccins)'
+      - ' [vaccins](vaccins) obligatoire'
+      - ' [vaccins](vaccins) obligatoires'
+  - intent: faq/5
+    examples: |
+      - ' Est ce que les cartes bancaires sont accept?es partout ? Bali?'
+      - ' Estce que les CB fran?aises sont accept?es Bali ?'
+      - ' Ma carte bleue fonctionnetelle l? bas ?'
+      - ' Quels sont les moyens de paiement qui fonctionne sur place ? '
+      - ' Estce que je peux payer par carte ? Bali ?'
+      - ' Je peux utiliser ma carte bancaire ? Bali ?'
+      - ' Est ce que je pourrais utiliser ma [carte de crédit](carte_credit) làbas?'
+      - ' Je peux utiliser ma [carte de crédit](carte_credit) sur place ?'
+      - ' [carte de crédit](carte_credit)'
+      - ' je peux payer par [carte bancaire](carte_credit)?'
+      - ' carte bancaire '
+      - ' je peux utiliser ma carte bancaire  '
+  - intent: faq/6
+    examples: |
+      - ' Ai je des frais suppl?mentaires pour retirer ?'
+      - ' Quels sont les frais pour les retrait de cash ?'
+      - ' Comment faire pour ?viter les frais de retrait suppl?mentaire sur place
+        ? '
+      - " Estce que les frais de retrait d'argent dans les distributeurs sont factur?s?"
+      - " Quel est le % de frais suppl?mentaires lors d'un retrait ? "
+      - " Le retrait d'argent g?n?retil des frais suppl?mentaires ?"
+      - " Le [retrait d'argent](retrait_argent) génèretil des frais supplémentaires\
+        \ ?"
+      - " Estce que j'aurais des frais supplémentaires si j'effectue un [retrait](retrait_argent)\
+        \ ?"
+      - " Estce qu'l y a des frais supplémentaires liés aux [retraits](retrait_argent)\
+        \ d'argent ?"
+      - " [retrait d'argent](retrait_argent)"
+      - " Retirer de l'argent"
+  - intent: faq/7
+    examples: |
+      - " Estil n?cessaire d'avoir du liquide sur soi ? "
+      - ' Aije besoin de cash ?'
+      - ' Combien fautil pr?voir de cash sur place ?'
+      - " Estce qu'il faut obligatoirement avoir de l'argent liquide ou la carte bancaire\
+        \ suffit?"
+      - " Estce qu'il faut du liquide ?"
+      - " Doisje avoir de l'argent liquide sur moi ?"
+      - " Estce qu'il faut prévoir de l'[argent liquide](argent_liquide) ?"
+      - " y a t'il besoin d'[argent liquide](argent_liquide)?"
+      - " Dois je prendre de l'[argent liquide](argent_liquide)"
+      - " Est ce qu'il me faut de l'[argent liquide](argent_liquide)"
+      - ' Doisje prendre du [cash](argent_liquide)'
+  - intent: faq/8
+    examples: |
+      - " Quelles sont les conditions d'annulation du voyage?"
+      - " Estil possible d'annuler a n'importe quel moment ?"
+      - ' Puisje annuler mon voyage ?'
+      - " Quelles sont les conditions d'annulation ?"
+      - ' Comment annuler mon voyage ? '
+      - " Estce possible d'annuler le voyage ? tout moment ?"
+      - ' Estce que je peux [annuler](annuler) le [voyage](voyage) à tout moment?'
+      - " Est il possible d'[annuler](annuler) mon [voyage](voyage) quand je le souhaite"
+      - " Est il possible d'[annuler](annuler) mon [voyage](voyage) ?"
+      - ' Estce que je peux [annuler](annuler) mon [voyage](voyage) quand je le souhaite
+        ?'
+      - ' [Annuler](annuler) mon [voyage](voyage)'
+  - intent: faq/9
+    examples: |
+      - ' Quelle est la monnaie du pays ?'
+      - " Estce qu'ils acceptent les euros ? Bali  ? "
+      - ' Quelle est la monnaie sur place ?'
+      - " Quel est le moyen d'?change ? Bali?"
+      - ' Quelle est la devise locale ?'
+      - ' Quelle est le nom de la monnaie ? Bali ?'
+      - ' Quelle est la [monnaie](monnaie) à Bali ?'
+      - ' Ils utilisent quoi comme [monnaie](monnaie) ?'
+      - ' [monnaie](monnaie) de Bali'
+      - ' Quel est la [monnaie](monnaie) de Bali'
+  - intent: faq/10
+    examples: |
+      - " Estce que je pourrais ?tre rembours? en cas d'annulation du voyage?"
+      - ' Comment me faire rembourser si mon voyage est annul? ?'
+      - " Comment estce que je serais rembourser en cas d'annulation ? "
+      - " Si j'annule, comment suisje rembours? ?"
+      - ' Comment se faire rembourser un voyage annul?'
+      - ' Si mon voyage est annul?, comment suisje rembours? ?'
+      - " Quel est le mode de [remboursement](remboursement) en cas d'[annulation](annuler)\
+        \ du voyage ?"
+      - ' Comment je serais [remboursé](remboursement) ?'
+      - " Comment être [remboursée](remboursement) en cas d'[annulation](annuler)\
+        \ de mon [voyage](voyage) ?"
+      - " si j'annule mon voyage, quel est le mode de [remboursement](remboursement)\
+        \ ?"
+      - ' remboursement voyage'
+      - ' je veux me faire rembourser'
+      - ' comment je fais pour me faire rembourser ?'
+      - ' je voudrais me faire rembourser mon voyage'
+      - " j'aimerais me faire rembourser mon billet"
+      - ' comment je serai remboursé'
+      - " j'aimerais un remboursement"
+  - intent: faq/11
+    examples: |
+      - " Y a t'il des normes sanitaires particuli?re a respecter ? "
+      - ' Quelles sont les r?glementations sanitaires ?'
+      - " Y'atil des maladies ? Bali ?"
+      - " Estce que l'eau de robinet est potable?"
+      - " Estce que l'eau est potable ? Bali ?"
+      - ' Quelles recommandations sanitaires doisje suivre ? Bali ?'
+      - ' Quelles sont les [préconisations](preconisation) [sanitaires](sanitaires)
+        ?'
+      - " Estce qu'il y a des précautions [sanitaires](sanitaires) ?"
+      - " Estce qu'il y a des consignes [sanitaires](sanitaires)  ?"
+      - ' [préco](preconisation) sanitaires'
+      - ' reglementation [sanitaire](sanitaires)'
+      - " Y a t'il des préconisation sanitaire spécifiques ?"
+  - intent: faq/12
+    examples: |
+      - ' Comment changer mon voyage ?'
+      - ' Je voudrais modifier ma r?servation'
+      - ' Que faire pour modifier ma r?servation ? '
+      - " Estce qu'il y a moyen de modifier la r?servation?"
+      - ' Je veux modifier mon vol. '
+      - ' Comment modifier mon billet'
+      - ' Comment [modifier](modifier) ma [réservation](reservation) ?'
+      - ' je veux [modifier](modifier) une réservation'
+      - ' [Modif](modifier) ma [réservation](reservation)'
+      - ' Modifier ma réservation'
+  - intent: faq/13
+    examples: |
+      - ' Que faire pour annuler ma r?servation ?'
+      - ' Estce que je peux annuler ma r?servation?'
+      - ' Je voudrais annuler ma reservation'
+      - ' Comment faire une annulation pour mon vol   ? '
+      - ' Je veux annuler mon vol'
+      - ' Comment annuler mon billet ?'
+      - ' Comment [annuler](annuler) ma [réservation](reservation) ?'
+      - ' Je fais comment pour [annuler](annuler) une [réservation](reservation) ?'
+      - ' Annuler ma réservation'
+      - ' je veux annuler mon vol'
+      - ' je veux annuler mon voyage'
+  - intent: faq/14
+    examples: |
+      - ' Une assurance voyage est elle oblig?e'
+      - ' Fautil obligatoirement prendre une assurance.'
+      - ' Fautil forcement prendre une assurance voyage ? '
+      - " Estce que c'est obligatoire d'avoir une assurance voyage?"
+      - ' Estce que je dois avoir une assurance voyage ?'
+      - " L'assurance de voyage estelle obligatoire ?"
+      - " Estce que l'[assurance](assurance) voyage est obligatoire ?"
+      - " me faudra t'il une [assurance](assurance) voyage ?"
+      - " Suisje obligé d'avoir une [assurance](assurance) [voyage](voyage)"
+      - ' doisje prendre une assurance [voyage](voyage) ?'
+      - ' [assurance](assurance) voyage obligatoire'
+  - intent: faq/15
+    examples: |
+      - ' Comment ?tre pris en charge en cas de maladie ? Bali?'
+      - " Existetil une Carte d'Assurance Maladie pour Bali ?"
+      - " Quel est l'?quivalent de la carte europ?enne ? l'?tranger ? "
+      - " Est ce qu'il y a une assurance maladie ? Bali ?"
+      - " Estce qu'il y a une carte d'assurance maladie internationale ?"
+      - " Estceque je b?n?ficie d'un ?quivalent de carte d'assurance maladie ? Bali\
+        \ ?"
+      - " Estce qu'il y a un équivalent de [carte européenne](carte_européenne) d'assurance\
+        \ maladie à l'étranger ?"
+      - ' ont t il des [carte européenne](carte_européenne) là bas ?'
+      - ' [Assurance maladie](carte_européenne)'
+      - ' Y a til un type de carte européenne à Bali ?'
+      - ' Y a til un genre de carte européenne à Bali ?'
+  - intent: faq/16
+    examples: |
+      - ' Quelles sont les meilleures assurance pour ce voyage ?'
+      - ' Ou puis souscrire une assurance voyage ?'
+      - ' Ou puisje souscrire ? une assurance pour mon voyage ? '
+      - ' Comment trouver une assurance voyage?'
+      - ' Je veux une assurance voyage. '
+      - ' Je cherche une assurance de voyage'
+      - ' Où estce que je peux trouver une [assurance](assurance) voyage?'
+      - ' Je veux une [assurance](assurance) [voyage](voyage)'
+      - ' Comment trouver une assurance voyage ?'
+      - ' assurance voyage'
+      - ' Ou trouver une assurance [voyage](voyage)'
+  - intent: faq/17
+    examples: |
+      - ' Que fautil pr?voir comme assurance pour le voyage ?'
+      - ' Comment trouver la meilleur assurance voyage ?'
+      - ' Ou estce que je peux trouver la meilleure assurance voyage ? '
+      - ' Comment trouver la meilleure assurance voyage?'
+      - ' Je souhaite prendre une assurance voyage.'
+      - ' Je cherche une bonne assurance de voyage.'
+      - ' Quelle est la meilleure [assurance](assurance) voyage ?'
+      - ' Et du coup quelle est la meilleure [assurance](assurance) ?'
+      - ' Quelle est la meilleure assurance [voyage](voyage)'
+  - intent: faq/18
+    examples: |
+      - ' O? estce que je pourrais trouver de bons h?tels?'
+      - ' Quels sont les meilleurs hotels ?'
+      - ' Comment puisje trouver les h?tels les plus populaires ? Bali ? '
+      - ' Quel hotel choisir ?'
+      - ' Quels h?tels me recommandezvous ? '
+      - ' Quels sont les bons h?tels ? Bali ?'
+      - ' Quels sont les [hôtels](hotels) recommandés ?'
+      - ' Quels hôtels estce que vous me [recommandez](recommander) ?'
+      - ' Tu me [recommandes](recommander) quel [hôtel](hotels) ?'
+      - ' quel  hôtel est le plus [populaire](recommander) ?'
+      - ' quels sont les bons [hôtels](hotels) ?'
+      - ' Quel hotel me conseillez vous ?'
+      - ' hotel'
+      - ' hotels'
+      - ' hotels recommandés'
+      - ' hotels conseillés'
+      - ' me recommandez vous des hotels'
+      - ' des hotels à me proposer ?'
+      - ' des hotels proposés?'
+  - intent: faq/19
+    examples: |
+      - ' Estce que je peux r?gler avec des ch?ques voyages entreprise ?'
+      - ' Comment puisje r?gler mon voyage ?'
+      - ' Comment payer mon voyage ?'
+      - ' Avec quel type de CB puisje payer mon voyage?'
+      - ' Comment r?gler mon billet ? '
+      - ' Par quel moyen puisje r?gler mon voyage ?'
+      - ' Quels sont les [moyens de paiement](moyen_paiement) pour régler mon voyage
+        ?'
+      - ' Comment estce que je peux [payer](moyen_paiement)  mon billet?'
+      - ' pour mon voyage, quels sont les moyens de [moyens de paiement](moyen_paiement)
+        ?'
+      - ' quels sont les moyens de payement ?'
+      - ' moyens de payement pour voyage'
+      - ' je fais comment por régler le voyages ?'
+  - intent: faq/20
+    examples: |
+      - ' Est ce que je peux agences de voyage qui proposent des voyages organis?s?'
+      - ' Je voudrais participer ? des voyages organis?s'
+      - ' Puisje avoir un s?jour programm? ?'
+      - " Existe t'il des voyages organis?s ? faire sur place ? "
+      - ' Estce que des agences organisent des voyagent pour Bali ? '
+      - ' Il y a des voyages organis?s ?'
+      - " Estce qu'il y a des [voyages organisés](voyages_organise) ?"
+      - ' Comment trouver des [voyages organisés](voyages_organise) ?'
+      - ' Comment trouver des [voyages organisés](voyages_organise) ?'
+      - ' je cherche des voyages organisés'
+  - intent: faq/21
+    examples: |
+      - ' Je voudrais r?server un guide sur place'
+      - ' Comment faire pour trouver un guide touristique ? Bali ? '
+      - ' Puisje avoir un guide sur place ?'
+      - ' Estce que je pourrais ?tre aiguill? par un guide touristique?'
+      - ' Je veux un guide touristique '
+      - ' Comment r?server un guide ? Bali ?'
+      - ' Estil possible de réserver un [guide touristique](guide_touristique) sur
+        place ?'
+      - ' sur place je voudrais un [guide touristique](guide_touristique)'
+      - ' Comment avoir un [guide touristique](guide_touristique) sur place ?'
+  - intent: faq/22
+    examples: |
+      - " Estce compliqu? d'utiliser sa carte bancaire ? Bali ? "
+      - ' Vautil mieux ?changer son argent avant de partir ?'
+      - ' Fautil prendre du cash avant de partir ?'
+      - " Estce que c'est simple de faire un change de monnaie sur place?"
+      - ' Comment ?changer ma monnaie ?'
+      - " C'est mieux de faire un ?change de monnaie avant ou apr?s le voyage ?"
+      - " Estil [recommandé](recommander) d'effectuer un [change](change) de monnaie\
+        \ avant le voyage ?"
+      - ' Estce que je dois [changer](change) ma monnaie avant mon [voyage](voyage)
+        ?'
+      - ' Estce que je dois faire un change de [monnaie](monnaie) avant ?'
+      - ' doisje faire [échanger](change) la [monnaies](monnaie) avant de [voyager](voyage)
+        ?'
+  - intent: faq/23
+    examples: |
+      - ' Estce que tous les h?tels ont de la wifi?'
+      - " Est ce qu'il y a le wifi dans l'hotel ?"
+      - " Estce qu'il y a des h?tel qui proposent une connexion internet sur place\
+        \ ? "
+      - ' Je voudrais su Wifi dans mon hotel'
+      - ' Je veux une connexion internet dans mon h?tel'
+      - ' Je cherche un h?tel avec une connexion internet'
+      - ' Comment faire pour avoir un [hôtel](hotels) avec une connexion [internet](internet)
+        (wifi) ?'
+      - ' Je veux une connexion [internet](internet) dans mon [hôtel](hotels)'
+      - ' Estce que je peux avoir une connexion [internet](internet) dans mon hôtel?'
+      - ' Je veux une connexion wifi dans mon hôtel'
+      - " Estil possible d'avoir une connexion [internet](internet) dans mon hôtel\
+        \ ?"
+      - " Y a t'il de la [wifi](internet) ?"
+      - ' estce que les [hôtels](hotels) on la [wifi](internet)  ?'
+      - " est ce qu'il y a [internet](internet) dans les hôtels ?"
+  - intent: faq/24
+    examples: |
+      - ' Puis je avoir la 4g ? Bali ?'
+      - " Estce qu'il y a facilement la 4G ?"
+      - ' Estce que mon t?l?phone peut capter la 4G sur place ? '
+      - ' Estce que je peux avoir un forfait t?l?phoniques avec la 4G ? Bali?'
+      - ' Comment avoir la 4G ? Bali ?'
+      - ' Aton la 4G ? Bali ?'
+      - " Estce qu'il y a la [4G](quatre_G) à Bali ?"
+      - " Estce qu'il y a la [4g](quatre_G) sur place ?"
+      - ' La [4G](quatre_G) est disponible à Bali ?'
+      - ' La [4G](quatre_G) existe ?'
+  - intent: faq/25
+    examples: |
+      - ' Comment avoir un t?l?phone ? Bali ?'
+      - ' O? puisje acheter un forfait t?l?phonique?'
+      - ' Comment faire pour pouvoir t?l?phoner su place ? '
+      - ' Je voudrais un forfait t?l?phonique sur place'
+      - ' Comment avoir un forfait t?l?phonique ? Bali ?'
+      - ' Quels sont les forfaits t?l?phoniques ? Bali ?'
+      - " Estce qu'il y a des [forfaits téléphoniques](forfaits_téléphonique) à Bali\
+        \ ?"
+      - ' Comment avoir un [forfait de téléphone](forfaits_téléphonique) local ?'
+      - ' Estce que des forfaits téléphoniques existent à Bali ?'
+      - " Estce qu'il y a des [forfait téléphoniques](forfaits_téléphonique)?"
+      - ' comment faire pour [téléphoner](forfaits_téléphonique) a bali   ?'
+      - ' comment je fais pour les [forfaits téléphoniques](forfaits_téléphonique)?'
+      - ' Il y a des [forfaits téléphoniques](forfaits_téléphonique) à bali ?'
+  - intent: faq/26
+    examples: |
+      - ' Quel est le budget hebdomadaire sur place pour une semaine ? Bali  ? '
+      - ' Combien me fautil pour une semaine ?'
+      - ' Quel est le cout ? la semaine ?'
+      - ' Quel budget fautil pr?voir pour une semaine de s?jour?'
+      - ' Quel budget pour une semaine ? '
+      - ' Une semaine de s?jour co?te combien en moyenne ?'
+      - ' Combien [coûte](prix) une semaine de [séjour](sejour) en moyenne sur place
+        ?'
+      - " Quel [budget](prix) pour un séjour d'une semaine à Bali ?"
+      - ' Quel budget pour une semaine à Bali ?'
+      - ' Quel est le [budget](prix) pour une semaine à Bali ?'
+      - " un séjour d'une durée de 1 semaine me [coutera](prix) combien ?"
+      - " Combien [coûte](prix) une séjour d'une semaine à Bali ?"
+      - ' cela coute combien un [séjour](sejour) en moyenne  ?'
+      - " Quel est le [prix](prix) moyen d'un [séjour](sejour) a bali   ?"
+      - ' une semaine de [séjour](sejour) coûte combien ?'
+  - intent: faq/27
+    examples: |
+      - " Combien d'heure de d?calage il y a"
+      - " Estce qu'il y a un gros d?calage horaire? "
+      - " Combien d'heures de d?calage horaire y a til entre la France et Bali?"
+      - " Combien d'heure de d?calage ? Paris part rapport ? Bali ?"
+      - ' Quel est le d?calage horaire entre la France et Bali ?'
+      - ' Quel est le [décalage](decalage) horaire ?'
+      - " Il y a combien d'heure de [décalage horraire](decalage) entre Paris et Bali\
+        \ ?"
+      - " Combien il y a d'heures de décalage entre Paris et Bali ?"
+      - ' Combien de décalage horaire entre Paris et Bali ?'
+      - " Estce qu'il y a des heures de  [décalage](decalage)"
+      - " Estce qu'il y a un décalage horaire"
+      - " on a combien d'heures de décalage horaire ?"
+      - ' [décalage horaire](decalage) ?'
+      - ' Combien de temps de décalage il y a entre Paris et Bali ?'
+  - intent: faq/28
+    examples: |
+      - ' Comment chercher des h?tels ?'
+      - ' O? trouver un hotel ?'
+      - " Je voudrais une liste d'hotel pour comparer"
+      - ' Ou puisje comparer des h?tels pour mon voyage ? '
+      - ' Je souhaite comparer des h?tels'
+      - ' Quels sont les meilleurs h?tels ?'
+      - " Je voudrais une [liste d'hôtels](liste_hotels)"
+      - ' Estce que je peux avoir une [listes de hôtels](liste_hotels) disponibles
+        à Bali ?'
+      - " Avezvous une [liste d'hôtels](liste_hotels)?"
+      - ' ou [trouver  un hôtel](liste_hotels)  ?'
+      - " y a t'il des [liste d'hôtel](liste_hotels)  ?"
+      - " Puis je avoir une liste d'hotel"
+      - " Peux tu m'aider à réserver un hotel ?"
+  - intent: faq/29
+    examples: |
+      - ' Est ce que les animaux sont interdits dans les hotels ?'
+      - " Estce que je peux emmener mon chien ? l'hotel ?"
+      - " Puisje avoir mon animal de compagnie avec moi ? l'h?tel   ? "
+      - ' Estce que les animaux sont autoris?s dans les h?tels ? '
+      - " Estce que je peux emmener mon lapin dans l'h?tel ?"
+      - ' Les h?tels autorisentils les animaux ?'
+      - ' Les [animaux](animaux) sontils [autorisés](interdit) dans les hôtels ?'
+      - ' Estce que les animaux sont [autorisés](interdit) dans mon hôtel ?'
+      - " Estce que je peux amener mon [animal](animaux) à l'hôtel ?"
+      - " Estce que je peux emmener mon [lapin](animaux) dans l'hôtel ?"
+      - " `Puisje amener  mon [animal de compagnie](animaux) à l'[hôtel](hotels) ?"
+      - " je peux emmener des [animaux](animaux) dans l'hôtel ,"
+      - " est ce que je peux prendre des [animaux](animaux) dans l'hôtel ?"
+      - " Puis je amener mon chien à l'hotel ?"
+  - intent: faq/30
+    examples: |
+      - ' Et si je veux prolonger mon s?jour ?'
+      - ' Estil possible de prolonger mon s?jour sur place au dernier moment  ? '
+      - ' Comment rester sur place apr?s mon voyage ?'
+      - ' Quelles sont les modalit?s pour prolonger le s?jour?'
+      - ' Je veux rester plus longtemps ? Bali'
+      - ' comment prolonger mon s?jour ? Bali ?'
+      - ' Que fautil faire pour [prolonger](prolonger) mon [séjour](sejour) sur place?'
+      - ' je veux [prolonger](prolonger) mon [séjour](sejour)'
+      - ' comment puisje [prolonger](prolonger) mon [séjour](sejour) ?'
+      - ' Je veux prolonger mon [séjour](sejour)'
+      - ' Je voudrais rester plus longtemps'
+  - intent: faq/31
+    examples: |
+      - ' Qui est le point de contact l?bas en cas de probl?me ?'
+      - ' Qui contacter en cas de probl?me ?'
+      - " Comment faire en cas d'urgence sur place ? "
+      - " Estce qu'il y a un num?ro d'urgence ? contacter en cas de probl?me?"
+      - ' Quel est le num?ro de la police ? Bali ?'
+      - " Si j'ai un probl?me durant mon s?jour, je contacte qui ?"
+      - ' Quelle est la personne à [contacter](contacter) en cas de [problème](probleme)
+        durant mon séjour ?'
+      - " qui dois je [contacter](contacter)  si j'ai un [probleme](probleme)"
+      - " Qui contacter si j'ai un [problème](probleme)"
+      - " Je dois contacter qui si j'ai des [problèmes](probleme) ?"
+      - ' Qui dois je contacter ?'
+      - ' je contacte qui en cas de problème ?'
+  - intent: faq/32
+    examples: |
+      - " Qu'est ce que je dois prendre dans ma trousse ? pharmacie?"
+      - ' Quels m?dicaments fautil apporter ?'
+      - " Estce qu'il y a des m?dicaments sans ordonnance facilement accessible ?\
+        \ Bali ? "
+      - ' Quels m?dicaments sont autoris?s sans ordonnance ?'
+      - ' Quels m?dicament je peux acheter sans ordonnance ? Bali ? '
+      - ' Peuton prendre certains m?dicament sans ordonnance ? Bali ?'
+      - ' Quels [médicaments](medicament) puisje prendre sans [ordonnance](ordonnance)
+        à Bali ?'
+      - ' Quels médicaments prendre'
+      - ' estce que je peux prendre des [médicaments](medicament) avec moi ?'
+      - ' Il y a t il des médicaments que je peux prendre sans [ordonnance](ordonnance) '
+      - ' médicament'
+      - ' medicament'
+      - ' me fautil des médicamnents ?'
+      - ' quels médicaments je peux prendre ?'
+      - ' medicaments'
+      - ' médicaments'
+  - intent: faq/33
+    examples: |
+      - ' Quelles est la meilleure saison pour y voyager ?'
+      - " Estce qu'il y a diff?rente saison ? Bali  ? "
+      - ' Quelle est la m?t?o ?'
+      - ' Quelle est la temp?rature en Juin?'
+      - ' Quel temps faitil en juin ?'
+      - ' En juin il fait quelle saison ?'
+      - ' Quelle est la [saison](saison) en Juin ?'
+      - " c'est quoi la [saison](saison) ?"
+      - ' Quelle est la [météo](saison)'
+      - " c'est quoi la saison là bas ?"
+      - ' Quel est le temps à Bali ?'
+      - ' Quels sont les températures en juin'
+  - intent: faq/34
+    examples: |
+      - ' Que fautil penser ? apporter ?'
+      - " Qu'est ce que je pourrais oublier ?"
+      - " Estce qu'il y a des affaires indispensables ? emporter?"
+      - " Qu'est il indispensable d'apporter avec soit lors d'un voyage ? Bali ? "
+      - " Que me conseillez vous d'apporter ? "
+      - ' Quels objets me seront utiles ?'
+      - ' Quels objets peuvent être [utiles](utile) làbas ?'
+      - ' [objets utiles](utile) ?'
+      - " Y a t'il des objets utiles a prendre  ?"
+      - " Qu'est ce qui est [utile](utile) la bas  ?"
+      - " quels objets peuvent m'être utiles ?"
+      - " Qu'est ce que je met dans ma valise ?"
+      - ' que doisje prendre comme objet ?'
+      - ' quels objets doisje prendre pour mon voyage ?'
+      - ' quels objets sont nécessaires?'
+  - intent: faq/35
+    examples: |
+      - " Quelle est la liste des objets interdits dans l'avion ?"
+      - " Qu'est ce que ne peux pas emmener dans l'avion ?"
+      - " Qu'est ce qui est interdit en bagage cabine?"
+      - " Qu'estce qu'il m'est interdit de prendre avec moi dans l'avion  ? "
+      - " Estce que je peux emporter un couteau de cuisine dans l'avion ?"
+      - " Qu'est ce qui est interdit dans l'avion?"
+      - " Quels objets sont [interdits](interdit) dans l'avion ?"
+      - ' Objets [interdits](interdit)'
+      - ' [interdits](interdit)'
+      - ' Quels sont les objets [interdits](interdit)'
+      - " [Pas autorisé](interdit) dans l'avion"
+      - " Qu'est ce qui n'est [pas autorisé](interdit) dans l'avion"
+      - " est ce qu'il y a des objets [interdits](interdit) durant le vol ?"
+  - intent: faq/36
+    examples: |
+      - ' Quel est la taille autoris?e pour un bagage ? main pour un voyage en avion
+        ? '
+      - ' Quelles sont les dimensions des bagages ?'
+      - ' Quelles sont les dimensions pour un bagage ? main ?'
+      - ' Quel bagage ? main puisje emporter ?'
+      - ' Taille maximum de ma valise'
+      - " C'est quoi les dimensions maximales des bagages dans l'avion ?"
+      - " Quelles sont les [dimensions](dimensions) maximales d'un bagage dans l'avion\
+        \ ?"
+      - " c'est quoi les [dimensions](dimensions) maximales dans la soute ?"
+      - ' [dimensions](dimensions) valise avion'
+      - " [dimension](dimensions) valises dans l'avion"
+      - ' Quelle est la [dimensions](dimensions) maximale de ma valise'
+      - " c'est quoi la [taille](dimensions) maximal d'un bagage ?"
+  - intent: faq/37
+    examples: |
+      - " Quel est le poids maximum de ma valise pour l'avion ?"
+      - ' Quel est le poids maximum pour ma valise ?'
+      - " Quel est le poids maximum autoris? dans l'avion pour mon bagage ? "
+      - ' Quel est le poids maximal du bagage autoris? en avion?'
+      - ' Poids max valise'
+      - ' Quel est le poids limite de bagage en avion ?'
+      - " Quel est le [poids](poids) maximum de mon bagage dans l'avion ?"
+      - ' [Poids](poids) max avion'
+      - ' Quel est le [poids](poids) maximum de ma valise ?'
+      - " c'est quoi le [poids](poids) maximal  d'un bagage  ?"
+      - " je veux le [poids](poids) maximum d'un bagage"
+      - ' Quel est le poids maximum de mon bagage'
+  - intent: faq/38
+    examples: |
+      - ' Combien coute un bagage en plus ?'
+      - " Estce qu'il faut payer un suppl?ment pour un bagage en plus en soute ? "
+      - ' Combien co?te un bagage suppl?mentaire en soute?'
+      - ' Quel est le prix des bagages suppl?mentaires ?'
+      - ' Combien pour une valise en plus ?'
+      - ' En soute, un suppl?ment de bagage co?te combien ?'
+      - " Quel est le prix d'un [bagage supplémentaire](bagage_sup) en soute ?"
+      - " si j'ai un [bagage supplémentaire](bagage_sup), je paye combien ?"
+      - ' Supplément [bagage supplémentaire](bagage_sup) ?'
+      - " estce qu'il y a un supplément pour les [bagages supplémentaires](bagage_sup)\
+        \  ?"
+      - " y a t'il des frais pour un [bagage supplémentaire](bagage_sup) ?"
+      - ' Prix bagage supp en soute'
+      - " Quels sont les frais suppélementaires d'une valise"
+      - ' Quels est le prix dun bagage en plus'
+  - intent: faq/39
+    examples: |
+      - " Est ce qu'il y a beaucoup de moustique"
+      - " Estce qu'il est conseill? de prendre de  l'antimoustique ? "
+      - " Estce que je dois pr?voir une cr?me apaisante pour les piq?res d'insectes? "
+      - ' Yatil beaucoup de moustiques ?'
+      - " Estce qu'il y a des moustiques ? Bali ?"
+      - " Estce n?cessaire de prendre de l'antimoustique ?"
+      - " Doisje prendre de l'[antimoustique](anti_moustique) ?"
+      - " Je dois penser à de l'[antimoustique](anti_moustique) ?"
+      - " estce qu'il y a des [moustiques](anti_moustique)  ?"
+      - ' Est ce que je risque de me faire piquer par les moustiques'
+      - ' Me conseillezvous un antimoustique ?'
+  - intent: faq/40
+    examples: |
+      - ' O? trouver un avion ?'
+      - " Ou estce que je peux acheter des billets d'avion pas trop cher  ? "
+      - " Je voudrais r?server un billet d'avion"
+      - " O? trouver les meilleurs plan pour les billets d'avion?"
+      - " O? acheter mon billet d'avion ?"
+      - " Je chercher un billet d'avion pour Bali."
+      - " Comment faire pour trouver des [billets d'avion](billet_avion) ?"
+      - " [billets d'avion](billet_avion), je trouve où ?"
+      - " Je veux trouver un [billet d'avion](billet_avion)"
+      - ' Aide moi à réserver mon vol'
+      - " Je voudrais réserver mon billet d'avion"
+      - " Peux tu m'aider à réserver mon vol ?"
+      - ' Réserve moi un vol'
+  - intent: faq/41
+    examples: |
+      - " Combien coute approximativement un billet d'avion A/R ? Bali ? partir de\
+        \ la France ?"
+      - " Quel est le cout d'un billet allerretour pour Bali ?"
+      - ' Combien vaisje payer un allerretour Paris Bali ? '
+      - ' Quel est le budget avion pour un AR ?'
+      - ' Quel budget pour un allerretour FranceBali en avion ?'
+      - ' Un billet allerretour FranceBali co?te combien ?'
+      - ' Quel est le prix moyen du [billet allerretour](billet_aller_retour) FranceBali
+        ?'
+      - " [billet allerretour](billet_aller_retour) c'est combien ?"
+      - " [Prix d'un allerretour](billet_aller_retour) ParisBali"
+      - ' Prix billet avion'
+      - " Quel est le prix d'un vol"
+      - " Quel est le prix d'un vol ?"
+  - intent: faq/42
+    examples: |
+      - ' Estil possible de prendre un vol direct ? '
+      - " Est ce qu'il y a des correspondances ?"
+      - ' Je voudrais un vol direct'
+      - " Estce qu'il y a des vols sans escale?"
+      - ' Je souhaite un vol direct'
+      - ' Existetil des vols directs ? Bali ?'
+      - " Estce qu'il y a des [vols directs](vol_direct) ?"
+      - ' Des [vols directs](vol_direct) existent entre Paris et Bali ?'
+      - ' je veux un [vol direct](vol_direct)'
+      - " estil possible d'avoir un [vol directe](vol_direct) ?"
+      - ' je cherche un trajet direct'
+  - intent: faq/43
+    examples: |
+      - " estce qu'une compagnie a?rienne est plus conseill?e qu'une autre pour ce\
+        \ type de voyage ? "
+      - ' Quelle est la meilleure compagnie pour le voyage ?'
+      - ' Quelle est la meilleure compagnie ?'
+      - ' O? trouver la meilleure compagnie a?rienne?'
+      - ' Quelle est la meilleure compagnie a?rienne pour faire un allerretour Paris  Bali
+        ?'
+      - ' Je cherche une compagnie a?rienne.'
+      - ' Quelle [compagnie aérienne](compagnie_aerienne) est recommandée ?'
+      - ' Vous me recommandez une [compagnie aérienne](compagnie_aerienne) ?'
+      - ' quelle est la meilleure [compagnie aérienne](compagnie_aerienne) ?'
+      - " j'aimerais une [compagnie aérienne](compagnie_aerienne)"
+      - ' Quelle compagnie prendre pour aller à Bali ?'
+      - ' Air France propose des vols ?'
+  - intent: faq/44
+    examples: |
+      - " A quelle heure fautil se pr?senter ? l'a?roport pour ?tre sur de ne pas\
+        \ rater le vol?"
+      - ' Combien de temps en avance fautil arriver ?'
+      - " A quelle heure est le checkin de l'avion ?"
+      - " Fautil que je me pr?sente ? l'a?roport en avance le jour du d?part ? "
+      - ' Combien de temps en avance avant le vol ?'
+      - " Combien de temps avant l'heure de vol, doisje me pr?senter ? l'a?roport\
+        \ ?"
+      - " A quelle [heure](heure_arrivee) je dois me présenter à l'[aéroport](aeroport)\
+        \ pour avoir mon vol ?"
+      - " [Combien de temps](heure_arrivee) à l'avance dois'je arriver ?"
+      - " Combien de [temps à l'avance](heure_arrivee) doisje arriver ?"
+      - " Combien de [temps](heure_arrivee) à l'avance [doisje arriver](heure_arrivee)\
+        \ à l'[aéroport](aeroport) ?"
+  - intent: faq/45
+    examples: |
+      - ' Comment ?a se passe si mon bagage est perdu ?'
+      - " Que faire si mon bagage est endommag?s ? sa r?cup?ration dans l'a?roport\
+        \ ? "
+      - ' Comment ?tre rembours? si mon bagage est perdu ?'
+      - " Quelle est la proc?dure d'indemnisation en cas de perte de bagage? "
+      - ' Je me suis fais voler ma valise'
+      - ' Si mes objets personnels sont perdus estce que je suis indemnis? ?'
+      - ' Comment être [indemnisé](indemniser) si mon [bagage a été perdu](bagage_perdu)
+        ou endommagé pendant le trajet en avion ?'
+      - ' si mon [bagage est perdu](bagage_perdu) est ce que je suis [indemnisé](indemniser)
+        ?'
+      - ' comment je suis indemnisé si mon bagage est perdu ou aucours du trajet ?'
+      - " Que faire si j'ai [perdu mon bagage](bagage_perdu)"
+      - ' Mon [bagage a été volé](bagage_perdu), comment doisje faire pour me le faire
+        [rembourser](indemniser) ?'
+      - ' Mon bagage a été volé, comment doisje faire pour me faire indemniser ?'
+  - intent: faq/46
+    examples: |
+      - ' Estce que les animaux sont autoris?s en avion?'
+      - ' Les animaux sontils accept?s pour ce voyage ?'
+      - " Les animaux sontils accept?s dans l'avion ? "
+      - " Est ce que les animaux sont autoris?s dans l'avion ?"
+      - " Comment emmener mon lapin dans l'avion ?"
+      - " Les animaux sontils autoris?s dans l'avion ?"
+      - ' Puisje [voyager](voyage) en avion avec mes [animaux](animaux) ?'
+      - ' est ce que je peux voyager avec des animaux ?'
+      - ' Je voudrais [emmener](voyage) mon animal'
+      - ' JE veux voyager avec mon [animal](animaux)'
+      - ' Estce que je peux voyager avec mon animal ?'
+      - " Mon animal peut il [venir avec moi](voyage) dans l'avion ?"
+      - ' puis je prendre mon animal en avion ?'
+  - intent: faq/47
+    examples: |
+      - ' Je voudrais emmener mon chien'
+      - ' Doisje paye pour emmener mon animal ?'
+      - " A combien s'?l?ve le suppl?ment pour voyager avec son animal ? "
+      - " Estce qu'il faut payer des frais en plus pour transporter un animal en avion?"
+      - ' Combien co?te un animal en soute ou en cabine ?'
+      - ' Si je voyage avec un animal, je paye combien de plus ?'
+      - ' Quels sont les [frais supplémentaire](frais_supp) pour voyager avec mon
+        [animal](animaux) ?'
+      - ' Si je voyage avec mon animal, quels sont les [frais supplémentaires](frais_supp)
+        ?'
+      - ' Combien ça [coûte](frais_supp) pour voyager avec un [animal](animaux) ?'
+      - " estce qu'il y a des frais supplémentaire pour prendre mon animal  dans l'avion\
+        \  ?"
+  - intent: faq/48
+    examples: |
+      - ' Que se passetil en cas de modification de vol ?'
+      - ' Mon vol est il annul? ?'
+      - ' Estce que je serais pr?venue en cas de modification de mon vol ? '
+      - " Estce que je serai notifi? s'il y a une modification sur le vol?"
+      - ' Estce que mon vol a ?t? modifi? ?'
+      - ' Si mon vol est modifi?, comment le savoir ?'
+      - ' Comment savoir si mon vol a été [modifié](modifier) ?'
+      - ' je fais comment pour savoir si mon [vol a été modifié](modifier) ?'
+      - ' si on [modifie mon vol](modifier) je fais comment pour savoir ?'
+      - ' Mon vol est modifié'
+      - ' Estce que mon vol a été modifié ?'
+  - intent: faq/49
+    examples: |
+      - ' Estce que je peux recevoir un billet ?lectronique ?'
+      - ' Comment auraisje le justificatif de voyage?'
+      - ' Vaisje recevoir mon billet sous format papier ou ?lectronique ?'
+      - ' Estce que je vais recevoir mon billet par mail  ? '
+      - ' Comment estce que je r?cup?re mon billet ?'
+      - ' Mon billet est sous quel format ?'
+      - ' Sous quel [format](format) vaisje recevoir mon billet ?'
+      - " mon billet d'avion sera sous quel [format](format) ?"
+      - ' format de mon billet'
+      - ' Comment vais je recevoir mon billet ?'
+      - ' Sous quel [format](format) est mon billet ?'
+      - ' Je voudrais un billet electronique'
+      - ' Comment sera mon billet ?'
+  - intent: faq/50
+    examples: |
+      - " Y'atil un m?decin dans l'avion ?"
+      - " L'avion a t'il un m?decin d?sign? ? "
+      - " Est ce qu'un m?decin sera ? bord du vol ?"
+      - " Estce qu'il un du personnel soignant dans l'avion?"
+      - " Y a til un m?decin dans l'avion ?"
+      - " Est ce qu'il des m?decins dans l'avion ?"
+      - " Auraton un [médecin](medecin) dans l'avion ?"
+      - " est ce qu'il y a un médecin dans l'avion ?"
+      - ' [medecin](medecin) avion'
+      - ' [Medecin](medecin) avion'
+      - " Y a til un médecin dans l'avion ?"
+      - " avez vous des médecins dans l'avion ?"
+      - ' médecin'
+  - intent: faq/51
+    examples: |
+      - " Estce qu'il y a la possibilit? de commander un repas sp?cial en avion?"
+      - ' Est ce que mes allergies sont prises en compte pour mes repas ?'
+      - ' Comment signaler les allergies alimentaires ?'
+      - " Que faire pour mes repas dans l'avion si je suis allergique ? "
+      - ' Je veux un plat qui respecte mes allergies pendant le vol'
+      - " Si j'ai des allergies, estce qu'il m'est propos? des plats diff?rents ?"
+      - " Estil possible d'avoir des plats différents en fonction de mes [allergies](allergies)\
+        \ ?"
+      - " Si j'ai des [allergies](allergies), puisje bénéficier de plats différents\
+        \ ?"
+      - ' il y a til des [plats différents](allergies) en fonction de mes allergies
+        ?'
+      - ' Puis je avoir un plat différents si je suis [allergique](allergies) ?'
+      - ' [allergies](allergies)'
+      - ' [Allergie](allergies)'
+      - ' [Plats différentes](allergies) alergies'
+      - ' Puis je avoir un plat différentes si je suis allergique'
+      - ' [Je fais des allergies](allergies), estce que je peux avoir des plats en
+        adaptés ?'
+  - intent: faq/52
+    examples: |
+      - " Aije un transport entre l'hotel et l'a?roport ?"
+      - " Estce qu'il y a des moyens mis ? la disposition des voyageurs pour faire\
+        \ le trajet a?roporth?tel ? "
+      - " Y'atil une navette de l'hotel pour l'a?roport ?"
+      - " Estce qu'il y a une navette a?roport h?tel?"
+      - " Comment aller de l'a?roport ? l'h?tel ?"
+      - " Existetil un moyen de transport propos? par les h?tel depuis l'a?roport\
+        \ ?"
+      - " Comment vaton de l'[aéroport à l'hôtel](aeroport_hotel) ?"
+      - ' [Trajet aéroport hotel](aeroport_hotel)'
+      - " [Aller de l'aéroport à l'hotel](aeroport_hotel) ?"
+      - " Je veux aller de l'aéroport à l'hôtel"
+      - " Je veux aller de [l'hôtel à l'aéroport](aeroport_hotel)"
+  - intent: faq/53
+    examples: |
+      - " Quel est le prix d'une navette h?tel a?roport?"
+      - " Quel est le tarif d'un taxi pour m'amener ? l'a?roport ?"
+      - " Quels sont les prix pour prendre le taxi depuis l'a?roport ? Bali ? "
+      - ' Quel est le prix de trajet hotela?roport ?'
+      - " Quel est le prix d'un d?placement de mon h?tel jusqu'? l'a?roport ?"
+      - " Un taxi vers l'a?roport co?te combien ?"
+      - " Combien coûte un [taxi](taxi) pour aller à l'aéroport ?"
+      - " Le [prix d'un taxi](taxi) pour aller à l'aéroport coûte combien ?"
+      - ' [Taxi](taxi)'
+      - ' Prix [taxi](taxi)'
+      - " [prix taxi](taxi) jusqu'à l'aéroport"
+  - intent: faq/54
+    examples: |
+      - ' Quelles sont les langues officielles ?'
+      - " Estce qu'ils parlent l'anglais ? Bali  ? "
+      - ' Estce que le fran?ais est parl? l?bas ?'
+      - ' Quelle est la langue officielle ? Bali?'
+      - ' Quel est la langue locale ?'
+      - ' On parle quoi comme langues ? Bali ?'
+      - ' Quelles sont les [langues](langues) les plus parlées làbas ?'
+      - ' quelles sont les [langues les plus parlées](langues) à Bali ?'
+      - " c'est quoi les langues les plus parlées à Bali ?"
+      - ' [langues populaires](langues)'
+      - ' Quelles sont les [langues](langues) de Bali'
+      - ' Langue populaire à Bali'
+      - ' [Langues courantes](langues) à Bali'
+      - ' Quel est la langue locale ?'
+  - intent: faq/55
+    examples: |
+      - " Estce qu'il y a des activit?s incontournables ? faire?"
+      - ' Quelles activit?s me conseillestu ?'
+      - ' Quel est le top 10 des activit?s recommand?es ? Bali ? '
+      - ' Quelles sont les activit?s sur place ?'
+      - ' Liste des activit?s ? faire ? Bali'
+      - ' Il y a quoi comme activit? ? Bali ?'
+      - ' Quelles sont les [activités](activites) recommandées à Bali ?'
+      - " C'est quoi les activités recommandées  à Bali ?"
+      - ' [Activités](activites) à Bali'
+      - ' [activités](activites) recommandés'
+      - ' [Activités](activites) recommandés'
+      - ' [Sports](activites) à Bali'
+      - ' Quels activités me recommandezvous ?'
+  - intent: faq/56
+    examples: |
+      - " Estce qu'il y a un code de conduite sp?cifique ? respecter ? Bali ? "
+      - ' Quelle coutume doisje ?viter ?'
+      - ' Que fautil savoir sur les moeurs ?'
+      - " Estce qu'il y a des comportements contraire aux m?urs des Balinais?"
+      - " Estce qu'il y a des choses ? ?viter ? Bali ?"
+      - " Qu'est ce que je ne dois pas faire l? bas ?"
+      - " Estce qu'il y a des [comportements](comportement) à [éviter](eviter) ?"
+      - ' Quels [comportements](comportement) fautil éviter ?'
+      - ' Il y a des comportements à [éviter](eviter)  à Bali ?'
+      - ' [comportements](comportement)'
+      - ' [comportement](comportement)'
+      - ' [Comportements](comportement) à éviter'
+      - ' Que doisje [éviter de faire](comportement)'
+      - ' [Quels comportements](comportement) doisje éviter de faire ?'
+  - intent: faq/57
+    examples: |
+      - ' Estil possible de se loger dans des h?bergement atypiques sur place ? '
+      - ' Quels sont les lieux insolites o? je peux dormir ?'
+      - " Estce qu'on peut loger chez l'habitant ?"
+      - ' Existetil des h?bergement atypiques ? louer?'
+      - ' Je veux un logement atypique'
+      - ' Des endroits atypiques pour dormir ?'
+      - " Quels types d'[hébergement atypiques](hebergement_atypiques) puisje trouver\
+        \ sur place et louer ?"
+      - ' Il y a t il des [hébergement atypiques](hebergement_atypiques) à Bali ?'
+      - ' Je voudrais un [hébergement atypique](hebergement_atypiques)'
+      - ' hébergement atypique'
+      - ' Quels sont les hébergements atypiques à Bali ?'
+  - intent: faq/58
+    examples: |
+      - ' Quels plats incontournables ? gouter ? Bali?'
+      - ' Quels sont les sp?cialit?s culinaires de la r?gion ?'
+      - ' Quels sont les sp?cialit?s culinaires de Bali ?'
+      - ' Quels sont les sp?cialit?s culinaires balinaise ? '
+      - ' Quels sont les sp?cialit?s culinaires locales ?'
+      - ' Il y a quoi l? bas comme bon plats ?'
+      - ' Quels sont les [plats](plats) typiques de Bali ?'
+      - " C'est quoi les [plats typiques](plats) typiques là bas ?"
+      - ' quels sont les [plats](plats) ?'
+      - ' Quels sont les plats ?'
+      - ' [spécialité culinaires](plats)'
+      - ' Y a til des plats typiques à Bali ?'
+      - ' quels sont les bons plats à bali ?'
+      - ' les plats à manger à Bali ?'
+      - " j'aimerais connaitre les plats typique de Bali"
+      - " Il y a t'il des plats typiques à Bali ?"
+  - intent: faq/59
+    examples: |
+      - ' Je voudrais r?server mes activit?s'
+      - ' Doisje r?server les activit?s ?'
+      - ' Estil facile de r?server un place pour les activit?s sur place ? '
+      - ' Fautil faire une r?servation des activit? avant de venir ? Bali?'
+      - ' Estce que je dois r?server mes activit?s'
+      - " Doisje r?server les activit?s ? l'avance ?"
+      - " Estce qu''il faut [réserver les activités](reserver_act) à l'avance ?"
+      - ' Puisje [réserver les activités](reserver_act) ?'
+      - ' Réserver les activités'
+      - ' [Reserver les activites](reserver_act)'
+      - ' réserver les activité'
+      - " Doisje [réserver mes activités](reserver_act) à l'avance ?"
+  - intent: faq/60
+    examples: |
+      - " Les animaux de compagnie sontils accept?s lors d'un voyage ? Bali ? "
+      - ' Estce que les animaux sont autoris?s partout?'
+      - ' Les chiens sontils accept?s partout ?'
+      - ' Est ce que les animaux sont autoris?s dans les lieux de cultes ?'
+      - ' Estce que je peux emmener mon chien au temple Tanah Lot ?'
+      - ' Les animaux de compagnies sontils autoris?s dans les endroits culturels
+        ?'
+      - ' Puisje amener mes [animaux](animaux) de compagnie dans les [lieux culturels](lieux_cult)
+        ?'
+      - ' amener mes animaux dans les [temples](lieux_cult)'
+      - ' Estce que je peux amener mon animal dans un [lieu de culture](lieux_cult)
+        ?'
+      - ' Estce que je peux prendre mon animal dans un lieu culturel ?'
+  - intent: faq/61
+    examples: |
+      - ' Combien coutent les activit?s ?'
+      - ' Quel est le cout moyen des activit?s ?'
+      - ' Combien me coutera en moyenne une activit? sur place ? '
+      - ' Quel budget fautil pr?voir par activit??'
+      - " Quel est le prix d'une activit? ? Bali ? "
+      - ' Un activit? co?te combien en moyenne ?'
+      - ' Quel est le [budget moyen par activité](prix_act) ?'
+      - ' Quel est le [budget pour les activités](prix_act) ?'
+      - ' [Prix activité](prix_act)'
+      - ' [budget activité](prix_act)'
+      - " [Prix moyen d'une activité](prix_act)"
+      - ' Quel est le [prix moyen des activités](prix_act) ?'
+      - " J'aimerais connaitre le budget moyen nécessaire par activité"
+  - intent: faq/62
+    examples: |
+      - " Quelles sont les activit?s de l'hotel ?"
+      - " Quelles activit?s puis je faire ? l'hotel ?"
+      - ' Quelles activit?s sont inclues dans mon h?tel ? '
+      - " Estce qu'il y a des activit?s ? faire dans l'h?tel?"
+      - ' Quelles activit?s propose mon h?tel ? '
+      - " C'est quoi les activit?s dans les h?tels ?"
+      - " Quelles sont  les [activités](activites) proposées dans l'hôtel ?"
+      - " [activité à l'hotel](act_hotel)"
+      - ' [activité hotel](act_hotel)'
+      - ' [Service hotel](act_hotel)'
+      - ' Quels sont les [activités de mon hôtel](act_hotel) ?'
+  - intent: faq/63
+    examples: |
+      - " Estce que je dois payer en suppl?ment les frais des repas ? l'h?tel?"
+      - ' Les repas sontils pr?vus dans mon forfait ?'
+      - " Doisje payer mes repas en plus de l'hotel ?"
+      - " Qu'estce qu'il y a dans mon forfait h?tel ? "
+      - " Les repas font parti du forfait de l'h?tel ?"
+      - " Estce que le repas est inclus dans les frais d'h?tel ?"
+      - " Les [repas](repas) sontils inclus dans le forfait de l'hôtel ?"
+      - ' Estce que les repas sont inclus ?'
+      - ' [repas inclus](repas)'
+      - ' [repas hotel](repas)'
+      - " Estce qu'il y a des [repas dans mon forfait](repas) ?"
+  - intent: faq/64
+    examples: |
+      - ' Quels sont les plus beaux sites ? visiter ?'
+      - ' Quels sont les lieux ? visiter ?'
+      - ' Quels endroits sont recommand?s pour d?couvrir Bali  ? '
+      - " Estce qu'il y a des endroits ? visiter absolument?"
+      - " Qu'estce que je dois visiter ? Bali ?"
+      - ' Quels sont les meilleures places touristiques ? Bali ?'
+      - ' Quels sont les [endroits](endroits) incontournables de Bali ?'
+      - ' [Endroits](endroits) à visiter ?'
+      - ' endroits Bali'
+      - ' [lieux incontournables](endroits)'
+      - ' [lieux à visiter](endroits)'
+      - ' Endroit à ne pas rater'
+      - ' Quels sont les [endroits à ne pas rater](endroits)'
+      - ' Y a til des [endroits immanquables](endroits) à Bali ?'
+  - intent: faq/65
+    examples: |
+      - ' Quels sont les ?v?nements ? ne pas rater pendant mon s?jour ?'
+      - " Est ce qu'il y a des f?tes locales ?"
+      - " Estce qu'il y a des ?v?nements sp?ciaux en Juin?"
+      - ' Que faire ? Bali pour d?couvrir la culture locale ? '
+      - ' Quels seront les ?v?nements ? Bali dans 4 mois ?'
+      - ' Il y atil des f?tes culturelles ?'
+      - ' Quelles sont les [évènements](eve_fete) / [fêtes](eve_fete) [culturelles](culturelles)
+        ?'
+      - ' fêtes [culturelles](culturelles) '
+      - ' [évenements](eve_fete) à Bali'
+      - ' [evenement](eve_fete) et fetes de Bali'
+      - ' evenement Bali'
+      - " Estce qu'il y a des [évènements](eve_fete) en ce moment ?"
+      - ' à quelles fête culturelle puisje assister'
+  - intent: faq/66
+    examples: |
+      - ' Fautil un permis pour rouler en scooter ? Bali ? '
+      - " Est ce qu'il faut un permis moto pour louer ? Bali ?"
+      - " Estce qu'il y a la possibilit? de louer des deux roues ? Bali  ? "
+      - " Estce qu'il faut un permis pour louer une moto ?"
+      - ' Condition pour louer une moto ? Bali'
+      - ' Peuton louer un deux roues sans permis ?'
+      - ' Fautil un [permis](permis) pour louer un deux roues à Bali ?'
+      - ' Fautil un permis pour les sccoter s?'
+      - ' Fautil un [permis pour les scooter](permis) ?'
+      - ' [louer scooter](permis)'
+      - ' louer moto'
+      - ' conduite une [moto](permis)'
+      - " Estce que j'ai besoin d'un permis spécifique pour [louer une moto](permis)\
+        \ ?"
+      - ' comment faire si je veux louer un deux roues a bali ?'
+      - " Estce qu'il y a besoin d'un permis pour conduire un deux roues sur place\
+        \ ?"
+  - intent: faq/67
+    examples: |
+      - ' Estil facile de rencontrer des ?trangers l?bas ?'
+      - " Puis je rencontre d'autre voyages dans des lieux d'?changes ?"
+      - ' Estil possible de trouver des lieux de rencontre pour ?trangers ? Bali ? '
+      - " Estce qu'il y a des lieux de rencontres pour des ?trangers ?"
+      - ' Comment rencontrer des ?trangers ? Bali ?'
+      - ' Comment faire pour rencontrer des ?trangers ? Bali ?'
+      - ' Il y atil des lieux de [rencontres](rencontres) pour des étrangers ?'
+      - ' [Rencontrer](rencontres) des étrangers'
+      - ' [Voir des étrangers](rencontres)'
+      - " Je veux faire [des rencontres](rencontres) avec d'autres étrangers"
+      - ' Comment rencontrer des étranger sur place ?'
+      - " Ou puisje rencontrer d'autres étrangers à bali"
+      - " Estce qu'il y a des lieux de rencontre pour les étrangers à Bali ?"
+  - intent: faq/68
+    examples: |
+      - ' Quelles sont les activit?s abordables ? Bali?'
+      - ' Quels sont les sports pratiqu?s ? Bali ?'
+      - ' Quels sports nautiques sont les plus pratiqu?s sur place ?'
+      - ' Quels sports de mer puis je faire la bas ?'
+      - ' Je veux faire des sports nautiques'
+      - ' Quels sont les sports nautiques ?'
+      - ' Quels sont les [sports nautiques](sports_nautiques) populaires ?'
+      - ' Je voudrais faire des [sports nautiques](sports_nautiques)'
+      - ' [sports nautique](sports_nautiques)'
+      - ' [sports nautiques](sports_nautiques)'
+      - ' Sports nautiques à Bali'
+      - ' Dites mois quels sont les [sports nautiques](sports_nautiques) populaires'
+  - intent: number
+    examples: |
+      - ' 1'
+      - ' 2'
+      - ' 3'
+      - ' 4'
+      - ' 5'
+      - ' 6'
+      - ' 7'
+      - ' 8'
+      - ' 9'
+      - ' 10'
+  - intent: ask_reformulate
+    examples: |
+      - ' pouvez vous reformuler'
+      - ' dis le moi autrement'
+      - ' reformule'
+      - " dis le d'une autre manière"
+      - ' dites le différemment'
+      - " je n'ai pas compris"
+      - ' peux tu être plus clair'
+      - ' soit plus explicite'
+      - ' explique mieux'
+      - ' parle français'
+      - ' rien compris'
+      - " je n'ai pas compris"
+      - " pouvezvous reformuler s'il vous plait ?"
+      - ' pas compris'
+      - ' je ne comprends pas'
+      - ' Pas compris'
+      - " j'ai pas compris"
+      - " Je n'ai pas compris"
+  - intent: confusion_1
+    examples: |
+      - ' la réponse de [gauche]gauche'
+      - ' [gauche](gauche)'
+      - ' [première](gauche) propositon'
+      - ' celle de [gauche](gauche)'
+      - ' [premiere](gauche) option'
+      - ' [1er][gauche] choix'
+      - ' [1e](gauche) choix'
+  - intent: confusion_2
+    examples: |
+      - ' la réponse du [milieux](milieu)'
+      - ' [milieu](milieu)'
+      - ' [deuxième](milieu) propositon'
+      - ' celle du [milieu](milieu)'
+      - ' [deuxieme](milieu) option'
+      - ' [2e]milieu choix'
+      - ' [2em]milieu choix'
+  - intent: non_sense
+    examples: |
+      - ' [autre](droit)'
+      - " je choisis l'[autre](droit)"
+      - " ni l'un ni l'[autre](droit)"
+      - ' [troisième](droit) option'
+      - ' [3e](droit) choix'
+      - ' [droit](droit)'
+      - ' la réponse tout à [droite](droit)'
+      - ' celle de [droite](droit)'
+  - intent: want_inform_profile
+    examples: |
+      - ' demande moi mon [profil](profile_exple)'
+      - ' je veux changer mon [profil](profile_exple)'
+      - ' [profil](profile_exple)'
+      - ' ce [profile](profile_exple) ne me convient plus'
+      - ' connaistu mon [profile](profile_exple)'
+      - " sais tu ce [que j'aime ](profile_exple)?"
+      - ' demandemoi mes [préférences](profile_exple)'
+      - ' sais tu ce que je [préfère](profile_exple) ?'
+      - ' demande ce que [je veux](profile_exple)'
+      - ' tu connais mes phrases [préférées](profile_exple)'
+      - ' tu connais mes réponses [préférées](profile_exple)'
+  - intent: short_utters
+    examples: |
+      - " J'aime les phrases [courtes](short_utters_entity)"
+      - ' des phrases [concises](short_utters_entity)'
+      - ' [court](short_utters_entity)'
+      - ' [courtes](short_utters_entity)'
+      - ' phrases [courtes](short_utters_entity)'
+      - ' [concises](short_utters_entity)'
+      - ' des phrases [pas trop longues](short_utters_entity)'
+      - " J'aime les réponses [courtes](short_utters_entity)"
+      - ' des réponses [concises](short_utters_entity)'
+      - ' [court](short_utters_entity)'
+      - ' [courtes](short_utters_entity)'
+      - ' réponses [courtes](short_utters_entity)'
+      - ' [concises](short_utters_entity)'
+      - ' des réponses [pas trop longues](short_utters_entity)'
+      - ' fais plus [court](short_utters_entity) dans des réponses'
+      - ' [droit au but](short_utters_entity)'
+      - ' va droit au but'
+  - intent: dont_care
+    examples: |
+      - " ça m'est [égal](dont_care_entity)"
+      - " je [m'en fiche](dont_care_entity)"
+      - ' peu [importe](dont_care_entity)'
+      - ' comme [tu veux](dont_care_entity)'
+      - ' [indifférent](dont_care_entity)'
+      - " j'aime [toutes](dont_care_entity) les réponses"
+      - " tu peux me donner n'[importe](dont_care_entity) qu'elle réponse"
+      - ' donne moi [toutes](dont_care_entity)les phrases'
+      - ' tu peux me proposer [toutes](dont_care_entity) les phrases'
+      - ' [toutes](dont_care_entity)'
+      - ' [toutes](dont_care_entity)'
+      - ' [toutes](dont_care_entity)'
+      - ' donne moi [toutes](dont_care_entity)  les réponses'
+      - ' tu peux me proposer [toutes](dont_care_entity) les réponses'
+      - " [pas d'importance](dont_care_entity)"
+      - ' bof'
+      - ' Bof'
+  - intent: long_utters
+    examples: |
+      - " j'aime les [longues](long_utters_entity) phrases"
+      - ' je préfères les phrases [détaillées](long_utters_entity)'
+      - " j'aime les [détails](long_utters_entity)"
+      - ' [longues](long_utters_entity)'
+      - ' [long](long_utters_entity)'
+      - ' phrases [longues](long_utters_entity)'
+      - ' [détaillées](long_utters_entity)'
+      - " j'aime les phrases [longues](long_utters_entity)"
+      - " j'adore les [longues](long_utters_entity) phrases"
+      - " j'ai les [longues](long_utters_entity) réponses"
+      - ' je préfères les réponses [détaillées](long_utters_entity)'
+      - ' réponses [longues](long_utters_entity)'
+      - " j'aime les réponses [longues](long_utters_entity)"
+      - " j'adore les [longues](long_utters_entity) réponses"
+      - ' donne moi une réponse [détaillée](long_utters_entity)'
+      - ' donne moi des réponses [longues](long_utters_entity) '
+      - ' finallement, je préfère les [longues](long_utters_entity)  réponses'
+  - intent: greet
+    examples: |
+      - ' Bonjour'
+      - ' hello'
+      - ' hey'
+      - ' salut'
+  - intent: goodbye
+    examples: |
+      - ' a plus'
+      - ' ciao'
+      - ' a plus tard'
+      - ' au revoir'
+      - ' bye'
+      - ' a plus tard'
+      - ' bye bye'
+  - intent: affirm
+    examples: |
+      - ' oui, biensûr'
+      - ' je veux bien, oui'
+      - " oui, s'il te plaît"
+      - ' oui'
+      - ' très bien'
+      - ' compris'
+      - ' super'
+      - " c'est cool"
+      - ' oui, tout à fait'
+      - ' exact'
+      - ' bien'
+      - ' ce serait super'
+      - ' ce serait top'
+      - ' merci'
+      - ' tu es top'
+      - ' Parfait'
+      - ' Exellent !!'
+      - ' Exellent'
+      - ' Génial'
+      - " C'est Génial !!"
+  - intent: deny
+    examples: |
+      - " c'est pas ma question"
+      - ' mais non'
+      - ' non'
+      - ' Non'
+      - ' NON'
+      - ' pas du tout'
+      - ' absolument pas'
+      - ' pas ma question'
+      - " pas ce que j'ai demandé"
+      - " Pas ce que j'ai demandé"
+      - " ce n'est pas ma question"
+      - " Tu n'as rien compris"
+      - " Ce n'est pas ma question"
+      - " j'ai pas demandé ça"
+  - intent: bot_challenge
+    examples: |
+      - ' es tu un bot ?'
+      - ' es tu un humain ?'
+      - ' suisje en train de parler à un bot ?'
+      - ' suisje en train de parler à un humain ?'
