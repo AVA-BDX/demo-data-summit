@@ -27,34 +27,34 @@ import json
 
 
 
-# class ActionSessionStart(Action):
-#     def name(self) :
-#         return "action_session_start"
+class ActionSessionStart(Action):
+    def name(self) :
+        return "action_session_start"
 
-#     @staticmethod
-#     def fetch_slots(tracker: Tracker):
-#         """Collect slots that contain the user's name and phone number."""
+    @staticmethod
+    def fetch_slots(tracker: Tracker):
+        """Collect slots that contain the user's name and phone number."""
 
-#         slots = []
-#         for key in ("name", "phone_number"):
-#             value = tracker.get_slot(key)
-#             if value is not None:
-#                 slots.append(SlotSet(key=key, value=value))
-#         return slots
+        slots = []
+        for key in ("name", "phone_number"):
+            value = tracker.get_slot(key)
+            if value is not None:
+                slots.append(SlotSet(key=key, value=value))
+        return slots
 
-#     async def run(
-#       self, dispatcher: CollectingDispatcher, tracker: Tracker, domain: Dict[Text, Any]
-#     ) -> List[Dict[Text, Any]]:
+    async def run(
+      self, dispatcher: CollectingDispatcher, tracker: Tracker, domain: Dict[Text, Any]
+    ) -> List[Dict[Text, Any]]:
 
-#         # the session should begin with a `session_started` event
-#         events = [SessionStarted()]
+        # the session should begin with a `session_started` event
+        events = [SessionStarted()]
 
-#         dispatcher.utter_message(text="Message d'accueil pour voir comment cela fonctionne sur rasa X")
+        dispatcher.utter_message(text="Message d'accueil pour voir comment cela fonctionne sur rasa X")
 
-#         # # an `action_listen` should be added at the end as a user message follows
-#         # events.append(ActionExecuted("action_listen"))
+        # # an `action_listen` should be added at the end as a user message follows
+        # events.append(ActionExecuted("action_listen"))
 
-#         return [UserUtteranceReverted(),Form("note_and_pseudo_asking_form")]
+        return [UserUtteranceReverted(),Form("note_and_pseudo_asking_form")]
 
 
 
