@@ -148,13 +148,13 @@ slots:
         influence_conversation: true
 responses:
     utter_greet:
-      - text: salut ?
-      - text: Bonjour ?
-      - text: Hello ?
+      - text: salut
+      - text: Bonjour
+      - text: Hello
     utter_goodbye:
       - text: Au revoir
       - text: A plus
-      - text: A bientôt ?
+      - text: A bientôt
     utter_iamabot:
       - text: Je suis un bot créé grâce à Rasa par Talan
     utter_ask_note:
