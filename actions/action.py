@@ -527,8 +527,7 @@ class ActionAskClarification(Action):
                 dispatcher.utter_message(
                     response ="utter_dont_understand",
                     name= f"{round(100*var_confidence,2)} %"
-                )               
-                return [SlotSet("test_sentences", intent_ranking) ]
+                )              
             else:
                 diff_intent_confidence = intent_ranking[0].get(
                     "confidence"
@@ -644,7 +643,7 @@ class ActionAskClarification(Action):
 
                     Bot_chosed_utterance = bot_responses_to_user_question[random.randint(0, len(bot_responses_to_user_question) - 1)]
                     dispatcher.utter_message(text = Bot_chosed_utterance)
-        return [SlotSet("test_sentences", intent_ranking)]
+        return []
     
     
 
