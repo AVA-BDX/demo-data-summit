@@ -1,0 +1,25 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  annotations:
+    kompose.cmd: kompose convert
+    kompose.version: 1.16.0 (0c01309)
+  creationTimestamp: null
+  labels:
+    io.kompose.service: deployment-civa-augmented-bot-action-server
+  name: deployment-civa-augmented-bot-action-server
+spec:
+  replicas: 1
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        io.kompose.service: deployment-civa-augmented-bot-action-server
+    spec:
+      containers:
+      - image: localhost:32000/civa-augmented-bot-action-server:0.0.1
+        name: deployment-civa-augmented-bot-action-server
+        resources: {}
+      restartPolicy: Always
+status: {}
