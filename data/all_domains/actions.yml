@@ -17,3 +17,4 @@ actions:
   - action_increment_confusion_incomprehension
   - action_set_confusion_slot_to_none
   - action_ask_another_question
+  - action_session_start
