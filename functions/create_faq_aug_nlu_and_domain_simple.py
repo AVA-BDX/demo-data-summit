@@ -4,7 +4,7 @@
 import pandas as pd
 import ruamel.yaml
 import yaml
-path = r"data/qna_data_bases/questions_bot_augmente.csv"
+path = r"other_data/qna_data_bases/questions_bot_augmente.csv"
 data_base = pd.read_csv(path,  sep=";", encoding="latin3")
 with open("data/nlu/faq-aug-nlu.yml", "wt", encoding="utf-8") as f:
     f.write('version: "2.0" \n')
@@ -20,9 +20,9 @@ with open("data/nlu/faq-aug-nlu.yml", "wt", encoding="utf-8") as f:
             f.write(f"    - {text}\n")
         f.write("\n")
 
-path2 = r"data/qna_data_bases/reponses_bot_augmente.csv"
+path2 = r"other_data/qna_data_bases/reponses_bot_augmente.csv"
 data_base = pd.read_csv(path2,  sep=";", encoding="latin3")
-with open("data/all_domains/faq-aug-domain.yml", "wt", encoding="utf-8") as f:
+with open("other_data/all_domains/faq-aug-domain.yml", "wt", encoding="utf-8") as f:
     f.write('version: "2.0" \n')
     f.write('\n')
     f.write("intents:\n") 

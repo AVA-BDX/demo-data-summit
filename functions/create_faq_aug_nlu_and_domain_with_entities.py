@@ -3,7 +3,7 @@
 
 import pandas as pd
 #import unicodedata
-path = r"data/qna_data_bases/NOM_DE_LA_FAQ_AVEC_ENTITES.csv"
+path = r"other_data/qna_data_bases/NOM_DE_LA_FAQ_AVEC_ENTITES.csv"
 data_base = pd.read_csv(path,  sep=";", encoding="latin3")
 with open("data/nlu/faq-nlu.yml", "wt", encoding="utf-8") as f:
     f.write('version: "2.0" \n')
@@ -26,7 +26,7 @@ with open("data/nlu/faq-nlu.yml", "wt", encoding="utf-8") as f:
         
 
    
-with open("data/all_domains/faq-domain.yml", "wt", encoding="utf-8") as f:
+with open("other_data/all_domains/faq-domain.yml", "wt", encoding="utf-8") as f:
     f.write('version: "2.0" \n')
     f.write('\n')
     f.write("intents:\n")

@@ -317,7 +317,7 @@ class bot_reformulate(Action):
             return [] 
         else:   
             #bot_responses_to_user_question_json contains all bot utterances regarding the user sub-intent in a list of json
-            with open('data/qna_data_bases/strored_all_bot_responses.txt') as json_file:
+            with open('other_data/qna_data_bases/strored_all_bot_responses.txt') as json_file:
                 bot_responses_to_user_question_json = json.load(json_file)
             user_current_intent_id = tracker.get_slot('user_current_intent_id')
 
@@ -377,7 +377,7 @@ class ActionBotAdaptiveAnswer(Action):
         user_profile = tracker.get_slot('profile')
 
         #bot_responses_to_user_question_json contains all bot utterances regarding the user sub-intent in a list of json
-        with open('data/qna_data_bases/strored_all_bot_responses.txt') as json_file:
+        with open('other_data/qna_data_bases/strored_all_bot_responses.txt') as json_file:
             bot_responses_to_user_question_json = json.load(json_file)       
         #get the user faq intent id
         user_current_intent_id = tracker.get_slot('user_current_intent_id')
@@ -510,9 +510,9 @@ class ActionAskClarification(Action):
         self, dispatcher: CollectingDispatcher, tracker: Tracker, domain: DomainDict,
     ) :
         #bot_responses_to_user_question_json contains all bot utterances regarding the user sub-intent in a list of json
-        with open('data/qna_data_bases/strored_all_bot_responses.txt') as json_file:
+        with open('other_data/qna_data_bases/strored_all_bot_responses.txt') as json_file:
             bot_responses_to_user_question_json = json.load(json_file)
-        with open('data/qna_data_bases/strored_all_bot_questions.txt') as json_file:
+        with open('other_data/qna_data_bases/strored_all_bot_questions.txt') as json_file:
             user_questions_to_bot_responses_json = json.load(json_file)
 
         intent_ranking = (

@@ -6,25 +6,25 @@ import yaml
 #combiner les deux fichiers faq-domain.yml et od-domain.yml en commun de manière automatique
 #ouverture des deux fichiers yml
 #importation de faq-domain.yml
-with open("data/all_domains/faq-domain.yml", 'rb') as stream:
+with open("other_data/all_domains/faq-domain.yml", 'rb') as stream:
         faq_domain = yaml.load(stream)
 #importation de od-domain.yml
-with open("data/all_domains/od-domain.yml", 'rb') as stream:
+with open("other_data/all_domains/od-domain.yml", 'rb') as stream:
         od_domain = yaml.load(stream)
 #importation de faq-aug-domain.yml
-with open("data/all_domains/faq-aug-domain.yml", 'rb') as stream:
+with open("other_data/all_domains/faq-aug-domain.yml", 'rb') as stream:
         faq_aug_domain = yaml.load(stream) 
 #importation de additional-entities.yml
-with open("data/all_domains/additional-entities.yml", 'rb') as stream:
+with open("other_data/all_domains/additional-entities.yml", 'rb') as stream:
         additional_enties = yaml.load(stream) 
 #importation de slots.yml
-with open("data/all_domains/slots.yml", 'rb') as stream:
+with open("other_data/all_domains/slots.yml", 'rb') as stream:
         slots = yaml.load(stream) 
 #importation de actions.yml
-with open("data/all_domains/actions.yml", 'rb') as stream:
+with open("other_data/all_domains/actions.yml", 'rb') as stream:
         actions = yaml.load(stream) 
 #importation de forms.yml
-with open("data/all_domains/forms.yml", 'rb') as stream:
+with open("other_data/all_domains/forms.yml", 'rb') as stream:
         forms = yaml.load(stream) 
 #generating the new domain.yml file
 domain_yaml = {'version': '2.0'}
