@@ -1,0 +1,7 @@
+role;ordinateur;smartphone;devTools;clavier;vsCode;adminAccess;calendarAccess;souris
+developpeur;1;1;1;1;1;0;0;1
+administrateur;1;1;0;0;0;1;0;1
+manager;1;1;0;0;0;0;1;1
+developpeur;1;1;1;1;0;0;0;1
+administrateur;1;1;0;0;0;1;0;0
+manager;1;1;0;0;0;0;1;0
