@@ -110,9 +110,9 @@ nlu:
     - [assurance](assurance) voyage obligatoire
 - intent: faq/15
   examples: |
-    - Est-ce qu'il y a un équivalent de [carte européenne](carte_européenne) d'assurance maladie à l'étranger ?
-    - ont t -il des [carte européenne](carte_européenne) là bas ?
-    - [Assurance maladie](carte_européenne)
+    - Est-ce qu'il y a un équivalent de [carte européenne](carte_europeenne) d'assurance maladie à l'étranger ?
+    - ont t -il des [carte européenne](carte_europeenne) là bas ?
+    - [Assurance maladie](carte_europeenne)
     - Y a t-il un type de carte européenne à Bali ?
     - Y a t-il un genre de carte européenne à Bali ?
 - intent: faq/16
@@ -185,13 +185,13 @@ nlu:
     - La [4G](quatre_G) existe ?
 - intent: faq/25
   examples: |
-    - Est-ce qu'il y a des [forfaits téléphoniques](forfaits_téléphonique) à Bali ?
-    - Comment avoir un [forfait de téléphone](forfaits_téléphonique) local ?
+    - Est-ce qu'il y a des [forfaits téléphoniques](forfaits_telephonique) à Bali ?
+    - Comment avoir un [forfait de téléphone](forfaits_telephonique) local ?
     - Est-ce que des forfaits téléphoniques existent à Bali ?
-    - Est-ce qu'il y a des [forfait téléphoniques](forfaits_téléphonique)?
-    - comment faire pour [téléphoner](forfaits_téléphonique) a bali   ?
-    - comment je fais pour les [forfaits téléphoniques](forfaits_téléphonique)?
-    - Il y a des [forfaits téléphoniques](forfaits_téléphonique) à bali ?
+    - Est-ce qu'il y a des [forfait téléphoniques](forfaits_telephonique)?
+    - comment faire pour [téléphoner](forfaits_telephonique) a bali   ?
+    - comment je fais pour les [forfaits téléphoniques](forfaits_telephonique)?
+    - Il y a des [forfaits téléphoniques](forfaits_telephonique) à bali ?
 - intent: faq/26
   examples: |
     - Combien [coûte](prix) une semaine de [séjour](sejour) en moyenne sur place ?
