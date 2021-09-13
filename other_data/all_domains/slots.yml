@@ -36,8 +36,6 @@ slots:
     type: any    
   pseudo:
     type: any
-  pseudo2:
-    type: any
   bot_question_confusion:
     type: any
   bot_question_incomprehension:

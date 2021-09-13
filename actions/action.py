@@ -215,7 +215,19 @@ class Record_user_note(Action):
 class validatenoteForm(FormValidationAction):
 
     def name(self):
-        return 'validate_note_asking_form'
+        return 'validate_note_and_pseudo_asking_form'
+
+    # async def required_slots(
+    #     self,
+    #     slots_mapped_in_domain: List[Text],
+    #     dispatcher: "CollectingDispatcher",
+    #     tracker: "Tracker",
+    #     domain: "DomainDict"
+    # ) -> List[Text]:
+    #     if tracker.get_slot("pseudo2") is True:
+    #         return ["note"]
+    #     else:
+    #         return ["note", "pseudo"]
 
     async def required_slots(
         self,
@@ -224,11 +236,9 @@ class validatenoteForm(FormValidationAction):
         tracker: "Tracker",
         domain: "DomainDict"
     ) -> List[Text]:
-        if tracker.get_slot("pseudo2") is True:
+        if tracker.get_slot("note") is False:
             return ["note"]
-        else:
-            return ["note", "pseudo"]
-
+          
     def validate_note(self, slot_value, dispatcher, tracker, domain):
         """Check if the note given by the user is within 1 and 5"""
 
@@ -238,35 +248,35 @@ class validatenoteForm(FormValidationAction):
             dispatcher.utter_message("veuillez renseigner une valeur entre 1 et 5")
             return {"note": None}
 
-    def validate_pseudo(self, slot_value, dispatcher, tracker, domain):
-        """Check if the user pseudo already exists"""
+    # def validate_pseudo(self, slot_value, dispatcher, tracker, domain):
+    #     """Check if the user pseudo already exists"""
 
         
-        try:
-            # Connect to an existing database (should put these in a config file for more safe)
-            connection = psycopg2.connect(user="civadev",
-                                        password="civa",
-                                        host="20.199.107.202",
-                                        port="5432",
-                                        database="postgres")
-            # Create a cursor to perform database operations
-            cursor = connection.cursor()
-            cursor.execute("SELECT pseudo from user_bot_augmented_recordings")
-            record = cursor.fetchall()
-            pseudos = list(set(list(pd.DataFrame(record)[0].values)))
-        except (Exception, Error) as error:
-            print("Error while connecting to PostgreSQL", error)
-        finally:
-            if (connection):
-                cursor.close()
-                connection.close()
-                print("PostgreSQL connection is closed")
+    #     try:
+    #         # Connect to an existing database (should put these in a config file for more safe)
+    #         connection = psycopg2.connect(user="civadev",
+    #                                     password="civa",
+    #                                     host="20.199.107.202",
+    #                                     port="5432",
+    #                                     database="postgres")
+    #         # Create a cursor to perform database operations
+    #         cursor = connection.cursor()
+    #         cursor.execute("SELECT pseudo from user_bot_augmented_recordings")
+    #         record = cursor.fetchall()
+    #         pseudos = list(set(list(pd.DataFrame(record)[0].values)))
+    #     except (Exception, Error) as error:
+    #         print("Error while connecting to PostgreSQL", error)
+    #     finally:
+    #         if (connection):
+    #             cursor.close()
+    #             connection.close()
+    #             print("PostgreSQL connection is closed")
                 
-        if slot_value not in pseudos:
-            return {"pseudo": slot_value, "pseudo2" : slot_value}
-        else:
-            dispatcher.utter_message("Ce pseudo existe déjà. Veuillez en renseigner un autre s'il vous plait.")
-            return {"pseudo": None}
+    #     if slot_value not in pseudos:
+    #         return {"pseudo": slot_value, "pseudo2" : slot_value}
+    #     else:
+    #         dispatcher.utter_message("Ce pseudo existe déjà. Veuillez en renseigner un autre s'il vous plait.")
+    #         return {"pseudo": None}
 
 
 class bot_reformulate(Action):

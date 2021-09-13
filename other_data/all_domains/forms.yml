@@ -9,8 +9,13 @@ forms:
           - faq
           - deny
           - ask_reformulate
-    pseudo:
-      - type: from_text
+    # pseudo:
+    #   - type: from_text
+
+  # user_email_form:
+  #   email:
+  #     - type : text
+
   
 
 
