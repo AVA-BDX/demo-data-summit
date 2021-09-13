@@ -15,6 +15,7 @@ intents:
 - confusion_1
 - confusion_2
 - non_sense
+- intent_trigger_conversation
 - helpdesk
 
 responses:

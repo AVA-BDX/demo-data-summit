@@ -25,38 +25,20 @@ from fuzzywuzzy import fuzz
 
 import json
 
+class TriggerNoteForm(Action):
+    def name(self):
+        return "action_identification_form"
 
+    async def run(
+        self,
+        dispatcher: CollectingDispatcher,
+        tracker: Tracker,
+        domain: Dict[Text, Any],
 
-# class ActionSessionStart(Action):
-#     def name(self) :
-#         return "action_session_start"
-
-#     @staticmethod
-#     def fetch_slots(tracker: Tracker):
-#         """Collect slots that contain the user's name and phone number."""
-
-#         slots = []
-#         for key in ("name", "phone_number"):
-#             value = tracker.get_slot(key)
-#             if value is not None:
-#                 slots.append(SlotSet(key=key, value=value))
-#         return slots
-
-#     async def run(
-#       self, dispatcher: CollectingDispatcher, tracker: Tracker, domain: Dict[Text, Any]
-#     ) -> List[Dict[Text, Any]]:
-
-#         # the session should begin with a `session_started` event
-#         events = [SessionStarted()]
-
-#         dispatcher.utter_message(text="Message d'accueil pour voir comment cela fonctionne sur rasa X")
-
-#         # # an `action_listen` should be added at the end as a user message follows
-#         # events.append(ActionExecuted("action_listen"))
-
-#         return [UserUtteranceReverted(),Form("note_and_pseudo_asking_form")]
-
-
+    ) -> List[EventType]:
+        """This action will trigger the note_asking_form at the begining of the conversation"""
+      
+        return [Form("note_and_pseudo_asking_form")] 
 
 class user_inputs(Action):
 
@@ -695,25 +677,7 @@ class ActionIncrementIncomprehensionConfusion(Action):
                     var_bot_question_confusion = 1
         return [SlotSet("bot_question_incomprehension", var_bot_question_incomprehension),SlotSet("bot_question_confusion", var_bot_question_confusion) ]
 
-
-
-# class TriggerNoteForm(Action):
-#     def name(self) -> Text:
-#         return "action_trigger_note_form"
-
-#     async def run(
-#         self,
-#         dispatcher: CollectingDispatcher,
-#         tracker: Tracker,
-#         domain: Dict[Text, Any],
-
-#     ) -> List[EventType]:
-#         """This action will trigger the note_asking_form """
-      
-#         return [Form("note_asking_form")] 
        
-            
-
 class SetConfusionSlotToNone(Action):
     def name(self) :
         return "action_set_confusion_slot_to_none"
