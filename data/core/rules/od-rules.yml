@@ -11,10 +11,105 @@ rules:
   - intent: bot_challenge
   - action: utter_iamabot
 
-- rule: start the conversation, simulate user message
+# - rule: start the conversation, simulate user message
+#   steps:
+#   - intent: intent_trigger_conversation
+#   - action: action_askingEmail_form
+
+
+- rule: Activate askingEmail_form
   steps:
   - intent: intent_trigger_conversation
-  - action: action_identification_form
+  - action: askingEmail_form
+  - active_loop: askingEmail_form
+
+
+- rule: submit the askingEmail_form, password incorrect
+  condition:
+      - active_loop: askingEmail_form
+  steps:
+    - action: askingEmail_form
+    - active_loop: null
+    - action: action_send_email
+    - action: check_password_form
+    - active_loop: check_password_form
+
+
+- rule: submit the check_password_form, password incorrect
+  condition:
+      - active_loop: check_password_form
+  steps:
+    - action: check_password_form
+    - active_loop: null
+    - action: action_set_misspell_pwd
+    - slot_was_set:
+      - misspelled_password: true
+    - action : action_propose_opts_if_misspell_psw
+
+
+- rule: submit the check_password_form, password is correct
+  condition:
+      - active_loop: check_password_form
+  steps:
+    - action: check_password_form
+    - active_loop: null
+    - action: action_set_misspell_pwd
+    - slot_was_set:
+      - misspelled_password: null
+    - action : utter_good_password
+
+- rule: Activate retry_password_form
+  steps:
+  - intent: retry_password
+  - action: action_set_retry_password_to_none 
+  - action: retry_password_form
+  - active_loop: retry_password_form
+
+
+
+- rule: submit the retry_password_form, password incorrect
+  condition:
+      - active_loop: retry_password_form
+  steps:
+    - action: retry_password_form
+    - active_loop: null
+    - action: action_set_misspell_pwd
+    - slot_was_set:
+      - misspelled_password: true
+    - action : action_propose_opts_if_misspell_psw
+
+
+- rule: submit the retry_password_form, password is correct
+  condition:
+      - active_loop: retry_password_form
+  steps:
+    - action: retry_password_form
+    - active_loop: null
+    - action: action_set_misspell_pwd
+    - slot_was_set:
+      - misspelled_password: null
+    - action : utter_good_password
+
+
+- rule:  The user want a new tokken to be sent 
+  steps:
+  - intent: send_new_pwd
+  - action: action_send_email
+  - action: action_set_user_password_to_none
+  - action: check_password_form
+  - active_loop: check_password_form
+
+
+- rule:  The user want to change his email
+  steps:
+  - intent: change_email
+  - action: action_set_email_slot_to_none
+  - action: action_set_user_password_to_none
+  - action: askingEmail_form
+  - active_loop: askingEmail_form
+
+
+    
 
 # - rule: Ask the user to rephrase whenever they send a message with low NLU confidence
 #   steps:

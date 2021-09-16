@@ -45,3 +45,14 @@ slots:
   user_want_given_anws:
     type: bool
     influence_conversation: true
+  email:
+    type: any
+  confirmation_password:
+    type: any
+  user_password:
+    type: any
+  retry_password:
+    type: any
+  misspelled_password:
+    type: bool
+    influence_conversation: true

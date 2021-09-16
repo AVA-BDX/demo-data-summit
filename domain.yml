@@ -17,6 +17,9 @@ intents:
   - non_sense
   - intent_trigger_conversation
   - helpdesk
+  - retry_password
+  - send_new_pwd
+  - change_email
 entities:
   - PCR
   - activites
@@ -100,6 +103,9 @@ entities:
   - milieu
   - droit
   - equipemnt_helpdesk
+  - retry_password
+  - new_password
+  - email
 slots:
     user_ongoin_message:
         type: any
@@ -145,7 +151,39 @@ slots:
     user_want_given_anws:
         type: bool
         influence_conversation: true
+    email:
+        type: any
+    confirmation_password:
+        type: any
+    user_password:
+        type: any
+    retry_password:
+        type: any
+    misspelled_password:
+        type: bool
+        influence_conversation: true
 responses:
+    utter_email_invalid:
+      - text: Merci de renseigner une adresse mail valide
+      - text: Il semblerait que votre e-mail ne soit pas valide.  Veuillez en renseigner
+            un valide s'il vous plait
+      - text: Veuillez renseigner un e-mail valide s'il vous plait
+    utter_ask_user_password:
+      - text: Un mot de passe vient d'être envoyé à l'adresse que vous avez indiqué
+            pour confirmer que vous en ête bien le propriétaire  Veuillez le renseigner
+            s'il vous plait
+      - text: Un mot de passe de 12 caractères vient d'être envoyé à l'adresse {email}  Merci
+            de le renseigner
+      - text: Merci de confirmer votre identité en renseignant le mot de passe qui
+            vient d'être envoyé à l'adresse {email}
+    utter_ask_retry_password:
+      - text: Veuillez réessayer de taper le mot de passe qui vous a été envoyé
+      - text: Très bien, saisissez à nouveau le code à 12 caractères
+      - text: Merci de taper à nouveau le mot de passe
+    utter_good_password:
+      - text: Vous avez été bien authentifié !
+      - text: Merci, votre identité est confirmée
+      - text: 'Parfait, vous êtes bien authentifé '
     utter_greet:
       - text: salut
       - text: Bonjour
@@ -182,8 +220,8 @@ responses:
       - text: Ok, on ne s'est pas compris, pouvez-vous reformuler votre question?
       - text: Hmmm, je n'ai donc pas compris! pouvez-vous me le dire différements?
     utter_dont_understand:
-      - text: "Pouvez vous apporter plus de détails s'il vous plait ? \n je n'ai compris\
-            \ que {name} de ce que vous avez dit ^^'"
+      - text: Pouvez vous apporter plus de détails s'il vous plait ?  je n'ai compris
+            que {name} de ce que vous avez dit ^^'
       - text: Pardon, je n'ai pas compris votre question.
       - text: Pardon, je n'ai compris que {name} de votre question
       - text: Hmmm, pas clair pour moi. Pouvez-vous reformuler ?
@@ -201,8 +239,10 @@ responses:
             payload: /dont_care
           - title: phrases longues
             payload: /long_utters
-    utter_ask_pseudo:
-      - text: Quel est votre pseudo ?
+    utter_ask_email:
+      - text: Quel est votre adresse mail ?
+      - text: Veuillez renseigner votre e-mail ?
+      - text: Nous avons besoin de votre e-mail pour continuer
     utter_faq/1:
       - text: Avec un passeport Français, il n'y a pas besoin d'un visa si la durée
             du séjour est inférieure à 30 jours, néanmoins il faudra que votre passeport
@@ -1441,7 +1481,7 @@ responses:
 actions:
   - action_user_last_message
   - action_bot_last_message
-  - validate_note_asking_form
+  - validate_note_and_pseudo_asking_form
   - action_record_the_user_note
   - user_note_to_none
   - action_utter_reformulate
@@ -1455,16 +1495,38 @@ actions:
   - action_increment_confusion_incomprehension
   - action_set_confusion_slot_to_none
   - action_ask_another_question
-  - action_identification_form
+  - action_askingEmail_form
+  - action_send_email
+  - validate_askingEmail_form
+  - action_set_email_slot_to_none
+  - validate_check_password_form
+  - validate_retry_password_form
+  - action_propose_opts_if_misspell_psw
+  - action_set_misspell_pwd
+  - action_set_retry_password_to_none
+  - action_set_user_password_to_none
 forms:
     note_and_pseudo_asking_form:
-        note:
-          - type: from_text
-            intent: number
-            not_intent:
-              - faq
-              - deny
-              - ask_reformulate
+        required_slots:
+            note:
+              - type: from_text
+                intent: number
+                not_intent:
+                  - faq
+                  - deny
+                  - ask_reformulate
+    askingEmail_form:
+        required_slots:
+            email:
+              - type: from_text
+    check_password_form:
+        required_slots:
+            user_password:
+              - type: from_text
+    retry_password_form:
+        required_slots:
+            retry_password:
+              - type: from_text
 session_config:
     session_expiration_time: 60
     carry_over_slots_to_new_session: true

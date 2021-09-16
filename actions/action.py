@@ -25,9 +25,235 @@ from fuzzywuzzy import fuzz
 
 import json
 
-class TriggerNoteForm(Action):
+import re
+
+import string
+
+import smtplib, ssl
+from email.mime.text import MIMEText
+from email.mime.multipart import MIMEMultipart
+
+# from configparser import ConfigParser
+
+
+
+class AskingEmail(Action):
     def name(self):
-        return "action_identification_form"
+        return "action_askingEmail_form"
+    
+    async def run(
+        self,
+        dispatcher: CollectingDispatcher,
+        tracker: Tracker,
+        domain: Dict[Text, Any],
+    ) -> List[EventType]:
+        """This action will trigger the note_asking_form at the begining of the conversation"""
+      
+        return [Form("askingEmail_form")] 
+    
+class validateEmail(FormValidationAction):
+    
+    def __init__(self):
+        #  Make a regular expression
+        # for validating an Email
+        self.regex  =  r'\b[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Z|a-z]{2,}\b'
+    
+    def name(self):
+        return 'validate_askingEmail_form'
+
+    def check(self, mail):
+    # pass the regular expression
+    # and the string into the fullmatch() method
+        if(re.fullmatch(self.regex , mail)):
+            return "Valid Email"
+        else:
+            return "Invalid Email"
+
+    def validate_email(self, slot_value, dispatcher, tracker, domain):
+        """Check if the email given by the user is a valid email format"""
+
+        if self.check(str(slot_value)) == "Valid Email":
+            return {"email": slot_value}
+        else:
+            dispatcher.utter_message(response="utter_email_invalid")
+            return {"email": None}
+        
+        
+class SendEmail(Action):
+    def name(self) :
+        return "action_send_email"
+
+    async def run(
+        self,
+        dispatcher: CollectingDispatcher,
+        tracker: Tracker,
+        domain: Dict[Text, Any],
+    ) -> List[EventType]:
+        """ send a random code to user to make sure the e-mail address he gave is his"""
+        
+        #retreive the user email
+        user_email = tracker.get_slot('email')
+        #generate token to send to the user
+        source = string.ascii_letters + string.digits
+        tokken = ''.join((random.choice(source) for i in range(12)))
+        #get credentials
+        # config = ConfigParser()
+        # config.read('config.ini')
+        # email_password = config.get('auth', 'email_password')
+        # email_address = config.get('instance', 'email_address')
+        
+        email_password = 'Wilfrikii123..'
+        email_address = 'civaqnabots@gmail.com'      
+        # on rentre les renseignements pris sur le site du fournisseur
+        smtp_address = 'smtp.gmail.com'
+        smtp_port = 465
+        # on rentre les informations sur le destinataire
+        email_receiver = user_email
+        # on crée la connexion
+        context = ssl.create_default_context()
+        # on crée un e-mail
+        message = MIMEMultipart("alternative")
+        # on ajoute un sujet
+        message["Subject"] = "Authentification"
+        # un émetteur
+        message["From"] = email_address
+        # un destinataire
+        message["To"] = email_receiver
+        # on crée un texte et sa version HTML
+        html = f'''
+        <html>
+        <body>
+        <p>mdp : {tokken}</p>
+        </body>
+        </html
+        >
+        '''
+        # on crée deux éléments MIMEText 
+        html_mime = MIMEText(html, 'html')
+        # on attache ces deux éléments 
+        message.attach(html_mime)
+        # on crée la connexion
+        context = ssl.create_default_context()
+        with smtplib.SMTP_SSL(smtp_address, smtp_port, context=context) as server:
+            # connexion au compte
+            server.login(email_address, email_password)
+            # envoi du mail
+            server.sendmail(email_address, email_receiver, message.as_string())       
+        return [SlotSet("confirmation_password", tokken)]
+
+    
+class validateConfirmationPassword(FormValidationAction):
+    
+    def name(self):
+        return 'validate_check_password_form'
+
+    def validate_user_password(self, slot_value, dispatcher, tracker, domain):
+        """Check if the email given by the user is a valid email format"""
+
+        
+        true_password = tracker.get_slot('confirmation_password')
+        if str(slot_value) == str(true_password):
+            user_email = tracker.get_slot('email')
+            
+            return  {"pseudo": user_email}
+        else:
+            return {"requested_slot": None}
+        
+        
+       
+        
+class validateRetryPassword(FormValidationAction):
+    
+    def name(self):
+        return 'validate_retry_password_form'
+
+    def validate_retry_password(self, slot_value, dispatcher, tracker, domain):
+        """Check if the email given by the user is a valid email format"""
+
+        true_password = tracker.get_slot('confirmation_password')
+        if str(slot_value) == str(true_password):
+            user_email = tracker.get_slot('email')
+            return  {"pseudo": user_email}
+        else:
+            return {"requested_slot": None}
+        
+class ActionSetMisspelledPassword(FormValidationAction):
+    
+    def name(self):
+        return 'action_set_misspell_pwd'
+
+    async def run(
+        self,
+        dispatcher: CollectingDispatcher,
+        tracker: Tracker,
+        domain: Dict[Text, Any],
+    ) -> List[EventType]:
+        """Check if the password written by the user is correct"""
+        if not tracker.get_slot('pseudo'):
+            user_email = tracker.get_slot('email')
+            return [SlotSet("misspelled_password",True), SlotSet("email",user_email)]
+        else:
+            return [SlotSet("misspelled_password",None)]
+        
+class ActionSetRetryPasswordToNone(FormValidationAction):
+    
+    def name(self):
+        return 'action_set_retry_password_to_none'
+
+    async def run(
+        self,
+        dispatcher: CollectingDispatcher,
+        tracker: Tracker,
+        domain: Dict[Text, Any],
+    ) -> List[EventType]:
+        """Set the retry_password slot to none"""
+        
+        return [SlotSet("retry_password",None) ]
+    
+class ActionSetUserPasswordToNone(FormValidationAction):
+    
+    def name(self):
+        return 'action_set_user_password_to_none'
+
+    async def run(
+        self,
+        dispatcher: CollectingDispatcher,
+        tracker: Tracker,
+        domain: Dict[Text, Any],
+    ) -> List[EventType]:
+        """Set the user_password slot to none"""
+        
+        return [SlotSet("user_password",None) ]
+        
+        
+        
+class ProposeOptionsIfMispellPassword(Action):
+    def name(self) :
+        return "action_propose_opts_if_misspell_psw"
+
+    async def run(
+        self,
+        dispatcher: CollectingDispatcher,
+        tracker: Tracker,
+        domain: Dict[Text, Any],
+    ) -> List[EventType]:
+        """This action will set the slot named email to None"""
+        message_title = (
+            "Le mot de passe est incorrecte 🤔.\n Que voulez-vous faire ? "
+        )
+        buttons = []
+
+        buttons.append({"title": "Réessayer", "payload": f"/retry_password"})                   
+        buttons.append({"title": "Recevoir un nouveau code", "payload": f"/send_new_pwd"})  
+        buttons.append({"title": "Changer d'e-mail", "payload": f"/change_email"})
+
+        dispatcher.utter_message(text=message_title, buttons=buttons)  
+        
+        return []
+        
+class SetEmailSlotToNone(Action):
+    def name(self) :
+        return "action_set_email_slot_to_none"
 
     async def run(
         self,
@@ -36,9 +262,10 @@ class TriggerNoteForm(Action):
         domain: Dict[Text, Any],
 
     ) -> List[EventType]:
-        """This action will trigger the note_asking_form at the begining of the conversation"""
-      
-        return [Form("note_and_pseudo_asking_form")] 
+        """This action will set the slot named email to None"""
+   
+        return [SlotSet("email", None)]
+
 
 class user_inputs(Action):
 
@@ -161,9 +388,9 @@ class Record_user_note(Action):
         
         try:
             # Connect to an existing database (should put these in a config file for more safe)
-            connection = psycopg2.connect(user="civadev",
-                                        password="civa",
-                                        host="20.199.107.202",
+            connection = psycopg2.connect(user="admin",
+                                        password="secret",
+                                        host="51.103.114.8",
                                         port="5432",
                                         database="postgres")
             # Create a cursor to perform database operations
@@ -229,17 +456,17 @@ class validatenoteForm(FormValidationAction):
     #     else:
     #         return ["note", "pseudo"]
 
-    async def required_slots(
-        self,
-        slots_mapped_in_domain: List[Text],
-        dispatcher: "CollectingDispatcher",
-        tracker: "Tracker",
-        domain: "DomainDict"
-    ) -> List[Text]:
-        if tracker.get_slot("note") is False:
-            return ["note"]
+    # async def required_slots(
+    #     self,
+    #     slots_mapped_in_domain: List[Text],
+    #     dispatcher: "CollectingDispatcher",
+    #     tracker: "Tracker",
+    #     domain: "DomainDict"
+    # ) -> List[Text]:
+    #     if tracker.get_slot("note") is False:
+    #         return ["note"]
           
-    def validate_note(self, slot_value, dispatcher, tracker, domain):
+    def validate_note(self, slot_value, dispatcher, tracker, domain) :
         """Check if the note given by the user is within 1 and 5"""
 
         if str(slot_value) in ["1","2","3","4","5"]:
@@ -685,7 +912,7 @@ class ActionIncrementIncomprehensionConfusion(Action):
                 ) - intent_ranking[1].get("confidence")                          
                 if diff_intent_confidence < 0.2:
                     var_bot_question_confusion = 1
-        return [SlotSet("bot_question_incomprehension", var_bot_question_incomprehension),SlotSet("bot_question_confusion", var_bot_question_confusion) ]
+        return [    SlotSet("bot_question_incomprehension", var_bot_question_incomprehension),SlotSet("bot_question_confusion", var_bot_question_confusion) ]
 
        
 class SetConfusionSlotToNone(Action):
@@ -706,16 +933,16 @@ class SetConfusionSlotToNone(Action):
 
 # class ActionRecommendationAlgo(Action):
 
-#     def __init__(self) -> None:
-#         self.roles = ['administrateur', 'developpeur', 'manager']
-#         self.materilasList = ['adminAccess',
-#         'calendarAccess',
-#         'clavier',
-#         'devTools',
-#         'ordinateur',
-#         'smartphone',
-#         'souris',
-#         'vsCode']
+    # def __init__(self) -> None:
+    #     self.roles = ['administrateur', 'developpeur', 'manager']
+    #     self.materilasList = ['adminAccess',
+    #     'calendarAccess',
+    #     'clavier',
+    #     'devTools',
+    #     'ordinateur',
+    #     'smartphone',
+    #     'souris',
+    #     'vsCode']
 
 
 #     def name(self) -> Text:
@@ -786,6 +1013,56 @@ class SetConfusionSlotToNone(Action):
 #         return Xnew
 
 
-#     async def run(
-#         self,
-#         dispatcher: Collecting
+
+    # async def run(
+    #         self,
+    #         dispatcher: CollectingDispatcher,
+    #         tracker: Tracker,
+    #         domain: Dict[Text, Any],
+    #     ) -> List[EventType]:
+    #         """ this function will indicate what to do after a clarification has been choosen"""
+
+    #         path = r"data/qna_data_bases/donnees_pour_reco.csv"
+    #         data_base = pd.read_csv(path,  sep=";", encoding="latin3")
+
+    #         #importation du model
+    #         with open('actions/recoLightKnn.sav', 'rb') as modelknn:
+    #             model = pickle.load(modelknn)
+
+    #         #encodage
+    #         le = preprocessing.LabelEncoder()
+    #         #elements a encoder
+    #         le.fit(self.roles)       
+
+    #         user_ongoin_message = tracker.get_slot('user_ongoin_message')
+
+    #         inputUserTransformed = self.extractKeyWords(user_ongoin_message.split(), self.materilasList)
+
+    #         if set(self.convertToDigit(inputUserTransformed, self.materilasList)) != {0}:
+    #             prediction = le.inverse_transform(model.predict(self.transfoInput(inputUserTransformed)))[0] 
+
+    #             equipments_role = data_base.loc[data_base["role"]==prediction,]
+    #             name_values = list(equipments_role.iloc[0,])[1:]
+    #             idx = [idx for idx in range(len(name_values)) if name_values[idx] != 0]
+    #             equipments_role = list(equipments_role.iloc[0,].index.values)[1:]
+    #             equipments_role = [equipments_role[index] for index in idx if equipments_role[index] not in inputUserTransformed]
+    #             equipments_role[len(equipments_role)-1] = "et " + equipments_role[len(equipments_role)-1] 
+    #             equipments_role = ", ".join(equipments_role)          
+
+    #             if len(inputUserTransformed) == 1:
+
+    #                 dispatcher.utter_message(text = f"Vous avez demandé l'équipement {inputUserTransformed[0]} \nJe prédis donc que vous êtes {prediction} \nVous aurez également besoin des équipements suivants: {equipments_role} ")
+
+    #                 return []
+    #             else:
+    #                 inputUserTransformed[len(inputUserTransformed)-1] = "et " + inputUserTransformed[len(inputUserTransformed)-1]
+    #                 inputUserTransformed = ", ".join(inputUserTransformed)  
+
+    #                 dispatcher.utter_message(text = f"Vous avez demandé les équiments {inputUserTransformed} \nJe prédis donc que vous êtes {prediction} \nVous aurez également besoin des équipements suivants: {equipments_role} ")
+
+    #                 return []
+    #         else:
+    #             prediction = "Desole :(, nous n'avons pas trouve de role correspondant a votre requete"    
+    #             return [] 
+
+    #         return []

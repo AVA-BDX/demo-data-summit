@@ -3,7 +3,7 @@ version: "2.0"
 actions:
   - action_user_last_message
   - action_bot_last_message
-  - validate_note_asking_form
+  - validate_note_and_pseudo_asking_form
   - action_record_the_user_note
   - user_note_to_none
   - action_utter_reformulate
@@ -17,4 +17,13 @@ actions:
   - action_increment_confusion_incomprehension
   - action_set_confusion_slot_to_none
   - action_ask_another_question
-  - action_identification_form
+  - action_askingEmail_form
+  - action_send_email
+  - validate_askingEmail_form
+  - action_set_email_slot_to_none
+  - validate_check_password_form
+  - validate_retry_password_form
+  - action_propose_opts_if_misspell_psw
+  - action_set_misspell_pwd
+  - action_set_retry_password_to_none
+  - action_set_user_password_to_none

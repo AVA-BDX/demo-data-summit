@@ -24,4 +24,8 @@ entities:
 - milieu
 - droit
 - equipemnt_helpdesk
+- retry_password
+- new_password
+- email
+
 

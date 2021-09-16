@@ -2,19 +2,29 @@ version: '2.0'
 
 forms:
   note_and_pseudo_asking_form:
-    note:
+    required_slots:
+      note:
       - type: from_text
         intent: number
         not_intent:
-          - faq
-          - deny
-          - ask_reformulate
-    # pseudo:
-    #   - type: from_text
+            - faq
+            - deny
+            - ask_reformulate
 
-  # user_email_form:
-  #   email:
-  #     - type : text
+  askingEmail_form:
+    required_slots:
+      email:
+      - type : from_text
+
+  check_password_form:
+    required_slots:
+      user_password:
+      - type : from_text
+
+  retry_password_form:
+    required_slots:
+      retry_password:
+      - type : from_text
 
   
 

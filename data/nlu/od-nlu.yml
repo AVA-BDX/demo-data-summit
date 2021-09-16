@@ -210,6 +210,41 @@ nlu:
     - suis-je en train de parler à un bot ?
     - suis-je en train de parler à un humain ?
 
+
+- intent: retry_password
+  examples: |
+    - je veux [réessayer](retry_password)
+    - [retenter](retry_password)
+    - réessayé
+    - [recommencer](retry_password)
+    - tenter encore
+    - essayer à nouveau
+    - je veux le [refaire](retry_password)
+
+- intent: send_new_pwd
+  examples: |
+    - Recevoir un nouveau [code](new_password)
+    - nouveau [mot de passe](new_password)
+    - nouveau [code](new_password)
+    - envoye moi un [nouveau mot de passe](new_password)
+    - envoie moi un nouveau code
+    - un nouveau [token](new_password)
+    - nouveau [tokken](new_password)
+    - je veux nouveau [code](new_password)
+    - passe moi un [nouveau mot de passe](new_password)
+
+- intent: change_email
+  examples: |
+    - Changer d'[e-mail](email)
+    - renseigner un nouveau [email](email)
+    - nouveau [email](email)
+    - autre email
+    - autre [adresse](email)
+    - j'ai un autre email
+    - donner une nouvelle adresse
+    - changer de [courriel](email)
+    - changer d'[addresse](email)
+
 # - intent: helpdesk
 #   examples: |
 #     - je voudrais un [ordinateur](equipemnt_helpdesk) et un [smartphone](equipemnt_helpdesk)
