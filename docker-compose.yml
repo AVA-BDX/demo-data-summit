@@ -4,7 +4,7 @@ services:
   deployment-civa-augmented-bot-action-server:
     build: .
     # tag it with the registry of microk8s
-    image: localhost:32000/civa-augmented-bot-action-server:0.0.1
-    expose:
-      - "5055"
+    image: laodocker2020/civa-augmented-bot-action-server:0.0.1
+    # expose:
+    #   - "5055"
 
