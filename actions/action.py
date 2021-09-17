@@ -243,9 +243,9 @@ class ProposeOptionsIfMispellPassword(Action):
         )
         buttons = []
 
-        buttons.append({"title": "Réessayer", "payload": f"/retry_password"})                   
+        buttons.append({"title": "Saisir à nouveau le mot de passe", "payload": f"/retry_password"})                   
         buttons.append({"title": "Recevoir un nouveau code", "payload": f"/send_new_pwd"})  
-        buttons.append({"title": "Changer d'e-mail", "payload": f"/change_email"})
+        buttons.append({"title": "Renseigner un nouveau e-mail", "payload": f"/change_email"})
 
         dispatcher.utter_message(text=message_title, buttons=buttons)  
         
@@ -435,7 +435,7 @@ class Record_user_note(Action):
                 connection.close()
                 print("PostgreSQL connection is closed") 
 
-        dispatcher.utter_message(f"vous avez donné la note de {user_note} à la question.") 
+        dispatcher.utter_message(f"Vous avez donné la note de {user_note} à la question.") 
 
         return [] 
 
@@ -742,7 +742,7 @@ class ActionAskClarification(Action):
         if len(intent_ranking) > 1 :
             #user question not clear enough
             var_confidence = intent_ranking[0].get("confidence")
-            if var_confidence < 0.7:
+            if var_confidence < 0.4:
                 dispatcher.utter_message(
                     response ="utter_dont_understand",
                     name= f"{round(100*var_confidence,2)} %"
@@ -759,17 +759,17 @@ class ActionAskClarification(Action):
                     id2 = intent_ranking[1].get("intent_response_key").split("/")[1]
 
                     #get faq_1 2 key words
-                    # phrase1 = list([list_utters for list_utters in bot_responses_to_user_question_json if id1 in list_utters.keys()][0].values())[0]
+                    phrase1_r = list([list_utters for list_utters in bot_responses_to_user_question_json if id1 in list_utters.keys()][0].values())[0]
                     phrase1_q = list([list_utters for list_utters in user_questions_to_bot_responses_json if id1 in list_utters.keys()][0].values())[0]
-                    # phrase1 = phrase1 + phrase1_q
-                    s_id1 =  phrase1_q
+                    phrases_1 = phrase1_r + phrase1_q
+                    s_id1 =  phrases_1
                     N_id1 = len(s_id1)
                    
                     #get faq_2 2 key words
-                    # phrase2 = list([list_utters for list_utters in bot_responses_to_user_question_json if id2 in list_utters.keys()][0].values())[0]
+                    phrase2_r = list([list_utters for list_utters in bot_responses_to_user_question_json if id2 in list_utters.keys()][0].values())[0]
                     phrase2_q = list([list_utters for list_utters in user_questions_to_bot_responses_json if id2 in list_utters.keys()][0].values())[0]
-                    # phrase2 = phrase2 + phrase2_q
-                    s_id2 = phrase2_q
+                    phrases_2 = phrase2_r + phrase2_q
+                    s_id2 = phrases_2
                     N_id2 = len(s_id2)
 
                     #transform quesitons list into spacy's set of docs
@@ -799,7 +799,7 @@ class ActionAskClarification(Action):
                         nb_occur_word_id2 = len([list_w for list_w in id2_pur if word in list_w ])
                         words_importance_id1.append((nb_occur_word_id1/N_id1)*math.log(N_id2/(nb_occur_word_id2 + 1)))
                     Id1_key_word_idx = words_importance_id1.index(max(words_importance_id1))
-                    Id1_key_word = unique_word_id1[Id1_key_word_idx]
+                    Id1_key_word = unique_word_id1[Id1_key_word_idx].replace('\x92',"'").replace('\x9c','oe').replace('\x80','€')
                     
                     #Extract key word for id2 questions
                     for word in unique_word_id2:
@@ -807,7 +807,7 @@ class ActionAskClarification(Action):
                         nb_occur_word_id1 = len([list_w for list_w in id1_pur if word in list_w ])
                         words_importance_id2.append((nb_occur_word_id2/N_id2)*math.log(N_id1/(nb_occur_word_id1 + 1)))
                     Id2_key_word_idx = words_importance_id2.index(max(words_importance_id2))
-                    Id2_key_word = unique_word_id2[Id2_key_word_idx]
+                    Id2_key_word = unique_word_id2[Id2_key_word_idx].replace('\x92',"'").replace('\x9c','oe').replace('\x80','€')
                     
                     
                     #create buttons titles
@@ -904,7 +904,7 @@ class ActionIncrementIncomprehensionConfusion(Action):
         var_bot_question_incomprehension = 0
         var_bot_question_confusion = 0
         if len(intent_ranking) > 1 :
-            if intent_ranking[0].get("confidence") < 0.7:
+            if intent_ranking[0].get("confidence") < 0.4:
                 var_bot_question_incomprehension = 1
             else:
                 diff_intent_confidence = intent_ranking[0].get(

@@ -8,6 +8,7 @@ stories:
     - intent: dont_care
     - intent: long_utters
   - action: action_set_and_acknowledge_profile
+  - action: user_note_to_none
   - action: action_bot_adaptive_answer
   - action: note_and_pseudo_asking_form
   - active_loop: note_and_pseudo_asking_form
@@ -20,6 +21,7 @@ stories:
     - intent: dont_care
     - intent: long_utters
   - action: action_set_and_acknowledge_profile
+  - action: user_note_to_none
   - action: action_bot_adaptive_answer
   - action: note_and_pseudo_asking_form
   - active_loop: note_and_pseudo_asking_form

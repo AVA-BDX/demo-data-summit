@@ -1,214 +1,214 @@
 id_question_pivot;reponse_prop
-1;Quelles sont les conditions de validit? du visa ?
+1;Quelles sont les conditions de validité du visa ?
 1;Un visa est obligatoire ?
-1;Le visa est-il obligatoire pour ce voyage ? 
-1;Faut-il un visa pour se rendre ? ce Pays?
-1;Faut-il avoir un visa pour aller ? Bali ?
+1;"Le visa est-il obligatoire pour ce voyage ? "
+1;Faut-il un visa pour se rendre à ce Pays?
+1;Faut-il avoir un visa pour aller à Bali ?
 1;ai-je besoin d'un visa ?
 2;Faut-il un passeport pour ce voyage ?
 2;Ai je besoin de mon passeport ?
-2;Est ce qu'un passeport valide est obligatoire?
-2;Le passeport est-il n?cessaire pour voyage ? Bali ? 
+2;Est ce qu'un passeport valide est obligatoire ?
+2;"Le passeport est-il nécessaire pour voyage à Bali ? "
 2;Je dois avoir un passeport ?
 2;Un passeport est obligatoire ?
 3;Faut-il faire un test Covid avant de partir ?
-3;Le test PCR est il oblig? pour entrer ? Bali ?
-3;Faut-il faire le test PCR ? 
+3;Le test PCR est-il obligatoire pour entrer à Bali ?
+3;"Faut-il faire le test PCR ? "
 3;Avant combien d'heure du vol dois-je faire un test PCR?
-3;Quelles sont les confitions pour prendre l'avions en cette p?riode de coronavirus ?
+3;Quelles sont les confitions pour prendre l'avions en cette période de coronavirus ?
 3;est-ce obligatoire de faire un test de Corona ?
-4;Dois-je me faire vacciner pour aller ? Bali ? 
+4;"Dois-je me faire vacciner pour aller à Bali ? "
 4;Faut-il se faire vacciner ?
 4;Quels vaccins sont obligatoires ?
-4;Dois-je me vacciner avant de me rendre ? Bali?
-4;Quels sont les vaccins ? faire ? 
+4;Dois-je me vacciner avant de me rendre à Bali?
+4;"Quels sont les vaccins à faire ? "
 4;Il y a-t-il des vaccins obligatoires ?
-5;Est ce que les cartes bancaires sont accept?es partout ? Bali?
-5;Est-ce que les CB fran?aises sont accept?es Bali ?
-5;Ma carte bleue fonctionne-t-elle l? bas ?
-5;Quels sont les moyens de paiement qui fonctionne sur place ? 
-5;Est-ce que je peux payer par carte ? Bali ?
-5;Je peux utiliser ma carte bancaire ? Bali ?
-6;Ai je des frais suppl?mentaires pour retirer ?
+5;Est ce que les cartes bancaires sont acceptées partout à Bali?
+5;Est-ce que les CB françaises sont acceptées Bali ?
+5;Ma carte bleue fonctionne-t-elle là bas ?
+5;"Quels sont les moyens de paiement qui fonctionne sur place ? "
+5;Est-ce que je peux payer par carte à Bali ?
+5;Je peux utiliser ma carte bancaire à Bali ?
+6;Ai je des frais supplémentaires pour retirer ?
 6;Quels sont les frais pour les retrait de cash ?
-6;Comment faire pour ?viter les frais de retrait suppl?mentaire sur place ? 
-6;Est-ce que les frais de retrait d'argent dans les distributeurs sont factur?s?
-6;Quel est le % de frais suppl?mentaires lors d'un retrait ? 
-6;Le retrait d'argent g?n?re-t-il des frais suppl?mentaires ?
-7;Est-il n?cessaire d'avoir du liquide sur soi ? 
+6;"Comment faire pour ?viter les frais de retrait supplémentaire sur place ? "
+6;Est-ce que les frais de retrait d'argent dans les distributeurs sont facturés?
+6;"Quel est le % de frais supplémentaires lors d'un retrait ? "
+6;Le retrait d'argent génère-t-il des frais supplémentaires ?
+7;"Est-il nécessaire d'avoir du liquide sur soi ? "
 7;Ai-je besoin de cash ?
-7;Combien faut-il pr?voir de cash sur place ?
+7;Combien faut-il prévoir de cash sur place ?
 7;Est-ce qu'il faut obligatoirement avoir de l'argent liquide ou la carte bancaire suffit?
 7;Est-ce qu'il faut du liquide ?
 7;Dois-je avoir de l'argent liquide sur moi ?
 8;Quelles sont les conditions d'annulation du voyage?
-8;Est-il possible d'annuler a n'importe quel moment ?
+8;Est-il possible d'annuler à n'importe quel moment ?
 8;Puis-je annuler mon voyage ?
 8;Quelles sont les conditions d'annulation ?
-8;Comment annuler mon voyage ? 
-8;Est-ce possible d'annuler le voyage ? tout moment ?
+8;"Comment annuler mon voyage ? "
+8;Est-ce possible d'annuler le voyage à tout moment ?
 9;Quelle est la monnaie du pays ?
-9;Est-ce qu'ils acceptent les euros ? Bali  ? 
+9;"Est-ce qu'ils acceptent les euros à Bali  ? "
 9;Quelle est la monnaie sur place ?
-9;Quel est le moyen d'?change ? Bali?
+9;Quel est le moyen d'échange ? Bali ?
 9;Quelle est la devise locale ?
-9;Quelle est le nom de la monnaie ? Bali ?
-10;Est-ce que je pourrais ?tre rembours? en cas d'annulation du voyage?
-10;Comment me faire rembourser si mon voyage est annul? ?
-10;Comment est-ce que je serais rembourser en cas d'annulation ? 
-10;Si j'annule, comment suis-je rembours? ?
-10;Comment se faire rembourser un voyage annul?
-10;Si mon voyage est annul?, comment suis-je rembours? ?
-11;Y a t'il des normes sanitaires particuli?re a respecter ? 
-11;Quelles sont les r?glementations sanitaires ?
+9;Quelle est le nom de la monnaie à Bali ?
+10;Est-ce que je pourrais être rembours? en cas d'annulation du voyage?
+10;Comment me faire rembourser si mon voyage est annulé ?
+10;"Comment est-ce que je serais rembourser en cas d'annulation ? "
+10;Si j'annule, comment suis-je remboursé ?
+10;Comment se faire rembourser un voyage annulé?
+10;Si mon voyage est annulé, comment suis-je remboursé ?
+11;"Y a t'il des normes sanitaires particulières à respecter ? "
+11;Quelles sont les réglementations sanitaires ?
 11;Y'a-t-il des maladies ? Bali ?
 11;Est-ce que l'eau de robinet est potable?
 11;Est-ce que l'eau est potable ? Bali ?
 11;Quelles recommandations sanitaires dois-je suivre ? Bali ?
 12;Comment changer mon voyage ?
-12;Je voudrais modifier ma r?servation
-12;Que faire pour modifier ma r?servation ? 
-12;Est-ce qu'il y a moyen de modifier la r?servation?
-12;Je veux modifier mon vol. 
+12;Je voudrais modifier ma réservation
+12;"Que faire pour modifier ma réservation ? "
+12;Est-ce qu'il y a moyen de modifier la réservation?
+12;"Je veux modifier mon vol. "
 12;Comment modifier mon billet
-13;Que faire pour annuler ma r?servation ?
-13;Est-ce que je peux annuler ma r?servation?
-13;Je voudrais annuler ma reservation
-13;Comment faire une annulation pour mon vol   ? 
+13;Que faire pour annuler ma réservation ?
+13;Est-ce que je peux annuler ma réservation?
+13;Je voudrais annuler ma réservation
+13;"Comment faire une annulation pour mon vol   ? "
 13;Je veux annuler mon vol
 13;Comment annuler mon billet ?
-14;Une assurance voyage est elle oblig?e
+14;Une assurance voyage est-elle obligée
 14;Faut-il obligatoirement prendre une assurance.
-14;Faut-il forcement prendre une assurance voyage ? 
+14;"Faut-il forcement prendre une assurance voyage ? "
 14;Est-ce que c'est obligatoire d'avoir une assurance voyage?
 14;Est-ce que je dois avoir une assurance voyage ?
 14;L'assurance de voyage est-elle obligatoire ?
-15;Comment ?tre pris en charge en cas de maladie ? Bali?
+15;Comment être pris en charge en cas de maladie ? Bali ?
 15;Existe-t-il une Carte d'Assurance Maladie pour Bali ?
-15;Quel est l'?quivalent de la carte europ?enne ? l'?tranger ? 
+15;"Quel est l'?quivalent de la carte europ?enne ? l'?tranger ? "
 15;Est ce qu'il y a une assurance maladie ? Bali ?
 15;Est-ce qu'il y a une carte d'assurance maladie internationale ?
 15;Est-ce-que je b?n?ficie d'un ?quivalent de carte d'assurance maladie ? Bali ?
 16;Quelles sont les meilleures assurance pour ce voyage ?
 16;Ou puis souscrire une assurance voyage ?
-16;Ou puis-je souscrire ? une assurance pour mon voyage ? 
+16;"Ou puis-je souscrire ? une assurance pour mon voyage ? "
 16;Comment trouver une assurance voyage?
-16;Je veux une assurance voyage. 
+16;"Je veux une assurance voyage. "
 16;Je cherche une assurance de voyage
-17;Que faut-il pr?voir comme assurance pour le voyage ?
+17;Que faut-il prévoir comme assurance pour le voyage ?
 17;Comment trouver la meilleur assurance voyage ?
-17;Ou est-ce que je peux trouver la meilleure assurance voyage ? 
+17;"Ou est-ce que je peux trouver la meilleure assurance voyage ? "
 17;Comment trouver la meilleure assurance voyage?
 17;Je souhaite prendre une assurance voyage.
 17;Je cherche une bonne assurance de voyage.
-18;O? est-ce que je pourrais trouver de bons h?tels?
-18;Quels sont les meilleurs hotels ?
-18;Comment puis-je trouver les h?tels les plus populaires ? Bali ? 
-18;Quel hotel choisir ?
-18;Quels h?tels me recommandez-vous ? 
-18;Quels sont les bons h?tels ? Bali ?
+18;O? est-ce que je pourrais trouver de bons hôtels?
+18;Quels sont les meilleurs hôtels ?
+18;"Comment puis-je trouver les h?tels les plus populaires ? Bali ? "
+18;Quel hôtel choisir ?
+18;"Quels hôtels me recommandez-vous ? "
+18;Quels sont les bons hôtels ? Bali ?
 19;Est-ce que je peux r?gler avec des ch?ques voyages entreprise ?
-19;Comment puis-je r?gler mon voyage ?
+19;Comment puis-je régler mon voyage ?
 19;Comment payer mon voyage ?
 19;Avec quel type de CB puis-je payer mon voyage?
-19;Comment r?gler mon billet ? 
-19;Par quel moyen puis-je r?gler mon voyage ?
+19;"Comment régler mon billet ? "
+19;Par quel moyen puis-je régler mon voyage ?
 20;Est- ce que je peux agences de voyage qui proposent des voyages organis?s?
-20;Je voudrais participer ? des voyages organis?s
-20;Puis-je avoir un s?jour programm? ?
-20;Existe t'il des voyages organis?s ? faire sur place ? 
-20;Est-ce que des agences organisent des voyagent pour Bali ? 
-20;Il y a des voyages organis?s ?
-21;Je voudrais r?server un guide sur place
-21;Comment faire pour trouver un guide touristique ? Bali ? 
+20;Je voudrais participer ? des voyages organisés
+20;Puis-je avoir un séjour programme? ?
+20;"Existe t-il des voyages organisés ? faire sur place ? "
+20;"Est-ce que des agences organisent des voyagent pour Bali ? "
+20;Il y a des voyages organisés ?
+21;Je voudrais réserver un guide sur place
+21;"Comment faire pour trouver un guide touristique ? Bali ? "
 21;Puis-je avoir un guide sur place ?
 21;Est-ce que je pourrais ?tre aiguill? par un guide touristique?
-21;Je veux un guide touristique 
-21;Comment r?server un guide ? Bali ?
-22;Est-ce compliqu? d'utiliser sa carte bancaire ? Bali ? 
+21;"Je veux un guide touristique "
+21;Comment réserver un guide ? Bali ?
+22;"Est-ce compliqué? d'utiliser sa carte bancaire ? Bali ? "
 22;Vaut-il mieux ?changer son argent avant de partir ?
 22;Faut-il prendre du cash avant de partir ?
 22;Est-ce que c'est simple de faire un change de monnaie sur place?
 22;Comment ?changer ma monnaie ?
 22;C'est mieux de faire un ?change de monnaie avant ou apr?s le voyage ?
-23;Est-ce que tous les h?tels ont de la wifi?
-23;Est ce qu'il y a le wifi dans l'hotel ?
-23;Est-ce qu'il y a des h?tel qui proposent une connexion internet sur place ? 
-23;Je voudrais su Wifi dans mon hotel
-23;Je veux une connexion internet dans mon h?tel
-23;Je cherche un h?tel avec une connexion internet
+23;Est-ce que tous les hôtels ont de la wifi?
+23;Est ce qu'il y a le wifi dans l'hôtel ?
+23;"Est-ce qu'il y a des h?tel qui proposent une connexion internet sur place ? "
+23;Je voudrais su Wifi dans mon hôtel
+23;Je veux une connexion internet dans mon hôtel
+23;Je cherche un hôtel avec une connexion internet
 24;Puis je avoir la 4g ? Bali ?
 24;Est-ce qu'il y a facilement la 4G ?
-24;Est-ce que mon t?l?phone peut capter la 4G sur place ? 
-24;Est-ce que je peux avoir un forfait t?l?phoniques avec la 4G ? Bali?
+24;"Est-ce que mon téléphone peut capter la 4G sur place ? "
+24;Est-ce que je peux avoir un forfait t?l?phoniques avec la 4G ? Bali ?
 24;Comment avoir la 4G ? Bali ?
 24;A-t-on la 4G ? Bali ?
-25;Comment avoir un t?l?phone ? Bali ?
-25;O? puis-je acheter un forfait t?l?phonique?
-25;Comment faire pour pouvoir t?l?phoner su place ? 
-25;Je voudrais un forfait t?l?phonique sur place
-25;Comment avoir un forfait t?l?phonique ? Bali ?
-25;Quels sont les forfaits t?l?phoniques ? Bali ?
-26;Quel est le budget hebdomadaire sur place pour une semaine ? Bali  ? 
+25;Comment avoir un téléphone ? Bali ?
+25;O? puis-je acheter un forfait téléphonique?
+25;"Comment faire pour pouvoir téléphoner su place ? "
+25;Je voudrais un forfait téléphonique sur place
+25;Comment avoir un forfait téléphonique ? Bali ?
+25;Quels sont les forfaits téléphoniques ? Bali ?
+26;"Quel est le budget hebdomadaire sur place pour une semaine ? Bali ? "
 26;Combien me faut-il pour une semaine ?
 26;Quel est le cout ? la semaine ?
-26;Quel budget faut-il pr?voir pour une semaine de s?jour?
-26;Quel budget pour une semaine ? 
-26;Une semaine de s?jour co?te combien en moyenne ?
-27;Combien d'heure de d?calage il y a
-27;Est-ce qu'il y a un gros d?calage horaire? 
+26;Quel budget faut-il prévoir pour une semaine de séjour?
+26;"Quel budget pour une semaine ? "
+26;Une semaine de séjour coûte combien en moyenne ?
+27;Combien d'heure de décalage il y a
+27;"Est-ce qu'il y a un gros décalage horaire? "
 27;Combien d'heures de d?calage horaire y a t-il entre la France et Bali?
-27;Combien d'heure de d?calage ? Paris part rapport ? Bali ?
-27;Quel est le d?calage horaire entre la France et Bali ?
-28;Comment chercher des h?tels ?
-28;O? trouver un hotel ?
-28;Je voudrais une liste d'hotel pour comparer
-28;Ou puis-je comparer des h?tels pour mon voyage ? 
-28;Je souhaite comparer des h?tels
-28;Quels sont les meilleurs h?tels ?
-29;Est ce que les animaux sont interdits dans les hotels ?
-29;Est-ce que je peux emmener mon chien ? l'hotel ?
-29;Puis-je avoir mon animal de compagnie avec moi ? l'h?tel   ? 
-29;Est-ce que les animaux sont autoris?s dans les h?tels ? 
-29;Est-ce que je peux emmener mon lapin dans l'h?tel ?
-29;Les h?tels autorisent-ils les animaux ?
-30;Et si je veux prolonger mon s?jour ?
-30;Est-il possible de prolonger mon s?jour sur place au dernier moment  ? 
-30;Comment rester sur place apr?s mon voyage ?
-30;Quelles sont les modalit?s pour prolonger le s?jour?
+27;Combien d'heure de décalage ? Paris part rapport ? Bali ?
+27;Quel est le décalage horaire entre la France et Bali ?
+28;Comment chercher des hôtels ?
+28;O? trouver un hôtel ?
+28;Je voudrais une liste d'hôtel pour comparer
+28;"Ou puis-je comparer des hôtels pour mon voyage ? "
+28;Je souhaite comparer des hôtels
+28;Quels sont les meilleurs hôtels ?
+29;Est ce que les animaux sont interdits dans les hôtels ?
+29;Est-ce que je peux emmener mon chien ? l'hôtel ?
+29;"Puis-je avoir mon animal de compagnie avec moi ? l'h?tel   ? "
+29;"Est-ce que les animaux sont autorisés dans les hôtels ? "
+29;Est-ce que je peux emmener mon lapin dans l'hôtel ?
+29;Les hôtels autorisent-ils les animaux ?
+30;Et si je veux prolonger mon séjour ?
+30;"Est-il possible de prolonger mon s?jour sur place au dernier moment  ? "
+30;Comment rester sur place après mon voyage ?
+30;Quelles sont les modalités pour prolonger le séjour?
 30;Je veux rester plus longtemps ? Bali
-30;comment prolonger mon s?jour ? Bali ?
-31;Qui est le point de contact l?-bas en cas de probl?me ?
-31;Qui contacter en cas de probl?me ?
-31;Comment faire en cas d'urgence sur place ? 
+30;comment prolonger mon séjour ? Bali ?
+31;Qui est le point de contact l?-bas en cas de problème ?
+31;Qui contacter en cas de problème ?
+31;"Comment faire en cas d'urgence sur place ? "
 31;Est-ce qu'il y a un num?ro d'urgence ? contacter en cas de probl?me?
-31;Quel est le num?ro de la police ? Bali ?
-31;Si j'ai un probl?me durant mon s?jour, je contacte qui ?
+31;Quel est le numéro de la police ? Bali ?
+31;Si j'ai un problème durant mon séjour, je contacte qui ?
 32;Qu'est ce que je dois prendre dans ma trousse ? pharmacie?
-32;Quels m?dicaments faut-il apporter ?
-32;Est-ce qu'il y a des m?dicaments sans ordonnance facilement accessible ? Bali ? 
-32;Quels m?dicaments sont autoris?s sans ordonnance ?
-32;Quels m?dicament je peux acheter sans ordonnance ? Bali ? 
-32;Peut-on prendre certains m?dicament sans ordonnance ? Bali ?
+32;Quels médicaments faut-il apporter ?
+32;"Est-ce qu'il y a des m?dicaments sans ordonnance facilement accessible ? Bali ? "
+32;Quels médicaments sont autorisés sans ordonnance ?
+32;"Quels médicament je peux acheter sans ordonnance ? Bali ? "
+32;Peut-on prendre certains médicament sans ordonnance ? Bali ?
 33;Quelles est la meilleure saison pour y voyager ?
-33;Est-ce qu'il y a diff?rente saison ? Bali  ? 
-33;Quelle est la m?t?o ?
-33;Quelle est la temp?rature en Juin?
+33;"Est-ce qu'il y a différente saison ? Bali ? "
+33;Quelle est la météo ?
+33;Quelle est la température en Juin?
 33;Quel temps fait-il en juin ?
 33;En juin il fait quelle saison ?
 34;Que faut-il penser ? apporter ?
 34;Qu'est ce que je pourrais oublier ?
 34;Est-ce qu'il y a des affaires indispensables ? emporter?
-34;Qu'est il indispensable d'apporter avec soit lors d'un voyage ? Bali ? 
-34;Que me conseillez vous d'apporter ? 
+34;"Qu'est il indispensable d'apporter avec soit lors d'un voyage ? Bali ? "
+34;"Que me conseillez-vous d'apporter ? "
 34;Quels objets me seront utiles ?
 35;Quelle est la liste des objets interdits dans l'avion ?
 35;Qu'est ce que ne peux pas emmener dans l'avion ?
 35;Qu'est ce qui est interdit en bagage cabine?
-35;Qu'est-ce qu'il m'est interdit de prendre avec moi dans l'avion  ? 
+35;"Qu'est-ce qu'il m'est interdit de prendre avec moi dans l'avion  ? "
 35;Est-ce que je peux emporter un couteau de cuisine dans l'avion ?
 35;Qu'est ce qui est interdit dans l'avion?
-36;Quel est la taille autoris?e pour un bagage ? main pour un voyage en avion ? 
+36;"Quel est la taille autoris?e pour un bagage ? main pour un voyage en avion ? "
 36;Quelles sont les dimensions des bagages ?
 36;Quelles sont les dimensions pour un bagage ? main ?
 36;Quel bagage ? main puis-je emporter ?
@@ -216,193 +216,194 @@ id_question_pivot;reponse_prop
 36;C'est quoi les dimensions maximales des bagages dans l'avion ?
 37;Quel est le poids maximum de ma valise pour l'avion ?
 37;Quel est le poids maximum pour ma valise ?
-37;Quel est le poids maximum autoris? dans l'avion pour mon bagage ? 
-37;Quel est le poids maximal du bagage autoris? en avion?
+37;"Quel est le poids maximum autoris? dans l'avion pour mon bagage ? "
+37;Quel est le poids maximal du bagage autorisé? en avion?
 37;Poids max valise
 37;Quel est le poids limite de bagage en avion ?
 38;Combien coute un bagage en plus ?
-38;Est-ce qu'il faut payer un suppl?ment pour un bagage en plus en soute ? 
-38;Combien co?te un bagage suppl?mentaire en soute?
-38;Quel est le prix des bagages suppl?mentaires ?
+38;"Est-ce qu'il faut payer un suppl?ment pour un bagage en plus en soute ? "
+38;Combien coute un bagage supplémentaire en soute?
+38;Quel est le prix des bagages supplémentaires ?
 38;Combien pour une valise en plus ?
-38;En soute, un suppl?ment de bagage co?te combien ?
+38;En soute, un supplément de bagage coute combien ?
 39;Est ce qu'il y a beaucoup de moustique
-39;Est-ce qu'il est conseill? de prendre de  l'anti-moustique ? 
-39;Est-ce que je dois pr?voir une cr?me apaisante pour les piq?res d'insectes? 
+39;"Est-ce qu'il est conseill? de prendre de  l'anti-moustique ? "
+39;"Est-ce que je dois pr?voir une cr?me apaisante pour les piq?res d'insectes? "
 39;Y-a-til beaucoup de moustiques ?
 39;Est-ce qu'il y a des moustiques ? Bali ?
-39;Est-ce n?cessaire de prendre de l'anti-moustique ?
+39;Est-ce nécessaire de prendre de l'anti-moustique ?
 40;O? trouver un avion ?
-40;Ou est-ce que je peux acheter des billets d'avion pas trop cher  ? 
-40;Je voudrais r?server un billet d'avion
+40;"Ou est-ce que je peux acheter des billets d'avion pas trop cher  ? "
+40;Je voudrais réserver un billet d'avion
 40;O? trouver les meilleurs plan pour les billets d'avion?
 40;O? acheter mon billet d'avion ?
 40;Je chercher un billet d'avion pour Bali.
 41;Combien coute approximativement un billet d'avion A/R ? Bali ? partir de la France ?
 41;Quel est le cout d'un billet aller-retour pour Bali ?
-41;Combien vais-je payer un aller-retour Paris- Bali ? 
+41;"Combien vais-je payer un aller-retour Paris- Bali ? "
 41;Quel est le budget avion pour un AR ?
 41;Quel budget pour un aller-retour France-Bali en avion ?
-41;Un billet aller-retour France-Bali co?te combien ?
-42;Est-il possible de prendre un vol direct ? 
+41;Un billet aller-retour France-Bali coute combien ?
+42;"Est-il possible de prendre un vol direct ? "
 42;Est ce qu'il y a des correspondances ?
 42;Je voudrais un vol direct
 42;Est-ce qu'il y a des vols sans escale?
 42;Je souhaite un vol direct
 42;Existe-t-il des vols directs ? Bali ?
-43;est-ce qu'une compagnie a?rienne est plus conseill?e qu'une autre pour ce type de voyage ? 
+43;"est-ce qu'une compagnie a?rienne est plus conseill?e qu'une autre pour ce type de voyage ? "
 43;Quelle est la meilleure compagnie pour le voyage ?
 43;Quelle est la meilleure compagnie ?
-43;O? trouver la meilleure compagnie a?rienne?
+43;O? trouver la meilleure compagnie arienne?
 43;Quelle est la meilleure compagnie a?rienne pour faire un aller-retour Paris - Bali ?
-43;Je cherche une compagnie a?rienne.
+43;Je cherche une compagnie aérienne.
 44;A quelle heure faut-il se pr?senter ? l'a?roport pour ?tre sur de ne pas rater le vol?
 44;Combien de temps en avance faut-il arriver ?
 44;A quelle heure est le check-in de l'avion ?
-44;Faut-il que je me pr?sente ? l'a?roport en avance le jour du d?part ? 
+44;"Faut-il que je me pr?sente ? l'a?roport en avance le jour du d?part ? "
 44;Combien de temps en avance avant le vol ?
 44;Combien de temps avant l'heure de vol, dois-je me pr?senter ? l'a?roport ?
 45;Comment ?a se passe si mon bagage est perdu ?
-45;Que faire si mon bagage est endommag?s ? sa r?cup?ration dans l'a?roport ? 
-45;Comment ?tre rembours? si mon bagage est perdu ?
-45;Quelle est la proc?dure d'indemnisation en cas de perte de bagage? 
+45;"Que faire si mon bagage est endommag?s ? sa r?cup?ration dans l'a?roport ? "
+45;Comment être rembours? si mon bagage est perdu ?
+45;"Quelle est la proc?dure d'indemnisation en cas de perte de bagage? "
 45;Je me suis fais voler ma valise
 45;Si mes objets personnels sont perdus est-ce que je suis indemnis? ?
-46;Est-ce que les animaux sont autoris?s en avion?
-46;Les animaux sont-ils accept?s pour ce voyage ?
-46;Les animaux sont-ils accept?s dans l'avion ? 
-46;Est ce que les animaux sont autoris?s dans l'avion ?
+46;Est-ce que les animaux sont autorisés en avion?
+46;Les animaux sont-ils acceptés pour ce voyage ?
+46;"Les animaux sont-ils acceptés dans l'avion ? "
+46;Est ce que les animaux sont autorisés dans l'avion ?
 46;Comment emmener mon lapin dans l'avion ?
-46;Les animaux sont-ils autoris?s dans l'avion ?
+46;Les animaux sont-ils autorisés dans l'avion ?
 47;Je voudrais emmener mon chien
 47;Dois-je paye pour emmener mon animal ?
-47;A combien s'?l?ve le suppl?ment pour voyager avec son animal ? 
+47;"A combien s'?l?ve le suppl?ment pour voyager avec son animal ? "
 47;Est-ce qu'il faut payer des frais en plus pour transporter un animal en avion?
-47;Combien co?te un animal en soute ou en cabine ?
+47;Combien coute un animal en soute ou en cabine ?
 47;Si je voyage avec un animal, je paye combien de plus ?
 48;Que se passe-t-il en cas de modification de vol ?
-48;Mon vol est il annul? ?
-48;Est-ce que je serais pr?venue en cas de modification de mon vol ? 
+48;Mon vol est il annulé? ?
+48;"Est-ce que je serais pr?venue en cas de modification de mon vol ? "
 48;Est-ce que je serai notifi? s'il y a une modification sur le vol?
-48;Est-ce que mon vol a ?t? modifi? ?
-48;Si mon vol est modifi?, comment le savoir ?
-49;Est-ce que je peux recevoir un billet ?lectronique ?
+48;Est-ce que mon vol a ?t? modifié? ?
+48;Si mon vol est modifié?, comment le savoir ?
+49;Est-ce que je peux recevoir un billet ?électroniques ?
 49;Comment aurais-je le justificatif de voyage?
 49;Vais-je recevoir mon billet sous format papier ou ?lectronique ?
-49;Est-ce que je vais recevoir mon billet par mail  ? 
-49;Comment est-ce que je r?cup?re mon billet ?
+49;"Est-ce que je vais recevoir mon billet par mail  ? "
+49;Comment est-ce que je récupère mon billet ?
 49;Mon billet est sous quel format ?
-50;Y'a-t-il un m?decin dans l'avion ?
-50;L'avion a t'il un m?decin d?sign? ? 
-50;Est ce qu'un m?decin sera ? bord du vol ?
+50;Y'a-t-il un médecin dans l'avion ?
+50;"L'avion a t'il un médecin design? ? "
+50;Est ce qu'un médecin sera ? bord du vol ?
 50;Est-ce qu'il un du personnel soignant dans l'avion?
-50;Y a t-il un m?decin dans l'avion ?
-50;Est ce qu'il des m?decins dans l'avion ?
+50;Y a t-il un médecin dans l'avion ?
+50;Est ce qu'il des médecins dans l'avion ?
 51;Est-ce qu'il y a la possibilit? de commander un repas sp?cial en avion?
 51;Est ce que mes allergies sont prises en compte pour mes repas ?
 51;Comment signaler les allergies alimentaires ?
-51;Que faire pour mes repas dans l'avion si je suis allergique ? 
+51;"Que faire pour mes repas dans l'avion si je suis allergique ? "
 51;Je veux un plat qui respecte mes allergies pendant le vol
 51;Si j'ai des allergies, est-ce qu'il m'est propos? des plats diff?rents ?
-52;Ai-je un transport entre l'hotel et l'a?roport ?
-52;Est-ce qu'il y a des moyens mis ? la disposition des voyageurs pour faire le trajet a?roport-h?tel ? 
-52;Y'a-t-il une navette de l'hotel pour l'a?roport ?
-52;Est-ce qu'il y a une navette a?roport h?tel?
-52;Comment aller de l'a?roport ? l'h?tel ?
+52;Ai-je un transport entre l'hôtel et l'aéroport ?
+52;"Est-ce qu'il y a des moyens mis ? la disposition des voyageurs pour faire le trajet a?roport-h?tel ? "
+52;Y'a-t-il une navette de l'hôtel pour l'aéroport ?
+52;Est-ce qu'il y a une navette aéroport hôtel?
+52;Comment aller de l'aéroport ? l'hôtel ?
 52;Existe-t-il un moyen de transport propos? par les h?tel depuis l'a?roport ?
-53;Quel est le prix d'une navette h?tel a?roport?
-53;Quel est le tarif d'un taxi pour m'amener ? l'a?roport ?
-53;Quels sont les prix pour prendre le taxi depuis l'a?roport ? Bali ? 
-53;Quel est le prix de trajet hotel-a?roport ?
+53;Quel est le prix d'une navette hôtel aéroport?
+53;Quel est le tarif d'un taxi pour m'amener ? l'aéroport ?
+53;"Quels sont les prix pour prendre le taxi depuis l'a?roport ? Bali ? "
+53;Quel est le prix de trajet hôtel-aéroport ?
 53;Quel est le prix d'un d?placement de mon h?tel jusqu'? l'a?roport ?
-53;Un taxi vers l'a?roport co?te combien ?
+53;Un taxi vers l'aéroport coute combien ?
 54;Quelles sont les langues officielles ?
-54;Est-ce qu'ils parlent l'anglais ? Bali  ? 
-54;Est-ce que le fran?ais est parl? l?-bas ?
-54;Quelle est la langue officielle ? Bali?
+54;"Est-ce qu'ils parlent l'anglais ? Bali ? "
+54;Est-ce que le français est parlé? l?-bas ?
+54;Quelle est la langue officielle ? Bali ?
 54;Quel est la langue locale ?
 54;On parle quoi comme langues ? Bali ?
-55;Est-ce qu'il y a des activit?s incontournables ? faire?
-55;Quelles activit?s me conseilles-tu ?
-55;Quel est le top 10 des activit?s recommand?es ? Bali ? 
-55;Quelles sont les activit?s sur place ?
-55;Liste des activit?s ? faire ? Bali
-55;Il y a quoi comme activit? ? Bali ?
-56;Est-ce qu'il y a un code de conduite sp?cifique ? respecter ? Bali ? 
-56;Quelle coutume dois-je ?viter ?
-56;Que faut-il savoir sur les moeurs ?
+55;Est-ce qu'il y a des activités incontournables ? faire?
+55;Quelles activités me conseilles-tu ?
+55;"Quel est le top 10 des activités recommandées ? Bali ? "
+55;Quelles sont les activités sur place ?
+55;Liste des activités ? faire ? Bali
+55;Il y a quoi comme activité? ? Bali ?
+56;"Est-ce qu'il y a un code de conduite sp?cifique ? respecter ? Bali ? "
+56;Quelle coutume dois-je éviter ?
+56;Que faut-il savoir sur les mœurs ?
 56;Est-ce qu'il y a des comportements contraire aux m?urs des Balinais?
-56;Est-ce qu'il y a des choses ? ?viter ? Bali ?
+56;Est-ce qu'il y a des choses ? éviter à Bali ?
 56;Qu'est ce que je ne dois pas faire l? bas ?
-57;Est-il possible de se loger dans des h?bergement atypiques sur place ? 
+57;"Est-il possible de se loger dans des h?bergement atypiques sur place ? "
 57;Quels sont les lieux insolites o? je peux dormir ?
 57;Est-ce qu'on peut loger chez l'habitant ?
-57;Existe-t-il des h?bergement atypiques ? louer?
+57;Existe-t-il des hébergement atypiques ? louer?
 57;Je veux un logement atypique
 57;Des endroits atypiques pour dormir ?
-58;Quels plats incontournables ? gouter ? Bali?
-58;Quels sont les sp?cialit?s culinaires de la r?gion ?
-58;Quels sont les sp?cialit?s culinaires de Bali ?
-58;Quels sont les sp?cialit?s culinaires balinaise ? 
-58;Quels sont les sp?cialit?s culinaires locales ?
+58;Quels plats incontournables ? gouter ? Bali ?
+58;Quels sont les spécialités culinaires de la région ?
+58;Quels sont les spécialités culinaires de Bali ?
+58;"Quels sont les spécialités culinaires balinaise ? "
+58;Quels sont les spécialités culinaires locales ?
 58;Il y a quoi l? bas comme bon plats ?
-59;Je voudrais r?server mes activit?s
-59;Dois-je r?server les activit?s ?
-59;Est-il facile de r?server un place pour les activit?s sur place ? 
-59;Faut-il faire une r?servation des activit? avant de venir ? Bali?
-59;Est-ce que je dois r?server mes activit?s
-59;Dois-je r?server les activit?s ? l'avance ?
-60;Les animaux de compagnie sont-ils accept?s lors d'un voyage ? Bali ? 
-60;Est-ce que les animaux sont autoris?s partout?
-60;Les chiens sont-ils accept?s partout ?
+59;Je voudrais réserver mes activités
+59;Dois-je réserver les activités ?
+59;"Est-il facile de r?server un place pour les activit?s sur place ? "
+59;Faut-il faire une r?servation des activit? avant de venir ? Bali ?
+59;Est-ce que je dois réserver mes activités
+59;Dois-je réserver les activités ? l'avance ?
+60;"Les animaux de compagnie sont-ils accept?s lors d'un voyage ? Bali ? "
+60;Est-ce que les animaux sont autorisés partout?
+60;Les chiens sont-ils acceptés partout ?
 60;Est ce que les animaux sont autoris?s dans les lieux de cultes ?
 60;Est-ce que je peux emmener mon chien au temple Tanah Lot ?
 60;Les animaux de compagnies sont-ils autoris?s dans les endroits culturels ?
-61;Combien coutent les activit?s ?
-61;Quel est le cout moyen des activit?s ?
-61;Combien me coutera en moyenne une activit? sur place ? 
-61;Quel budget faut-il pr?voir par activit??
-61;Quel est le prix d'une activit? ? Bali ? 
-61;Un activit? co?te combien en moyenne ?
-62;Quelles sont les activit?s de l'hotel ?
-62;Quelles activit?s puis je faire ? l'hotel ?
-62;Quelles activit?s sont inclues dans mon h?tel ? 
-62;Est-ce qu'il y a des activit?s ? faire dans l'h?tel?
-62;Quelles activit?s propose mon h?tel ? 
-62;C'est quoi les activit?s dans les h?tels ?
+61;Combien coutent les activités ?
+61;Quel est le cout moyen des activités ?
+61;"Combien me coutera en moyenne une activité? sur place ? "
+61;Quel budget faut-il prévoir par activité?
+61;"Quel est le prix d'une activité à Bali ? "
+61;Un activité? coute combien en moyenne ?
+62;Quelles sont les activités de l'hôtel ?
+62;Quelles activités puis-je faire ? l'hôtel ?
+62;"Quelles activités sont inclues dans mon hôtel ? "
+62;Est-ce qu'il y a des activités ? faire dans l'hôtel?
+62;"Quelles activités propose mon hôtel ? "
+62;C'est quoi les activités dans les hôtels ?
 63;Est-ce que je dois payer en suppl?ment les frais des repas ? l'h?tel?
-63;Les repas sont-ils pr?vus dans mon forfait ?
-63;Dois-je payer mes repas en plus de l'hotel ?
-63;Qu'est-ce qu'il y a dans mon forfait h?tel ? 
-63;Les repas font parti du forfait de l'h?tel ?
-63;Est-ce que le repas est inclus dans les frais d'h?tel ?
+63;Les repas sont-ils prévus dans mon forfait ?
+63;Dois-je payer mes repas en plus de l'hôtel ?
+63;"Qu'est-ce qu'il y a dans mon forfait hôtel ? "
+63;Les repas font parti du forfait de l'hôtel ?
+63;Est-ce que le repas est inclus dans les frais d'hôtel ?
 64;Quels sont les plus beaux sites ? visiter ?
 64;Quels sont les lieux ? visiter ?
-64;Quels endroits sont recommand?s pour d?couvrir Bali  ? 
+64;"Quels endroits sont recommandés pour découvrir Bali  ? "
 64;Est-ce qu'il y a des endroits ? visiter absolument?
 64;Qu'est-ce que je dois visiter ? Bali ?
 64;Quels sont les meilleures places touristiques ? Bali ?
-65;Quels sont les ?v?nements ? ne pas rater pendant mon s?jour ?
-65;Est ce qu'il y a des f?tes locales ?
-65;Est-ce qu'il y a des ?v?nements sp?ciaux en Juin?
-65;Que faire ? Bali pour d?couvrir la culture locale ? 
-65;Quels seront les ?v?nements ? Bali dans 4 mois ?
-65;Il y a-t-il des f?tes culturelles ?
-66;Faut-il un permis pour rouler en scooter ? Bali ? 
+65;Quels sont les ?vêtements ? ne pas rater pendant mon séjour ?
+65;Est ce qu'il y a des fêtes locales ?
+65;Est-ce qu'il y a des événements spéciaux en Juin?
+65;"Que faire ? Bali pour découvrir la culture locale ? "
+65;Quels seront les événements ? Bali dans 4 mois ?
+65;Il y a-t-il des fêtes culturelles ?
+66;"Faut-il un permis pour rouler en scooter ? Bali ? "
 66;Est ce qu'il faut un permis moto pour louer ? Bali ?
-66;Est-ce qu'il y a la possibilit? de louer des deux roues ? Bali  ? 
+66;"Est-ce qu'il y a la possibilit? de louer des deux roues ? Bali ? "
 66;Est-ce qu'il faut un permis pour louer une moto ?
 66;Condition pour louer une moto ? Bali
 66;Peut-on louer un deux roues sans permis ?
-67;Est-il facile de rencontrer des ?trangers l?-bas ?
+67;Est-il facile de rencontrer des ?étrangers l?-bas ?
 67;Puis je rencontre d'autre voyages dans des lieux d'?changes ?
-67;Est-il possible de trouver des lieux de rencontre pour ?trangers ? Bali ? 
-67;Est-ce qu'il y a des lieux de rencontres pour des ?trangers ?
-67;Comment rencontrer des ?trangers ? Bali ?
-67;Comment faire pour rencontrer des ?trangers ? Bali ?
-68;Quelles sont les activit?s abordables ? Bali?
-68;Quels sont les sports pratiqu?s ? Bali ?
-68;Quels sports nautiques sont les plus pratiqu?s sur place ?
-68;Quels sports de mer puis je faire la bas ?
+67;"Est-il possible de trouver des lieux de rencontre pour ?trangers ? Bali ? "
+67;Est-ce qu'il y a des lieux de rencontres pour des ?étrangers ?
+67;Comment rencontrer des ?étrangers ? Bali ?
+67;Comment faire pour rencontrer des ?étrangers ? Bali ?
+68;Quelles sont les activités abordables ? Bali ?
+68;Quels sont les sports pratiqués ? Bali ?
+68;Quels sports nautiques sont les plus pratiqués sur place ?
+68;Quels sports de mer puis-je faire la bas ?
 68;Je veux faire des sports nautiques
 68;Quels sont les sports nautiques ?
+

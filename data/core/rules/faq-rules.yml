@@ -150,6 +150,7 @@ rules:
   steps:
   - intent: short_utters
   - action: action_set_and_acknowledge_profile
+  - action: user_note_to_none
   - action: action_bot_adaptive_answer
   - action: note_and_pseudo_asking_form
   - active_loop: note_and_pseudo_asking_form
@@ -159,6 +160,7 @@ rules:
   steps:
   - intent: dont_care
   - action: action_set_and_acknowledge_profile
+  - action: user_note_to_none
   - action: action_bot_adaptive_answer
   - action: note_and_pseudo_asking_form
   - active_loop: note_and_pseudo_asking_form
@@ -168,6 +170,7 @@ rules:
   steps:
   - intent: long_utters
   - action: action_set_and_acknowledge_profile
+  - action: user_note_to_none
   - action: action_bot_adaptive_answer
   - action: note_and_pseudo_asking_form
   - active_loop: note_and_pseudo_asking_form
@@ -176,6 +179,7 @@ rules:
 - rule: bot didn't get user profil well and ask him to chose
   steps:
   - action: action_set_and_acknowledge_profile
+  - action: user_note_to_none
   - action: action_bot_adaptive_answer
   - action: note_and_pseudo_asking_form
   - active_loop: note_and_pseudo_asking_form

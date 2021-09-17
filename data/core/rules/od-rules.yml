@@ -56,7 +56,8 @@ rules:
     - action: action_set_misspell_pwd
     - slot_was_set:
       - misspelled_password: null
-    - action : utter_good_password
+    - action: utter_good_password
+    - action: utter_invite_user_to_ask
 
 - rule: Activate retry_password_form
   steps:
@@ -88,7 +89,8 @@ rules:
     - action: action_set_misspell_pwd
     - slot_was_set:
       - misspelled_password: null
-    - action : utter_good_password
+    - action: utter_good_password
+    - action: utter_invite_user_to_ask
 
 
 - rule:  The user want a new tokken to be sent 

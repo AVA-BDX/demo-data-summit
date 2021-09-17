@@ -38,9 +38,13 @@ responses:
       - text: "Très bien, saisissez à nouveau le code à 12 caractères"
       - text: "Merci de taper à nouveau le mot de passe"
     utter_good_password:
-      - text: "Vous avez été bien authentifié !"
-      - text: "Merci, votre identité est confirmée"
-      - text: "Parfait, vous êtes bien authentifé "
+      - text: "Vous avez été bien authentifié ! "
+      - text: "Merci, votre identité est confirmée." 
+      - text: "Parfait, vous êtes bien authentifé."
+    utter_invite_user_to_ask:
+      - text: "Vous pouve maitennant poser vos questions"
+      - text: "Je vous écoute pour vos questions"
+      - text: "Comment puis-je vous aider ? "
     utter_greet:
       - text: salut 
       - text: Bonjour 
@@ -55,7 +59,7 @@ responses:
     #   - text: cela vous a-t-il aidé ?
     #   - text: êtes vous satisfaits de la réponse ?
     utter_ask_note:
-      - text: donnez une note entre 1 et 5 pour exprimer votre satisfaction
+      - text: Merci d'évaluer votre satisfaction pour cette réponse
         buttons:
         - title: "1"
           payload: "1"
