@@ -4,7 +4,3 @@ numpy
 spacy
 fuzzywuzzy
 sklearn
-re
-string
-smtplib
-email
