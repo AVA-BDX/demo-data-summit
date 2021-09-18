@@ -56,7 +56,7 @@ class validateEmail(FormValidationAction):
     def __init__(self):
         #  Make a regular expression
         # for validating an Email
-        self.regex  =  r'\b[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Z|a-z]{2,}\b'
+        self.regex  =  r'\b[A-Za-z0-9._%+-]+@talan+\.com\b'
     
     def name(self):
         return 'validate_askingEmail_form'
