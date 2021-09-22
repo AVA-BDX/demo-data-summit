@@ -1,0 +1,17 @@
+    FROM rasa/rasa:latest-full
+
+    USER root
+
+    WORKDIR /app
+    COPY . /app
+    COPY ./data /app/data
+
+    # RUN  rasa train -c ./config.yml -d ./domain.yml --data ./data --debug 
+
+    VOLUME /app
+    VOLUME /app/data
+    VOLUME /app/models
+
+    CMD [ "run","-m","/app/models","--enable-api","--cors","*","--debug" ]
+
+    EXPOSE 5005

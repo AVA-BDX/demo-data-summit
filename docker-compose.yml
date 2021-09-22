@@ -1,10 +1,19 @@
 
-version: '3.4'
+version: '3.7'
 services:
-  deployment-civa-augmented-bot-action-server:
-    build: .
+  civa-augmented-bot-action-server:
+    build: 
+      context: .
+      dockerfile: Dockerfile-action-server
     # tag it with the registry of microk8s
     image: laodocker2020/civa-augmented-bot-action-server:0.0.1
     # expose:
     #   - "5055"
-
+  # civa-rasa-image:
+  #   build: 
+  #     context: .
+  #     dockerfile: Dockerfile-rasa-image
+  #   # tag it with the registry of microk8s
+  #   image: laodocker2020/rasa-image:0.0.1
+  #   # expose:
+  #   #   - "5055"

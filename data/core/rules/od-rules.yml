@@ -11,18 +11,11 @@ rules:
   - intent: bot_challenge
   - action: utter_iamabot
 
-# - rule: start the conversation, simulate user message
-#   steps:
-#   - intent: intent_trigger_conversation
-#   - action: action_askingEmail_form
-
-
 - rule: Activate askingEmail_form
   steps:
   - intent: intent_trigger_conversation
   - action: askingEmail_form
   - active_loop: askingEmail_form
-
 
 - rule: submit the askingEmail_form, password incorrect
   condition:
@@ -110,10 +103,3 @@ rules:
   - action: askingEmail_form
   - active_loop: askingEmail_form
 
-
-    
-
-# - rule: Ask the user to rephrase whenever they send a message with low NLU confidence
-#   steps:
-#   - intent: nlu_fallback
-#   - action: utter_dont_understand
