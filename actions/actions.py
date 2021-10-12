@@ -102,7 +102,7 @@ class SendEmail(Action):
         # email_password = config.get('auth', 'email_password')
         # email_address = config.get('instance', 'email_address')
         
-        email_password = 'Wilfrikii123..'
+        email_password = 'bodvkowjwmrzertc'
         email_address = 'civaqnabots@gmail.com'      
         # on rentre les renseignements pris sur le site du fournisseur
         smtp_address = 'smtp.gmail.com'
