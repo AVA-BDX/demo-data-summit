@@ -1,7 +1,8 @@
-FROM rasa/rasa-sdk:2.8.1
+FROM rasa/rasa-sdk:2.8.2
 
 COPY actions /app/actions
 COPY data /app/data
+COPY other_data /app/other_data
 
 USER root
 RUN pip install --upgrade pip
