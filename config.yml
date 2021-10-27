@@ -4,7 +4,7 @@ pipeline:
   - name: "WhitespaceTokenizer"
   - name: "CountVectorsFeaturizer"
   - name: "DIETClassifier"
-    entity_recognition: False
+    entity_recognition: True
     epochs: 300
   - name: ResponseSelector
     epochs: 300
